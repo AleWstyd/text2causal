@@ -1,0 +1,35 @@
+version: "3"
+
+vars:
+  PYTHON: "uv run python"
+
+tasks:
+  default:
+    desc: Show available tasks
+    cmds:
+      - task --list
+
+  run:
+    desc: Run the main application
+    cmds:
+      - uv run main.py
+
+  install:
+    desc: Install dependencies using uv
+    cmds:
+      - uv sync
+
+  test:
+    desc: Run tests
+    cmds:
+      - uv run pytest
+
+  lint:
+    desc: Run ruff checks
+    cmds:
+      - uv run ruff check .
+
+  format:
+    desc: Format code with ruff
+    cmds:
+      - uv run ruff format .
