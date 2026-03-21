@@ -32,7 +32,8 @@ TRUE_EDGES = [
 AppInputs = dict[str, Any]
 MetricDict = dict[str, float]
 SimulationResult = dict[str, Any]
-RelationExtractor = Callable[[list[str], str], list[dict[str, Any]]]
+RelationRecord = dict[str, Any]
+RelationExtractor = Callable[[list[str], str], list[RelationRecord]]
 AlgorithmRunner = Callable[[Any, list[str], PriorKnowledge | None], Any]
 
 

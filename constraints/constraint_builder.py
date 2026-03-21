@@ -34,18 +34,31 @@ def build_prior_knowledge(
     relations: list[dict[str, object]], threshold: float = 0.7
 ) -> PriorKnowledge:
     required_edges: list[Edge] = []
+    forbidden_edges: list[Edge] = []
 
     for relation in relations:
         cause = str(relation["cause"])
         effect = str(relation["effect"])
         confidence = float(relation["confidence"])
+        relation_type = str(relation.get("relation_type", "required"))
 
-        if confidence >= threshold:
+        if relation_type not in {"required", "forbidden"}:
+            raise ValueError(
+                "Relation type must be 'required' or 'forbidden': "
+                f"{cause} -> {effect} ({relation_type})"
+            )
+
+        if confidence < threshold:
+            continue
+
+        if relation_type == "required":
             required_edges.append((cause, effect))
+        else:
+            forbidden_edges.append((cause, effect))
 
     return PriorKnowledge(
         required_edges=_deduplicate_edges(required_edges),
-        forbidden_edges=[],
+        forbidden_edges=_deduplicate_edges(forbidden_edges),
     )
 
 

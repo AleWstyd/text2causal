@@ -21,9 +21,13 @@ def _retrieve_adjacency_matrix(graph, order_nodes=None, weight=False):
         return graph
 
     if isinstance(graph, nx.DiGraph):
-        node_order = list(order_nodes) if order_nodes is not None else list(graph.nodes())
+        node_order = (
+            list(order_nodes) if order_nodes is not None else list(graph.nodes())
+        )
         if not weight:
-            return np.array(nx.adjacency_matrix(graph, node_order, weight=None).todense())
+            return np.array(
+                nx.adjacency_matrix(graph, node_order, weight=None).todense()
+            )
 
         return np.array(nx.adjacency_matrix(graph, node_order).todense())
 

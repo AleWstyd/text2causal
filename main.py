@@ -25,27 +25,46 @@ def get_inputs() -> dict[str, object]:
 
 def initialize_session_state() -> None:
     st.session_state.setdefault("llm_state", None)
+    st.session_state.setdefault("llm_state_background_text", None)
     st.session_state.setdefault("run_results", {})
 
 
 def ensure_llm_state(
     variable_names: list[str], background_text: str
 ) -> dict[str, object]:
-    if st.session_state["llm_state"] is None:
+    needs_refresh = (
+        st.session_state["llm_state"] is None
+        or st.session_state["llm_state_background_text"] != background_text
+    )
+
+    if needs_refresh:
         with st.spinner("Extracting relations with Gemini..."):
             st.session_state["llm_state"] = extract_llm_constraints(
                 variable_names=variable_names,
                 background_text=background_text,
             )
+            st.session_state["llm_state_background_text"] = background_text
 
     return st.session_state["llm_state"]
 
 
 def build_relations_frame(relations: list[dict[str, object]]) -> pd.DataFrame:
     if not relations:
-        return pd.DataFrame(columns=["cause", "effect", "confidence"])
+        return pd.DataFrame(columns=["relation_type", "cause", "effect", "confidence"])
 
-    frame = pd.DataFrame(relations, columns=["cause", "effect", "confidence"])
+    normalized_relations = [
+        {
+            "relation_type": relation.get("relation_type", "required"),
+            "cause": relation.get("cause"),
+            "effect": relation.get("effect"),
+            "confidence": relation.get("confidence"),
+        }
+        for relation in relations
+    ]
+    frame = pd.DataFrame(
+        normalized_relations,
+        columns=["relation_type", "cause", "effect", "confidence"],
+    )
 
     if "confidence" in frame:
         frame["confidence"] = frame["confidence"].astype(float).round(3)
@@ -125,39 +144,68 @@ def render_graphs(result: dict[str, object]) -> None:
 
 
 def render_result(result: dict[str, object], llm_state: dict[str, object]) -> None:
-    st.subheader("LLM-found edges")
     relations_frame = build_relations_frame(llm_state["relations"])
-    if relations_frame.empty:
-        st.info("The LLM did not return any relations.")
-    else:
-        st.dataframe(relations_frame, width="stretch", hide_index=True)
-
-    st.subheader("Prior knowledge")
     constraints_frame = build_constraints_frame(llm_state["prior_knowledge"])
-    if constraints_frame.empty:
-        st.info("No relations met the confidence threshold for constraints.")
-    else:
-        st.dataframe(constraints_frame, width="stretch", hide_index=True)
+
+    left_column, middle_column, right_column = st.columns([1, 0.12, 1])
+
+    with left_column:
+        st.subheader("LLM-found edges")
+        if relations_frame.empty:
+            st.info("The LLM did not return any relations.")
+        else:
+            st.dataframe(relations_frame, width="stretch", hide_index=True)
+
+    with middle_column:
+        st.markdown(
+            "<div style='text-align:center; font-size:2rem; padding-top:4.5rem;'>→</div>",
+            unsafe_allow_html=True,
+        )
+
+    with right_column:
+        st.subheader("Prior knowledge")
+        if constraints_frame.empty:
+            st.info("No relations met the confidence threshold for constraints.")
+        else:
+            st.dataframe(constraints_frame, width="stretch", hide_index=True)
 
     st.caption(describe_constraint_mode(result["constraint_mode"]))
 
-    render_graphs(result)
-
     st.subheader("Metrics")
     st.dataframe(build_metrics_frame(result), width="stretch", hide_index=True)
+
+    render_graphs(result)
 
 
 def render_algorithm_tab(
     algorithm_name: str,
     inputs: dict[str, object],
 ) -> None:
-    st.write(f"Run the {algorithm_name} simulation on the Lucas dataset.")
+    description_column, action_column = st.columns(
+        [1, 0.24], vertical_alignment="bottom"
+    )
 
-    if st.button("Run simulation", key=f"run_{algorithm_name}"):
+    with description_column:
+        st.write(f"Run the {algorithm_name} simulation on the Lucas dataset.")
+
+    run_requested = False
+    with action_column:
+        run_requested = st.button(
+            "Run simulation", key=f"run_{algorithm_name}", width="stretch"
+        )
+
+    background_text = st.text_area(
+        "Simulation text",
+        value=inputs["background_text"],
+        height=180,
+        key=f"background_text_{algorithm_name}",
+    )
+
+    if run_requested:
         try:
             llm_state = ensure_llm_state(
                 variable_names=inputs["variable_names"],
-                background_text=inputs["background_text"],
+                background_text=background_text,
             )
             with st.spinner(f"Running {algorithm_name}..."):
                 result = run_algorithm_simulation(
@@ -170,24 +218,34 @@ def render_algorithm_tab(
             st.session_state["run_results"].pop(algorithm_name, None)
             st.error(f"{algorithm_name} failed: {exc}")
         else:
+            result["background_text"] = background_text
+            result["llm_state"] = llm_state
             st.session_state["run_results"][algorithm_name] = result
 
     stored_result = st.session_state["run_results"].get(algorithm_name)
-    llm_state = st.session_state["llm_state"]
 
-    if stored_result and llm_state:
-        render_result(stored_result, llm_state)
+    if (
+        stored_result
+        and stored_result.get("llm_state")
+        and stored_result.get("background_text") == background_text
+    ):
+        render_result(stored_result, stored_result["llm_state"])
 
 
 def main() -> None:
     initialize_session_state()
     inputs = get_inputs()
 
-    st.title("Text2Causal")
-    st.caption(
-        "Run PC, GES, and LiNGAM with shared LLM-extracted prior knowledge and compare "
-        "unconstrained vs prior-knowledge-guided results."
-    )
+    title_column, summary_column = st.columns([0.9, 3.1], vertical_alignment="center")
+
+    with title_column:
+        st.markdown("<h1 style='margin:0;'>Text2Causal</h1>", unsafe_allow_html=True)
+
+    with summary_column:
+        st.caption(
+            "Run PC, GES, and LiNGAM with shared LLM-extracted prior knowledge and compare "
+            "unconstrained vs prior-knowledge-guided results."
+        )
 
     tabs = st.tabs(get_algorithm_names())
 
