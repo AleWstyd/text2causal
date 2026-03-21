@@ -7,6 +7,7 @@ def run_pc(data, variable_names):
     cg = pc(data, alpha=0.05, indep_test="fisherz")
 
     graph = nx.DiGraph()
+    graph.add_nodes_from(variable_names)
 
     adjacency = cg.G.graph
 

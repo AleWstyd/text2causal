@@ -11,6 +11,7 @@ def run_lingam(data, variable_names):
     adjacency = model.adjacency_matrix_
 
     graph = nx.DiGraph()
+    graph.add_nodes_from(variable_names)
 
     n = len(variable_names)
 

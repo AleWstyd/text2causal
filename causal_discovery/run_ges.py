@@ -9,6 +9,7 @@ def run_ges(data, variable_names):
     G = record["G"]
 
     graph = nx.DiGraph()
+    graph.add_nodes_from(variable_names)
 
     adjacency = G.graph
 
