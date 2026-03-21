@@ -111,7 +111,9 @@ def run_algorithm_simulation(
 
     if algorithm_name not in available_runners:
         available = ", ".join(available_runners)
-        raise ValueError(f"Unsupported algorithm '{algorithm_name}'. Available: {available}")
+        raise ValueError(
+            f"Unsupported algorithm '{algorithm_name}'. Available: {available}"
+        )
 
     baseline_graph = available_runners[algorithm_name](data_matrix, variable_names)
     constrained_graph = apply_constraints(baseline_graph.copy(), required_edges)

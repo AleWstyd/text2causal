@@ -27,7 +27,9 @@ def initialize_session_state() -> None:
     st.session_state.setdefault("run_results", {})
 
 
-def ensure_llm_state(variable_names: list[str], background_text: str) -> dict[str, object]:
+def ensure_llm_state(
+    variable_names: list[str], background_text: str
+) -> dict[str, object]:
     if st.session_state["llm_state"] is None:
         with st.spinner("Extracting relations with Gemini..."):
             st.session_state["llm_state"] = extract_llm_constraints(
