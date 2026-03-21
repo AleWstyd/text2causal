@@ -1,10 +1,13 @@
 from causallearn.search.ScoreBased.GES import ges
 import networkx as nx
 
+from constraints.constraint_builder import PriorKnowledge
 
-def run_ges(data, variable_names):
 
-    record = ges(data, score_func="local_score_BIC")
+def run_ges(data, variable_names, prior_knowledge: PriorKnowledge | None = None):
+    del prior_knowledge
+
+    record = ges(data, score_func="local_score_BIC", node_names=variable_names)
 
     G = record["G"]
 

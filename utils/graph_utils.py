@@ -1,10 +1,15 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
+from constraints.constraint_builder import PriorKnowledge
 
-def apply_constraints(graph, required_edges):
 
-    for cause, effect in required_edges:
+def apply_constraints(graph, prior_knowledge: PriorKnowledge):
+    for cause, effect in prior_knowledge.forbidden_edges:
+        if graph.has_edge(cause, effect):
+            graph.remove_edge(cause, effect)
+
+    for cause, effect in prior_knowledge.required_edges:
         if graph.has_edge(effect, cause):
             graph.remove_edge(effect, cause)
 

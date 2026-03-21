@@ -11,6 +11,7 @@ from app_pipeline import (
     load_app_inputs,
     run_algorithm_simulation,
 )
+from constraints.constraint_builder import PriorKnowledge
 from utils.graph_utils import build_graph_figure, build_hierarchical_layout
 
 
@@ -52,8 +53,36 @@ def build_relations_frame(relations: list[dict[str, object]]) -> pd.DataFrame:
     return frame
 
 
-def build_constraints_frame(required_edges: list[tuple[str, str]]) -> pd.DataFrame:
-    return pd.DataFrame(required_edges, columns=["cause", "effect"])
+def build_constraints_frame(prior_knowledge: PriorKnowledge) -> pd.DataFrame:
+    rows = [
+        {"type": "required", "cause": cause, "effect": effect}
+        for cause, effect in prior_knowledge.required_edges
+    ]
+    rows.extend(
+        {"type": "forbidden", "cause": cause, "effect": effect}
+        for cause, effect in prior_knowledge.forbidden_edges
+    )
+
+    return pd.DataFrame(rows, columns=["type", "cause", "effect"])
+
+
+def describe_constraint_mode(constraint_mode: str) -> str:
+    descriptions = {
+        "native_pc_background_knowledge": (
+            "PC uses causallearn BackgroundKnowledge to orient edges when the learned "
+            "skeleton allows them."
+        ),
+        "native_direct_lingam_prior_knowledge": (
+            "LiNGAM uses DirectLiNGAM prior knowledge, where required and forbidden "
+            "entries describe directed-path constraints."
+        ),
+        "post_hoc_direct_edge_constraints": (
+            "GES has no native prior-knowledge hook in this causallearn version, so "
+            "constraints are applied after graph discovery as direct-edge edits."
+        ),
+    }
+
+    return descriptions[constraint_mode]
 
 
 def build_metrics_frame(result: dict[str, object]) -> pd.DataFrame:
@@ -63,7 +92,7 @@ def build_metrics_frame(result: dict[str, object]) -> pd.DataFrame:
     return pd.DataFrame(
         [
             {"graph": "Unconstrained", **baseline_metrics},
-            {"graph": "LLM constrained", **constrained_metrics},
+            {"graph": "Prior knowledge", **constrained_metrics},
         ]
     ).round(3)
 
@@ -81,17 +110,17 @@ def render_graphs(result: dict[str, object]) -> None:
             title="Unconstrained result",
             pos=layout,
         )
-        st.pyplot(baseline_figure, use_container_width=True)
+        st.pyplot(baseline_figure, width="stretch")
         plt.close(baseline_figure)
 
     with right_column:
-        st.subheader("LLM constrained result")
+        st.subheader("Prior-knowledge result")
         constrained_figure = build_graph_figure(
             result["constrained_graph"],
-            title="LLM constrained result",
+            title="Prior-knowledge result",
             pos=layout,
         )
-        st.pyplot(constrained_figure, use_container_width=True)
+        st.pyplot(constrained_figure, width="stretch")
         plt.close(constrained_figure)
 
 
@@ -101,19 +130,21 @@ def render_result(result: dict[str, object], llm_state: dict[str, object]) -> No
     if relations_frame.empty:
         st.info("The LLM did not return any relations.")
     else:
-        st.dataframe(relations_frame, use_container_width=True, hide_index=True)
+        st.dataframe(relations_frame, width="stretch", hide_index=True)
 
-    st.subheader("Applied constraint edges")
-    constraints_frame = build_constraints_frame(llm_state["required_edges"])
+    st.subheader("Prior knowledge")
+    constraints_frame = build_constraints_frame(llm_state["prior_knowledge"])
     if constraints_frame.empty:
         st.info("No relations met the confidence threshold for constraints.")
     else:
-        st.dataframe(constraints_frame, use_container_width=True, hide_index=True)
+        st.dataframe(constraints_frame, width="stretch", hide_index=True)
+
+    st.caption(describe_constraint_mode(result["constraint_mode"]))
 
     render_graphs(result)
 
     st.subheader("Metrics")
-    st.dataframe(build_metrics_frame(result), use_container_width=True, hide_index=True)
+    st.dataframe(build_metrics_frame(result), width="stretch", hide_index=True)
 
 
 def render_algorithm_tab(
@@ -133,7 +164,7 @@ def render_algorithm_tab(
                     algorithm_name=algorithm_name,
                     data_matrix=inputs["data_matrix"],
                     variable_names=inputs["variable_names"],
-                    required_edges=llm_state["required_edges"],
+                    prior_knowledge=llm_state["prior_knowledge"],
                 )
         except Exception as exc:
             st.session_state["run_results"].pop(algorithm_name, None)
@@ -154,8 +185,8 @@ def main() -> None:
 
     st.title("Text2Causal")
     st.caption(
-        "Run PC, GES, and LiNGAM with shared LLM-extracted causal edges and compare "
-        "unconstrained vs LLM-constrained results."
+        "Run PC, GES, and LiNGAM with shared LLM-extracted prior knowledge and compare "
+        "unconstrained vs prior-knowledge-guided results."
     )
 
     tabs = st.tabs(get_algorithm_names())

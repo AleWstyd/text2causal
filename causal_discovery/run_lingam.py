@@ -1,10 +1,20 @@
 from causallearn.search.FCMBased import lingam
 import networkx as nx
 
+from constraints.constraint_builder import (
+    PriorKnowledge,
+    build_lingam_prior_knowledge,
+)
 
-def run_lingam(data, variable_names):
 
-    model = lingam.ICALiNGAM()
+def run_lingam(data, variable_names, prior_knowledge: PriorKnowledge | None = None):
+    lingam_prior_knowledge = None
+    if prior_knowledge is not None:
+        lingam_prior_knowledge = build_lingam_prior_knowledge(
+            prior_knowledge, variable_names
+        )
+
+    model = lingam.DirectLiNGAM(prior_knowledge=lingam_prior_knowledge)
 
     model.fit(data)
 

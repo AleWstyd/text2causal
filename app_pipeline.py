@@ -4,8 +4,12 @@ from collections.abc import Callable
 from pathlib import Path
 from typing import Any
 
-from constraints.constraint_builder import build_constraints
-from evaluation.metrics import f1_score, precision, recall
+from constraints.constraint_builder import (
+    PriorKnowledge,
+    build_prior_knowledge,
+    validate_prior_knowledge,
+)
+from evaluation.metrics import f1_score, precision, precision_recall_aupr, recall, shd
 from utils.graph_utils import apply_constraints
 from utils.load_data import load_lucas_dataset
 
@@ -29,7 +33,7 @@ AppInputs = dict[str, Any]
 MetricDict = dict[str, float]
 SimulationResult = dict[str, Any]
 RelationExtractor = Callable[[list[str], str], list[dict[str, Any]]]
-AlgorithmRunner = Callable[[Any, list[str]], Any]
+AlgorithmRunner = Callable[[Any, list[str], PriorKnowledge | None], Any]
 
 
 def get_algorithm_runners() -> dict[str, AlgorithmRunner]:
@@ -75,11 +79,12 @@ def extract_llm_constraints(
         extractor = extract_relations
 
     relations = extractor(variable_names, background_text)
-    required_edges = build_constraints(relations, threshold=threshold)
+    prior_knowledge = build_prior_knowledge(relations, threshold=threshold)
+    validate_prior_knowledge(prior_knowledge, variable_names)
 
     return {
         "relations": relations,
-        "required_edges": required_edges,
+        "prior_knowledge": prior_knowledge,
     }
 
 
@@ -89,6 +94,16 @@ def calculate_graph_metrics(
 ) -> MetricDict:
     reference_edges = true_edges or TRUE_EDGES
     predicted_edges = list(graph.edges())
+    all_nodes = set(graph.nodes())
+    for cause, effect in reference_edges:
+        all_nodes.add(cause)
+        all_nodes.add(effect)
+
+    reference_graph = graph.__class__()
+    reference_graph.add_nodes_from(sorted(all_nodes))
+    reference_graph.add_edges_from(reference_edges)
+    predicted_graph = graph.copy()
+    predicted_graph.add_nodes_from(sorted(all_nodes))
     metric_precision = precision(predicted_edges, reference_edges)
     metric_recall = recall(predicted_edges, reference_edges)
 
@@ -96,6 +111,8 @@ def calculate_graph_metrics(
         "precision": metric_precision,
         "recall": metric_recall,
         "f1": f1_score(metric_precision, metric_recall),
+        "aupr": precision_recall_aupr(reference_graph, predicted_graph),
+        "shd": shd(reference_graph, predicted_graph),
     }
 
 
@@ -103,7 +120,7 @@ def run_algorithm_simulation(
     algorithm_name: str,
     data_matrix: Any,
     variable_names: list[str],
-    required_edges: list[tuple[str, str]],
+    prior_knowledge: PriorKnowledge,
     true_edges: list[tuple[str, str]] | None = None,
     runners: dict[str, AlgorithmRunner] | None = None,
 ) -> SimulationResult:
@@ -115,8 +132,25 @@ def run_algorithm_simulation(
             f"Unsupported algorithm '{algorithm_name}'. Available: {available}"
         )
 
-    baseline_graph = available_runners[algorithm_name](data_matrix, variable_names)
-    constrained_graph = apply_constraints(baseline_graph.copy(), required_edges)
+    validate_prior_knowledge(prior_knowledge, variable_names)
+
+    baseline_graph = available_runners[algorithm_name](
+        data_matrix, variable_names, None
+    )
+
+    if algorithm_name == "GES":
+        constrained_graph = apply_constraints(baseline_graph.copy(), prior_knowledge)
+        constraint_mode = "post_hoc_direct_edge_constraints"
+    elif algorithm_name == "PC":
+        constrained_graph = available_runners[algorithm_name](
+            data_matrix, variable_names, prior_knowledge
+        )
+        constraint_mode = "native_pc_background_knowledge"
+    else:
+        constrained_graph = available_runners[algorithm_name](
+            data_matrix, variable_names, prior_knowledge
+        )
+        constraint_mode = "native_direct_lingam_prior_knowledge"
 
     return {
         "algorithm_name": algorithm_name,
@@ -124,5 +158,6 @@ def run_algorithm_simulation(
         "constrained_graph": constrained_graph,
         "baseline_metrics": calculate_graph_metrics(baseline_graph, true_edges),
         "constrained_metrics": calculate_graph_metrics(constrained_graph, true_edges),
-        "required_edges": required_edges,
+        "prior_knowledge": prior_knowledge,
+        "constraint_mode": constraint_mode,
     }
