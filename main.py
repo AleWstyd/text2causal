@@ -38,7 +38,7 @@ def ensure_llm_state(
     )
 
     if needs_refresh:
-        with st.spinner("Extracting relations with Gemini..."):
+        with st.spinner("Extracting relations with the LLM (OpenRouter)..."):
             st.session_state["llm_state"] = extract_llm_constraints(
                 variable_names=variable_names,
                 background_text=background_text,
@@ -207,20 +207,25 @@ def render_algorithm_tab(
                 variable_names=inputs["variable_names"],
                 background_text=background_text,
             )
-            with st.spinner(f"Running {algorithm_name}..."):
-                result = run_algorithm_simulation(
-                    algorithm_name=algorithm_name,
-                    data_matrix=inputs["data_matrix"],
-                    variable_names=inputs["variable_names"],
-                    prior_knowledge=llm_state["prior_knowledge"],
-                )
         except Exception as exc:
             st.session_state["run_results"].pop(algorithm_name, None)
-            st.error(f"{algorithm_name} failed: {exc}")
+            st.error(f"LLM extraction failed: {exc}")
         else:
-            result["background_text"] = background_text
-            result["llm_state"] = llm_state
-            st.session_state["run_results"][algorithm_name] = result
+            try:
+                with st.spinner(f"Running {algorithm_name}..."):
+                    result = run_algorithm_simulation(
+                        algorithm_name=algorithm_name,
+                        data_matrix=inputs["data_matrix"],
+                        variable_names=inputs["variable_names"],
+                        prior_knowledge=llm_state["prior_knowledge"],
+                    )
+            except Exception as exc:
+                st.session_state["run_results"].pop(algorithm_name, None)
+                st.error(f"{algorithm_name} failed: {exc}")
+            else:
+                result["background_text"] = background_text
+                result["llm_state"] = llm_state
+                st.session_state["run_results"][algorithm_name] = result
 
     stored_result = st.session_state["run_results"].get(algorithm_name)
 

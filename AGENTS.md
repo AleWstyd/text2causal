@@ -7,7 +7,7 @@ This file defines the default operating guide for coding agents working in this 
 `text2causal` is a Python 3.12 Streamlit application that:
 
 - loads the LUCAS dataset,
-- extracts causal relations from free-form background text with Gemini,
+- extracts causal relations from free-form background text via OpenRouter Free Models Router (`openrouter/free`),
 - converts those relations into prior-knowledge constraints,
 - runs causal discovery algorithms (`PC`, `GES`, `LiNGAM`),
 - compares unconstrained and constrained graph quality with evaluation metrics.
@@ -27,7 +27,7 @@ Agents should preserve that end-to-end flow unless the task explicitly asks for 
 
 - `main.py`: Streamlit UI entrypoint and rendering layer.
 - `app_pipeline.py`: orchestration layer for dataset loading, LLM extraction, algorithm dispatch, and metrics.
-- `llm/`: prompt definitions and relation extraction with Google GenAI.
+- `llm/`: prompt definitions and relation extraction via OpenRouter.
 - `constraints/`: conversion and validation of extracted relations into prior knowledge.
 - `causal_discovery/`: wrappers around the supported causal discovery algorithms.
 - `evaluation/`: metric helpers used to compare graphs.
@@ -52,7 +52,7 @@ If a needed workflow is not available in `Taskfile.yml`, use the narrowest direc
 
 - Python is managed with `uv`.
 - The Taskfile loads variables from `.env`.
-- LLM extraction uses `google-genai` via `genai.Client()`, so runtime access to valid Google GenAI credentials is required for live LLM calls.
+- LLM extraction uses the OpenAI-compatible OpenRouter API (`openrouter/free`), so `OPEN_ROUTER_API_KEY` must be set for live LLM calls.
 - Do not hardcode secrets, keys, filesystem-specific paths, or machine-specific assumptions.
 
 ## Editing Rules
@@ -86,7 +86,7 @@ When UI-only text or documentation changes are made, `task test` is optional unl
 
 ## External API and Model Changes
 
-- The current LLM integration lives in `llm/extract_relations.py`.
+- The current LLM integration lives in `llm/extract_relations.py` (OpenRouter, model `openrouter/free`).
 - Do not change the model name, prompt contract, response format, or JSON parsing behavior without a clear reason.
 - If you do change any of those, update tests or add mocks around the new contract where feasible.
 - Prefer deterministic, mockable seams for anything that would otherwise require live API calls in tests.
