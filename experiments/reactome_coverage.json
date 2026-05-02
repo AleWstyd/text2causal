@@ -1,6 +1,31 @@
 {
   "cache_files_total": 179,
   "dataset": "sachs",
+  "dream4_smoke": {
+    "accessions": {
+      "AKT1": "P31749",
+      "MAP2K1 (MEK1)": "Q02750",
+      "MAPK1 (ERK2)": "P28482",
+      "MAPK3 (ERK1)": "P27361",
+      "RPS6KB1 (p70S6K)": "P23443"
+    },
+    "all_resolved": true,
+    "note": "Offline smoke probe - Step 7 will replace with the real DREAM4 PSN node list once data is acquired.",
+    "reactions_per_accession": {
+      "AKT1": 81,
+      "MAP2K1 (MEK1)": 54,
+      "MAPK1 (ERK2)": 117,
+      "MAPK3 (ERK1)": 108,
+      "RPS6KB1 (p70S6K)": 5
+    }
+  },
+  "escalation_decision": {
+    "escalate_to_omnipath": false,
+    "rationale": "node_coverage=1.0 (11/11) clears the dev-plan tripwire (node_coverage < 0.8). Reaction-level pair_coverage=11/55 is below the aspirational 0.5 line, but the gap is a Reactome curation modality (PKC/PKA upstream regulation curated at pathway scope, not reaction scope), not a coverage problem. Step 2.5 (pathway / regulator-chain / co-complex layers) addresses the gap; OmniPath-as-primary is not triggered.",
+    "tripwire_field": "node_coverage",
+    "tripwire_threshold": 0.8,
+    "tripwire_value": 1.0
+  },
   "ground_truth_edge_coverage": "5/18",
   "ground_truth_edges_missing": [
     [
@@ -62,6 +87,7 @@
   "nodes_missing": [],
   "notes": "Reactome curates direct reaction-level participation; many Sachs edges (notably PKC- and PKA-mediated upstream regulation) are not expressed as single reactions, so reaction-level pair coverage under-represents pathway-level relevance. Step 4's LLM reasoner will see only the 'covered' pairs as Reactome context.",
   "pair_coverage": "11/55",
+  "pair_coverage_target": "0.5 (aspirational, not a hard tripwire)",
   "pairs_missing": [
     [
       "praf",
@@ -240,5 +266,5 @@
       "pjnk"
     ]
   ],
-  "wall_clock_seconds": 0.05
+  "wall_clock_seconds": 0.06
 }

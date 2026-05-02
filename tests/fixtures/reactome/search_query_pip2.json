@@ -1,0 +1,30 @@
+{
+  "results": [
+    {
+      "typeName": "Reaction",
+      "entries": [
+        {
+          "stId": "R-HSA-PIP2",
+          "name": "<span class=\"highlighting\">PI3K</span> phosphorylates PIP2 to PIP3",
+          "species": [
+            "Homo sapiens"
+          ]
+        },
+        {
+          "stId": "R-MMU-PIP2",
+          "name": "Mouse PI3K phosphorylates PIP2 to PIP3",
+          "species": [
+            "Mus musculus"
+          ]
+        },
+        {
+          "stId": "R-HSA-PIP2",
+          "name": "<span class=\"highlighting\">PI3K</span> phosphorylates PIP2 to PIP3",
+          "species": [
+            "Homo sapiens"
+          ]
+        }
+      ]
+    }
+  ]
+}

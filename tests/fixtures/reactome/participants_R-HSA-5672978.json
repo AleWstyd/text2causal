@@ -4,5 +4,6 @@
   {"peDbId": 1003, "refEntities": [{"identifier": "Q02750"}, {"identifier": "P36507"}]},
   {"peDbId": 1004, "refEntities": [{"identifier": "456216"}]},
   {"peDbId": 1005, "refEntities": [{"identifier": "P04049"}, {"identifier": "P15056"}]},
-  {"peDbId": 1006, "refEntities": [{"identifier": "17636"}]}
+  {"peDbId": 1006, "refEntities": [{"identifier": "17636"}]},
+  {"peDbId": 7777, "refEntities": [{"identifier": "O00255"}]}
 ]

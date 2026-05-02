@@ -1,0 +1,18 @@
+[
+  {
+    "peDbId": 2003,
+    "refEntities": [
+      {
+        "identifier": "Q02750"
+      }
+    ]
+  },
+  {
+    "peDbId": 2007,
+    "refEntities": [
+      {
+        "identifier": "P17612"
+      }
+    ]
+  }
+]

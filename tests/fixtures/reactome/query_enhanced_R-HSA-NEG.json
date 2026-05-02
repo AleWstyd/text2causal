@@ -1,0 +1,28 @@
+{
+  "stId": "R-HSA-NEG",
+  "displayName": "Synthetic negative regulation of MEK1",
+  "schemaClass": "Reaction",
+  "output": [
+    {
+      "dbId": 2003,
+      "displayName": "MEK1 output complex",
+      "schemaClass": "Complex"
+    }
+  ],
+  "regulatedBy": [
+    {
+      "schemaClass": "NegativeRegulation",
+      "regulator": {
+        "dbId": 2007,
+        "displayName": "PKA holoenzyme regulator",
+        "schemaClass": "Complex"
+      }
+    }
+  ],
+  "eventOf": [
+    {
+      "stId": "R-HSA-NEG-PATH",
+      "displayName": "Synthetic regulation pathway"
+    }
+  ]
+}
