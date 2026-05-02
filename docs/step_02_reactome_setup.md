@@ -153,7 +153,8 @@ These have been confirmed to return useful data on real reactions; they form the
 
 - [ ] `get_reaction_context(EntityRef("protein", ["P04049"], "RAF1"), EntityRef("protein", ["Q02750"], "MAP2K1"))` returns at least one `ReactionRecord` for `R-HSA-5672978` with `role_a="catalyst"` and `role_b="output"`.
 - [ ] `get_reaction_context(EntityRef("metabolite", ["CHEBI:18348"], "PIP2"), ...)` returns at least one record (verifies the metabolite path works).
-- [ ] Sachs `node_coverage` = 11/11; `pair_coverage` ≥ 0.5 of unordered pairs.
+- [ ] Sachs `node_coverage` = 11/11 (hard).
+- [ ] Sachs reaction-level `pair_coverage` recorded in `experiments/reactome_coverage.json`. The `≥ 0.5` line is **aspirational only** — escalation is keyed to `node_coverage < 0.8` per the dev-plan Risk Register, not to pair coverage. If reaction-level pair coverage is < 0.5, Step 2.5 (pathway / regulator-chain / co-complex layers) closes the gap before Step 4; OmniPath-as-primary is not triggered.
 - [ ] Re-running the coverage script with the network disabled succeeds (cache replay).
 - [ ] `task lint` and `task test` pass.
 
@@ -177,6 +178,7 @@ If `node_coverage < 0.8` on the primary dataset (extremely unlikely for Sachs gi
 - **Rate limits.** The Content Service is generally generous but undocumented for free use. The cache makes most reruns offline; for first-time sweeps add a polite `httpx.AsyncClient` with `limits=httpx.Limits(max_connections=10)` if you parallelise.
 - **ChEBI ID format.** Reactome stores some ChEBI references with `CHEBI:` prefix, others as bare numbers. Normalise in the client.
 - **Inferred-from-other-species reactions.** UniProt-mapping responses sometimes include orthologous reactions from rat/mouse/etc. Always re-filter by `speciesName == "Homo sapiens"`.
+- **Curation modality vs coverage gap.** Reactome curates PKC- and PKA-mediated regulation of MAPK substrates at *pathway* scope (e.g. "Activation of Protein Kinase C", "PKA-mediated phosphorylation of CREB and other targets"), not as one reaction per substrate. Empirically, `reactions_for_protein("P17252")` (PKC-α) and `reactions_for_protein("P04049")` (RAF1) have an empty `stId` intersection even after expanding to full PKC and PKA pan-isoform UniProt sets. This is a curation property of Reactome, **not** a grounding bug or a client bug. The fix is Step 2.5's pathway / regulator-chain / co-complex expansion layers, not OmniPath escalation.
 
 ---
 

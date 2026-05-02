@@ -165,7 +165,35 @@ Each step is self-contained, produces a testable artefact, maps to one or more m
 - Implement `format_context_for_llm(records, name_a, name_b) -> str` — natural-language paragraph for prompt inclusion.
 - Run coverage check: for Sachs's 11 nodes and DREAM4 PSN's 7 nodes, report fraction with at least one Reactome physical entity, mean reactions per node, mean co-participations per pair.
 
-**Tripwire.** If Reactome coverage < ~80% on either dataset, escalate to OmniPath-as-primary for that dataset. Capture the decision in `experiments/reactome_coverage.json`.
+**Tripwire.** If Reactome coverage < ~80% on either dataset, escalate to OmniPath-as-primary for that dataset. Capture the decision in `experiments/reactome_coverage.json`. Note: this tripwire is keyed to *node* coverage, not pair coverage. Low reaction-level pair coverage driven by curation modality (e.g., PKC/PKA regulation modelled at pathway level) is addressed by Step 2.5 below, not by escalating to OmniPath.
+
+---
+
+### Step 2.5 — Reactome Context Expansion (Foundation, post-coverage)
+
+**Goal.** Close the documented Sachs pair-coverage gap (~20% reaction-level → target ~50–60% pathway-level) without altering Reactome as the primary source. Driven by the empirical finding in `experiments/reactome_coverage.json` that PKC- and PKA-mediated regulation is curated at pathway scope, not reaction scope, so the reaction-level intersection is empty for many true edges (e.g. `(PKC, praf)`, `(PKA, pmek)`).
+
+**Output.**
+- `reactome/client.py` extended with three additive methods (no breaking change to existing signatures): `pathways_for_entity`, `regulator_chain_records`, `co_complex_records`.
+- `experiments/reactome_coverage.json` re-emitted with a `pair_coverage_by_layer` breakdown (`reaction`, `co_pathway`, `regulator_chain`, `co_complex`, `union`) so the LLM in Step 4 has an audit trail for which evidence layer fired for each pair.
+- `format_context_for_llm` updated to phrase each evidence layer distinctly so the Step 4 LLM can weight them.
+
+**Depends on.** Step 2.
+
+**Effort.** ~1 day.
+
+**Implementation tasks.**
+- `pathways_for_entity(EntityRef) -> set[str]` — harvest the `eventOf` already returned inline by `query/enhanced` for each entity's reactions; cache via the existing `cached_call` helper. Use it to emit `co_pathway` records when `a` and `b` share at least one Reactome `Pathway`.
+- `regulator_chain_records(a, b) -> list[ReactionRecord]` — for every reaction producing `b`, walk `regulatedBy → regulator` and `catalystActivity → physicalEntity`, expand via `participants`, and emit a record with `role_a="regulator"` (or `"catalyst"`) and `role_b="output"` if any expanded refEntity hits `a.normalised_ids`. Reuses existing `_resolve_regulation` and `_matches_for_pe`. Sign carries through.
+- `co_complex_records(a, b) -> list[ReactionRecord]` — index Complex `refEntities` from cached `participants` payloads; emit a `role_a=role_b="co_complex"` record where both accessions co-occur in the same PE without a shared reaction. New `reaction_type="ComplexMembership"`.
+- Extend the `Role` literal with `"co_pathway"` and `"co_complex"`; update `format_context_for_llm` per-layer phrasing ("co-occur in the SCF complex", "PKA positively regulates a reaction producing MEK1", etc.).
+
+**Acceptance criteria.**
+- Sachs `pair_coverage_by_layer.union ≥ 0.55` (target; not a hard tripwire).
+- `(PKC, praf)`, `(PKA, pmek)`, and `(PIP3, plcg)` each return ≥ 1 record from at least one layer.
+- All existing `tests/test_reactome_client.py` tests pass unchanged; new tests cover at minimum: a positive- and a negative-regulator path producing signed `ReactionRecord`s, the `/search/query` metabolite path, the retry-with-backoff on transient 5xx, and one `co_pathway` and one `co_complex` record.
+
+**Out of scope.** Any LLM call. OmniPath. Sign-aware regulator weighting (Step 4 owns that).
 
 ---
 
@@ -177,7 +205,7 @@ Each step is self-contained, produces a testable artefact, maps to one or more m
 - `grounding/ground.py` with the grounding function.
 - `experiments/grounding_sachs.json` and `experiments/grounding_dream4.json`.
 
-**Depends on.** Step 2 (Reactome validation required).
+**Depends on.** Step 2.5 (Reactome validation uses the expanded context layers).
 
 **Effort.** 2–3 days.
 
@@ -200,9 +228,16 @@ Each step is self-contained, produces a testable artefact, maps to one or more m
 **Implementation tasks.**
 - Extend the prompt to handle phospho-prefix conventions (`p` = phosphorylated state), protein families (return list of canonical isoforms), and metabolites (return ChEBI IDs).
 - Provide few-shot examples covering each kind: a single protein (`praf` → RAF1, P15056), a family (`pkc` → PRKCA/B/G/D/E), a metabolite (`PIP2` → CHEBI:18348).
+- Few-shot the prompt to return BOTH protonated and deprotonated ChEBI forms for phosphoinositides (PIP2: `CHEBI:18348` + `CHEBI:58456`; PIP3: `CHEBI:16618` + `CHEBI:57836`). Single-form returns systematically halve metabolite reaction hits in Reactome.
 - Validate every returned ID against Reactome via `ReactomeClient.get_entity_info`. If the entity isn't in Reactome, mark `reactome_validated: false` and set `confidence` to `min(reported, 0.4)`.
 - Cache the grounding LLM call via `llm/cache.py`.
 - Hand-curate gold-standard groundings for Sachs and DREAM4 PSN, evaluate accuracy against gold standard, log failures.
+
+**Sachs gold-standard grounding policy.** Lift the existing `experiments/reactome_coverage.py:SACHS_GROUNDING` dict as the Sachs gold-standard fixture, with two confirmed adjustments before scoring:
+1. Drop PKA regulatory subunits (`P10644`, `P31321`) — Sachs measures activated PKA = catalytic subunit only.
+2. Drop AKT3 (`Q9Y243`) from `pakts473` — not meaningfully expressed in the Sachs immune-cell context.
+
+These adjustments are pinned now to avoid a "regression" appearance when Step 3's LLM returns the smaller, biologically-correct set.
 
 ---
 
@@ -359,7 +394,7 @@ A novel secondary contribution: how accurately can an LLM infer causal direction
 - `pyproject.toml` with pinned dependency versions.
 - Fixed random seeds in all stochastic components.
 - LLM model: OpenRouter `openrouter/free`. Acknowledge in the appendix that this is a routing alias; per-request `served_model` is recorded in the cache and reported in aggregate so reviewers can see which underlying providers (Llama, Mistral, Qwen, etc.) served the requests that produced the paper's numbers.
-- Full LLM and Reactome response caches committed to repo. The pipeline replays end-to-end from cache without any API key.
+- Full LLM and Reactome response caches committed to repo, kept in lockstep with code (committed in the same PR as the code that produced them; not deferred to Step 8). The pipeline replays end-to-end from cache without any API key.
 - Full `grounding_*.json` and `causal_priors_*.json` committed.
 - All ablation results and figures regenerable from a single command (`task ablation`).
 - Cost / latency report in the appendix (where applicable for free-tier).
@@ -372,7 +407,8 @@ A novel secondary contribution: how accurately can an LLM infer causal direction
 |------|------|------------------|----------|
 | 1 | Sachs baseline + LLM cache layer | 1.5–2 days | None |
 | 2 | Reactome REST client + coverage | 2–3 days | Step 1 (variable names) |
-| 3 | Variable grounding (proteins + metabolites + families) | 2–3 days | Step 2 |
+| 2.5 | Reactome context expansion (pathway / regulator-chain / co-complex) | ~1 day | Step 2 |
+| 3 | Variable grounding (proteins + metabolites + families) | 2–3 days | Step 2.5 |
 | 4 | Causal reasoning + caching + OmniPath floor | 4–6 days | Steps 2 + 3 |
 | 5 | Constraint integration + constrained discovery | 2 days | Steps 1 + 3 + 4 |
 | 6 | Ablation study + constraint quality eval | 3–4 days | Steps 1–5 |
@@ -381,7 +417,7 @@ A novel secondary contribution: how accurately can an LLM infer causal direction
 
 **Total: 6–8 weeks of focused implementation + writing.**
 
-Steps 1 and 2 cannot be parallelised here because Step 2's coverage check requires Step 1's variable list. The critical path is Step 1 → Step 2 → Step 3 → Step 4 → Step 5 → Step 6 → Step 7 → Step 8.
+Steps 1 and 2 cannot be parallelised here because Step 2's coverage check requires Step 1's variable list. The critical path is Step 1 → Step 2 → Step 2.5 → Step 3 → Step 4 → Step 5 → Step 6 → Step 7 → Step 8.
 
 ---
 
@@ -406,7 +442,7 @@ Steps 1 and 2 cannot be parallelised here because Step 2's coverage check requir
 | # | Risk | Likelihood | Impact | Mitigation |
 |---|------|------------|--------|------------|
 | 1 | Reactome REST API rate-limited, unstable, or schema drift | Low | High | On-disk cache makes reruns offline; retry-with-backoff in the client; Homebrew-Neo4j fallback documented if REST insufficient (Step 2) |
-| 2 | Reactome coverage of dataset nodes < 80% | Low (Sachs), Medium (DREAM4) | High | Tripwire in Step 2; OmniPath as primary if triggered |
+| 2 | Reactome *node* coverage of dataset < 80% | Low (Sachs — confirmed 11/11), Medium (DREAM4 — unverified) | High | Tripwire in Step 2; OmniPath as primary if triggered. Keyed to node coverage, not pair coverage. |
 | 3 | DREAM4 Predictive Signalling data inaccessible | Medium | Medium | Synthetic-from-Reactome-pathway substitution |
 | 4 | LLM costs balloon | Low | Low | Caching is mandatory; ~110 ordered pairs per dataset is small |
 | 5 | LLM nondeterminism breaks reproducibility | Medium without caching, Low with | High | Cache on first run, replay-from-disk thereafter; record `served_model` per request; cache committed |
@@ -416,6 +452,7 @@ Steps 1 and 2 cannot be parallelised here because Step 2's coverage check requir
 | 9 | Single-dataset reviewer pushback (despite DREAM4 secondary) | Medium | Medium | Cross-source attribution via OmniPath ablation strengthens generalization claim |
 | 10 | Timeline slips past CLeaR 2027 deadline | Medium | Low | ECAI 2027 fallback adds 6 months |
 | 11 | C-LLM-only outperforms LLM+CD pipeline | Medium | Low (acceptable outcome) | Reframe paper as "LLM-as-causal-reasoner with auditable Reactome evidence"; the CD comparison becomes a quantified negative result that is itself a contribution. No code changes required. |
+| 12 | Reactome reaction-level pair coverage low because of curation modality (PKC/PKA modelled at pathway level, not per-reaction) | Confirmed on Sachs (`pair_coverage = 11/55`, ground-truth-edge coverage = 5/18) | Medium | Step 2.5 pathway / regulator-chain / co-complex expansion; OmniPath C0.5 floor in Step 4 as second check; document in paper limitations. Does NOT trigger OmniPath-as-primary (Risk #2 is keyed to node coverage, not pair coverage). |
 
 ---
 
