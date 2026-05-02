@@ -31,6 +31,11 @@ tasks:
     cmds:
       - uv run python -m experiments.baseline_sachs
 
+  reactome-coverage:
+    desc: Probe Reactome coverage for the Sachs nodes and write the JSON report
+    cmds:
+      - uv run python -m experiments.reactome_coverage
+
   lint:
     desc: Run ruff checks
     cmds:

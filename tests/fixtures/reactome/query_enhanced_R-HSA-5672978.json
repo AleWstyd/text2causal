@@ -1,0 +1,37 @@
+{
+  "stId": "R-HSA-5672978",
+  "displayName": "RAF phosphorylates MAP2K dimer",
+  "schemaClass": "Reaction",
+  "input": [
+    {"dbId": 1001, "displayName": "MAP2K dimer", "schemaClass": "Complex"},
+    {"dbId": 1002, "displayName": "ATP", "schemaClass": "SimpleEntity"}
+  ],
+  "output": [
+    {"dbId": 1003, "displayName": "phospho-MAP2K dimer", "schemaClass": "Complex"},
+    {"dbId": 1004, "displayName": "ADP", "schemaClass": "SimpleEntity"}
+  ],
+  "catalystActivity": [
+    {
+      "dbId": 2001,
+      "physicalEntity": {
+        "dbId": 1005,
+        "displayName": "active RAF dimer",
+        "schemaClass": "Complex"
+      }
+    }
+  ],
+  "regulatedBy": [
+    {
+      "schemaClass": "PositiveRegulation",
+      "regulator": {
+        "dbId": 1006,
+        "displayName": "phosphatidylserine",
+        "schemaClass": "SimpleEntity"
+      }
+    },
+    9999
+  ],
+  "eventOf": [
+    {"stId": "R-HSA-5673001", "displayName": "RAF/MAP kinase cascade"}
+  ]
+}

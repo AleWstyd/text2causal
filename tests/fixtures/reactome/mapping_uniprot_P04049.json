@@ -1,0 +1,12 @@
+[
+  {
+    "stId": "R-HSA-5672978",
+    "displayName": "RAF phosphorylates MAP2K dimer",
+    "speciesName": "Homo sapiens"
+  },
+  {
+    "stId": "R-RNO-5672978",
+    "displayName": "RAF phosphorylates MAP2K dimer (Rat)",
+    "speciesName": "Rattus norvegicus"
+  }
+]

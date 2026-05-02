@@ -1,0 +1,8 @@
+{
+  "schemaClass": "NegativeRegulation",
+  "regulator": {
+    "dbId": 7777,
+    "displayName": "miRNA-let-7",
+    "schemaClass": "OtherEntity"
+  }
+}
