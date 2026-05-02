@@ -1,5 +1,5 @@
 {
-  "cache_files_total": 179,
+  "cache_files_total": 1296,
   "dataset": "sachs",
   "dream4_smoke": {
     "accessions": {
@@ -87,6 +87,20 @@
   "nodes_missing": [],
   "notes": "Reactome curates direct reaction-level participation; many Sachs edges (notably PKC- and PKA-mediated upstream regulation) are not expressed as single reactions, so reaction-level pair coverage under-represents pathway-level relevance. Step 4's LLM reasoner will see only the 'covered' pairs as Reactome context.",
   "pair_coverage": "11/55",
+  "pair_coverage_by_layer": {
+    "co_complex": "13/55",
+    "co_pathway": "29/55",
+    "ground_truth_edge_coverage_by_layer": {
+      "co_complex": "6/18",
+      "co_pathway": "13/18",
+      "reaction": "5/18",
+      "regulator_chain": "1/18",
+      "union": "13/18"
+    },
+    "reaction": "11/55",
+    "regulator_chain": "5/55",
+    "union": "33/55"
+  },
   "pair_coverage_target": "0.5 (aspirational, not a hard tripwire)",
   "pairs_missing": [
     [
@@ -266,5 +280,95 @@
       "pjnk"
     ]
   ],
-  "wall_clock_seconds": 0.06
+  "pairs_missing_by_layer_union": [
+    [
+      "praf",
+      "plcg"
+    ],
+    [
+      "praf",
+      "PIP3"
+    ],
+    [
+      "praf",
+      "pakts473"
+    ],
+    [
+      "praf",
+      "PKC"
+    ],
+    [
+      "praf",
+      "pjnk"
+    ],
+    [
+      "pmek",
+      "plcg"
+    ],
+    [
+      "pmek",
+      "PIP3"
+    ],
+    [
+      "pmek",
+      "pakts473"
+    ],
+    [
+      "pmek",
+      "PKA"
+    ],
+    [
+      "pmek",
+      "PKC"
+    ],
+    [
+      "pmek",
+      "P38"
+    ],
+    [
+      "pmek",
+      "pjnk"
+    ],
+    [
+      "plcg",
+      "pakts473"
+    ],
+    [
+      "plcg",
+      "P38"
+    ],
+    [
+      "PIP2",
+      "P38"
+    ],
+    [
+      "PIP2",
+      "pjnk"
+    ],
+    [
+      "PIP3",
+      "PKA"
+    ],
+    [
+      "PIP3",
+      "P38"
+    ],
+    [
+      "PIP3",
+      "pjnk"
+    ],
+    [
+      "p44/42",
+      "PKA"
+    ],
+    [
+      "pakts473",
+      "pjnk"
+    ],
+    [
+      "PKC",
+      "pjnk"
+    ]
+  ],
+  "wall_clock_seconds": 0.21
 }

@@ -190,6 +190,44 @@ def run_coverage() -> dict[str, object]:
     gt_covered = ground_truth_pairs & covered_unordered
     gt_missing = sorted(ground_truth_pairs - covered_unordered)
 
+    evidence_layers = ("reaction", "co_pathway", "regulator_chain", "co_complex")
+    covered_by_layer: dict[str, set[tuple[str, str]]] = {
+        layer: set() for layer in evidence_layers
+    }
+    union_covered: set[tuple[str, str]] = set()
+    pairs_missing_by_union: list[list[str]] = []
+    for col_a, col_b in pairs:
+        a = SACHS_GROUNDING[col_a]
+        b = SACHS_GROUNDING[col_b]
+        pair = tuple(sorted([col_a, col_b]))
+        evidence_records = client.get_evidence_records(a, b)
+        fired_layers = {record.evidence_layer for record in evidence_records}
+        for layer in evidence_layers:
+            if layer in fired_layers:
+                covered_by_layer[layer].add(pair)
+        if evidence_records:
+            union_covered.add(pair)
+        else:
+            pairs_missing_by_union.append([col_a, col_b])
+
+    pair_coverage_by_layer: dict[str, object] = {
+        layer: _format_fraction(len(covered_by_layer[layer]), len(pairs))
+        for layer in evidence_layers
+    }
+    pair_coverage_by_layer["union"] = _format_fraction(len(union_covered), len(pairs))
+    pair_coverage_by_layer["ground_truth_edge_coverage_by_layer"] = {
+        **{
+            layer: _format_fraction(
+                len(ground_truth_pairs & covered_by_layer[layer]),
+                len(ground_truth_pairs),
+            )
+            for layer in evidence_layers
+        },
+        "union": _format_fraction(
+            len(ground_truth_pairs & union_covered), len(ground_truth_pairs)
+        ),
+    }
+
     elapsed = time.time() - started
     cache_dir = client.cache_dir
     cache_files_total = (
@@ -219,6 +257,7 @@ def run_coverage() -> dict[str, object]:
             len(columns) - len(nodes_missing), len(columns)
         ),
         "pair_coverage": _format_fraction(pairs_with_context, len(pairs)),
+        "pair_coverage_by_layer": pair_coverage_by_layer,
         "pair_coverage_target": "0.5 (aspirational, not a hard tripwire)",
         "ground_truth_edge_coverage": _format_fraction(
             len(gt_covered), len(ground_truth_pairs)
@@ -231,6 +270,7 @@ def run_coverage() -> dict[str, object]:
         ),
         "nodes_missing": nodes_missing,
         "pairs_missing": pairs_missing,
+        "pairs_missing_by_layer_union": pairs_missing_by_union,
         "ground_truth_edges_missing": [list(p) for p in gt_missing],
         "notes": (
             "Reactome curates direct reaction-level participation; many Sachs "

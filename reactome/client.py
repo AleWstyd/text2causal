@@ -25,6 +25,7 @@ HUMAN_SPECIES = "Homo sapiens"
 
 Role = Literal["input", "output", "catalyst", "regulator"]
 RegulationSign = Literal["positive", "negative", "unknown"]
+EvidenceLayer = Literal["reaction", "co_pathway", "regulator_chain", "co_complex"]
 
 _HIGHLIGHT_RE = re.compile(r"</?span[^>]*>")
 
@@ -83,6 +84,7 @@ class ReactionRecord:
     sign: RegulationSign | None = None
     supporting_ids_a: tuple[str, ...] = field(default_factory=tuple)
     supporting_ids_b: tuple[str, ...] = field(default_factory=tuple)
+    evidence_layer: EvidenceLayer = "reaction"
 
 
 _RETRYABLE_STATUS = {429, 500, 502, 503, 504}
@@ -140,9 +142,14 @@ class ReactomeClient:
         self.cache_dir = cache_dir
         self.timeout = timeout
         self._sleep = sleep
+        self._memory_cache: dict[tuple[str, tuple[tuple[str, Any], ...]], Any] = {}
 
     def _get(self, path: str, **params: Any) -> Any:
         """Cached GET against the Reactome Content Service."""
+
+        memory_key = (path, tuple(sorted(params.items())))
+        if memory_key in self._memory_cache:
+            return self._memory_cache[memory_key]
 
         payload = {"path": path, "params": params}
 
@@ -156,7 +163,9 @@ class ReactomeClient:
 
             return _fetch_with_retry(call, sleep=self._sleep)
 
-        return cached_call(self.cache_dir, payload, fetch)
+        data = cached_call(self.cache_dir, payload, fetch)
+        self._memory_cache[memory_key] = data
+        return data
 
     # ------------------------------------------------------------------
     # Listing endpoints
@@ -236,6 +245,11 @@ class ReactomeClient:
         ``regulatedBy`` participants returned inline."""
 
         return self._get(f"/data/query/enhanced/{rxn_st_id}")
+
+    def discover(self, st_id: str) -> dict[str, Any]:
+        """Discover endpoint payload for a Reactome stable identifier."""
+
+        return self._get(f"/data/discover/{st_id}")
 
     def reaction_participants(self, rxn_st_id: str) -> dict[int, list[dict[str, Any]]]:
         """Per-PhysicalEntity flattened reference entities for the given reaction.
@@ -324,6 +338,216 @@ class ReactomeClient:
                     )
         return records
 
+    def pathways_for_entity(self, entity: EntityRef) -> set[str]:
+        """Reactome pathway stable ids referenced by reactions involving ``entity``."""
+
+        return set(self._pathways_for_entity_with_names(entity))
+
+    def co_pathway_records(self, a: EntityRef, b: EntityRef) -> list[ReactionRecord]:
+        """Pathway-level evidence for entities that share Reactome pathways."""
+
+        pathways_a = self._pathways_for_entity_with_names(a)
+        pathways_b = self._pathways_for_entity_with_names(b)
+        records: list[ReactionRecord] = []
+
+        for st_id in sorted(set(pathways_a) & set(pathways_b)):
+            pathway_name = pathways_a.get(st_id) or pathways_b.get(st_id) or st_id
+            if pathway_name == st_id:
+                try:
+                    discovered = self.discover(st_id)
+                except httpx.HTTPStatusError:
+                    discovered = {}
+                if isinstance(discovered, dict):
+                    pathway_name = (
+                        _strip_highlight(discovered.get("displayName")) or st_id
+                    )
+            records.append(
+                ReactionRecord(
+                    reaction_id=st_id,
+                    reaction_name=pathway_name,
+                    pathway=pathway_name,
+                    role_a="input",
+                    role_b="input",
+                    reaction_type="Pathway",
+                    sign=None,
+                    supporting_ids_a=tuple(a.normalised_ids),
+                    supporting_ids_b=tuple(b.normalised_ids),
+                    evidence_layer="co_pathway",
+                )
+            )
+        return records
+
+    def regulator_chain_records(
+        self, a: EntityRef, b: EntityRef
+    ) -> list[ReactionRecord]:
+        """One-hop evidence where ``a`` regulates or catalyses reactions producing ``b``."""
+
+        reaction_keys = {
+            (record.reaction_id, record.role_a, record.role_b, record.sign)
+            for record in self.get_reaction_context(a, b)
+        }
+        records: list[ReactionRecord] = []
+        seen: set[tuple[str, Role, Role, RegulationSign | None]] = set()
+        accessions_a = set(a.normalised_ids)
+        accessions_b = set(b.normalised_ids)
+
+        for meta in self._reactions_for_entity(b):
+            try:
+                details = self.reaction_details(meta.st_id)
+                participants = self.reaction_participants(meta.st_id)
+            except httpx.HTTPStatusError:
+                continue
+
+            b_hits = self._output_hits(b, details, participants, accessions_b)
+            if not b_hits:
+                continue
+
+            reaction_type = (
+                details.get("schemaClass") or details.get("className") or "Reaction"
+            )
+            reaction_name = details.get("displayName") or meta.display_name
+            pathway = self._pick_pathway(details)
+
+            for reg in details.get("regulatedBy", []) or []:
+                resolved = self._resolve_regulation(reg)
+                if resolved is None:
+                    continue
+                regulator_pe, sign = resolved
+                hits_a = self._matches_for_pe(
+                    regulator_pe, participants, accessions_a, a.kind == "metabolite"
+                )
+                if hits_a:
+                    self._append_chain_record(
+                        records,
+                        seen,
+                        reaction_keys,
+                        meta.st_id,
+                        reaction_name,
+                        pathway,
+                        reaction_type,
+                        "regulator",
+                        sign,
+                        hits_a,
+                        b_hits,
+                    )
+
+            for ca in details.get("catalystActivity", []) or []:
+                if not isinstance(ca, dict):
+                    continue
+                hits_a = self._matches_for_pe(
+                    ca.get("physicalEntity"),
+                    participants,
+                    accessions_a,
+                    a.kind == "metabolite",
+                )
+                if hits_a:
+                    self._append_chain_record(
+                        records,
+                        seen,
+                        reaction_keys,
+                        meta.st_id,
+                        reaction_name,
+                        pathway,
+                        reaction_type,
+                        "catalyst",
+                        None,
+                        hits_a,
+                        b_hits,
+                    )
+
+        return records
+
+    def co_complex_records(self, a: EntityRef, b: EntityRef) -> list[ReactionRecord]:
+        """Complex-membership evidence mined from cached participant expansions."""
+
+        records: list[ReactionRecord] = []
+        seen_complexes: set[str] = set()
+        accessions_a = set(a.normalised_ids)
+        accessions_b = set(b.normalised_ids)
+        is_metabolite_a = a.kind == "metabolite"
+        is_metabolite_b = b.kind == "metabolite"
+
+        for meta in self._participant_index_metas(a, b):
+            try:
+                raw_participants = self._get(f"/data/participants/{meta.st_id}")
+            except httpx.HTTPStatusError:
+                continue
+            for entry in raw_participants or []:
+                if not isinstance(entry, dict):
+                    continue
+                pe_db_id = entry.get("peDbId")
+                if pe_db_id is None:
+                    continue
+                schema = entry.get("schemaClass") or ""
+                if schema and schema != "Complex":
+                    continue
+                refs = [
+                    ref
+                    for ref in entry.get("refEntities", []) or []
+                    if isinstance(ref, dict)
+                ]
+                hits_a = self._matching_ref_ids(refs, accessions_a, is_metabolite_a)
+                hits_b = self._matching_ref_ids(refs, accessions_b, is_metabolite_b)
+                if not hits_a or not hits_b:
+                    continue
+
+                complex_id = str(pe_db_id)
+                complex_name = entry.get("displayName") or complex_id
+                try:
+                    enhanced = self._get(f"/data/query/enhanced/{pe_db_id}")
+                except httpx.HTTPStatusError:
+                    enhanced = {}
+                if isinstance(enhanced, dict):
+                    complex_id = enhanced.get("stId") or complex_id
+                    complex_name = enhanced.get("displayName") or complex_name
+
+                if complex_id in seen_complexes:
+                    continue
+                seen_complexes.add(complex_id)
+                records.append(
+                    ReactionRecord(
+                        reaction_id=complex_id,
+                        reaction_name=_strip_highlight(complex_name),
+                        pathway=None,
+                        role_a="input",
+                        role_b="input",
+                        reaction_type="ComplexMembership",
+                        sign=None,
+                        supporting_ids_a=tuple(sorted(hits_a)),
+                        supporting_ids_b=tuple(sorted(hits_b)),
+                        evidence_layer="co_complex",
+                    )
+                )
+        return records
+
+    def get_evidence_records(
+        self,
+        a: EntityRef,
+        b: EntityRef,
+        *,
+        layers: tuple[str, ...] = (
+            "reaction",
+            "co_pathway",
+            "regulator_chain",
+            "co_complex",
+        ),
+    ) -> list[ReactionRecord]:
+        """Return additive Reactome evidence records in caller-requested layer order."""
+
+        records: list[ReactionRecord] = []
+        for layer in layers:
+            if layer == "reaction":
+                records.extend(self.get_reaction_context(a, b))
+            elif layer == "co_pathway":
+                records.extend(self.co_pathway_records(a, b))
+            elif layer == "regulator_chain":
+                records.extend(self.regulator_chain_records(a, b))
+            elif layer == "co_complex":
+                records.extend(self.co_complex_records(a, b))
+            else:
+                raise ValueError(f"Unsupported Reactome evidence layer: {layer}")
+        return records
+
     def _reactions_for_entity(self, entity: EntityRef) -> list[ReactionMeta]:
         merged: dict[str, ReactionMeta] = {}
         if entity.kind == "protein":
@@ -333,6 +557,86 @@ class ReactomeClient:
         else:
             for meta in self.reactions_for_metabolite(entity.display_name):
                 merged.setdefault(meta.st_id, meta)
+        return list(merged.values())
+
+    def _pathways_for_entity_with_names(self, entity: EntityRef) -> dict[str, str]:
+        pathways: dict[str, str] = {}
+        for meta in self._reactions_for_entity(entity):
+            try:
+                details = self.reaction_details(meta.st_id)
+            except httpx.HTTPStatusError:
+                continue
+            for entry in details.get("eventOf", []) or []:
+                if not isinstance(entry, dict):
+                    continue
+                schema = entry.get("schemaClass") or entry.get("className") or ""
+                st_id = entry.get("stId")
+                if not st_id:
+                    continue
+                if "pathway" not in schema.lower() and schema:
+                    continue
+                display_name = _strip_highlight(entry.get("displayName")) or st_id
+                pathways.setdefault(st_id, display_name)
+        return pathways
+
+    def _output_hits(
+        self,
+        entity: EntityRef,
+        details: dict[str, Any],
+        participants: dict[int, list[dict[str, Any]]],
+        accessions: set[str],
+    ) -> set[str]:
+        hits: set[str] = set()
+        for pe in details.get("output", []) or []:
+            hits.update(
+                self._matches_for_pe(
+                    pe,
+                    participants,
+                    accessions,
+                    entity.kind == "metabolite",
+                )
+            )
+        return hits
+
+    def _append_chain_record(
+        self,
+        records: list[ReactionRecord],
+        seen: set[tuple[str, Role, Role, RegulationSign | None]],
+        reaction_keys: set[tuple[str, Role, Role, RegulationSign | None]],
+        reaction_id: str,
+        reaction_name: str,
+        pathway: str | None,
+        reaction_type: str,
+        role_a: Literal["catalyst", "regulator"],
+        sign: RegulationSign | None,
+        hits_a: set[str],
+        hits_b: set[str],
+    ) -> None:
+        key = (reaction_id, role_a, "output", sign)
+        if key in seen or key in reaction_keys:
+            return
+        seen.add(key)
+        records.append(
+            ReactionRecord(
+                reaction_id=reaction_id,
+                reaction_name=reaction_name,
+                pathway=pathway,
+                role_a=role_a,
+                role_b="output",
+                reaction_type=reaction_type,
+                sign=sign,
+                supporting_ids_a=tuple(sorted(hits_a)),
+                supporting_ids_b=tuple(sorted(hits_b)),
+                evidence_layer="regulator_chain",
+            )
+        )
+
+    def _participant_index_metas(
+        self, a: EntityRef, b: EntityRef
+    ) -> list[ReactionMeta]:
+        merged: dict[str, ReactionMeta] = {}
+        for meta in (*self._reactions_for_entity(a), *self._reactions_for_entity(b)):
+            merged.setdefault(meta.st_id, meta)
         return list(merged.values())
 
     def _roles_in_reaction(
@@ -431,6 +735,25 @@ class ReactomeClient:
         return hits
 
     @staticmethod
+    def _matching_ref_ids(
+        refs: Iterable[dict[str, Any]],
+        accessions: set[str],
+        is_metabolite: bool,
+    ) -> set[str]:
+        hits: set[str] = set()
+        for ref in refs:
+            identifier = ref.get("identifier")
+            if not identifier:
+                continue
+            if is_metabolite:
+                normalised = _normalize_chebi(identifier)
+                if normalised and normalised in accessions:
+                    hits.add(normalised)
+            elif identifier in accessions:
+                hits.add(identifier)
+        return hits
+
+    @staticmethod
     def _pick_pathway(details: dict[str, Any]) -> str | None:
         for field_name in ("eventOf", "inferredFrom"):
             container = details.get(field_name)
@@ -470,6 +793,29 @@ def format_context_for_llm(
 
     lines: list[str] = []
     for record in records:
+        if record.evidence_layer == "co_pathway":
+            lines.append(
+                f"{name_a} and {name_b} both participate in the Reactome pathway "
+                f"'{record.pathway}' (stId {record.reaction_id})."
+            )
+            continue
+        if record.evidence_layer == "regulator_chain":
+            product_phrase = (
+                f"{name_a} {_role_phrase(record.role_a, record.sign)} a reaction "
+                f"whose product includes {name_b}"
+            )
+            lines.append(
+                f"{product_phrase} (terminal reaction {record.reaction_id}, "
+                f"'{record.reaction_name}')."
+            )
+            continue
+        if record.evidence_layer == "co_complex":
+            lines.append(
+                f"{name_a} and {name_b} co-occur as members of the Reactome Complex "
+                f"'{record.reaction_name}' (stId {record.reaction_id}), without a "
+                f"shared reaction."
+            )
+            continue
         pathway = (
             f"In the {record.pathway} pathway, " if record.pathway else "In Reactome, "
         )
