@@ -26,6 +26,11 @@ tasks:
     cmds:
       - uv run python -m unittest discover -s tests -v
 
+  baseline-sachs:
+    desc: Run the Sachs unconstrained PC/GES/LiNGAM baseline
+    cmds:
+      - uv run python -m experiments.baseline_sachs
+
   lint:
     desc: Run ruff checks
     cmds:

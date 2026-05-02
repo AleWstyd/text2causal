@@ -30,7 +30,7 @@ def run_pc(data, variable_names, prior_knowledge: PriorKnowledge | None = None):
 
     for i in range(n):
         for j in range(n):
-            if adjacency[i, j] == 1:
+            if adjacency[i, j] == -1 and adjacency[j, i] == 1:
                 graph.add_edge(variable_names[i], variable_names[j])
 
     return graph
