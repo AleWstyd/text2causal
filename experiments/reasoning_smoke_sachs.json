@@ -1,0 +1,143 @@
+{
+  "n_pairs": 5,
+  "n_passing": 4,
+  "rows": [
+    {
+      "cause": "praf",
+      "cites_real_reaction": true,
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "context_size": 172,
+      "contradicting_reactions": [
+        "R-HSA-5672969",
+        "R-HSA-6802916",
+        "R-HSA-6802924",
+        "R-HSA-6802941",
+        "R-HSA-9656212"
+      ],
+      "effect": "pmek",
+      "expected_cause": "praf",
+      "expected_effect": "pmek",
+      "mechanism": "RAF1 phosphorylates MAP2K1/2 (MEK)",
+      "notes": [],
+      "passes_tripwire": true,
+      "raw_llm_cause": "praf",
+      "raw_llm_effect": "pmek",
+      "reasoning": "praf acts as a catalyst in reactions that produce phosphorylated pmek (e.g., R-HSA-5672978, RAF phosphorylates MAP2K dimer), indicating praf \u2192 pmek. However, pmek also catalyzes phosphorylation of praf in several feedback reactions (e.g., R-HSA-5672969). The forward direction is the primary signaling cascade, but the reverse direction reduces confidence and precludes a unique absolute direction.",
+      "served_model": "deepseek-ai/DeepSeek-V4-Pro",
+      "supporting_reactions": [
+        "R-HSA-5672978",
+        "R-HSA-6802919",
+        "R-HSA-6802926",
+        "R-HSA-6802943",
+        "R-HSA-9656215"
+      ]
+    },
+    {
+      "cause": "pmek",
+      "cites_real_reaction": true,
+      "confidence": 0.95,
+      "constraint_type": "hard_required",
+      "context_size": 249,
+      "contradicting_reactions": [
+        "R-HSA-5674496"
+      ],
+      "effect": "p44/42",
+      "expected_cause": "pmek",
+      "expected_effect": "p44/42",
+      "mechanism": "MEK phosphorylates ERK1/2",
+      "notes": [],
+      "passes_tripwire": true,
+      "raw_llm_cause": "pmek",
+      "raw_llm_effect": "p44/42",
+      "reasoning": "In numerous phosphorylation reactions across multiple pathways, pmek (MEK) acts in the catalyst complex while p44/42 (ERK) appears as an output, clearly supporting the canonical MEK \u2192 ERK activation direction. Only one reaction (R-HSA-5674496) suggests the reverse feedback phosphorylation, which does not outweigh the consistent, well-established upstream role of MEK in the MAPK cascade.",
+      "served_model": "deepseek-ai/DeepSeek-V4-Pro",
+      "supporting_reactions": [
+        "R-HSA-109860",
+        "R-HSA-109862",
+        "R-HSA-5672973",
+        "R-HSA-5674373",
+        "R-HSA-6802910",
+        "R-HSA-6802918",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-6802935",
+        "R-HSA-9610156",
+        "R-HSA-9652165",
+        "R-HSA-9656214"
+      ]
+    },
+    {
+      "cause": "unknown",
+      "cites_real_reaction": false,
+      "confidence": 0.4,
+      "constraint_type": "unknown",
+      "context_size": 161,
+      "contradicting_reactions": [
+        "R-HSA-9732753",
+        "R-HSA-5675194"
+      ],
+      "effect": "unknown",
+      "expected_cause": "praf",
+      "expected_effect": "p44/42",
+      "mechanism": "RAF\u2192ERK direct cascade (replaces (PKC, praf): 0 Reactome records)",
+      "notes": [],
+      "passes_tripwire": false,
+      "raw_llm_cause": "unknown",
+      "raw_llm_effect": "unknown",
+      "reasoning": "Direct catalytic links exist in both directions: praf phosphorylates p44/42 in IFNG signaling (R-HSA-9732753, catalyst complex and output), while p44/42 phosphorylates praf in a negative feedback loop (R-HSA-5675194, catalyst complex and output). These contradictory roles make the overall causal direction ambiguous.",
+      "served_model": "deepseek-ai/DeepSeek-V4-Pro",
+      "supporting_reactions": []
+    },
+    {
+      "cause": "PIP2",
+      "cites_real_reaction": true,
+      "confidence": 0.95,
+      "constraint_type": "hard_required",
+      "context_size": 6,
+      "contradicting_reactions": [],
+      "effect": "PIP3",
+      "expected_cause": "PIP2",
+      "expected_effect": "PIP3",
+      "mechanism": "PI3K phosphorylates PIP2 \u2192 PIP3 (replaces (plcg, pakts473): 0 Reactome records)",
+      "notes": [],
+      "passes_tripwire": true,
+      "raw_llm_cause": "PIP2",
+      "raw_llm_effect": "PIP3",
+      "reasoning": "In reaction R-HSA-2730870, PIP2 is an input and PIP3 is an output, directly establishing PIP2 as the upstream cause of PIP3 production via PI3K-mediated phosphorylation.",
+      "served_model": "deepseek-ai/DeepSeek-V4-Pro",
+      "supporting_reactions": [
+        "R-HSA-2730870"
+      ]
+    },
+    {
+      "cause": "PIP3",
+      "cites_real_reaction": true,
+      "confidence": 0.85,
+      "constraint_type": "soft_prior",
+      "context_size": 26,
+      "contradicting_reactions": [],
+      "effect": "pakts473",
+      "expected_cause": "PIP3",
+      "expected_effect": "pakts473",
+      "mechanism": "PIP3 recruits/activates AKT at the membrane",
+      "notes": [
+        "support_pruned: dropped supporting_reactions not present in the Reactome context window.",
+        "contradict_pruned: dropped contradicting_reactions not present in the Reactome context window."
+      ],
+      "passes_tripwire": true,
+      "raw_llm_cause": "PIP3",
+      "raw_llm_effect": "pakts473",
+      "reasoning": "In the canonical PI3K/AKT pathway, PIP3 recruits AKT to the membrane where it is phosphorylated at S473, establishing PIP3 as upstream of pakts473. Multiple reactions show PIP3 participating in catalyst complexes that directly produce pakts473. A single contradictory note that PIP3 negatively regulates one of these reactions is likely a contextual feedback detail and does not override the consistent positive evidence.",
+      "served_model": "deepseek-ai/DeepSeek-V4-Pro",
+      "supporting_reactions": [
+        "R-HSA-198270",
+        "R-HSA-2243938",
+        "R-HSA-9860800",
+        "R-HSA-109702"
+      ]
+    }
+  ],
+  "served_model_pin": "Qwen/Qwen3-235B-A22B (Baseten dedicated)",
+  "tripwire_threshold": "n_passing >= 4 AND confidence >= 0.7 AND cites_real_reaction"
+}

@@ -8,14 +8,13 @@ from openai import OpenAI
 
 from llm.cache import cached_call
 
-# Baseten dedicated deployment hosting Qwen3-235B-A22B. The base URL is
-# deployment-specific (the `model-XXXXXXXX` segment is the deployment id);
-# override with the LLM_BASE_URL env var if the deployment is recreated.
-LLM_BASE_URL = os.environ.get(
-    "LLM_BASE_URL",
-    "https://model-qrjvn993.api.baseten.co/environments/production/sync/v1",
-)
-MODEL = os.environ.get("LLM_MODEL", "Qwen/Qwen3-235B-A22B")
+# Baseten *Model API* (multi-model inference endpoint, not a per-deployment
+# URL). The default model below is the active research-pipeline pin; the
+# previous Qwen/Qwen3-235B-A22B dedicated deployment was retired (mid-Step 4
+# rebuild) and the project moved to deepseek-ai/DeepSeek-V4-Pro on the same
+# Baseten Model API. Both LLM_BASE_URL and LLM_MODEL are env-overridable.
+LLM_BASE_URL = os.environ.get("LLM_BASE_URL", "https://inference.baseten.co/v1")
+MODEL = os.environ.get("LLM_MODEL", "deepseek-ai/DeepSeek-V4-Pro")
 
 _client: OpenAI | None = None
 
