@@ -1,0 +1,12 @@
+{
+  "pairs": [
+    {
+      "var_a": "M",
+      "var_b": "N",
+      "cause": "M",
+      "effect": "N",
+      "confidence": 0.7,
+      "constraint_type": "soft_prior"
+    }
+  ]
+}

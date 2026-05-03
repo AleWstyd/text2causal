@@ -1,0 +1,13 @@
+{
+  "claims": [
+    {
+      "var_a": "a",
+      "var_b": "b",
+      "cause": "a",
+      "effect": "b",
+      "confidence": 0.55,
+      "constraint_type": "hard_required",
+      "served_models": ["m/x"]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "pairs": [
+    {
+      "var_a": "X",
+      "var_b": "Y",
+      "cause": "X",
+      "effect": "Y",
+      "confidence": 1.0,
+      "constraint_type": "hard_required"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "served_models": {},
+  "pairs": [
+    {
+      "var_a": "A",
+      "var_b": "B",
+      "cause": "A",
+      "effect": "B",
+      "confidence": 0.9,
+      "constraint_type": "hard_required"
+    },
+    {
+      "var_a": "C",
+      "var_b": "D",
+      "cause": "C",
+      "effect": "D",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior"
+    },
+    {
+      "var_a": "E",
+      "var_b": "F",
+      "cause": "E",
+      "effect": "F",
+      "confidence": 0.95,
+      "constraint_type": "hard_forbidden_reverse"
+    },
+    {
+      "var_a": "G",
+      "var_b": "H",
+      "cause": "unknown",
+      "effect": "unknown",
+      "confidence": 0.99,
+      "constraint_type": "unknown"
+    },
+    {
+      "var_a": "I",
+      "var_b": "J",
+      "cause": "I",
+      "effect": "J",
+      "confidence": 1.0,
+      "constraint_type": "no_context"
+    }
+  ]
+}
