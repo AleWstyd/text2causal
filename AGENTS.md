@@ -46,7 +46,7 @@ Active research pipeline (this is where new work goes):
 - `evaluation/` — `harness.py` evaluates a predicted graph against ground truth; `metrics.py` carries the primitives.
 - `constraints/constraint_builder.py` — translates priors into PC `BackgroundKnowledge`, LiNGAM prior matrices, and post-hoc GES edits. Will grow in Step 5.
 - `causal_discovery/` — algorithm wrappers (`run_pc.py`, `run_ges.py`, `run_lingam.py`).
-- `experiments/` — runnable scripts and their JSON outputs (`baseline_sachs.py`/`.json`, `reactome_coverage.py`/`.json`, `run_grounding_sachs.py`, `grounding_sachs_gold.json`, `grounding_dream4.json`). Each script writes a single committed JSON artefact.
+- `experiments/` — runnable scripts and their JSON outputs (`baseline_sachs.py`/`.json`, `reactome_coverage.py`/`.json`, `run_grounding_sachs.py`, `grounding_sachs_gold.json`, `grounding_dream4.json`, `run_discovery_sachs.py`/`.json` Step 5 Sachs sweep). Most scripts write one committed JSON artefact; the Step 5 sweep persists incrementally to `experiments/discovery_results_sachs.json`.
 - `utils/load_data.py` — dataset loaders (`load_sachs_dataset`, `load_lucas_dataset`).
 - `utils/graph_utils.py` — graph-manipulation helpers.
 - `tests/` — unittest-based regression coverage. Fixtures live in `tests/fixtures/`.
@@ -73,6 +73,7 @@ Prefer `Taskfile.yml` targets when they exist:
 - `task format` — Ruff format.
 - `task lint` — Ruff check.
 - `task baseline-sachs` — Sachs unconstrained PC/GES/LiNGAM baseline → `experiments/baseline_sachs.json`.
+- `task discover-sachs` — Step 5 Sachs constrained-discovery sweep → `experiments/discovery_results_sachs.json`.
 - `task reactome-coverage` — Sachs (+ DREAM4 smoke) Reactome coverage probe → `experiments/reactome_coverage.json`.
 - `task ground-sachs` — batched LLM grounding for Sachs columns → `experiments/grounding_sachs.json`.
 - `task run` — launches the **legacy Streamlit LUCAS skeleton** (kept for the C1 ablation only; not the research pipeline entrypoint).

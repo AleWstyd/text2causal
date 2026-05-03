@@ -52,17 +52,20 @@
 4. **Implement `experiments/run_condition.py`.**
    ```python
    def run_condition(
+       *,
        dataset_name: str,
        data: np.ndarray,
        variable_names: list[str],
        true_graph: nx.DiGraph,
-       priors: list[dict] | None,        # None for C0
-       algorithm: str,                    # "PC", "GES", "LiNGAM"
-       threshold: float | None,
+       priors: list[ClaimRecord] | None,
+       priors_source: str,  # "none" | "reactome_llm" | "omnipath_all" | "omnipath_reactome_only" | "oracle"
+       algorithm: str,  # "PC", "GES", "LiNGAM"
+       threshold: float | None,  # None for C0 and oracle (C5); numeric threshold required for other sources
        seed: int,
-   ) -> dict:
-       """Returns {algorithm, condition, seed, metrics, predicted_edges, ...}."""
+   ) -> dict[str, Any]:
+       """Returns per-cell diagnostics including condition, priors_source, metrics, predicted_edges, status, error, constraint_summary, dropped_due_to_cycle (GES)."""
    ```
+   - Strict validation: `priors is None` and `threshold is None` only for C0 (`priors_source="none"`); `priors_source="oracle"` builds claims from `true_graph`; all other sources require non-`None` `priors` and `threshold`.
    - If `priors is None` → no constraints (C0 baseline).
    - Otherwise build constraints via `ConstraintBuilder` at the given threshold.
    - Set the seed before running the algorithm.
