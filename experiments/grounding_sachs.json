@@ -104,28 +104,10 @@
   },
   "metrics": {
     "all_validated": true,
-    "canonical_name_match": 2,
-    "column_precision": 0.893939393939394,
-    "column_recall": 0.7717171717171717,
+    "canonical_name_match": 0,
+    "column_precision": 0.9696969696969696,
+    "column_recall": 0.9232323232323232,
     "failures": [
-      {
-        "column": "P38",
-        "expected": "O15264",
-        "got": [
-          "Q15759",
-          "Q16539"
-        ],
-        "reason": "missing_gold_id"
-      },
-      {
-        "column": "P38",
-        "expected": "P53778",
-        "got": [
-          "Q15759",
-          "Q16539"
-        ],
-        "reason": "missing_gold_id"
-      },
       {
         "column": "PKA",
         "expected": "P13861",
@@ -151,18 +133,10 @@
         "expected": "P05129",
         "got": [
           "P05771",
-          "P05773",
-          "P17252"
-        ],
-        "reason": "missing_gold_id"
-      },
-      {
-        "column": "PKC",
-        "expected": "P24723",
-        "got": [
-          "P05771",
-          "P05773",
-          "P17252"
+          "P17252",
+          "P24723",
+          "Q02156",
+          "Q04759"
         ],
         "reason": "missing_gold_id"
       },
@@ -171,28 +145,10 @@
         "expected": "P41743",
         "got": [
           "P05771",
-          "P05773",
-          "P17252"
-        ],
-        "reason": "missing_gold_id"
-      },
-      {
-        "column": "PKC",
-        "expected": "Q02156",
-        "got": [
-          "P05771",
-          "P05773",
-          "P17252"
-        ],
-        "reason": "missing_gold_id"
-      },
-      {
-        "column": "PKC",
-        "expected": "Q04759",
-        "got": [
-          "P05771",
-          "P05773",
-          "P17252"
+          "P17252",
+          "P24723",
+          "Q02156",
+          "Q04759"
         ],
         "reason": "missing_gold_id"
       },
@@ -201,8 +157,10 @@
         "expected": "Q05513",
         "got": [
           "P05771",
-          "P05773",
-          "P17252"
+          "P17252",
+          "P24723",
+          "Q02156",
+          "Q04759"
         ],
         "reason": "missing_gold_id"
       },
@@ -211,26 +169,12 @@
         "expected": "Q05655",
         "got": [
           "P05771",
-          "P05773",
-          "P17252"
-        ],
-        "reason": "missing_gold_id"
-      },
-      {
-        "column": "PKC",
-        "expected": [
-          "P05129",
-          "P05771",
           "P17252",
           "P24723",
-          "P41743",
           "Q02156",
-          "Q04759",
-          "Q05513",
-          "Q05655"
+          "Q04759"
         ],
-        "got": "P05773",
-        "reason": "extra_predicted_id"
+        "reason": "missing_gold_id"
       },
       {
         "column": "pakts473",
@@ -238,64 +182,41 @@
           "P31749",
           "P31751"
         ],
-        "got": "P31750",
-        "reason": "extra_predicted_id"
-      },
-      {
-        "column": "pjnk",
-        "expected": "P53779",
-        "got": [
-          "P45983",
-          "P45984"
-        ],
-        "reason": "missing_gold_id"
-      },
-      {
-        "column": "plcg",
-        "expected": "P16885",
-        "got": [
-          "P18031",
-          "P19174"
-        ],
-        "reason": "missing_gold_id"
-      },
-      {
-        "column": "plcg",
-        "expected": [
-          "P16885",
-          "P19174"
-        ],
-        "got": "P18031",
+        "got": "Q9Y243",
         "reason": "extra_predicted_id"
       }
     ],
     "kind_accuracy": 1.0,
-    "mean_jaccard": 0.7242424242424242,
+    "mean_jaccard": 0.892929292929293,
     "n_columns": 11,
     "n_validated": 11
   },
   "predicted": {
     "P38": {
-      "canonical_name": "p38 MAPK isoform family",
+      "canonical_name": "p38 mitogen-activated protein kinase family",
       "column": "P38",
-      "confidence": 0.94,
+      "confidence": 0.95,
       "gene_names": [
         "MAPK14",
-        "MAPK11"
+        "MAPK11",
+        "MAPK12",
+        "MAPK13"
       ],
       "ids": [
         "Q16539",
-        "Q15759"
+        "Q15759",
+        "P53778",
+        "O15264"
       ],
       "kind": "family",
       "reactome_validated": true,
-      "reasoning": "P38 refers to the p38 MAPK family; MAPK11 (p38\u03b2) and MAPK14 (p38\u03b1) are the most commonly detected isoforms.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "P38 family includes all four MAPK isoforms (alpha/beta/gamma/delta) involved in stress response pathways.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "PIP2": {
-      "canonical_name": "phosphatidylinositol 4,5-bisphosphate",
+      "canonical_name": "Phosphatidylinositol 4,5-bisphosphate",
       "column": "PIP2",
-      "confidence": 0.99,
+      "confidence": 1.0,
       "gene_names": [],
       "ids": [
         "CHEBI:18348",
@@ -303,13 +224,13 @@
       ],
       "kind": "metabolite",
       "reactome_validated": true,
-      "reasoning": "PIP2 is a phosphoinositide lipid; both protonated and deprotonated ChEBI forms are required.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Both ChEBI forms required by system rules to capture protonation state variations in phosphoinositide metabolism.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "PIP3": {
-      "canonical_name": "phosphatidylinositol 3,4,5-trisphosphate",
+      "canonical_name": "Phosphatidylinositol 3,4,5-trisphosphate",
       "column": "PIP3",
-      "confidence": 0.99,
+      "confidence": 1.0,
       "gene_names": [],
       "ids": [
         "CHEBI:16618",
@@ -317,13 +238,13 @@
       ],
       "kind": "metabolite",
       "reactome_validated": true,
-      "reasoning": "PIP3 is a phosphoinositide lipid; both protonated and deprotonated ChEBI forms are required.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Both ChEBI forms required by system rules to preserve metabolite state diversity in PI3K-Akt signaling.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "PKA": {
       "canonical_name": "cAMP-dependent protein kinase catalytic subunit",
       "column": "PKA",
-      "confidence": 0.94,
+      "confidence": 0.95,
       "gene_names": [
         "PRKACA",
         "PRKACB",
@@ -336,32 +257,36 @@
       ],
       "kind": "family",
       "reactome_validated": true,
-      "reasoning": "PKA activity is measured via its catalytic subunits PRKACA, PRKACB, and PRKACG.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Pan-PKA measurement includes all three catalytic isoforms (alpha, beta, gamma) critical for cAMP signaling.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "PKC": {
-      "canonical_name": "protein kinase C isoform family",
+      "canonical_name": "Protein kinase C family",
       "column": "PKC",
-      "confidence": 0.93,
+      "confidence": 0.85,
       "gene_names": [
         "PRKCA",
         "PRKCB",
-        "PRKCG"
+        "PRKCH",
+        "PRKCE",
+        "PRKCQ"
       ],
       "ids": [
         "P17252",
         "P05771",
-        "P05773"
+        "P24723",
+        "Q02156",
+        "Q04759"
       ],
       "kind": "family",
       "reactome_validated": true,
-      "reasoning": "PKC measurement uses pan\u2011PKC antibodies detecting multiple isoforms; PRKCA, PRKCB, and PRKCG are major representatives.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Pan-PKC family includes conventional (PRKCA/B), novel (PRKCH/E), and atypical (PRKCQ) isoforms with immune roles.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "p44/42": {
-      "canonical_name": "ERK1/2",
+      "canonical_name": "Mitogen-activated protein kinase family",
       "column": "p44/42",
-      "confidence": 0.96,
+      "confidence": 1.0,
       "gene_names": [
         "MAPK3",
         "MAPK1"
@@ -372,11 +297,11 @@
       ],
       "kind": "family",
       "reactome_validated": true,
-      "reasoning": "The historical p44/42 band corresponds to ERK1 (MAPK3) and ERK2 (MAPK1).",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Historical 'p44/42' designation corresponds to ERK2 (MAPK3) and ERK1 (MAPK1) isoforms.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "pakts473": {
-      "canonical_name": "AKT (Ser473)",
+      "canonical_name": "RAC-alpha serine/threonine-protein kinase family",
       "column": "pakts473",
       "confidence": 0.95,
       "gene_names": [
@@ -386,33 +311,35 @@
       ],
       "ids": [
         "P31749",
-        "P31750",
-        "P31751"
+        "P31751",
+        "Q9Y243"
       ],
       "kind": "family",
       "reactome_validated": true,
-      "reasoning": "pakts473 denotes AKT phosphorylated at Ser473, common to all three AKT isoforms.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Phosphorylation at Ser473 occurs across all three AKT isoforms, which are PI3K effectors in immune signaling.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "pjnk": {
-      "canonical_name": "c-Jun N-terminal kinase isoform family",
+      "canonical_name": "c-Jun N-terminal kinase family",
       "column": "pjnk",
-      "confidence": 0.94,
+      "confidence": 0.95,
       "gene_names": [
         "MAPK8",
-        "MAPK9"
+        "MAPK9",
+        "MAPK10"
       ],
       "ids": [
         "P45983",
-        "P45984"
+        "P45984",
+        "P53779"
       ],
       "kind": "family",
       "reactome_validated": true,
-      "reasoning": "pjnk denotes phosphorylated JNK1 and JNK2, the two ubiquitously expressed JNK isoforms.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Phosphorylated JNK/SAPK family includes MAPK8 (JNK1), MAPK9 (JNK2), and MAPK10 (JNK3) isoforms.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "plcg": {
-      "canonical_name": "phospho-PLC\u03b31/2",
+      "canonical_name": "Phospholipase C gamma family",
       "column": "plcg",
       "confidence": 0.95,
       "gene_names": [
@@ -421,19 +348,19 @@
       ],
       "ids": [
         "P19174",
-        "P18031"
+        "P16885"
       ],
       "kind": "family",
       "reactome_validated": true,
-      "reasoning": "PLC\u03b3 has two isoforms, PLCG1 and PLCG2, both detectable by pan\u2011phospho\u2011PLC\u03b3 antibodies.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Phosphorylated PLCG1 and PLCG2 represent the gamma isoforms critical in immune cell signaling.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "pmek": {
-      "canonical_name": "phospho-MEK1/2",
+      "canonical_name": "MAP kinase kinase family",
       "column": "pmek",
       "confidence": 0.95,
       "gene_names": [
-        "MAPK2K1",
+        "MAP2K1",
         "MAP2K2"
       ],
       "ids": [
@@ -442,13 +369,13 @@
       ],
       "kind": "family",
       "reactome_validated": true,
-      "reasoning": "pmek refers to phosphorylated MEK1 and MEK2, the two MAP2K isoforms that activate ERK.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Phosphorylated MAP2K1 (MEK1) and MAP2K2 (MEK2) are canonical ERK activators measured by this column.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     },
     "praf": {
-      "canonical_name": "phospho-RAF1",
+      "canonical_name": "RAF proto-oncogene serine/threonine-protein kinase",
       "column": "praf",
-      "confidence": 0.96,
+      "confidence": 0.95,
       "gene_names": [
         "RAF1"
       ],
@@ -457,9 +384,9 @@
       ],
       "kind": "protein",
       "reactome_validated": true,
-      "reasoning": "RAF1 (c-Raf) is the sole MAPKKK phosphorylated at the measured site in this dataset.",
-      "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+      "reasoning": "Phosphorylated RAF1 (UniProt P04049) is a well-established MAPK cascade component in immune cells.",
+      "served_model": "Qwen/Qwen3-235B-A22B"
     }
   },
-  "served_model": "nvidia/nemotron-3-super-120b-a12b-20230311:free"
+  "served_model": "Qwen/Qwen3-235B-A22B"
 }

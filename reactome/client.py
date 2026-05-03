@@ -193,6 +193,58 @@ class ReactomeClient:
             and item.get("stId")
         ]
 
+    def resolve_gene_to_uniprots(self, gene_name: str) -> list[str]:
+        """Resolve a gene symbol to canonical Homo sapiens UniProt accessions.
+
+        Open-weight LLMs reliably know gene names but mis-recall UniProt
+        accessions; this method offloads the gene→UniProt step to Reactome's
+        search index, which returns ``referenceIdentifier`` (the UniProt
+        accession) for each indexed PhysicalEntity. Results are deduped per
+        accession, restricted to ``databaseName='UniProt'``, restricted to
+        Homo sapiens, and filtered to entries whose ``referenceName`` matches
+        the queried gene exactly (case-insensitive) so that a search for
+        "MEK1" doesn't drift into MEK1-related-but-distinct proteins.
+        """
+
+        if not gene_name or not gene_name.strip():
+            return []
+        try:
+            result = self._get(
+                "/search/query",
+                query=gene_name,
+                species=HUMAN_SPECIES,
+                types="Protein",
+            )
+        except httpx.HTTPStatusError as exc:
+            if exc.response.status_code == 404:
+                return []
+            raise
+        if not isinstance(result, dict):
+            return []
+
+        target = gene_name.strip().upper()
+        uniprots: list[str] = []
+        seen: set[str] = set()
+        for bucket in result.get("results", []) or []:
+            for entry in bucket.get("entries", []) or []:
+                if entry.get("databaseName") != "UniProt":
+                    continue
+                species_list = entry.get("species") or []
+                if HUMAN_SPECIES not in species_list:
+                    continue
+                ref_name = _strip_highlight(entry.get("referenceName")).strip().upper()
+                if ref_name and ref_name != target:
+                    continue
+                accession = entry.get("referenceIdentifier")
+                if not accession or not isinstance(accession, str):
+                    continue
+                accession = accession.strip().upper()
+                if accession in seen:
+                    continue
+                seen.add(accession)
+                uniprots.append(accession)
+        return uniprots
+
     def reactions_for_metabolite(self, name: str) -> list[ReactionMeta]:
         """Search-derived reactions for a metabolite name (Homo sapiens only).
 
@@ -547,6 +599,40 @@ class ReactomeClient:
             else:
                 raise ValueError(f"Unsupported Reactome evidence layer: {layer}")
         return records
+
+    def validate_ids(self, ref: EntityRef) -> list[str]:
+        """Return the subset of ``ref.ids`` that resolve in Reactome.
+
+        For ``protein`` (and family) refs, each UniProt accession is checked
+        individually via ``reactions_for_protein``; only accessions that map
+        to at least one Homo sapiens reaction are kept. For ``metabolite``
+        refs, validation is name-based via ``reactions_for_metabolite`` (the
+        Reactome search index does not give us per-ChEBI granularity for the
+        same display name); all ChEBI ids are returned together if the name
+        resolves, or ``[]`` if it does not.
+
+        Per-accession transient network failures (``httpx.RequestError``)
+        are swallowed so that one unreachable lookup does not falsely
+        invalidate the rest of the family. This is the post-LLM validation
+        primitive used by ``grounding/ground.py`` to drop hallucinated
+        accessions per dev plan §3 task 7.
+        """
+
+        if ref.kind == "protein":
+            kept: list[str] = []
+            for accession in ref.normalised_ids:
+                try:
+                    metas = self.reactions_for_protein(accession)
+                except httpx.RequestError:
+                    continue
+                if metas:
+                    kept.append(accession)
+            return kept
+        try:
+            metabolite_metas = self.reactions_for_metabolite(ref.display_name)
+        except httpx.RequestError:
+            metabolite_metas = []
+        return list(ref.ids) if metabolite_metas else []
 
     def get_entity_info(self, ref: EntityRef) -> dict[str, Any] | None:
         """Validate an ``EntityRef`` against Reactome.

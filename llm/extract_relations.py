@@ -1,29 +1,7 @@
 import json
-import os
 
-from openai import OpenAI
-
+from llm.client import MODEL, _get_client
 from llm.prompts import RELATION_PROMPT
-
-OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-MODEL = "openrouter/free"
-
-_client: OpenAI | None = None
-
-
-def _get_client() -> OpenAI:
-    global _client
-    if _client is not None:
-        return _client
-    key = os.environ.get("OPEN_ROUTER_API_KEY")
-    if not key:
-        msg = "OPEN_ROUTER_API_KEY is not set (e.g. in .env for `task run`)."
-        raise ValueError(msg)
-    _client = OpenAI(
-        base_url=OPENROUTER_BASE_URL,
-        api_key=key,
-    )
-    return _client
 
 
 def _unwrap_json_text(raw: str) -> str:

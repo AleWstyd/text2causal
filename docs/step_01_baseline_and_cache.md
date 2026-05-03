@@ -56,7 +56,7 @@
    - That's it. No sharding, no atomic-write rename, no stage tags. Total: ~20 lines.
 
 3. **Update `llm/client.py` to use the cache.**
-   - `MODEL` is pinned to `nvidia/nemotron-3-super-120b-a12b:free` (changed from `openrouter/free` after Step 3 found the alias routed to a 1.2B model that could not ground biomedical column names; see dev plan changelog item 5 and §8 for the full model-selection trail).
+   - The transport is the OpenAI Python SDK pointing at a Baseten dedicated deployment (`https://model-qrjvn993.api.baseten.co/environments/production/sync/v1`) hosting `Qwen/Qwen3-235B-A22B`. The credential is `BASETEN_API_KEY`. The deployment URL and model id are overridable via the `LLM_BASE_URL` and `LLM_MODEL` env vars. The earlier `openrouter/free` and Nemotron pins are obsolete (see dev plan changelog item 5 and §8 for the trail).
    - Wrap `client.chat.completions.create(...)` with `cached_call(Path("cache/llm"), {"model": model, "messages": messages, **kwargs}, fetch)`.
    - Store the *full* response object so token counts and `served_model` from OpenRouter survive replay.
    - Extract `served_model = response.model` (the underlying provider OpenRouter routed to) and persist it alongside each cache entry — this is what the paper appendix reports.
@@ -101,7 +101,7 @@
 - **LiNGAM prior-matrix convention.** The current codebase uses `-1` as the default fill, `1` for required, `0` for forbidden. Keep this — it matches `lingam`'s `DirectLiNGAM(prior_knowledge=...)` API. Don't follow v1's `0`-as-default convention.
 - **`cdt` Java/R extras.** `cdt` drags Java/R deps for some causal discovery methods, but `load_dataset('sachs')` and the metric helpers (`SHD`, `precision_recall`) work without them. Don't accidentally import an R-backed method.
 - **Cache key sensitivity.** Include `temperature`, `top_p`, and any other generation kwargs in the cache key payload. Otherwise a temperature change silently reuses old responses.
-- **`openrouter/free` is a routing alias.** Two requests with the same prompt may be served by *different* underlying models on different days. The cache pins each call's response so this doesn't break paper numbers — but record `served_model` so the appendix can report which provider served what. Without the cache, results would not be reproducible.
+- **Stable model pin matters more than free-tier breadth.** The original plan used the `openrouter/free` routing alias, which produced unusable output during the Step 3 attempt (routed to a 1.2B-parameter "thinking" model). The current pin (`Qwen/Qwen3-235B-A22B` on a Baseten dedicated deployment) gives a single deterministic endpoint, and the cache pins each call's response so reruns are byte-identical. `served_model` is still recorded per cache entry for the paper appendix.
 - **Streaming responses.** If the OpenAI client streams, materialise to a complete response before caching. Streamed objects don't serialise well.
 
 ---

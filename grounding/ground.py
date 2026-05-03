@@ -3,17 +3,16 @@
 from __future__ import annotations
 
 import json
-import os
 import re
 from collections.abc import Callable
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Any, Literal
 
-from openai import OpenAI
+import httpx
 
 from llm.cache import cached_call
-from llm.client import MODEL, OPENROUTER_BASE_URL
+from llm.client import MODEL, _get_client
 from reactome.client import EntityRef, ReactomeClient, _normalize_chebi
 
 CHEBI_PAIR_PIP2: frozenset[str] = frozenset({"CHEBI:18348", "CHEBI:58456"})
@@ -156,21 +155,19 @@ def normalize_id_list(
     return out
 
 
-def _openrouter_client() -> OpenAI:
-    key = os.environ.get("OPEN_ROUTER_API_KEY")
-    if not key:
-        msg = "OPEN_ROUTER_API_KEY is not set (e.g. in .env for `task run`)."
-        raise ValueError(msg)
-    return OpenAI(base_url=OPENROUTER_BASE_URL, api_key=key)
-
-
 def default_llm_fetch(
     messages: list[dict[str, Any]], *, cache_dir: Path, model: str = MODEL
 ) -> dict[str, Any]:
+    """Single-call grounding fetch via the shared LLM client and disk cache.
+
+    The ``"task": "grounding"`` discriminator in the cache payload prevents
+    collisions with other LLM use sites that share the same cache dir.
+    """
+
     payload = {"task": "grounding", "model": model, "messages": messages}
 
     def fetch() -> dict[str, Any]:
-        response = _openrouter_client().chat.completions.create(
+        response = _get_client().chat.completions.create(
             model=model,
             messages=messages,
         )
@@ -301,6 +298,30 @@ def ground_columns(
 
         ids = normalize_id_list(kind_lit, entry.get("ids"))
 
+        # Gene→UniProt resolution. Open-weight LLMs in the 100B-235B class
+        # reliably know gene symbols (MAPK8, PRKCA, …) but mis-recall the
+        # specific UniProt accessions, sometimes confidently emitting real
+        # but unrelated proteins (e.g. Q7Z6Z7=MAGI-3 returned for a JNK
+        # column). For protein/family columns where the LLM gave us gene
+        # names, we offload the gene→UniProt step to Reactome's search
+        # index, which is the deterministic source of truth, and replace
+        # the LLM's `ids` with the resolved UniProts. If no gene name
+        # resolves (or the LLM didn't provide gene names), we fall back to
+        # the LLM's accessions and rely on per-ID `validate_ids` below.
+        resolved_ids: list[str] = []
+        if kind_lit in {"protein", "family"} and genes:
+            seen_resolved: set[str] = set()
+            for gname in genes:
+                try:
+                    candidates = client.resolve_gene_to_uniprots(gname)
+                except httpx.RequestError:
+                    continue
+                for upid in candidates:
+                    if upid not in seen_resolved:
+                        seen_resolved.add(upid)
+                        resolved_ids.append(upid)
+        ids_after_resolve = resolved_ids if resolved_ids else ids
+
         confidence = 0.0
         c_raw = entry.get("confidence")
         if isinstance(c_raw, (int, float)) and not isinstance(c_raw, bool):
@@ -309,20 +330,26 @@ def ground_columns(
         reported = confidence
         ref = _entity_ref_from_entry(
             kind_lit,
-            ids,
+            ids_after_resolve,
             canonical,
             fallback_name=col,
         )
 
-        validated = False
-        if ref is not None and client.get_entity_info(ref) is not None:
-            validated = True
+        # Per-ID Reactome validation, per dev plan §3 task 7: drop
+        # unvalidated accessions; mark the entity reactome_validated when
+        # any ID survives.
+        if ref is None:
+            kept_ids: list[str] = []
+        else:
+            kept_ids = client.validate_ids(ref)
+        validated = bool(kept_ids)
+        kept_ids_out = kept_ids if ref is not None else list(ids_after_resolve)
         final_conf = reported if validated else min(reported, 0.4)
 
         out[col] = Grounding(
             column=col,
             kind=kind_lit,
-            ids=ids,
+            ids=kept_ids_out,
             canonical_name=canonical,
             gene_names=genes,
             confidence=final_conf,

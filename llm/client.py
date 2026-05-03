@@ -8,8 +8,14 @@ from openai import OpenAI
 
 from llm.cache import cached_call
 
-OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
+# Baseten dedicated deployment hosting Qwen3-235B-A22B. The base URL is
+# deployment-specific (the `model-XXXXXXXX` segment is the deployment id);
+# override with the LLM_BASE_URL env var if the deployment is recreated.
+LLM_BASE_URL = os.environ.get(
+    "LLM_BASE_URL",
+    "https://model-qrjvn993.api.baseten.co/environments/production/sync/v1",
+)
+MODEL = os.environ.get("LLM_MODEL", "Qwen/Qwen3-235B-A22B")
 
 _client: OpenAI | None = None
 
@@ -18,12 +24,12 @@ def _get_client() -> OpenAI:
     global _client
     if _client is not None:
         return _client
-    key = os.environ.get("OPEN_ROUTER_API_KEY")
+    key = os.environ.get("BASETEN_API_KEY")
     if not key:
-        msg = "OPEN_ROUTER_API_KEY is not set (e.g. in .env for `task run`)."
+        msg = "BASETEN_API_KEY is not set (e.g. in .env for `task run`)."
         raise ValueError(msg)
     _client = OpenAI(
-        base_url=OPENROUTER_BASE_URL,
+        base_url=LLM_BASE_URL,
         api_key=key,
     )
     return _client

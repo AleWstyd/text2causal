@@ -82,7 +82,8 @@
    - Build the prompt with the column list, dataset description, and domain hint.
    - Call the cached LLM client.
    - Parse the JSON response.
-   - Validate each returned ID against Reactome via `get_entity_info`.
+   - **Gene→UniProt resolution (added after Step 3 implementation surfaced the open-weight UniProt-recall failure mode).** For every protein/family column where the LLM returned `gene_names`, look each gene name up in Reactome's `/search/query?types=Protein&species=Homo+sapiens` index, take the canonical Homo sapiens UniProt for each gene (filtered by `databaseName=UniProt` and exact `referenceName` match), and **replace** the LLM's `ids` with the resolved set. If gene-name resolution returns nothing for a column, fall back to the LLM's accessions. Metabolite columns skip resolution: ChEBI accessions from the LLM are reliable when the dual-form rule is enforced. Rationale: open-weight models in the 100B–235B class (verified across `nvidia/nemotron-3-super-120b-a12b`, `openai/gpt-oss-120b`, `Qwen/Qwen3-235B-A22B`) reliably know gene symbols but mis-recall UniProt accessions, sometimes confidently emitting unrelated proteins. Reactome is the deterministic source of truth.
+   - Per-ID Reactome validation: for each remaining ID call `ReactomeClient.validate_ids(ref)`; drop accessions that fail to resolve.
    - If *no* returned ID validates, set `reactome_validated: False` and `confidence = min(reported, 0.4)`. If at least one validates, mark `True`.
    - Drop unvalidated IDs from the `ids` list (keep validated ones only).
 

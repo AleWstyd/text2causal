@@ -83,7 +83,7 @@ If a needed workflow is not in `Taskfile.yml`, use the narrowest direct command 
 
 - Python 3.12; dependencies managed by `uv` (`pyproject.toml` + `uv.lock`).
 - `Taskfile.yml` loads variables from `.env`.
-- LLM calls use OpenRouter through `llm/client.py`. `OPEN_ROUTER_API_KEY` must be set for a *first-time* (cache-miss) run; cache-hit runs are offline. The model identifier is the single `MODEL` constant in `llm/client.py` — `openrouter/free` is no longer the active value (see Risk #5 / §8 of the dev plan: the routed model is recorded per-cache-entry as `served_model`).
+- LLM calls go through `llm/client.py` against an OpenAI-compatible API. The current pin is `Qwen/Qwen3-235B-A22B` served from a Baseten dedicated deployment; `BASETEN_API_KEY` (and optionally `LLM_BASE_URL` / `LLM_MODEL` for overrides) must be set in `.env` for a *first-time* (cache-miss) run; cache-hit runs are offline. `served_model` is recorded per cache entry for the paper appendix. The earlier `openrouter/free` alias and the Nemotron pin are obsolete (see dev plan changelog item 5 / §8 for the trail).
 - Reactome calls use the public Content Service REST API via `reactome/client.py`. No credentials required. First run populates `cache/reactome/`; subsequent runs are offline.
 - Do not hardcode secrets, API keys, filesystem-specific paths, or machine-specific assumptions.
 
