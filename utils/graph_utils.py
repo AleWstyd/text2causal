@@ -4,6 +4,58 @@ import matplotlib.pyplot as plt
 from constraints.constraint_builder import PriorKnowledge
 
 
+def apply_post_hoc_edits(
+    graph: nx.DiGraph,
+    edges_to_add: list[tuple[str, str]],
+    edges_to_forbid: list[tuple[str, str]],
+    *,
+    on_cycle: str = "drop",
+) -> tuple[nx.DiGraph, list[tuple[str, str]]]:
+    """Apply post-hoc constraint edits to a discovered graph.
+
+    Returns (edited_graph, dropped_due_to_cycle).
+
+    Forbidden edges are removed first (this can never introduce a cycle).
+    Required edges are added in input order. If adding an edge would
+    create a cycle, the edge is dropped and recorded. The reverse edge
+    is removed first if it exists, mirroring the existing
+    apply_constraints logic.
+
+    The function operates on a copy of `graph` and returns a new
+    DiGraph; the input is not mutated.
+    """
+    if on_cycle not in {"drop", "raise"}:
+        raise ValueError(f"on_cycle must be 'drop' or 'raise', got {on_cycle!r}")
+
+    g = graph.copy()
+    dropped_due_to_cycle: list[tuple[str, str]] = []
+
+    for cause, effect in edges_to_forbid:
+        if g.has_edge(cause, effect):
+            g.remove_edge(cause, effect)
+
+    for cause, effect in edges_to_add:
+        if cause == effect:
+            raise ValueError(f"Self-loop required edge is not allowed: {cause!r}")
+
+        if g.has_edge(cause, effect):
+            continue
+
+        if g.has_edge(effect, cause):
+            g.remove_edge(effect, cause)
+
+        g.add_edge(cause, effect)
+        if not nx.is_directed_acyclic_graph(g):
+            g.remove_edge(cause, effect)
+            if on_cycle == "raise":
+                raise ValueError(
+                    f"Required edge {cause} -> {effect} would create a cycle"
+                )
+            dropped_due_to_cycle.append((cause, effect))
+
+    return g, dropped_due_to_cycle
+
+
 def apply_constraints(graph, prior_knowledge: PriorKnowledge):
     for cause, effect in prior_knowledge.forbidden_edges:
         if graph.has_edge(cause, effect):
