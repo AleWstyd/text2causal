@@ -9,6 +9,7 @@ from unittest.mock import patch
 import networkx as nx
 import numpy as np
 
+from causal_discovery import run_lingam as run_lingam_mod
 from constraints.constraint_builder import ClaimRecord
 from experiments import run_condition as run_condition_mod
 from experiments.run_condition import _derive_condition_label, run_condition
@@ -168,6 +169,38 @@ class RunConditionGesCycleTests(unittest.TestCase):
         pred = nx.DiGraph()
         pred.add_edges_from(tuple(edge) for edge in result["predicted_edges"])
         self.assertTrue(nx.is_directed_acyclic_graph(pred))
+
+
+class RunConditionLiNGAMOverconstraintTests(unittest.TestCase):
+    def test_lingam_overconstrained_priors_reraises_with_clear_message(self) -> None:
+        rng = np.random.default_rng(1717)
+        data, names, true_graph = _synth_chain_data(rng)
+
+        class _FailingModel:
+            def fit(self, _data: object) -> None:
+                raise ValueError("attempt to get argmax of an empty sequence")
+
+        with patch.object(
+            run_lingam_mod.lingam, "DirectLiNGAM", return_value=_FailingModel()
+        ):
+            result = run_condition(
+                dataset_name="synth_chain",
+                data=data,
+                variable_names=names,
+                true_graph=true_graph,
+                priors=None,
+                priors_source="oracle",
+                algorithm="LiNGAM",
+                threshold=None,
+                seed=0,
+            )
+        self.assertEqual(result["status"], "failed")
+        err = result["error"] or ""
+        lowered = err.lower()
+        self.assertTrue(
+            "over-constrained" in lowered or "directlingam" in lowered,
+            msg=err,
+        )
 
 
 class RunConditionPCFailureTests(unittest.TestCase):
