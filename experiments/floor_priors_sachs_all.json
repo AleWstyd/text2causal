@@ -1,0 +1,1852 @@
+{
+  "confidence_formula": "min(1.0, n_sources / 3.0)",
+  "constraint_rule": "confidence >= 0.9 -> hard_required; 0.6 <= confidence < 0.9 -> soft_prior; otherwise unknown. See reasoning/_constraint_rule.py.",
+  "family_aggregation_rule": "A directed OmniPath edge from any UniProt member of var_a's grounding to any UniProt member of var_b's grounding counts as the family-level edge var_a \u2192 var_b. The contributing primary sources are unioned across all member-pair rows.",
+  "n_hard_required": 32,
+  "n_pairs_no_edge": 29,
+  "n_pairs_skipped_metabolite": 38,
+  "n_pairs_total": 110,
+  "n_pairs_with_edge": 43,
+  "n_soft_prior": 9,
+  "n_unknown_kept": 2,
+  "no_edge_pairs": [
+    [
+      "P38",
+      "plcg"
+    ],
+    [
+      "P38",
+      "praf"
+    ],
+    [
+      "PKA",
+      "pakts473"
+    ],
+    [
+      "PKA",
+      "pjnk"
+    ],
+    [
+      "PKA",
+      "pmek"
+    ],
+    [
+      "PKC",
+      "P38"
+    ],
+    [
+      "PKC",
+      "PKA"
+    ],
+    [
+      "p44/42",
+      "plcg"
+    ],
+    [
+      "pakts473",
+      "P38"
+    ],
+    [
+      "pakts473",
+      "pmek"
+    ],
+    [
+      "pjnk",
+      "PKA"
+    ],
+    [
+      "pjnk",
+      "PKC"
+    ],
+    [
+      "pjnk",
+      "plcg"
+    ],
+    [
+      "pjnk",
+      "praf"
+    ],
+    [
+      "plcg",
+      "P38"
+    ],
+    [
+      "plcg",
+      "p44/42"
+    ],
+    [
+      "plcg",
+      "pjnk"
+    ],
+    [
+      "plcg",
+      "pmek"
+    ],
+    [
+      "plcg",
+      "praf"
+    ],
+    [
+      "pmek",
+      "PKA"
+    ],
+    [
+      "pmek",
+      "PKC"
+    ],
+    [
+      "pmek",
+      "pakts473"
+    ],
+    [
+      "pmek",
+      "plcg"
+    ],
+    [
+      "praf",
+      "P38"
+    ],
+    [
+      "praf",
+      "PKA"
+    ],
+    [
+      "praf",
+      "PKC"
+    ],
+    [
+      "praf",
+      "pakts473"
+    ],
+    [
+      "praf",
+      "pjnk"
+    ],
+    [
+      "praf",
+      "plcg"
+    ]
+  ],
+  "pairs": [
+    {
+      "cause": "P38",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "PKA",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "O15264",
+          "P17612"
+        ],
+        [
+          "P53778",
+          "P17612"
+        ],
+        [
+          "Q16539",
+          "P17612"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "ACSN",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "P38",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "P38",
+      "confidence": 1.0,
+      "consensus_sign": "unknown",
+      "constraint_type": "hard_required",
+      "effect": "PKC",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "Q15759",
+          "Q02156"
+        ],
+        [
+          "Q16539",
+          "P05771"
+        ],
+        [
+          "Q16539",
+          "Q02156"
+        ]
+      ],
+      "n_sources": 9,
+      "sources": [
+        "HPRD_MIMP",
+        "KEA",
+        "MIMP",
+        "NetworKIN_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "PhosphoSite_noref",
+        "ProtMapper",
+        "iPTMnet"
+      ],
+      "var_a": "P38",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "P38",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "p44/42",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "O15264",
+          "P27361"
+        ],
+        [
+          "O15264",
+          "P28482"
+        ],
+        [
+          "Q15759",
+          "P27361"
+        ],
+        [
+          "Q16539",
+          "P27361"
+        ],
+        [
+          "Q16539",
+          "P28482"
+        ]
+      ],
+      "n_sources": 11,
+      "sources": [
+        "ACSN",
+        "CancerCellMap",
+        "HINT",
+        "HPRD",
+        "InnateDB",
+        "IntAct",
+        "Lit-BM-17",
+        "NetPath",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "P38",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "P38",
+      "confidence": 0.6667,
+      "consensus_sign": "unknown",
+      "constraint_type": "soft_prior",
+      "effect": "pakts473",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "Q16539",
+          "P31751"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "ProtMapper",
+        "SIGNOR_ProtMapper"
+      ],
+      "var_a": "P38",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "P38",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "pjnk",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P53778",
+          "P45984"
+        ],
+        [
+          "Q16539",
+          "P45984"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "Cui2007",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "Wang"
+      ],
+      "var_a": "P38",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "P38",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "pmek",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "Q15759",
+          "P36507"
+        ],
+        [
+          "Q16539",
+          "P36507"
+        ],
+        [
+          "Q16539",
+          "Q02750"
+        ]
+      ],
+      "n_sources": 9,
+      "sources": [
+        "ACSN",
+        "CancerCellMap",
+        "Cui2007",
+        "HPRD",
+        "NetPath",
+        "PhosphoPoint",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "P38",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.6667,
+      "consensus_sign": "activates",
+      "constraint_type": "soft_prior",
+      "effect": "P38",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P17612",
+          "Q16539"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "Cui2007",
+        "Wang"
+      ],
+      "var_a": "PKA",
+      "var_b": "P38"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.6667,
+      "consensus_sign": "unknown",
+      "constraint_type": "soft_prior",
+      "effect": "PKC",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P22694",
+          "Q02156"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "KEA",
+        "NetworKIN_KEA"
+      ],
+      "var_a": "PKA",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.6667,
+      "consensus_sign": "conflicting",
+      "constraint_type": "soft_prior",
+      "effect": "p44/42",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P17612",
+          "P28482"
+        ],
+        [
+          "P22612",
+          "P27361"
+        ],
+        [
+          "P22612",
+          "P28482"
+        ],
+        [
+          "P22694",
+          "P27361"
+        ],
+        [
+          "P22694",
+          "P28482"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "Adhesome",
+        "Wang"
+      ],
+      "var_a": "PKA",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 1.0,
+      "consensus_sign": "inhibits",
+      "constraint_type": "hard_required",
+      "effect": "plcg",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P17612",
+          "P19174"
+        ]
+      ],
+      "n_sources": 13,
+      "sources": [
+        "Adhesome",
+        "CA1",
+        "Cui2007",
+        "HPRD_MIMP",
+        "MIMP",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "Wang",
+        "iPTMnet",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "PKA",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "praf",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P17612",
+          "P04049"
+        ],
+        [
+          "P22612",
+          "P04049"
+        ],
+        [
+          "P22694",
+          "P04049"
+        ]
+      ],
+      "n_sources": 23,
+      "sources": [
+        "CA1",
+        "Cui2007",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "KEA",
+        "Kinexus_KEA",
+        "MIMP",
+        "NetworKIN_KEA",
+        "PhosphoPoint",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "SignaLink3",
+        "Sparser_ProtMapper",
+        "Wang",
+        "iPTMnet",
+        "phosphoELM_KEA",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "PKA",
+      "var_b": "praf"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "p44/42",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P05771",
+          "P27361"
+        ],
+        [
+          "P05771",
+          "P28482"
+        ],
+        [
+          "P17252",
+          "P27361"
+        ],
+        [
+          "P17252",
+          "P28482"
+        ],
+        [
+          "P24723",
+          "P27361"
+        ],
+        [
+          "P24723",
+          "P28482"
+        ],
+        [
+          "Q02156",
+          "P27361"
+        ],
+        [
+          "Q02156",
+          "P28482"
+        ],
+        [
+          "Q04759",
+          "P27361"
+        ],
+        [
+          "Q04759",
+          "P28482"
+        ]
+      ],
+      "n_sources": 9,
+      "sources": [
+        "HPRD",
+        "InnateDB",
+        "NCI-PID_ProtMapper",
+        "PhosphoPoint",
+        "ProtMapper",
+        "SIGNOR",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "PKC",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 1.0,
+      "consensus_sign": "unknown",
+      "constraint_type": "hard_required",
+      "effect": "pakts473",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P05771",
+          "P31749"
+        ],
+        [
+          "P17252",
+          "P31749"
+        ]
+      ],
+      "n_sources": 14,
+      "sources": [
+        "Adhesome",
+        "HINT",
+        "HPRD_MIMP",
+        "MIMP",
+        "PhosphoSite",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "RLIMS-P_ProtMapper",
+        "Sparser_ProtMapper",
+        "Wang",
+        "iPTMnet",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "PKC",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "pjnk",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P05771",
+          "P45983"
+        ],
+        [
+          "P05771",
+          "P45984"
+        ],
+        [
+          "P17252",
+          "P45984"
+        ],
+        [
+          "Q04759",
+          "P45983"
+        ],
+        [
+          "Q04759",
+          "P45984"
+        ],
+        [
+          "Q04759",
+          "P53779"
+        ]
+      ],
+      "n_sources": 7,
+      "sources": [
+        "KEA",
+        "Kinexus_KEA",
+        "NCI-PID_ProtMapper",
+        "NetworKIN_KEA",
+        "ProtMapper",
+        "Wang",
+        "phosphoELM_KEA"
+      ],
+      "var_a": "PKC",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "plcg",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P17252",
+          "P19174"
+        ],
+        [
+          "Q02156",
+          "P19174"
+        ],
+        [
+          "Q04759",
+          "P19174"
+        ]
+      ],
+      "n_sources": 15,
+      "sources": [
+        "Adhesome",
+        "HPRD_MIMP",
+        "KEA",
+        "MIMP",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "Wang",
+        "iPTMnet",
+        "phosphoELM",
+        "phosphoELM_KEA",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "PKC",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 0.6667,
+      "consensus_sign": "inhibits",
+      "constraint_type": "soft_prior",
+      "effect": "pmek",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P05771",
+          "Q02750"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "Cui2007",
+        "Wang"
+      ],
+      "var_a": "PKC",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "praf",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P05771",
+          "P04049"
+        ],
+        [
+          "P17252",
+          "P04049"
+        ],
+        [
+          "Q02156",
+          "P04049"
+        ]
+      ],
+      "n_sources": 28,
+      "sources": [
+        "CA1",
+        "Cui2007",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "InnateDB",
+        "KEA",
+        "KEGG-MEDICUS",
+        "Kinexus_KEA",
+        "MIMP",
+        "NCI-PID_ProtMapper",
+        "PhosphoPoint",
+        "PhosphoSite",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "SignaLink3",
+        "Wang",
+        "iPTMnet",
+        "phosphoELM_KEA",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "PKC",
+      "var_b": "praf"
+    },
+    {
+      "cause": "p44/42",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "P38",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "Q16539"
+        ],
+        [
+          "P28482",
+          "Q16539"
+        ]
+      ],
+      "n_sources": 11,
+      "sources": [
+        "CancerCellMap",
+        "HINT",
+        "HPRD",
+        "InnateDB",
+        "IntAct",
+        "Lit-BM-17",
+        "NetPath",
+        "PhosphoPoint",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "p44/42",
+      "var_b": "P38"
+    },
+    {
+      "cause": "p44/42",
+      "confidence": 0.6667,
+      "consensus_sign": "activates",
+      "constraint_type": "soft_prior",
+      "effect": "PKA",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "P22694"
+        ],
+        [
+          "P28482",
+          "P17612"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "Adhesome",
+        "Wang"
+      ],
+      "var_a": "p44/42",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "p44/42",
+      "confidence": 0.3333,
+      "consensus_sign": "activates",
+      "constraint_type": "unknown",
+      "effect": "PKC",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P28482",
+          "P17252"
+        ]
+      ],
+      "n_sources": 1,
+      "sources": [
+        "iPTMnet"
+      ],
+      "var_a": "p44/42",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "p44/42",
+      "confidence": 1.0,
+      "consensus_sign": "unknown",
+      "constraint_type": "hard_required",
+      "effect": "pakts473",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P28482",
+          "P31749"
+        ]
+      ],
+      "n_sources": 3,
+      "sources": [
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "iPTMnet"
+      ],
+      "var_a": "p44/42",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "p44/42",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "pjnk",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "P45983"
+        ],
+        [
+          "P28482",
+          "P45983"
+        ]
+      ],
+      "n_sources": 6,
+      "sources": [
+        "Adhesome",
+        "Cui2007",
+        "HPRD",
+        "PhosphoNetworks",
+        "PhosphoPoint",
+        "Wang"
+      ],
+      "var_a": "p44/42",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "p44/42",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "pmek",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "P36507"
+        ],
+        [
+          "P27361",
+          "Q02750"
+        ],
+        [
+          "P28482",
+          "P36507"
+        ],
+        [
+          "P28482",
+          "Q02750"
+        ]
+      ],
+      "n_sources": 35,
+      "sources": [
+        "CancerCellMap",
+        "ELM",
+        "HINT",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "InnateDB",
+        "IntAct",
+        "KEA",
+        "LMPID",
+        "Lit-BM-17",
+        "MIMP",
+        "NCI-PID_ProtMapper",
+        "NetPath",
+        "PhosphoNetworks",
+        "PhosphoPoint",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "PhosphoSite_noref",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "RLIMS-P_ProtMapper",
+        "Reactome_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "Sparser_ProtMapper",
+        "Wang",
+        "iPTMnet",
+        "phosphoELM",
+        "phosphoELM_KEA",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "p44/42",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "p44/42",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "praf",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "P04049"
+        ],
+        [
+          "P28482",
+          "P04049"
+        ]
+      ],
+      "n_sources": 26,
+      "sources": [
+        "ACSN",
+        "HINT",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "InnateDB",
+        "InnateDB_SignaLink3",
+        "KEA",
+        "Kinexus_KEA",
+        "MIMP",
+        "NCI-PID_ProtMapper",
+        "PhosphoPoint",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "PhosphoSite_noref",
+        "ProtMapper",
+        "Reactome_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "SignaLink3",
+        "Wang",
+        "dbPTM",
+        "iPTMnet",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "p44/42",
+      "var_b": "praf"
+    },
+    {
+      "cause": "pakts473",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "PKA",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "P17612"
+        ],
+        [
+          "Q9Y243",
+          "P17612"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "ACSN",
+        "PhosphoNetworks",
+        "SignaLink3",
+        "Wang"
+      ],
+      "var_a": "pakts473",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "pakts473",
+      "confidence": 1.0,
+      "consensus_sign": "unknown",
+      "constraint_type": "hard_required",
+      "effect": "PKC",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "Q04759"
+        ],
+        [
+          "Q9Y243",
+          "Q04759"
+        ]
+      ],
+      "n_sources": 6,
+      "sources": [
+        "HPRD",
+        "NetPath",
+        "PhosphoPoint",
+        "SignaLink3",
+        "TCRcuration_SignaLink3",
+        "Wang"
+      ],
+      "var_a": "pakts473",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "pakts473",
+      "confidence": 0.6667,
+      "consensus_sign": "activates",
+      "constraint_type": "soft_prior",
+      "effect": "p44/42",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "P27361"
+        ],
+        [
+          "P31749",
+          "P28482"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "SIGNOR",
+        "Wang"
+      ],
+      "var_a": "pakts473",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "pakts473",
+      "confidence": 0.6667,
+      "consensus_sign": "conflicting",
+      "constraint_type": "soft_prior",
+      "effect": "pjnk",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "P45983"
+        ],
+        [
+          "P31751",
+          "P45983"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "InnateDB",
+        "Wang"
+      ],
+      "var_a": "pakts473",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "pakts473",
+      "confidence": 1.0,
+      "consensus_sign": "unknown",
+      "constraint_type": "hard_required",
+      "effect": "plcg",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "P19174"
+        ]
+      ],
+      "n_sources": 11,
+      "sources": [
+        "Adhesome",
+        "DOMINO",
+        "HPRD_MIMP",
+        "IntAct",
+        "MIMP",
+        "PhosphoSite",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "ProtMapper",
+        "iPTMnet",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "pakts473",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "pakts473",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "praf",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "P04049"
+        ],
+        [
+          "P31751",
+          "P04049"
+        ]
+      ],
+      "n_sources": 29,
+      "sources": [
+        "CA1",
+        "CancerCellMap",
+        "Cui2007",
+        "ELM",
+        "HINT",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "InnateDB",
+        "IntAct",
+        "KEA",
+        "Lit-BM-17",
+        "MIMP",
+        "NCI-PID_ProtMapper",
+        "NetworKIN_KEA",
+        "PhosphoPoint",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "Sparser_ProtMapper",
+        "Wang",
+        "iPTMnet",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "pakts473",
+      "var_b": "praf"
+    },
+    {
+      "cause": "pjnk",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "P38",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P45983",
+          "P53778"
+        ],
+        [
+          "P45983",
+          "Q16539"
+        ]
+      ],
+      "n_sources": 3,
+      "sources": [
+        "HPRD",
+        "PhosphoPoint",
+        "Wang"
+      ],
+      "var_a": "pjnk",
+      "var_b": "P38"
+    },
+    {
+      "cause": "pjnk",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "p44/42",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P45983",
+          "P27361"
+        ],
+        [
+          "P45983",
+          "P28482"
+        ],
+        [
+          "P45984",
+          "P27361"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "Adhesome",
+        "Cui2007",
+        "HPRD",
+        "Wang"
+      ],
+      "var_a": "pjnk",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "pjnk",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "pakts473",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P45983",
+          "P31749"
+        ],
+        [
+          "P45984",
+          "P31749"
+        ],
+        [
+          "P53779",
+          "P31751"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper"
+      ],
+      "var_a": "pjnk",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "pjnk",
+      "confidence": 1.0,
+      "consensus_sign": "inhibits",
+      "constraint_type": "hard_required",
+      "effect": "pmek",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P45983",
+          "Q02750"
+        ],
+        [
+          "P45984",
+          "P36507"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "Cui2007",
+        "KEA",
+        "NetworKIN_KEA",
+        "Wang"
+      ],
+      "var_a": "pjnk",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.3333,
+      "consensus_sign": "conflicting",
+      "constraint_type": "unknown",
+      "effect": "PKA",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P19174",
+          "P17612"
+        ]
+      ],
+      "n_sources": 1,
+      "sources": [
+        "Adhesome"
+      ],
+      "var_a": "plcg",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "PKC",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P16885",
+          "P05771"
+        ],
+        [
+          "P16885",
+          "P17252"
+        ],
+        [
+          "P16885",
+          "Q02156"
+        ],
+        [
+          "P19174",
+          "P17252"
+        ],
+        [
+          "P19174",
+          "Q02156"
+        ]
+      ],
+      "n_sources": 3,
+      "sources": [
+        "Adhesome",
+        "SIGNOR",
+        "Wang"
+      ],
+      "var_a": "plcg",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.6667,
+      "consensus_sign": "unknown",
+      "constraint_type": "soft_prior",
+      "effect": "pakts473",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P16885",
+          "P31749"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "ProtMapper",
+        "REACH_ProtMapper"
+      ],
+      "var_a": "plcg",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "pmek",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "P38",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P36507",
+          "O15264"
+        ],
+        [
+          "P36507",
+          "P53778"
+        ],
+        [
+          "P36507",
+          "Q15759"
+        ],
+        [
+          "P36507",
+          "Q16539"
+        ],
+        [
+          "Q02750",
+          "O15264"
+        ],
+        [
+          "Q02750",
+          "P53778"
+        ],
+        [
+          "Q02750",
+          "Q15759"
+        ],
+        [
+          "Q02750",
+          "Q16539"
+        ]
+      ],
+      "n_sources": 9,
+      "sources": [
+        "CancerCellMap",
+        "HPRD",
+        "KEGG-MEDICUS",
+        "NCI-PID_ProtMapper",
+        "NetPath",
+        "ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "pmek",
+      "var_b": "P38"
+    },
+    {
+      "cause": "pmek",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "p44/42",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P36507",
+          "P27361"
+        ],
+        [
+          "P36507",
+          "P28482"
+        ],
+        [
+          "Q02750",
+          "P27361"
+        ],
+        [
+          "Q02750",
+          "P28482"
+        ]
+      ],
+      "n_sources": 43,
+      "sources": [
+        "ACSN",
+        "BEL-Large-Corpus_ProtMapper",
+        "CancerCellMap",
+        "Cui2007",
+        "ELM",
+        "HINT",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "InnateDB",
+        "IntAct",
+        "KEA",
+        "KEGG-MEDICUS",
+        "LMPID",
+        "Lit-BM-17",
+        "MIMP",
+        "Macrophage",
+        "NCI-PID_ProtMapper",
+        "NetPath",
+        "PhosphoNetworks",
+        "PhosphoPoint",
+        "PhosphoSite",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "PhosphoSite_noref",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "RLIMS-P_ProtMapper",
+        "Reactome_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "SignaLink3",
+        "Sparser_ProtMapper",
+        "Wang",
+        "dbPTM",
+        "iPTMnet",
+        "phosphoELM",
+        "phosphoELM_KEA",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "pmek",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "pmek",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "pjnk",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P36507",
+          "P45983"
+        ],
+        [
+          "P36507",
+          "P45984"
+        ],
+        [
+          "P36507",
+          "P53779"
+        ],
+        [
+          "Q02750",
+          "P45983"
+        ],
+        [
+          "Q02750",
+          "P45984"
+        ],
+        [
+          "Q02750",
+          "P53779"
+        ]
+      ],
+      "n_sources": 3,
+      "sources": [
+        "Cui2007",
+        "KEGG-MEDICUS",
+        "Wang"
+      ],
+      "var_a": "pmek",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "pmek",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "praf",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P36507",
+          "P04049"
+        ],
+        [
+          "Q02750",
+          "P04049"
+        ]
+      ],
+      "n_sources": 20,
+      "sources": [
+        "CancerCellMap",
+        "DIP",
+        "HINT",
+        "HPRD",
+        "HPRD_MIMP",
+        "IntAct",
+        "Lit-BM-17",
+        "MIMP",
+        "NetPath",
+        "PhosphoPoint",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "ProtMapper",
+        "SIGNOR",
+        "SPIKE",
+        "SPIKE_LC",
+        "Sparser_ProtMapper",
+        "Wang",
+        "iPTMnet",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "pmek",
+      "var_b": "praf"
+    },
+    {
+      "cause": "praf",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "p44/42",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P04049",
+          "P27361"
+        ],
+        [
+          "P04049",
+          "P28482"
+        ]
+      ],
+      "n_sources": 17,
+      "sources": [
+        "HINT",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "InnateDB",
+        "KEA",
+        "MIMP",
+        "NCI-PID_ProtMapper",
+        "PhosphoPoint",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang",
+        "iPTMnet"
+      ],
+      "var_a": "praf",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "praf",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "pmek",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P04049",
+          "P36507"
+        ],
+        [
+          "P04049",
+          "Q02750"
+        ]
+      ],
+      "n_sources": 36,
+      "sources": [
+        "ACSN",
+        "BEL-Large-Corpus_ProtMapper",
+        "CancerCellMap",
+        "Cui2007",
+        "DIP",
+        "HINT",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "IntAct",
+        "KEA",
+        "KEGG-MEDICUS",
+        "Lit-BM-17",
+        "MIMP",
+        "NCI-PID_ProtMapper",
+        "NetPath",
+        "PhosphoNetworks",
+        "PhosphoPoint",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "RLIMS-P_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "SignaLink3",
+        "Wang",
+        "dbPTM",
+        "iPTMnet",
+        "phosphoELM",
+        "phosphoELM_KEA",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "praf",
+      "var_b": "pmek"
+    }
+  ],
+  "schema_version": "step04.floor.v1",
+  "skipped_metabolite_pairs": [
+    [
+      "P38",
+      "PIP2"
+    ],
+    [
+      "P38",
+      "PIP3"
+    ],
+    [
+      "PIP2",
+      "P38"
+    ],
+    [
+      "PIP2",
+      "PIP3"
+    ],
+    [
+      "PIP2",
+      "PKA"
+    ],
+    [
+      "PIP2",
+      "PKC"
+    ],
+    [
+      "PIP2",
+      "p44/42"
+    ],
+    [
+      "PIP2",
+      "pakts473"
+    ],
+    [
+      "PIP2",
+      "pjnk"
+    ],
+    [
+      "PIP2",
+      "plcg"
+    ],
+    [
+      "PIP2",
+      "pmek"
+    ],
+    [
+      "PIP2",
+      "praf"
+    ],
+    [
+      "PIP3",
+      "P38"
+    ],
+    [
+      "PIP3",
+      "PIP2"
+    ],
+    [
+      "PIP3",
+      "PKA"
+    ],
+    [
+      "PIP3",
+      "PKC"
+    ],
+    [
+      "PIP3",
+      "p44/42"
+    ],
+    [
+      "PIP3",
+      "pakts473"
+    ],
+    [
+      "PIP3",
+      "pjnk"
+    ],
+    [
+      "PIP3",
+      "plcg"
+    ],
+    [
+      "PIP3",
+      "pmek"
+    ],
+    [
+      "PIP3",
+      "praf"
+    ],
+    [
+      "PKA",
+      "PIP2"
+    ],
+    [
+      "PKA",
+      "PIP3"
+    ],
+    [
+      "PKC",
+      "PIP2"
+    ],
+    [
+      "PKC",
+      "PIP3"
+    ],
+    [
+      "p44/42",
+      "PIP2"
+    ],
+    [
+      "p44/42",
+      "PIP3"
+    ],
+    [
+      "pakts473",
+      "PIP2"
+    ],
+    [
+      "pakts473",
+      "PIP3"
+    ],
+    [
+      "pjnk",
+      "PIP2"
+    ],
+    [
+      "pjnk",
+      "PIP3"
+    ],
+    [
+      "plcg",
+      "PIP2"
+    ],
+    [
+      "plcg",
+      "PIP3"
+    ],
+    [
+      "pmek",
+      "PIP2"
+    ],
+    [
+      "pmek",
+      "PIP3"
+    ],
+    [
+      "praf",
+      "PIP2"
+    ],
+    [
+      "praf",
+      "PIP3"
+    ]
+  ],
+  "source_filter": "all"
+}

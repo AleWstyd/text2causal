@@ -201,3 +201,55 @@
 - Constraint translation to `BackgroundKnowledge` / LiNGAM prior matrix (Step 5).
 - Deterministic rule-based reasoner over Reactome subgraphs (parking lot; possible stretch goal in Step 6 if the OmniPath floor is too coarse).
 - Discovery algorithm runs (Step 5).
+
+---
+
+## Implementation notes (deviations from the original spec)
+
+These are findings from the actual implementation. They are not changes to
+the contribution claim, just operational details a future agent needs to
+know.
+
+### Local package name: `omnipath_floor/`, not `omnipath/`
+
+The dev plan §9 repo layout suggests `omnipath/floor.py`. The PyPI package
+`omnipath` (the lighter REST client we read from) occupies that import path,
+so a local `omnipath/` directory at repo root would shadow the third-party
+package and prevent us from importing `omnipath.interactions.AllInteractions`.
+
+The implementation lives at `omnipath_floor/floor.py` with the same public
+surface (`build_floor_priors`, `FloorEdge`).
+
+### `pypath-omnipath` not used; `omnipath` is
+
+`pyproject.toml` originally declared `pypath-omnipath>=0.16.20`. That package
+is the heavyweight pypath toolkit; importing it currently fails on a
+transitive `pysftp` / `paramiko` `DSSKey` mismatch (`DSSKey` was removed
+upstream from `paramiko`). We use the lighter `omnipath` REST client (added
+to `pyproject.toml` as `omnipath`) which the spec already pointed at via
+`omnipath.interactions.AllInteractions.get(...)`. `pypath-omnipath` is left
+in `pyproject.toml` for now in case downstream needs it; nothing in the
+Step 4 floor pipeline imports it.
+
+### OmniPath REST endpoint flakiness
+
+The omnipathdb.org REST endpoint was returning 500s on the
+`directed=1`-filtered query at the time of the snapshot capture. The
+unfiltered query also intermittently 500s after a successful first pass.
+The implementation pulls all human interactions with the
+`genesymbols=True` + `references` field signature (the combination the
+upstream omnipath client cached locally for our session), then filters
+client-side on the `is_directed` boolean. The resulting DataFrame is
+snapshotted to `cache/omnipath/all_interactions_directed_human.parquet`
+(committed) so subsequent runs replay from the repo cache without hitting
+the upstream REST API. Verified offline-replayable with
+`HTTPS_PROXY=http://127.0.0.1:1 task floor-sachs`.
+
+### Floor priors metabolite handling
+
+Metabolites (PIP2, PIP3) have no UniProt accession; OmniPath's
+`AllInteractions` table is keyed on UniProt source/target. Pairs involving
+either of the two Sachs metabolites are skipped explicitly and recorded
+under `skipped_metabolite_pairs` in the artefact, separately from
+`no_edge_pairs`. The LLM path does cover those pairs via Reactome's
+metabolite-aware reaction context.

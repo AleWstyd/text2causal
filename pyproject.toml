@@ -15,4 +15,5 @@ dependencies = [
     "httpx>=0.28.1",
     "pypath-omnipath>=0.16.20",
     "torch>=2.11.0",
+    "omnipath>=1.0.12",
 ]
