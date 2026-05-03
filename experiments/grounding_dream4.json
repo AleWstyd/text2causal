@@ -1,0 +1,6 @@
+{
+  "dataset": "dream4_psn",
+  "status": "deferred_to_step_7",
+  "rationale": "DREAM4 PSN node list is not pinned until data acquisition in Step 7. Step 3's grounding function (grounding/ground.py:ground_columns) is dataset-agnostic and will be called on the real DREAM4 PSN node list once available.",
+  "groundings": {}
+}

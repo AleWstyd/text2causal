@@ -9,7 +9,7 @@ from openai import OpenAI
 from llm.cache import cached_call
 
 OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-MODEL = "openrouter/free"
+MODEL = "nvidia/nemotron-3-super-120b-a12b:free"
 
 _client: OpenAI | None = None
 

@@ -56,7 +56,7 @@
    - That's it. No sharding, no atomic-write rename, no stage tags. Total: ~20 lines.
 
 3. **Update `llm/client.py` to use the cache.**
-   - Keep `MODEL = "openrouter/free"` (no model pinning).
+   - `MODEL` is pinned to `nvidia/nemotron-3-super-120b-a12b:free` (changed from `openrouter/free` after Step 3 found the alias routed to a 1.2B model that could not ground biomedical column names; see dev plan changelog item 5 and §8 for the full model-selection trail).
    - Wrap `client.chat.completions.create(...)` with `cached_call(Path("cache/llm"), {"model": model, "messages": messages, **kwargs}, fetch)`.
    - Store the *full* response object so token counts and `served_model` from OpenRouter survive replay.
    - Extract `served_model = response.model` (the underlying provider OpenRouter routed to) and persist it alongside each cache entry — this is what the paper appendix reports.

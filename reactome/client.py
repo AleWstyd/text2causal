@@ -548,6 +548,49 @@ class ReactomeClient:
                 raise ValueError(f"Unsupported Reactome evidence layer: {layer}")
         return records
 
+    def get_entity_info(self, ref: EntityRef) -> dict[str, Any] | None:
+        """Validate an ``EntityRef`` against Reactome.
+
+        Returns a small dict with reaction count and a representative display name,
+        or ``None`` if no Homo sapiens reactions are found for the entity (union
+        over protein accessions, or search hits for the metabolite display name).
+
+        Per-accession transient network failures (``httpx.RequestError``) are
+        swallowed so that a single bogus or unreachable UniProt does not doom the
+        whole family entity; if at least one of the entity's IDs resolves in
+        Reactome the entity is considered validated.
+        """
+
+        merged: dict[str, ReactionMeta] = {}
+        if ref.kind == "protein":
+            for accession in ref.normalised_ids:
+                try:
+                    metas = self.reactions_for_protein(accession)
+                except httpx.RequestError:
+                    continue
+                for meta in metas:
+                    merged.setdefault(meta.st_id, meta)
+                # Early-exit: validation only requires one ID to resolve. This
+                # avoids paying retry/timeout cost on bogus or rarely-cached
+                # UniProts when an earlier ID in the family already validated.
+                if merged:
+                    break
+        else:
+            try:
+                metabolite_metas = self.reactions_for_metabolite(ref.display_name)
+            except httpx.RequestError:
+                metabolite_metas = []
+            for meta in metabolite_metas:
+                merged.setdefault(meta.st_id, meta)
+        if not merged:
+            return None
+        metas = sorted(merged.values(), key=lambda m: (m.st_id, m.display_name))
+        first = metas[0]
+        return {
+            "reaction_count": len(merged),
+            "first_reaction_name": first.display_name or first.st_id,
+        }
+
     def _reactions_for_entity(self, entity: EntityRef) -> list[ReactionMeta]:
         merged: dict[str, ReactionMeta] = {}
         if entity.kind == "protein":

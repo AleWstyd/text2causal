@@ -1,0 +1,61 @@
+{
+  "dataset": "sachs",
+  "source": "Hand-curated from experiments/reactome_coverage.py:SACHS_GROUNDING with three biology-driven drops (P10644, P31321, Q9Y243).",
+  "groundings": {
+    "PIP2": {
+      "kind": "metabolite",
+      "ids": ["CHEBI:58456", "CHEBI:18348"],
+      "canonical_name": "PIP2"
+    },
+    "PIP3": {
+      "kind": "metabolite",
+      "ids": ["CHEBI:57836", "CHEBI:16618"],
+      "canonical_name": "PIP3"
+    },
+    "PKA": {
+      "kind": "family",
+      "ids": ["P17612", "P22694", "P22612", "P13861", "P31323"],
+      "canonical_name": "PKA (catalytic subunits)"
+    },
+    "PKC": {
+      "kind": "family",
+      "ids": ["P17252", "P05771", "P05129", "Q05655", "Q02156", "P24723", "P41743", "Q04759", "Q05513"],
+      "canonical_name": "PKC (pan-isoform)"
+    },
+    "P38": {
+      "kind": "family",
+      "ids": ["Q16539", "Q15759", "P53778", "O15264"],
+      "canonical_name": "p38 (MAPK11/12/13/14)"
+    },
+    "p44/42": {
+      "kind": "family",
+      "ids": ["P28482", "P27361"],
+      "canonical_name": "MAPK1/MAPK3 (ERK1/2)"
+    },
+    "pakts473": {
+      "kind": "family",
+      "ids": ["P31749", "P31751"],
+      "canonical_name": "AKT1/2"
+    },
+    "pjnk": {
+      "kind": "family",
+      "ids": ["P45983", "P45984", "P53779"],
+      "canonical_name": "JNK1/2/3"
+    },
+    "plcg": {
+      "kind": "family",
+      "ids": ["P19174", "P16885"],
+      "canonical_name": "PLCG1/PLCG2"
+    },
+    "pmek": {
+      "kind": "family",
+      "ids": ["Q02750", "P36507"],
+      "canonical_name": "MAP2K1/MAP2K2"
+    },
+    "praf": {
+      "kind": "protein",
+      "ids": ["P04049"],
+      "canonical_name": "RAF1"
+    }
+  }
+}
