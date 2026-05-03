@@ -1,0 +1,139 @@
+{
+  "claims_kept": [
+    {
+      "cause": "PIP3",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "plcg"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.95,
+      "constraint_type": "hard_required",
+      "effect": "PIP3"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.95,
+      "constraint_type": "hard_required",
+      "effect": "pmek"
+    },
+    {
+      "cause": "pmek",
+      "confidence": 0.95,
+      "constraint_type": "hard_required",
+      "effect": "p44/42"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "p44/42"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "pakts473"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "praf"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.85,
+      "constraint_type": "soft_prior",
+      "effect": "p44/42"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.85,
+      "constraint_type": "soft_prior",
+      "effect": "pakts473"
+    },
+    {
+      "cause": "praf",
+      "confidence": 0.85,
+      "constraint_type": "soft_prior",
+      "effect": "pmek"
+    },
+    {
+      "cause": "P38",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "praf"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "PKC"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "PKC"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.75,
+      "constraint_type": "soft_prior",
+      "effect": "praf"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.75,
+      "constraint_type": "soft_prior",
+      "effect": "PKC"
+    },
+    {
+      "cause": "praf",
+      "confidence": 0.7,
+      "constraint_type": "soft_prior",
+      "effect": "p44/42"
+    }
+  ],
+  "dropped_due_to_cycle": [
+    {
+      "cause": "plcg",
+      "confidence": 0.95,
+      "effect": "PIP2",
+      "reason": "would_close_cycle"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.95,
+      "effect": "PIP2",
+      "reason": "would_close_cycle"
+    }
+  ],
+  "edge_count": 16,
+  "is_acyclic": true,
+  "n_above_threshold": 34,
+  "n_after_constraint_filter": 34,
+  "n_claims_in_priors": 62,
+  "n_claims_kept": 16,
+  "n_dropped_due_to_cycle": 2,
+  "n_dropped_other": 0,
+  "node_count": 11,
+  "schema_version": "step04.dag_llm_only.v1",
+  "source_priors_hash": "a69fe85c0626bd7bd5c569a30909697535a5ec837e8727b31060526b1ff08ef2",
+  "threshold": 0.7,
+  "variable_names": [
+    "praf",
+    "pmek",
+    "plcg",
+    "PIP2",
+    "PIP3",
+    "p44/42",
+    "pakts473",
+    "PKA",
+    "PKC",
+    "P38",
+    "pjnk"
+  ]
+}

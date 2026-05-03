@@ -11,6 +11,7 @@ from reasoning.reason import (
     aggregate_passes,
     build_reason_messages,
     parse_claim_response,
+    reason_all_pairs,
     reason_pair,
 )
 
@@ -23,5 +24,6 @@ __all__ = [
     "build_reason_messages",
     "decide_constraint_type",
     "parse_claim_response",
+    "reason_all_pairs",
     "reason_pair",
 ]

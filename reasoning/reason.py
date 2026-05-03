@@ -521,3 +521,159 @@ def aggregate_passes(
         conflict=conflict_payload,
         notes=sorted(set(notes)),
     )
+
+
+# ----------------------------------------------------------------------
+# Full-sweep orchestration
+# ----------------------------------------------------------------------
+
+
+def reason_all_pairs(
+    *,
+    grounding: dict[str, "GroundingLike"],
+    reactome_client: "ReactomeClientProto",
+    vocabulary: list[str] | None = None,
+    llm_fetch: LLMFetch | None = None,
+    cache_dir: Path = Path("cache/llm"),
+    layers: tuple[str, ...] = (
+        "reaction",
+        "co_pathway",
+        "regulator_chain",
+        "co_complex",
+    ),
+) -> dict[str, Any]:
+    """Run the full Step 4 LLM sweep over every ordered pair of grounded vars.
+
+    For each *unordered* pair, queries Reactome ``get_evidence_records``
+    once (the function is symmetric in coverage), then calls
+    ``reason_pair`` twice — once per ordering — so the LLM gets to
+    disagree with itself, which is informative. Per-pair aggregation
+    follows ``aggregate_passes``.
+
+    Returns the schema documented at ``docs/step_04_causal_reasoning.md``
+    with ``pairs``, ``no_context_pairs``, ``conflicts``, ``served_models``
+    counts, and the per-condition tallies.
+    """
+
+    columns = sorted(grounding.keys())
+    vocab = sorted(vocabulary or columns)
+
+    pair_records: list[dict[str, Any]] = []
+    no_context_pairs: list[list[str]] = []
+    conflicts: list[dict[str, Any]] = []
+    served_counts: dict[str, int] = {}
+    n_high_confidence = 0
+    n_with_context = 0
+
+    n_pairs_total = len(columns) * (len(columns) - 1)
+    seen_pairs = 0
+    for var_a, var_b in _ordered_pair_iter(columns):
+        seen_pairs += 1
+        a_ground = grounding[var_a]
+        b_ground = grounding[var_b]
+        a_ref = _entity_ref_from_grounding(var_a, a_ground)
+        b_ref = _entity_ref_from_grounding(var_b, b_ground)
+
+        records = reactome_client.get_evidence_records(a_ref, b_ref, layers=layers)
+
+        forward_claim = reason_pair(
+            var_a=var_a,
+            var_b=var_b,
+            entity_a=a_ref,
+            entity_b=b_ref,
+            reactome_context=records,
+            vocabulary=vocab,
+            llm_fetch=llm_fetch,
+            cache_dir=cache_dir,
+        )
+
+        reverse_records = reactome_client.get_evidence_records(
+            b_ref, a_ref, layers=layers
+        )
+        reverse_claim = reason_pair(
+            var_a=var_b,
+            var_b=var_a,
+            entity_a=b_ref,
+            entity_b=a_ref,
+            reactome_context=reverse_records,
+            vocabulary=vocab,
+            llm_fetch=llm_fetch,
+            cache_dir=cache_dir,
+        )
+
+        for claim in (forward_claim, reverse_claim):
+            if claim.served_model:
+                served_counts[claim.served_model] = (
+                    served_counts.get(claim.served_model, 0) + 1
+                )
+
+        agg = aggregate_passes(var_a, var_b, forward_claim, reverse_claim)
+        if agg.constraint_type == "no_context":
+            no_context_pairs.append([var_a, var_b])
+            continue
+
+        n_with_context += 1
+        if agg.confidence >= 0.9 and agg.constraint_type in (
+            "hard_required",
+            "hard_forbidden_reverse",
+        ):
+            n_high_confidence += 1
+        if agg.conflict is not None:
+            conflicts.append(agg.conflict)
+
+        pair_records.append(agg.as_dict())
+
+    return {
+        "schema_version": "step04.causal_priors.v1",
+        "n_pairs_total": n_pairs_total,
+        "n_processed": seen_pairs,
+        "n_with_context": n_with_context,
+        "n_no_context": len(no_context_pairs),
+        "n_high_confidence": n_high_confidence,
+        "n_conflicts": len(conflicts),
+        "served_models": dict(sorted(served_counts.items())),
+        "pairs": pair_records,
+        "no_context_pairs": no_context_pairs,
+        "conflicts": conflicts,
+        "evidence_layers": list(layers),
+        "vocabulary": vocab,
+    }
+
+
+# ----------------------------------------------------------------------
+# Light type protocols for callers that don't import the full module deps
+# ----------------------------------------------------------------------
+
+
+from typing import Protocol  # noqa: E402  (kept local to module bottom)
+
+
+class GroundingLike(Protocol):
+    """Minimal subset of ``grounding.ground.Grounding`` we read from."""
+
+    column: str
+    kind: str
+    ids: list[str]
+
+
+class ReactomeClientProto(Protocol):
+    def get_evidence_records(
+        self,
+        a: EntityRef,
+        b: EntityRef,
+        *,
+        layers: tuple[str, ...] = ...,
+    ) -> list[ReactionRecord]: ...
+
+
+def _ordered_pair_iter(columns: list[str]):
+    for var_a in columns:
+        for var_b in columns:
+            if var_a == var_b:
+                continue
+            yield var_a, var_b
+
+
+def _entity_ref_from_grounding(column: str, g: "GroundingLike") -> EntityRef:
+    kind = "metabolite" if g.kind == "metabolite" else "protein"
+    return EntityRef(kind=kind, ids=list(g.ids), display_name=column)

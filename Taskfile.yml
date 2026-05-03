@@ -51,6 +51,16 @@ tasks:
     cmds:
       - uv run python -m experiments.run_reasoning_smoke
 
+  reason-sachs:
+    desc: Step 4 Phase 3 full LLM sweep over 110 ordered Sachs pairs
+    cmds:
+      - uv run python -m experiments.run_reasoning_sachs
+
+  dag-llm-only-sachs:
+    desc: Step 4 Phase 4 cycle-broken LLM-only DAG for Sachs
+    cmds:
+      - uv run python -m experiments.run_dag_llm_only_sachs
+
   lint:
     desc: Run ruff checks
     cmds:
