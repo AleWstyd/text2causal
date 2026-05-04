@@ -13,6 +13,10 @@ from utils.load_data import load_sachs_dataset
 _PRIORS_FILES: tuple[tuple[str, Path], ...] = (
     ("reactome_llm", Path("experiments/causal_priors_sachs.json")),
     (
+        "reactome_llm_with_freetext_fallback",
+        Path("experiments/causal_priors_sachs_with_fallback.json"),
+    ),
+    (
         "omnipath_reactome_only",
         Path("experiments/floor_priors_sachs_reactome_only.json"),
     ),
@@ -199,6 +203,7 @@ def _headline(by_source: dict[str, dict[str, Any]]) -> str:
     parts: list[str] = []
     order = (
         "reactome_llm",
+        "reactome_llm_with_freetext_fallback",
         "omnipath_reactome_only",
         "omnipath_all",
         "freetext_llm",

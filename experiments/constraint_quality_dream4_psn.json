@@ -137,6 +137,62 @@
           "JNK"
         ]
       ]
+    },
+    "reactome_llm_with_freetext_fallback": {
+      "coverage": 0.23809523809523808,
+      "false_positives_loose": [
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "false_positives_strict": [],
+      "hallucination_loose": 0.1,
+      "hallucination_strict": 0.0,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 10,
+      "n_true_edges": 9,
+      "precision_forbidden": 0.0,
+      "precision_forward": 0.9,
+      "recall_forward": 1.0,
+      "true_positives": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ]
     }
   },
   "confidence_threshold": 0.7,

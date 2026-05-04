@@ -131,6 +131,25 @@
           "erk12"
         ]
       ]
+    },
+    "reactome_llm_with_freetext_fallback": {
+      "coverage": 0.047619047619047616,
+      "false_positives_loose": [],
+      "false_positives_strict": [],
+      "hallucination_loose": 0.0,
+      "hallucination_strict": 0.0,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 1,
+      "n_true_edges": 5,
+      "precision_forbidden": 0.0,
+      "precision_forward": 1.0,
+      "recall_forward": 0.2,
+      "true_positives": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ]
     }
   },
   "confidence_threshold": 0.7,

@@ -372,6 +372,8 @@ class DeriveConditionLabelTests(unittest.TestCase):
             ("reactome_llm", 0.7, "C3"),
             ("reactome_llm", 0.6, "C4"),
             ("reactome_llm", 0.65, "C_llm_t0.65"),
+            ("reactome_llm_with_freetext_fallback", 0.7, "C3+ft"),
+            ("reactome_llm_with_freetext_fallback", 0.8, "C_llm_ft_t0.8"),
             ("freetext_llm", 0.7, "C1"),
             ("freetext_llm", 0.5, "C_freetext_t0.5"),
         ]

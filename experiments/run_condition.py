@@ -27,6 +27,7 @@ _VALID_PRIORS_SOURCES = frozenset(
         "omnipath_reactome_only",
         "oracle",
         "reactome_llm",
+        "reactome_llm_with_freetext_fallback",
     }
 )
 _VALID_ALGORITHMS = frozenset({"PC", "GES", "LiNGAM"})
@@ -49,6 +50,10 @@ def _derive_condition_label(priors_source: str, threshold: float | None) -> str:
         if threshold == 0.6:
             return "C4"
         return f"C_llm_t{threshold}"
+    if priors_source == "reactome_llm_with_freetext_fallback":
+        if threshold == 0.7:
+            return "C3+ft"
+        return f"C_llm_ft_t{threshold}"
     if priors_source == "freetext_llm":
         if threshold == 0.7:
             return "C1"

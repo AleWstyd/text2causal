@@ -26,6 +26,11 @@ tasks:
     cmds:
       - uv run python -m unittest discover -s tests -v
 
+  reason-with-fallback-sachs:
+    desc: Merge Reactome priors with free-text fallback for no-context pairs (Sachs + DREAM4 + LiverDREAM when files exist)
+    cmds:
+      - uv run python -m experiments.run_reasoning_with_fallback
+
   baseline-sachs:
     desc: Run the Sachs unconstrained PC/GES/LiNGAM baseline
     cmds:

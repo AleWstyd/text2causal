@@ -85,6 +85,7 @@ Prefer `Taskfile.yml` targets when they exist:
 - `task ground-sachs` — batched LLM grounding for Sachs columns → `experiments/grounding_sachs.json`.
 - `task oracle-priors-sachs` — Step 6 Phase 1 oracle ground-truth priors for Sachs → `experiments/oracle_priors_sachs.json`.
 - `task freetext-sachs` — Step 6 Phase 1 C1 free-text LLM priors for Sachs → `experiments/freetext_priors_sachs.json` (uses committed `cache/llm/` on replay).
+- `task reason-with-fallback-sachs` — Merge Reactome pairwise priors with free-text claims for `no_context` slots → `experiments/causal_priors_*_with_fallback.json` (offline; depends on committed C1 + Step 4 JSONs).
 - `task run` — launches the **legacy Streamlit LUCAS skeleton** (kept for the C1 ablation only; not the research pipeline entrypoint).
 
 If a needed workflow is not in `Taskfile.yml`, use the narrowest direct command possible and mention that no Task target existed. If the workflow is recurring and a future agent will run it, add a Task target in the same PR.

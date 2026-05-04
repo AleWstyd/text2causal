@@ -28,6 +28,9 @@ FLOOR_REACTOME_ONLY: Final[Path] = Path(
     "experiments/floor_priors_sachs_reactome_only.json"
 )
 CAUSAL_PRIORS: Final[Path] = Path("experiments/causal_priors_sachs.json")
+CAUSAL_PRIORS_WITH_FALLBACK: Final[Path] = Path(
+    "experiments/causal_priors_sachs_with_fallback.json"
+)
 PREDICTED_DAG_GML: Final[Path] = Path("experiments/predicted_dag_llm_only_sachs.gml")
 PREDICTED_DAG_META: Final[Path] = Path(
     "experiments/predicted_dag_llm_only_sachs.meta.json"
@@ -198,6 +201,19 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
         for seed in _SEEDS:
             cells.append(
                 _AlgorithmicCell(
+                    condition="C3+ft",
+                    priors_source="reactome_llm_with_freetext_fallback",
+                    priors_cache_key="reactome_llm_with_freetext_fallback",
+                    threshold=0.7,
+                    algorithm=alg,
+                    seed=seed,
+                    lingam_prior_mode=("forbidden_only" if alg == "LiNGAM" else None),
+                )
+            )
+    for alg in _ALGORITHMS:
+        for seed in _SEEDS:
+            cells.append(
+                _AlgorithmicCell(
                     condition="C5",
                     priors_source="oracle",
                     priors_cache_key="oracle",
@@ -254,6 +270,7 @@ def _load_priors_cache() -> dict[str, list[Any] | None]:
         "omnipath_reactome_only": load_priors(FLOOR_REACTOME_ONLY),
         "freetext_llm": load_priors(FREETEXT_PRIORS),
         "reactome_llm": load_priors(CAUSAL_PRIORS),
+        "reactome_llm_with_freetext_fallback": load_priors(CAUSAL_PRIORS_WITH_FALLBACK),
         "oracle": load_priors(ORACLE_PRIORS),
     }
 

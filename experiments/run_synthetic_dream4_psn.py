@@ -277,6 +277,12 @@ def _conditions() -> tuple[Condition, ...]:
             "C3", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_dream4_psn.json", 0.7
         ),
         Condition(
+            "C3+ft",
+            "reactome_llm_with_freetext_fallback",
+            EXPERIMENTS_DIR / "causal_priors_dream4_psn_with_fallback.json",
+            0.7,
+        ),
+        Condition(
             "C4", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_dream4_psn.json", 0.6
         ),
         Condition(
@@ -312,7 +318,8 @@ def _run_ablation() -> dict[str, Any]:
                     threshold=cond.threshold,
                     seed=seed,
                     lingam_prior_mode="forbidden_only"
-                    if algorithm == "LiNGAM" and cond.name in {"C2", "C3", "C4"}
+                    if algorithm == "LiNGAM"
+                    and cond.name in {"C2", "C3", "C3+ft", "C4"}
                     else None,
                 )
                 row["condition"] = cond.name
@@ -350,7 +357,7 @@ def _run_ablation() -> dict[str, Any]:
     payload = {
         "dataset": "dream4_psn_synthetic",
         "fallback": "synthetic_from_reactome_literature_dag",
-        "n_cells_expected": 211,
+        "n_cells_expected": 241,
         "n_cells_completed": len(results),
         "n_cells_failed": sum(1 for row in results if row["status"] == "failed"),
         "results": results,
@@ -365,6 +372,8 @@ def _constraint_quality() -> dict[str, Any]:
     n_pairs = true_graph.number_of_nodes() * (true_graph.number_of_nodes() - 1)
     sources = {
         "reactome_llm": EXPERIMENTS_DIR / "causal_priors_dream4_psn.json",
+        "reactome_llm_with_freetext_fallback": EXPERIMENTS_DIR
+        / "causal_priors_dream4_psn_with_fallback.json",
         "omnipath_reactome_only": EXPERIMENTS_DIR
         / "floor_priors_dream4_psn_reactome_only.json",
         "omnipath_all": EXPERIMENTS_DIR / "floor_priors_dream4_psn_all.json",
@@ -406,7 +415,7 @@ def _write_dream4_tables_and_figures(ablation: dict[str, Any]) -> None:
         r"condition & PC F1 & GES F1 & LiNGAM F1 \\",
         r"\hline",
     ]
-    for cond in ("C0", "C0.5", "C1", "C2", "C3", "C4", "C5"):
+    for cond in ("C0", "C0.5", "C1", "C2", "C3", "C3+ft", "C4", "C5"):
         parts = [cond]
         for alg in ALGORITHMS:
             block = agg.get(cond, {}).get(alg, {}).get("f1", {})
@@ -432,7 +441,7 @@ def _write_dream4_tables_and_figures(ablation: dict[str, Any]) -> None:
     ):
         best_cond = "N/A"
         best_f1 = -math.inf
-        for cond in ("C0.5", "C1", "C2", "C3", "C4"):
+        for cond in ("C0.5", "C1", "C2", "C3", "C3+ft", "C4"):
             for alg in ALGORITHMS:
                 val = agg_obj.get(cond, {}).get(alg, {}).get("f1", {}).get("mean")
                 if val is not None and float(val) > best_f1:
@@ -495,6 +504,9 @@ def main() -> None:
     _write_dataset()
     _write_priors()
     _write_coverage_report()
+    from experiments.run_reasoning_with_fallback import main as _merge_fallback_main
+
+    _merge_fallback_main()
     ablation = _run_ablation()
     _constraint_quality()
     _write_dream4_tables_and_figures(ablation)

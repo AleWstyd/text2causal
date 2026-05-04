@@ -372,7 +372,29 @@ Reactome-only floor confidence is capped at ~0.33 in practice because
 the directed-edge column for these pairs almost always has just one
 Reactome-named source. This is the floor's honest answer; the higher-
 recall LLM path runs alongside it and the comparison is the C2/C3 vs
-C0.5 attribution promised in the dev plan §1.3 contribution claim.
+C0.5 attribution promised in the dev plan contribution claim.
+
+### Free-text fallback (merged priors, Step 6 C3+ft)
+
+When the four-layer Reactome union yields **no** evidence for an ordered
+pair, `reason_pair` returns `no_context` and the pairwise LLM is not
+called (`reasoning/reason.py`). Sachs leaves dozens of ordered pairs in
+`no_context_pairs` even though pathway-level biology is often documented
+elsewhere. The same cached **free-text** Sachs paragraph used for
+condition C1 (`experiments/freetext_priors_sachs.json`) already
+recovers several of those edges at high precision (see
+`experiments/constraint_quality_sachs.json` and dev plan changelog item 17).
+
+`reasoning/merge_freetext_fallback.py:merge_with_freetext_fallback` builds
+`experiments/causal_priors_*_with_fallback.json`: for each `no_context`
+slot (including rows listed only under `no_context_pairs`), if the
+unordered pair appears in the free-text prior blob, the claim is
+substituted with the free-text `cause`, `effect`, `confidence`, and
+`constraint_type`, and `source` is set to `freetext_fallback`. All
+Reactome-context claims are left unchanged. The Step 6 ablation adds
+**C3+ft** (`priors_source=reactome_llm_with_freetext_fallback`, τ=0.7),
+parallel to C3 but reading the merged file. Offline regeneration:
+`task reason-with-fallback-sachs` then `task ablation-sachs`.
 
 ### Hard acceptance criteria (Step 4 spec checklist)
 

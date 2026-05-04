@@ -1,8 +1,8 @@
 {
   "dataset": "dream4_psn_synthetic",
   "fallback": "synthetic_from_reactome_literature_dag",
-  "n_cells_completed": 211,
-  "n_cells_expected": 211,
+  "n_cells_completed": 241,
+  "n_cells_expected": 241,
   "n_cells_failed": 0,
   "results": [
     {
@@ -10671,6 +10671,2146 @@
         ]
       ],
       "priors_source": "reactome_llm",
+      "seed": 9,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 0,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 1,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 2,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 3,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 4,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 5,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 6,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 7,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 8,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 9,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 0,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 1,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 2,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 3,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 4,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 5,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 6,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 7,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 8,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 9,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 0,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 1,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 2,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 3,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 4,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 5,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 6,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 7,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 8,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.09183673469387756,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
+      },
+      "predicted_edges": [
+        [
+          "AKT",
+          "ERK12"
+        ],
+        [
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
+        ],
+        [
+          "HSP27",
+          "IKB"
+        ],
+        [
+          "JNK",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "HSP27"
+        ],
+        [
+          "MEK1",
+          "IKB"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
       "seed": 9,
       "status": "ok",
       "threshold": 0.7

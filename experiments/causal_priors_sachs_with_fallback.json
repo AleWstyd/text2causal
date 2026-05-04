@@ -1,0 +1,1625 @@
+{
+  "conflicts": [],
+  "evidence_layers": [
+    "reaction",
+    "co_pathway",
+    "regulator_chain",
+    "co_complex"
+  ],
+  "fallback_applied_pairs": [],
+  "n_conflicts": 0,
+  "n_fallback_applied": 0,
+  "n_high_confidence": 16,
+  "n_no_context": 48,
+  "n_pairs_total": 110,
+  "n_processed": 110,
+  "n_with_context": 62,
+  "no_context_pairs": [
+    [
+      "P38",
+      "PIP2"
+    ],
+    [
+      "P38",
+      "PIP3"
+    ],
+    [
+      "P38",
+      "plcg"
+    ],
+    [
+      "P38",
+      "pmek"
+    ],
+    [
+      "PIP2",
+      "P38"
+    ],
+    [
+      "PIP2",
+      "pjnk"
+    ],
+    [
+      "PIP3",
+      "P38"
+    ],
+    [
+      "PIP3",
+      "PKA"
+    ],
+    [
+      "PIP3",
+      "pjnk"
+    ],
+    [
+      "PIP3",
+      "pmek"
+    ],
+    [
+      "PIP3",
+      "praf"
+    ],
+    [
+      "PKA",
+      "PIP3"
+    ],
+    [
+      "PKA",
+      "p44/42"
+    ],
+    [
+      "PKA",
+      "pjnk"
+    ],
+    [
+      "PKA",
+      "pmek"
+    ],
+    [
+      "PKC",
+      "pakts473"
+    ],
+    [
+      "PKC",
+      "pjnk"
+    ],
+    [
+      "PKC",
+      "pmek"
+    ],
+    [
+      "PKC",
+      "praf"
+    ],
+    [
+      "p44/42",
+      "PKA"
+    ],
+    [
+      "pakts473",
+      "PKC"
+    ],
+    [
+      "pakts473",
+      "pjnk"
+    ],
+    [
+      "pakts473",
+      "plcg"
+    ],
+    [
+      "pakts473",
+      "pmek"
+    ],
+    [
+      "pakts473",
+      "praf"
+    ],
+    [
+      "pjnk",
+      "PIP2"
+    ],
+    [
+      "pjnk",
+      "PIP3"
+    ],
+    [
+      "pjnk",
+      "PKA"
+    ],
+    [
+      "pjnk",
+      "PKC"
+    ],
+    [
+      "pjnk",
+      "pakts473"
+    ],
+    [
+      "pjnk",
+      "pmek"
+    ],
+    [
+      "pjnk",
+      "praf"
+    ],
+    [
+      "plcg",
+      "P38"
+    ],
+    [
+      "plcg",
+      "pakts473"
+    ],
+    [
+      "plcg",
+      "pmek"
+    ],
+    [
+      "plcg",
+      "praf"
+    ],
+    [
+      "pmek",
+      "P38"
+    ],
+    [
+      "pmek",
+      "PIP3"
+    ],
+    [
+      "pmek",
+      "PKA"
+    ],
+    [
+      "pmek",
+      "PKC"
+    ],
+    [
+      "pmek",
+      "pakts473"
+    ],
+    [
+      "pmek",
+      "pjnk"
+    ],
+    [
+      "pmek",
+      "plcg"
+    ],
+    [
+      "praf",
+      "PIP3"
+    ],
+    [
+      "praf",
+      "PKC"
+    ],
+    [
+      "praf",
+      "pakts473"
+    ],
+    [
+      "praf",
+      "pjnk"
+    ],
+    [
+      "praf",
+      "plcg"
+    ]
+  ],
+  "pairs": [
+    {
+      "cause": "unknown",
+      "confidence": 0.1,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "Both P38 and PKA participate in the VEGFA-VEGFR2 pathway, but no specific reaction details are provided to determine a causal direction. Without evidence of input/output or catalyst relationships, the direction is unknown.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "P38",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.49,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "Both P38 and PKC participate in the RHO GTPases Activate NADPH Oxidases pathway, but they act as parallel kinases phosphorylating NADPH oxidase subunits (e.g., p47phox). There is no reaction where one serves as an input, output, catalyst, or regulator of a reaction directly involving the other, making causal direction unassignable.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5668599"
+      ],
+      "var_a": "P38",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [
+        "R-HSA-6800434"
+      ],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 11,
+      "reasoning": "No reaction indicates a causal direction between P38 and p44/42. They co-participate as catalysts in R-HSA-168053 and as inputs/outputs in R-HSA-6800434, but none shows one regulating the other. Both are MAP kinases acting in parallel pathways.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "P38",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "No reaction-level co-participation details are provided; only pathway-level association is mentioned, which is insufficient to establish a directed causal relationship.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "P38",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 3,
+      "reasoning": "Both P38 and pjnk act as catalysts in the same reaction (R-HSA-168053), with no other reaction indicating one regulates or produces the other. Co-participation as catalysts does not establish a causal direction.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-168053"
+      ],
+      "var_a": "P38",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "P38",
+      "confidence": 0.8,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "praf",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "p38 MAPK phosphorylates and inhibits RAF1 (praf) as part of negative feedback regulation of the MAPK pathway. In the Reactome pathway 'Negative regulation of MAPK pathway', p38 acts as a kinase on RAF1, placing p38 upstream as a causal regulator. This mechanism is well-documented but no specific reaction ID was provided.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5675221"
+      ],
+      "var_a": "P38",
+      "var_b": "praf"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "PIP3",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 6,
+      "reasoning": "In reaction R-HSA-2730870, PIP2 is an input and PIP3 is an output, directly establishing PIP2 as the upstream cause of PIP3 production via PI3K-mediated phosphorylation.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-2730870"
+      ],
+      "var_a": "PIP2",
+      "var_b": "PIP3"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.3,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "Only pathway-level co-participation is provided without specific reactions; no causal direction can be inferred.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-9664323"
+      ],
+      "var_a": "PIP2",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.8,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "PKC",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "PIP2 is hydrolyzed to DAG and IP3 in the DAG and IP3 signaling pathway, and DAG is a direct activator of PKC. Thus, PIP2 acts upstream of PKC activation.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-1489509"
+      ],
+      "var_a": "PIP2",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.9,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "p44/42",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 41,
+      "reasoning": "PIP2 acts as a negative regulator or as part of the catalyst complex in multiple reactions whose product includes p44/42, consistently placing PIP2 upstream of p44/42 phosphorylation. No reactions indicate the reverse direction. The dual roles suggest regulatory influence, but the directional signal remains clear.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5672973",
+        "R-HSA-5672978",
+        "R-HSA-6802910",
+        "R-HSA-6802911",
+        "R-HSA-6802918",
+        "R-HSA-6802919",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-6802926",
+        "R-HSA-6802933",
+        "R-HSA-6802935",
+        "R-HSA-6802943",
+        "R-HSA-9656214",
+        "R-HSA-9656215"
+      ],
+      "var_a": "PIP2",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.9,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "pakts473",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 5,
+      "reasoning": "PIP2 is part of the catalyst complex of reaction R-HSA-2243942, which directly produces pakts473 as a product. This establishes a clear upstream (catalyst) to downstream (product) causal direction.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-2243942"
+      ],
+      "var_a": "PIP2",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [
+        "R-HSA-202354"
+      ],
+      "effect": "PIP2",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 19,
+      "reasoning": "plcg acts as the catalyst in multiple reactions where PIP2 is the substrate, directly hydrolyzing PIP2 into second messengers. This establishes a clear causal direction from the enzyme plcg to its substrate PIP2. The translocation reaction (R-HSA-202354) has ambiguous direction but does not override the strong, consistent catalytic evidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-167686",
+        "R-HSA-202354",
+        "R-HSA-202407",
+        "R-HSA-2730847",
+        "R-HSA-5607735",
+        "R-HSA-622382"
+      ],
+      "var_a": "PIP2",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "pmek",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 41,
+      "reasoning": "PIP2 participates as a catalyst complex member or negative regulator in multiple reactions whose product includes pmek, demonstrating a clear upstream role in the MAPK signaling cascade. No reactions place pmek upstream of PIP2, and the consistent directionality across diverse pathway variants strongly supports PIP2 \u2192 pmek causation.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5672973",
+        "R-HSA-5672978",
+        "R-HSA-6802910",
+        "R-HSA-6802911",
+        "R-HSA-6802918",
+        "R-HSA-6802919",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-6802926",
+        "R-HSA-6802933",
+        "R-HSA-6802935",
+        "R-HSA-6802943",
+        "R-HSA-9656214",
+        "R-HSA-9656215"
+      ],
+      "var_a": "PIP2",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.9,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "praf",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 31,
+      "reasoning": "PIP2 acts as a negative regulator and is part of the catalyst complex in multiple reactions whose product includes praf, indicating that PIP2 directly influences the generation of praf. This consistent regulatory role across different pathways establishes PIP2 as upstream of praf with an inhibitory effect.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5672973",
+        "R-HSA-5672978",
+        "R-HSA-6802918",
+        "R-HSA-6802919",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-6802926",
+        "R-HSA-6802943",
+        "R-HSA-9656214",
+        "R-HSA-9656215"
+      ],
+      "var_a": "PIP2",
+      "var_b": "praf"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "PIP3",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 6,
+      "reasoning": "In reaction R-HSA-2730870, PIP2 is the input and PIP3 is the output of a phosphorylation event, directly establishing PIP2 \u2192 PIP3 causality. No contradictory reactions are present in the provided context.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-2730870"
+      ],
+      "var_a": "PIP3",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.8,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "PKC",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "PIP3 acts as part of a catalyst complex in a reaction that produces phosphorylated PKC theta (R-HSA-202222), indicating PIP3 is upstream and activates PKC. No contradictory reactions found.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-202222"
+      ],
+      "var_a": "PIP3",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.85,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "p44/42",
+      "n_passes": 1,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "PIP3 is a positive regulator of reaction R-HSA-9632910, which directly produces p44/42. This regulatory role indicates a causal direction from PIP3 to p44/42, with no contradictory evidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-9632910"
+      ],
+      "var_a": "PIP3",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.85,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "pakts473",
+      "n_passes": 2,
+      "notes": [
+        "contradict_pruned: dropped contradicting_reactions not present in the Reactome context window.",
+        "support_pruned: dropped supporting_reactions not present in the Reactome context window."
+      ],
+      "reactome_context_size": 26,
+      "reasoning": "In the canonical PI3K/AKT pathway, PIP3 recruits AKT to the membrane where it is phosphorylated at S473, establishing PIP3 as upstream of pakts473. Multiple reactions show PIP3 participating in catalyst complexes that directly produce pakts473. A single contradictory note that PIP3 negatively regulates one of these reactions is likely a contextual feedback detail and does not override the consistent positive evidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-109702",
+        "R-HSA-198270",
+        "R-HSA-2243938",
+        "R-HSA-9860800"
+      ],
+      "var_a": "PIP3",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 1.0,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "plcg",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 51,
+      "reasoning": "PIP3 acts as a catalyst complex component or positive regulator in multiple reactions that produce phosphorylated/activated plcg, consistently placing PIP3 upstream of plcg activation. No reactions indicate the reverse direction, and the repeated pattern across diverse pathways (GPVI, FGFR, BCR, ALK) strongly supports causality from PIP3 to plcg.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-1839098",
+        "R-HSA-2424487",
+        "R-HSA-2730841",
+        "R-HSA-2730856",
+        "R-HSA-2730858",
+        "R-HSA-2730888",
+        "R-HSA-5654147",
+        "R-HSA-5654149",
+        "R-HSA-5654151",
+        "R-HSA-5654222",
+        "R-HSA-5655243",
+        "R-HSA-5655301",
+        "R-HSA-5655341",
+        "R-HSA-9606159",
+        "R-HSA-9606162",
+        "R-HSA-9606163",
+        "R-HSA-9700171",
+        "R-HSA-9712086"
+      ],
+      "var_a": "PIP3",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.1,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "No specific reactions involving both PKA and p38 were provided. The only information is co-occurrence in the VEGFA-VEGFR2 pathway (R-HSA-4420097), which is insufficient to establish a causal direction. Without reaction-level details, any direction would be speculative.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "PKA",
+      "var_b": "P38"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.3,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "Insufficient reaction-level data: PKA and PIP2 co-participate in the pathway 'FCGR3A-mediated IL10 synthesis', but no specific reactions involving both are provided, so a causal direction cannot be determined.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-9664323"
+      ],
+      "var_a": "PKA",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "The provided context only mentions co-participation of PKA and PKC in two Reactome pathways without specifying any reaction roles (input, output, catalyst, regulator). This information is insufficient to determine a causal direction; therefore, the relationship is unknown.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "PKA",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "The provided context only states that PKA and pakts473 co-participate in a pathway (R-HSA-9856530), without specifying any reactions that indicate input/output or catalytic roles. Without such directional information, the causal relationship cannot be established.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "PKA",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "No specific reaction details are provided for the co-participation of PKA and plcg in the listed pathways; only pathway names are given. Without explicit reaction roles (input, output, catalyst, regulator), a causal direction cannot be established.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "PKA",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.75,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "praf",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "PKA is known to directly phosphorylate Raf-1 (praf) at inhibitory sites (e.g., Ser259 and Ser621), placing PKA upstream of Raf in signaling cascades. Both entities appear in the Rap1 signalling and CD209 signaling pathways, where PKA-mediated regulation of Raf is plausible, though specific reactions are not detailed in the provided context.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-392517",
+        "R-HSA-5621575"
+      ],
+      "var_a": "PKA",
+      "var_b": "praf"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.49,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "Both entities co-participate in the pathway 'RHO GTPases Activate NADPH Oxidases', but no specific reaction details are provided. Without information on their roles (input, output, catalyst), causal direction cannot be established.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5668599"
+      ],
+      "var_a": "PKC",
+      "var_b": "P38"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.8,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "PKC",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "PIP2 is hydrolyzed to DAG and IP3 in the DAG and IP3 signaling pathway, and DAG is a direct activator of PKC. Thus, PIP2 acts upstream of PKC activation.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-1489509"
+      ],
+      "var_a": "PKC",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.8,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "PKC",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "In all three co-participating pathways (Signaling by SCF-KIT, Downstream TCR signaling, Role of phospholipids in phagocytosis), PIP3 is a known upstream activator of PKC, recruiting it to the membrane and enabling its activation. No contradictory reactions are provided in the context.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-202222"
+      ],
+      "var_a": "PKC",
+      "var_b": "PIP3"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "PKC and PKA co-participate in the RET signaling and ROBO receptors bind AKAP5 pathways, but no specific reaction is provided showing one acting as a catalyst, regulator, or output relative to the other. Without a defined causal interaction, direction cannot be established.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "PKC",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.1,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "The provided context only indicates co-participation in the pathway 'RHO GTPases Activate NADPH Oxidases' without specifying direct biochemical reactions or roles. No causal direction can be inferred from this information alone.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "PKC",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.75,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "PKC",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "In the listed pathways, PLC\u03b3 (plcg) generates DAG, which is a well-known activator of PKC. This places plcg consistently upstream of PKC. Although no specific reaction-level roles are provided, the pathway context supports this directional inference with moderate confidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-1489509",
+        "R-HSA-2029485",
+        "R-HSA-5218921",
+        "R-HSA-8853659"
+      ],
+      "var_a": "PKC",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [
+        "R-HSA-6800434"
+      ],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 11,
+      "reasoning": "In R-HSA-168053, p44/42 and P38 are both catalysts, providing no directional signal. In R-HSA-6800434, each entity appears as both input and output with respect to the other, leading to contradictory causal directions. No consistent evidence supports a specific direction.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "p44/42",
+      "var_b": "P38"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.9,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "p44/42",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 41,
+      "reasoning": "PIP2 acts as a negative regulator or as part of the catalyst complex in multiple reactions whose product includes p44/42, consistently placing PIP2 upstream of p44/42 phosphorylation. No reactions indicate the reverse direction. The dual roles suggest regulatory influence, but the directional signal remains clear.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5672973",
+        "R-HSA-5672978",
+        "R-HSA-6802910",
+        "R-HSA-6802911",
+        "R-HSA-6802918",
+        "R-HSA-6802919",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-6802926",
+        "R-HSA-6802933",
+        "R-HSA-6802935",
+        "R-HSA-6802943",
+        "R-HSA-9656214",
+        "R-HSA-9656215"
+      ],
+      "var_a": "p44/42",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.85,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "p44/42",
+      "n_passes": 1,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "PIP3 is a positive regulator of reaction R-HSA-9632910, which directly produces p44/42. This regulatory role indicates a causal direction from PIP3 to p44/42, with no contradictory evidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-9632910"
+      ],
+      "var_a": "p44/42",
+      "var_b": "PIP3"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.1,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "The only provided information is that both entities co-participate in the pathway 'RHO GTPases Activate NADPH Oxidases' (R-HSA-5668599). Without specific reaction data detailing their roles (input, output, catalyst, or regulator), no causal direction can be inferred. Co-occurrence in a pathway alone is insufficient to establish a directional relationship.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "p44/42",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 3,
+      "reasoning": "The provided information only specifies co-participation in pathways (R-HSA-6811558, R-HSA-9634638, R-HSA-9856649) but no specific reaction roles (input, output, catalyst, regulator) are given for p44/42 or pakts473. Without reaction-level details, causal direction cannot be established.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "p44/42",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "Both p44/42 and pjnk act as catalysts in the same reaction (R-HSA-168053), phosphorylating ATF-2. There is no input-output or catalyst-output relationship between them; co-participation in pathways does not establish a directional causal link. Thus, the causal direction cannot be determined.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-168053"
+      ],
+      "var_a": "p44/42",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 11,
+      "reasoning": "Both p44/42 and plcg are co-substrates in ISGylation and de-ISGylation reactions (R-HSA-1169406, R-HSA-1678841), being independently modified without one acting as an upstream catalyst or regulator for the other. No provided reaction establishes a causal direction between them.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "p44/42",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "pmek",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [
+        "R-HSA-5674496"
+      ],
+      "effect": "p44/42",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 249,
+      "reasoning": "In numerous phosphorylation reactions across multiple pathways, pmek (MEK) acts in the catalyst complex while p44/42 (ERK) appears as an output, clearly supporting the canonical MEK \u2192 ERK activation direction. Only one reaction (R-HSA-5674496) suggests the reverse feedback phosphorylation, which does not outweigh the consistent, well-established upstream role of MEK in the MAPK cascade.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-109860",
+        "R-HSA-109862",
+        "R-HSA-5672973",
+        "R-HSA-5674373",
+        "R-HSA-6802910",
+        "R-HSA-6802918",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-6802935",
+        "R-HSA-9610156",
+        "R-HSA-9652165",
+        "R-HSA-9656214"
+      ],
+      "var_a": "p44/42",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "praf",
+      "confidence": 0.7,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [
+        "R-HSA-5675194",
+        "R-HSA-9732753"
+      ],
+      "effect": "p44/42",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 161,
+      "reasoning": "In the IFNG signaling pathway, praf catalyzes the phosphorylation of p44/42 (R-HSA-9732753), indicating praf is upstream. However, p44/42 also phosphorylates praf in a negative feedback loop (R-HSA-5675194), and many reactions show both directions due to complex formation. The canonical MAPK cascade context supports praf \u2192 p44/42 as the primary signal, but the contradictory feedback evidence reduces confidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-9732753"
+      ],
+      "var_a": "p44/42",
+      "var_b": "praf"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "Both entities participate in the same pathways but no specific reaction context was given, so causal direction cannot be inferred.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "pakts473",
+      "var_b": "P38"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.9,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "pakts473",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 5,
+      "reasoning": "PIP2 is part of the catalyst complex of reaction R-HSA-2243942, which directly produces pakts473 as a product. This establishes a clear upstream (catalyst) to downstream (product) causal direction.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-2243942"
+      ],
+      "var_a": "pakts473",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.85,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "pakts473",
+      "n_passes": 2,
+      "notes": [
+        "contradict_pruned: dropped contradicting_reactions not present in the Reactome context window.",
+        "support_pruned: dropped supporting_reactions not present in the Reactome context window."
+      ],
+      "reactome_context_size": 26,
+      "reasoning": "In the canonical PI3K/AKT pathway, PIP3 recruits AKT to the membrane where it is phosphorylated at S473, establishing PIP3 as upstream of pakts473. Multiple reactions show PIP3 participating in catalyst complexes that directly produce pakts473. A single contradictory note that PIP3 negatively regulates one of these reactions is likely a contextual feedback detail and does not override the consistent positive evidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-109702",
+        "R-HSA-198270",
+        "R-HSA-2243938",
+        "R-HSA-9860800"
+      ],
+      "var_a": "pakts473",
+      "var_b": "PIP3"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "No reaction-level data provided; only pathway co-participation, which does not establish a causal direction between pakts473 and PKA.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "pakts473",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 3,
+      "reasoning": "No specific reactions provided; only co-participation in pathways is shown, which does not indicate causal direction.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "pakts473",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 3,
+      "reasoning": "Both pjnk and P38 are part of the catalyst complex in the reaction R-HSA-168053, where they phosphorylate ATF-2. They act as co-catalysts with no evidence of one regulating the other; thus no causal direction can be inferred.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-168053"
+      ],
+      "var_a": "pjnk",
+      "var_b": "P38"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "The only provided reaction (R-HSA-168053) shows both pjnk and p44/42 acting as catalysts together, with no regulatory or input-output relationship between them. Without evidence of one influencing the other, causal direction cannot be determined.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-168053"
+      ],
+      "var_a": "pjnk",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "Only co-participation in pathways is provided without specific reaction details; causal direction cannot be determined from this information.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "pjnk",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [
+        "R-HSA-202354"
+      ],
+      "effect": "PIP2",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 19,
+      "reasoning": "plcg acts as the catalyst in multiple reactions where PIP2 is the substrate, directly hydrolyzing PIP2 into second messengers. This establishes a clear causal direction from the enzyme plcg to its substrate PIP2. The translocation reaction (R-HSA-202354) has ambiguous direction but does not override the strong, consistent catalytic evidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-167686",
+        "R-HSA-202354",
+        "R-HSA-202407",
+        "R-HSA-2730847",
+        "R-HSA-5607735",
+        "R-HSA-622382"
+      ],
+      "var_a": "plcg",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 1.0,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "plcg",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 51,
+      "reasoning": "PIP3 acts as a catalyst complex component or positive regulator in multiple reactions that produce phosphorylated/activated plcg, consistently placing PIP3 upstream of plcg activation. No reactions indicate the reverse direction, and the repeated pattern across diverse pathways (GPVI, FGFR, BCR, ALK) strongly supports causality from PIP3 to plcg.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-1839098",
+        "R-HSA-2424487",
+        "R-HSA-2730841",
+        "R-HSA-2730856",
+        "R-HSA-2730858",
+        "R-HSA-2730888",
+        "R-HSA-5654147",
+        "R-HSA-5654149",
+        "R-HSA-5654151",
+        "R-HSA-5654222",
+        "R-HSA-5655243",
+        "R-HSA-5655301",
+        "R-HSA-5655341",
+        "R-HSA-9606159",
+        "R-HSA-9606162",
+        "R-HSA-9606163",
+        "R-HSA-9700171",
+        "R-HSA-9712086"
+      ],
+      "var_a": "plcg",
+      "var_b": "PIP3"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "Only pathway-level co-participation (RET signaling, FCGR3A-mediated IL10 synthesis) is provided without any specific reaction data. Without reaction-level details, no causal direction between plcg and PKA can be determined.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "plcg",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.75,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "PKC",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "In the listed pathways, PLC\u03b3 (plcg) generates DAG, which is a well-known activator of PKC. This places plcg consistently upstream of PKC. Although no specific reaction-level roles are provided, the pathway context supports this directional inference with moderate confidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-1489509",
+        "R-HSA-2029485",
+        "R-HSA-5218921",
+        "R-HSA-8853659"
+      ],
+      "var_a": "plcg",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 11,
+      "reasoning": "Both plcg and p44/42 appear as both inputs and outputs in reactions R-HSA-1169406 and R-HSA-1678841, indicating they are co-substrates for ISGylation and deISGylation. There is no reaction where one entity uniquely acts as an input and the other as an output, or where one regulates the other; thus, no causal direction can be inferred.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "plcg",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "The provided context only indicates that plcg and pjnk co-participate in two pathways, but no specific reaction details (e.g., input/output/catalyst roles) are given. Without reaction-level evidence, causal direction cannot be determined.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "plcg",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "pmek",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 41,
+      "reasoning": "PIP2 participates as a catalyst complex member or negative regulator in multiple reactions whose product includes pmek, demonstrating a clear upstream role in the MAPK signaling cascade. No reactions place pmek upstream of PIP2, and the consistent directionality across diverse pathway variants strongly supports PIP2 \u2192 pmek causation.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5672973",
+        "R-HSA-5672978",
+        "R-HSA-6802910",
+        "R-HSA-6802911",
+        "R-HSA-6802918",
+        "R-HSA-6802919",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-6802926",
+        "R-HSA-6802933",
+        "R-HSA-6802935",
+        "R-HSA-6802943",
+        "R-HSA-9656214",
+        "R-HSA-9656215"
+      ],
+      "var_a": "pmek",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "pmek",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [
+        "R-HSA-5674496"
+      ],
+      "effect": "p44/42",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 249,
+      "reasoning": "In numerous phosphorylation reactions across multiple pathways, pmek (MEK) acts in the catalyst complex while p44/42 (ERK) appears as an output, clearly supporting the canonical MEK \u2192 ERK activation direction. Only one reaction (R-HSA-5674496) suggests the reverse feedback phosphorylation, which does not outweigh the consistent, well-established upstream role of MEK in the MAPK cascade.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-109860",
+        "R-HSA-109862",
+        "R-HSA-5672973",
+        "R-HSA-5674373",
+        "R-HSA-6802910",
+        "R-HSA-6802918",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-6802935",
+        "R-HSA-9610156",
+        "R-HSA-9652165",
+        "R-HSA-9656214"
+      ],
+      "var_a": "pmek",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "praf",
+      "confidence": 0.85,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [
+        "R-HSA-5672969",
+        "R-HSA-6802916",
+        "R-HSA-6802924",
+        "R-HSA-6802941",
+        "R-HSA-9656212"
+      ],
+      "effect": "pmek",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 172,
+      "reasoning": "In canonical MAPK signaling, RAF (praf) phosphorylates and activates MEK (pmek), as seen in multiple reactions where praf is a catalyst and pmek is an output (e.g., R-HSA-5672978). Although feedback phosphorylation of RAF by MEK occurs (R-HSA-5672969), the predominant causal direction is praf \u2192 pmek, supported by consistent pathway roles.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5672978",
+        "R-HSA-6802919",
+        "R-HSA-6802926",
+        "R-HSA-6802943",
+        "R-HSA-9656215"
+      ],
+      "var_a": "pmek",
+      "var_b": "praf"
+    },
+    {
+      "cause": "P38",
+      "confidence": 0.8,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "praf",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "p38 MAPK phosphorylates and inhibits RAF1 (praf) as part of negative feedback regulation of the MAPK pathway. In the Reactome pathway 'Negative regulation of MAPK pathway', p38 acts as a kinase on RAF1, placing p38 upstream as a causal regulator. This mechanism is well-documented but no specific reaction ID was provided.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5675221"
+      ],
+      "var_a": "praf",
+      "var_b": "P38"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.9,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [],
+      "effect": "praf",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 31,
+      "reasoning": "PIP2 acts as a negative regulator and is part of the catalyst complex in multiple reactions whose product includes praf, indicating that PIP2 directly influences the generation of praf. This consistent regulatory role across different pathways establishes PIP2 as upstream of praf with an inhibitory effect.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5672973",
+        "R-HSA-5672978",
+        "R-HSA-6802918",
+        "R-HSA-6802919",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-6802926",
+        "R-HSA-6802943",
+        "R-HSA-9656214",
+        "R-HSA-9656215"
+      ],
+      "var_a": "praf",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.75,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [],
+      "effect": "praf",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "PKA is known to directly phosphorylate Raf-1 (praf) at inhibitory sites (e.g., Ser259 and Ser621), placing PKA upstream of Raf in signaling cascades. Both entities appear in the Rap1 signalling and CD209 signaling pathways, where PKA-mediated regulation of Raf is plausible, though specific reactions are not detailed in the provided context.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-392517",
+        "R-HSA-5621575"
+      ],
+      "var_a": "praf",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "praf",
+      "confidence": 0.7,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [
+        "R-HSA-5675194",
+        "R-HSA-9732753"
+      ],
+      "effect": "p44/42",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 161,
+      "reasoning": "In the IFNG signaling pathway, praf catalyzes the phosphorylation of p44/42 (R-HSA-9732753), indicating praf is upstream. However, p44/42 also phosphorylates praf in a negative feedback loop (R-HSA-5675194), and many reactions show both directions due to complex formation. The canonical MAPK cascade context supports praf \u2192 p44/42 as the primary signal, but the contradictory feedback evidence reduces confidence.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-9732753"
+      ],
+      "var_a": "praf",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "praf",
+      "confidence": 0.85,
+      "conflict": null,
+      "constraint_type": "soft_prior",
+      "contradicting_reactions": [
+        "R-HSA-5672969",
+        "R-HSA-6802916",
+        "R-HSA-6802924",
+        "R-HSA-6802941",
+        "R-HSA-9656212"
+      ],
+      "effect": "pmek",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 172,
+      "reasoning": "In canonical MAPK signaling, RAF (praf) phosphorylates and activates MEK (pmek), as seen in multiple reactions where praf is a catalyst and pmek is an output (e.g., R-HSA-5672978). Although feedback phosphorylation of RAF by MEK occurs (R-HSA-5672969), the predominant causal direction is praf \u2192 pmek, supported by consistent pathway roles.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-5672978",
+        "R-HSA-6802919",
+        "R-HSA-6802926",
+        "R-HSA-6802943",
+        "R-HSA-9656215"
+      ],
+      "var_a": "praf",
+      "var_b": "pmek"
+    }
+  ],
+  "schema_version": "step04.causal_priors.v1",
+  "served_models": {
+    "deepseek-ai/DeepSeek-V4-Pro": 122
+  },
+  "vocabulary": [
+    "P38",
+    "PIP2",
+    "PIP3",
+    "PKA",
+    "PKC",
+    "p44/42",
+    "pakts473",
+    "pjnk",
+    "plcg",
+    "pmek",
+    "praf"
+  ],
+  "wall_clock_seconds": 0.56
+}

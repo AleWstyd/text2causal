@@ -238,11 +238,13 @@ class TestWritersAndFigures(unittest.TestCase):
                 _ok_row(
                     condition=c, algorithm="PC", seed=0, f1=0.4 + 0.01 * i, shd=float(i)
                 )
-                for i, c in enumerate(["C0", "C0.5", "C1", "C2", "C3", "C4", "C5"])
+                for i, c in enumerate(
+                    ["C0", "C0.5", "C1", "C2", "C3", "C3+ft", "C4", "C5"]
+                )
             ]
             + [
                 _ok_row(condition=c, algorithm="GES", seed=0, f1=0.45, shd=20.0)
-                for c in ["C0", "C0.5", "C1", "C2", "C3", "C4", "C5"]
+                for c in ["C0", "C0.5", "C1", "C2", "C3", "C3+ft", "C4", "C5"]
             ]
             + [
                 _ok_row(condition=c, algorithm="LiNGAM", seed=0, f1=0.42, shd=30.0)
@@ -250,7 +252,7 @@ class TestWritersAndFigures(unittest.TestCase):
             ]
             + [
                 _fail_row(condition=c, algorithm="LiNGAM", seed=0)
-                for c in ["C2", "C3", "C4", "C5"]
+                for c in ["C2", "C3", "C3+ft", "C4", "C5"]
             ]
         )
         llm = {"metrics": {"f1": 0.46, "directed_f1": 0.46, "shd": 17.0}}

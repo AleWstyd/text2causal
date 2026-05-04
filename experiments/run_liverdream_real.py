@@ -394,6 +394,12 @@ def _conditions() -> tuple[Condition, ...]:
             "C3", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_liverdream.json", 0.7
         ),
         Condition(
+            "C3+ft",
+            "reactome_llm_with_freetext_fallback",
+            EXPERIMENTS_DIR / "causal_priors_liverdream_with_fallback.json",
+            0.7,
+        ),
+        Condition(
             "C4", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_liverdream.json", 0.6
         ),
         Condition(
@@ -431,7 +437,8 @@ def _run_ablation() -> dict[str, Any]:
                     seed=seed,
                     lingam_prior_mode=(
                         "forbidden_only"
-                        if algorithm == "LiNGAM" and cond.name in {"C2", "C3", "C4"}
+                        if algorithm == "LiNGAM"
+                        and cond.name in {"C2", "C3", "C3+ft", "C4"}
                         else None
                     ),
                 )
@@ -470,7 +477,7 @@ def _run_ablation() -> dict[str, Any]:
     payload = {
         "dataset": DATASET_NAME,
         "source": "CellNOptR LiverDREAM public MIDAS + PKN files",
-        "n_cells_expected": 211,
+        "n_cells_expected": 241,
         "n_cells_completed": len(results),
         "n_cells_failed": sum(1 for row in results if row["status"] == "failed"),
         "results": results,
@@ -485,6 +492,8 @@ def _constraint_quality() -> dict[str, Any]:
     n_pairs = true_graph.number_of_nodes() * (true_graph.number_of_nodes() - 1)
     sources = {
         "reactome_llm": EXPERIMENTS_DIR / "causal_priors_liverdream.json",
+        "reactome_llm_with_freetext_fallback": EXPERIMENTS_DIR
+        / "causal_priors_liverdream_with_fallback.json",
         "omnipath_reactome_only": EXPERIMENTS_DIR
         / "floor_priors_liverdream_reactome_only.json",
         "omnipath_all": EXPERIMENTS_DIR / "floor_priors_liverdream_all.json",
@@ -526,7 +535,7 @@ def _write_ablation_table(payload: dict[str, Any]) -> None:
         r"condition & PC F1 & GES F1 & LiNGAM F1 \\",
         r"\hline",
     ]
-    for cond in ("C0", "C0.5", "C1", "C2", "C3", "C4", "C5"):
+    for cond in ("C0", "C0.5", "C1", "C2", "C3", "C3+ft", "C4", "C5"):
         row = [cond]
         for alg in ALGORITHMS:
             block = agg.get(cond, {}).get(alg, {}).get("f1", {})
@@ -543,7 +552,7 @@ def _write_cross_dataset_table() -> None:
         agg = aggregate(rows)
         best_label = "N/A"
         best_f1: float | None = None
-        for cond in ("C0", "C0.5", "C1", "C2", "C3", "C4"):
+        for cond in ("C0", "C0.5", "C1", "C2", "C3", "C3+ft", "C4"):
             for alg in ALGORITHMS:
                 block = agg.get(cond, {}).get(alg, {}).get("f1", {})
                 mean = block.get("mean")
@@ -576,6 +585,9 @@ def main() -> None:
     _write_reactome_priors()
     _write_floor_priors()
     _write_freetext_priors()
+    from experiments.run_reasoning_with_fallback import main as _merge_fallback_main
+
+    _merge_fallback_main()
     ablation = _run_ablation()
     quality = _constraint_quality()
     _write_ablation_table(ablation)

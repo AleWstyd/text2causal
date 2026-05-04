@@ -22,6 +22,7 @@ CONDITION_ORDER: Final[tuple[str, ...]] = (
     "C1",
     "C2",
     "C3",
+    "C3+ft",
     "C4",
     "C5",
 )
@@ -29,12 +30,28 @@ ALGORITHMS: Final[tuple[str, ...]] = ("PC", "GES", "LiNGAM")
 AGGREGATE_METRICS: Final[tuple[str, ...]] = ("shd", "f1", "directed_f1")
 HEADLINE_F1_METRIC: Final[str] = "directed_f1"
 
-GAP_CONDITIONS: Final[tuple[str, ...]] = ("C0.5", "C1", "C2", "C3", "C4")
-NON_ORACLE: Final[tuple[str, ...]] = ("C0", "C0.5", "C1", "C2", "C3", "C4")
-LLM_CD_CONDITIONS: Final[tuple[str, ...]] = ("C2", "C3", "C4")
+GAP_CONDITIONS: Final[tuple[str, ...]] = (
+    "C0.5",
+    "C1",
+    "C2",
+    "C3",
+    "C3+ft",
+    "C4",
+)
+NON_ORACLE: Final[tuple[str, ...]] = (
+    "C0",
+    "C0.5",
+    "C1",
+    "C2",
+    "C3",
+    "C3+ft",
+    "C4",
+)
+LLM_CD_CONDITIONS: Final[tuple[str, ...]] = ("C2", "C3", "C3+ft", "C4")
 
 CONSTRAINT_SOURCES: Final[tuple[str, ...]] = (
     "reactome_llm",
+    "reactome_llm_with_freetext_fallback",
     "omnipath_reactome_only",
     "omnipath_all",
     "freetext_llm",
