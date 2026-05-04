@@ -26,7 +26,8 @@ CONDITION_ORDER: Final[tuple[str, ...]] = (
     "C5",
 )
 ALGORITHMS: Final[tuple[str, ...]] = ("PC", "GES", "LiNGAM")
-METRICS: Final[tuple[str, ...]] = ("shd", "f1")
+AGGREGATE_METRICS: Final[tuple[str, ...]] = ("shd", "f1", "directed_f1")
+HEADLINE_F1_METRIC: Final[str] = "directed_f1"
 
 GAP_CONDITIONS: Final[tuple[str, ...]] = ("C0.5", "C1", "C2", "C3", "C4")
 NON_ORACLE: Final[tuple[str, ...]] = ("C0", "C0.5", "C1", "C2", "C3", "C4")
@@ -88,7 +89,7 @@ def aggregate(results: list[dict[str, Any]]) -> dict[str, Any]:
         metrics = row.get("metrics") or {}
         cond = str(row["condition"])
         alg = str(row["algorithm"])
-        for m in METRICS:
+        for m in AGGREGATE_METRICS:
             if m not in metrics or metrics[m] is None:
                 continue
             key = (cond, alg, m)
@@ -98,7 +99,7 @@ def aggregate(results: list[dict[str, Any]]) -> dict[str, Any]:
     for cond, alg in sorted(pairs, key=lambda t: (_cond_sort_key(t[0]), t[1])):
         out.setdefault(cond, {})
         out[cond].setdefault(alg, {})
-        for m in METRICS:
+        for m in AGGREGATE_METRICS:
             vals = buckets.get((cond, alg, m), [])
             n_ok = len(vals)
             if n_ok == 0:
@@ -152,6 +153,7 @@ def write_ablation_table(
     """Write ``tabular`` only (no ``table`` environment). C-LLM-only uses dashes in non-PC columns."""
     lines: list[str] = [
         r"% Sachs ablation: mean $\pm$ std over seeds with status=ok; $\pm$ is sample std over those seeds (0 if only one successful seed).",
+        r"% F1 columns are \textbf{skeleton} (undirected overlap; reversed arcs count as correct). For directed F1 see \texttt{ablation\_table\_directed.tex}.",
         r"% \textsuperscript{*} N/A: no successful runs or inapplicable cell. \textsuperscript{\dag}: fewer than 10/10 successful seeds (see caption).",
         r"\begin{tabular}{l|cc|cc|cc}",
         r"\hline",
@@ -199,6 +201,66 @@ def write_ablation_table(
     output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def write_ablation_table_directed(
+    agg: dict[str, Any],
+    llm_only_row: dict[str, Any],
+    output_path: Path,
+) -> None:
+    """Same layout as :func:`write_ablation_table` but F1 uses ``directed_f1`` (ordered arcs)."""
+    lines: list[str] = [
+        r"% Sachs ablation (directed F1): mean $\pm$ std over seeds with status=ok.",
+        r"% Directed F1 requires matching arc orientation; see \texttt{ablation\_table.tex} for skeleton F1.",
+        r"% \textsuperscript{*} N/A: no successful runs or inapplicable cell. \textsuperscript{\dag}: fewer than 10/10 successful seeds (see caption).",
+        r"\begin{tabular}{l|cc|cc|cc}",
+        r"\hline",
+        r" & \multicolumn{2}{c|}{PC} & \multicolumn{2}{c|}{GES} & \multicolumn{2}{c}{LiNGAM} \\",
+        r" & SHD & F1\textsubscript{dir} & SHD & F1\textsubscript{dir} & SHD & F1\textsubscript{dir} \\",
+        r"\hline",
+    ]
+
+    table_rows = [c for c in CONDITION_ORDER if c != "C5"] + ["C-LLM-only", "C5"]
+    for condition in table_rows:
+        if condition == "C-LLM-only":
+            m = llm_only_row.get("metrics") or {}
+            shd_v = round2(float(m["shd"])) if m.get("shd") is not None else None
+            d_f1 = (
+                round2(float(m["directed_f1"]))
+                if m.get("directed_f1") is not None
+                else None
+            )
+            assert shd_v is not None and d_f1 is not None
+            row = (
+                r"C-LLM-only\textsuperscript{$\dagger$} & "
+                rf"${shd_v:.2f}$ & ${d_f1:.2f}$ & --- & --- & --- & --- \\"
+            )
+            lines.append(
+                row
+                + r" % single DAG; no PC/GES/LiNGAM split—metrics repeated only under PC columns"
+            )
+            continue
+
+        row_parts = [condition]
+        for alg in ALGORITHMS:
+            for metric in ("shd", "directed_f1"):
+                row_parts.append(
+                    _cell_tex(
+                        agg,
+                        condition,
+                        alg,
+                        metric,
+                    )
+                )
+        lines.append(" & ".join(row_parts) + r" \\")
+
+    lines.append(r"\hline")
+    lines.append(
+        r"% C-LLM-only row: dagger marks algorithm-free DAG; values shown only under PC columns (--- elsewhere)."
+    )
+    lines.append(r"\end{tabular}")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def write_constraint_quality_table(quality: dict[str, Any], output_path: Path) -> None:
     """Build from ``constraint_quality_sachs.json`` ``by_source`` block."""
     by_source = quality["by_source"]
@@ -227,7 +289,7 @@ def write_constraint_quality_table(quality: dict[str, Any], output_path: Path) -
 def write_aupr_extension_table(
     results: list[dict[str, Any]], output_path: Path
 ) -> None:
-    """Write PC-only AUPR/F1 snippet from ablation rows."""
+    """Write PC-only AUPR / skeleton F1 / directed F1 snippet from ablation rows."""
     rows = [
         row
         for row in results
@@ -237,9 +299,10 @@ def write_aupr_extension_table(
     ]
     lines = [
         r"% PC AUPR extension: mean $\pm$ std over successful seeds from ablation_results_sachs.json.",
-        r"\begin{tabular}{lcc}",
+        r"% F1 = skeleton (undirected); F1\textsubscript{dir} = directed arc overlap.",
+        r"\begin{tabular}{lccc}",
         r"\hline",
-        r"condition & AUPR & F1 \\",
+        r"condition & AUPR & F1 & F1\textsubscript{dir} \\",
         r"\hline",
     ]
     for condition in CONDITION_ORDER:
@@ -254,16 +317,25 @@ def write_aupr_extension_table(
             for row in rows
             if row.get("condition") == condition and "f1" in (row.get("metrics") or {})
         ]
-        if not vals_aupr or not vals_f1:
-            lines.append(f"{condition} & N/A & N/A \\\\")
+        vals_df1 = [
+            float((row.get("metrics") or {})["directed_f1"])
+            for row in rows
+            if row.get("condition") == condition
+            and "directed_f1" in (row.get("metrics") or {})
+        ]
+        if not vals_aupr or not vals_f1 or not vals_df1:
+            lines.append(f"{condition} & N/A & N/A & N/A \\\\")
             continue
         aupr_mean = statistics.mean(vals_aupr)
         aupr_std = statistics.stdev(vals_aupr) if len(vals_aupr) >= 2 else 0.0
         f1_mean = statistics.mean(vals_f1)
         f1_std = statistics.stdev(vals_f1) if len(vals_f1) >= 2 else 0.0
+        df1_mean = statistics.mean(vals_df1)
+        df1_std = statistics.stdev(vals_df1) if len(vals_df1) >= 2 else 0.0
         lines.append(
             f"{condition} & ${aupr_mean:.2f} \\pm {aupr_std:.2f}$ "
-            f"& ${f1_mean:.2f} \\pm {f1_std:.2f}$ \\\\"
+            f"& ${f1_mean:.2f} \\pm {f1_std:.2f}$ "
+            f"& ${df1_mean:.2f} \\pm {df1_std:.2f}$ \\\\"
         )
     lines.extend([r"\hline", r"\end{tabular}"])
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -300,8 +372,13 @@ def headline_summary(
 ) -> dict[str, Any]:
     """Deterministic summary dict (rounded); nested structures sorted by key where relevant."""
     metrics_llm = llm_only_row.get("metrics") or {}
-    f1_cllm = (
+    sk_f1_cllm = (
         round2(float(metrics_llm["f1"])) if metrics_llm.get("f1") is not None else None
+    )
+    df1_cllm = (
+        round2(float(metrics_llm[HEADLINE_F1_METRIC]))
+        if metrics_llm.get(HEADLINE_F1_METRIC) is not None
+        else None
     )
     shd_cllm = (
         round2(float(metrics_llm["shd"]))
@@ -314,33 +391,37 @@ def headline_summary(
 
     for alg in ALGORITHMS:
         best_cond: str | None = None
-        best_f1: float | None = None
+        best_df1: float | None = None
+        best_sk_f1: float | None = None
         best_shd: float | None = None
         for cond in NON_ORACLE:
-            f1m = _mean_metric(agg, cond, alg, "f1")
+            f1m = _mean_metric(agg, cond, alg, HEADLINE_F1_METRIC)
             if f1m is None:
                 continue
-            if best_f1 is None or f1m > best_f1:
-                best_f1 = f1m
+            if best_df1 is None or f1m > best_df1:
+                best_df1 = f1m
                 best_cond = cond
                 shdm = _mean_metric(agg, cond, alg, "shd")
                 best_shd = round2(shdm) if shdm is not None else None
+                sk = _mean_metric(agg, cond, alg, "f1")
+                best_sk_f1 = round2(sk) if sk is not None else None
 
-        f0 = _mean_metric(agg, "C0", alg, "f1")
-        f5 = _mean_metric(agg, "C5", alg, "f1")
-        g_pct = gap_closed_pct(best_f1, f0, f5)
+        f0 = _mean_metric(agg, "C0", alg, HEADLINE_F1_METRIC)
+        f5 = _mean_metric(agg, "C5", alg, HEADLINE_F1_METRIC)
+        g_pct = gap_closed_pct(best_df1, f0, f5)
         if g_pct is not None:
             gap_for_best.append(float(g_pct))
 
         n_ok = 0
         if best_cond is not None:
-            block = agg.get(best_cond, {}).get(alg, {}).get("f1")
+            block = agg.get(best_cond, {}).get(alg, {}).get(HEADLINE_F1_METRIC)
             if block:
                 n_ok = int(block.get("n_ok", 0))
 
         best_by_alg[alg] = {
             "condition": best_cond,
-            "f1": round2(best_f1) if best_f1 is not None else None,
+            "directed_f1": round2(best_df1) if best_df1 is not None else None,
+            "f1": best_sk_f1,
             "shd": best_shd,
             "gap_closed_pct": g_pct,
             "n_ok_f1": n_ok,
@@ -350,10 +431,10 @@ def headline_summary(
 
     cllm_gap_pcts: list[float] = []
     for alg in ALGORITHMS:
-        f0 = _mean_metric(agg, "C0", alg, "f1")
-        f5 = _mean_metric(agg, "C5", alg, "f1")
+        f0 = _mean_metric(agg, "C0", alg, HEADLINE_F1_METRIC)
+        f5 = _mean_metric(agg, "C5", alg, HEADLINE_F1_METRIC)
         g = gap_closed_pct(
-            float(f1_cllm) if f1_cllm is not None else None,
+            float(df1_cllm) if df1_cllm is not None else None,
             f0,
             f5,
         )
@@ -363,31 +444,37 @@ def headline_summary(
 
     oracle: dict[str, Any] = {}
     for alg in ALGORITHMS:
-        f1_block = agg.get("C5", {}).get(alg, {}).get("f1", {})
-        f1 = _mean_metric(agg, "C5", alg, "f1")
-        n_ok = int(f1_block.get("n_ok", 0)) if isinstance(f1_block, dict) else 0
+        df1_block = agg.get("C5", {}).get(alg, {}).get(HEADLINE_F1_METRIC, {})
+        df1 = _mean_metric(agg, "C5", alg, HEADLINE_F1_METRIC)
+        n_ok = int(df1_block.get("n_ok", 0)) if isinstance(df1_block, dict) else 0
+        sk = _mean_metric(agg, "C5", alg, "f1")
         oracle[alg] = {
-            "f1": round2(f1) if f1 is not None else None,
+            "directed_f1": round2(df1) if df1 is not None else None,
+            "f1": round2(sk) if sk is not None else None,
             "n_ok": n_ok,
-            "failed": f1 is None,
+            "failed": df1 is None,
         }
     best_oracle_f1 = max(
-        (oracle[a]["f1"] for a in ALGORITHMS if oracle[a]["f1"] is not None),
+        (
+            oracle[a]["directed_f1"]
+            for a in ALGORITHMS
+            if oracle[a]["directed_f1"] is not None
+        ),
         default=None,
     )
 
     best_cd_f1: float | None = None
     for cond in LLM_CD_CONDITIONS:
         for alg in ALGORITHMS:
-            v = _mean_metric(agg, cond, alg, "f1")
+            v = _mean_metric(agg, cond, alg, HEADLINE_F1_METRIC)
             if v is None:
                 continue
             if best_cd_f1 is None or v > best_cd_f1:
                 best_cd_f1 = v
 
     delta = None
-    if best_cd_f1 is not None and f1_cllm is not None:
-        delta = round2(best_cd_f1 - float(f1_cllm))
+    if best_cd_f1 is not None and df1_cllm is not None:
+        delta = round2(best_cd_f1 - float(df1_cllm))
 
     coverage_block = None
     if quality is not None and "coverage_conditional" in quality:
@@ -405,7 +492,8 @@ def headline_summary(
         "best_condition_per_algorithm": best_by_alg,
         "gap_closed_pct": gap_closed_best,
         "c_llm_only": {
-            "f1": f1_cllm,
+            "f1": sk_f1_cllm,
+            "directed_f1": df1_cllm,
             "shd": shd_cllm,
             "gap_closed_pct_max_vs_algorithms": cllm_gap_max,
         },
@@ -431,15 +519,19 @@ def figure_gap_closed(
     bar_w = total_w / n_cond
 
     m_llm = llm_only_row.get("metrics") or {}
-    f1_llm = float(m_llm["f1"]) if m_llm.get("f1") is not None else None
+    f1_llm = (
+        float(m_llm[HEADLINE_F1_METRIC])
+        if m_llm.get(HEADLINE_F1_METRIC) is not None
+        else None
+    )
 
     for j, cond in enumerate(GAP_CONDITIONS):
         offsets = (j - (n_cond - 1) / 2) * bar_w
         heights: list[float] = []
         for alg in ALGORITHMS:
-            f0 = _mean_metric(agg, "C0", alg, "f1")
-            f5 = _mean_metric(agg, "C5", alg, "f1")
-            fx = _mean_metric(agg, cond, alg, "f1")
+            f0 = _mean_metric(agg, "C0", alg, HEADLINE_F1_METRIC)
+            f5 = _mean_metric(agg, "C5", alg, HEADLINE_F1_METRIC)
+            fx = _mean_metric(agg, cond, alg, HEADLINE_F1_METRIC)
             g = gap_closed_pct(fx, f0, f5)
             heights.append(float(g) if g is not None else float("nan"))
         ax.bar(
@@ -451,8 +543,8 @@ def figure_gap_closed(
         )
 
     for i, alg in enumerate(ALGORITHMS):
-        f0 = _mean_metric(agg, "C0", alg, "f1")
-        f5 = _mean_metric(agg, "C5", alg, "f1")
+        f0 = _mean_metric(agg, "C0", alg, HEADLINE_F1_METRIC)
+        f5 = _mean_metric(agg, "C5", alg, HEADLINE_F1_METRIC)
         y_line = gap_closed_pct(f1_llm, f0, f5)
         if y_line is not None:
             ax.hlines(
@@ -472,7 +564,9 @@ def figure_gap_closed(
     )
     ax.set_xticks(x)
     ax.set_xticklabels(list(ALGORITHMS))
-    ax.set_ylabel(r"$\%$ of $C0 \rightarrow C5$ F1 gap closed")
+    ax.set_ylabel(
+        r"$\%$ of $C0 \rightarrow C5$ $\mathrm{F1}_{\mathrm{dir}}$ gap closed"
+    )
     ax.set_title("Sachs: gap closed by condition (non-oracle)")
     ax.legend(loc="upper left", fontsize=8, ncol=2, framealpha=0.92)
     ax.annotate(
@@ -497,18 +591,24 @@ def figure_cd_vs_llm_only(
 ) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     m_llm = llm_only_row.get("metrics") or {}
-    f1_llm = float(m_llm["f1"]) if m_llm.get("f1") is not None else None
+    f1_llm = (
+        float(m_llm[HEADLINE_F1_METRIC])
+        if m_llm.get(HEADLINE_F1_METRIC) is not None
+        else None
+    )
 
     best_cd: float | None = None
     for cond in LLM_CD_CONDITIONS:
         for alg in ALGORITHMS:
-            v = _mean_metric(agg, cond, alg, "f1")
+            v = _mean_metric(agg, cond, alg, HEADLINE_F1_METRIC)
             if v is None:
                 continue
             if best_cd is None or v > best_cd:
                 best_cd = v
 
-    oracle_vals = [_mean_metric(agg, "C5", alg, "f1") for alg in ALGORITHMS]
+    oracle_vals = [
+        _mean_metric(agg, "C5", alg, HEADLINE_F1_METRIC) for alg in ALGORITHMS
+    ]
     oracle_best = max((v for v in oracle_vals if v is not None), default=None)
 
     labels = [
@@ -528,7 +628,7 @@ def figure_cd_vs_llm_only(
     ax.bar(xpos, values, color=colours, width=0.62)
     ax.set_xticks(xpos)
     ax.set_xticklabels(labels, fontsize=9)
-    ax.set_ylabel("F1 (direction-aware)")
+    ax.set_ylabel(r"$\mathrm{F1}_{\mathrm{dir}}$ (directed arc overlap)")
     ax.set_title("Sachs: does causal discovery add value vs LLM-only DAG?")
     ax.set_ylim(
         0.0, max(1.0, max((v for v in values if not math.isnan(v)), default=0.0) * 1.08)
@@ -545,7 +645,7 @@ def figure_cd_vs_llm_only(
 def _aggregate_tau_curve(
     discovery_results: list[dict[str, Any]],
 ) -> dict[tuple[str, float], dict[str, Any]]:
-    """Mean/std of F1 per (algorithm, threshold) for ok reactome_llm rows."""
+    """Mean/std of directed F1 per (algorithm, threshold) for ok reactome_llm rows."""
     buckets: dict[tuple[str, float], list[float]] = {}
     for row in discovery_results:
         if row.get("priors_source") != "reactome_llm":
@@ -553,11 +653,11 @@ def _aggregate_tau_curve(
         if row.get("status") != "ok":
             continue
         metrics = row.get("metrics") or {}
-        if "f1" not in metrics or metrics["f1"] is None:
+        if HEADLINE_F1_METRIC not in metrics or metrics[HEADLINE_F1_METRIC] is None:
             continue
         alg = str(row["algorithm"])
         th = float(row["threshold"])
-        buckets.setdefault((alg, th), []).append(float(metrics["f1"]))
+        buckets.setdefault((alg, th), []).append(float(metrics[HEADLINE_F1_METRIC]))
 
     out: dict[tuple[str, float], dict[str, Any]] = {}
     for key, vals in sorted(buckets.items()):
@@ -606,7 +706,7 @@ def figure_threshold_sensitivity(
         ax.fill_between(tau_grid, low, high, color=colour, alpha=0.18)
 
     ax.set_xlabel(r"confidence threshold $\tau$")
-    ax.set_ylabel("F1 (mean ± std over seeds)")
+    ax.set_ylabel(r"$\mathrm{F1}_{\mathrm{dir}}$ (mean ± std over seeds)")
     ax.set_title("Sachs: threshold sensitivity (reactome + LLM priors)")
     ax.set_xticks(tau_grid)
     ax.legend(loc="best", fontsize=8)
@@ -664,13 +764,13 @@ def _signed(delta: float | None) -> str:
 def _fmt_headline_block(s: dict[str, Any]) -> str:
     lines = [
         "=== Step 6 Sachs Ablation Headline ===",
-        "Best non-oracle condition per algorithm (by F1):",
+        "Best non-oracle condition per algorithm (by directed F1):",
     ]
     best = s["best_condition_per_algorithm"]
     for alg in ALGORITHMS:
         row = best[alg]
         cond = row["condition"]
-        f1v = row["f1"]
+        f1v = row["directed_f1"]
         shdv = row["shd"]
         g = row["gap_closed_pct"]
         if cond is None or f1v is None:
@@ -679,17 +779,23 @@ def _fmt_headline_block(s: dict[str, Any]) -> str:
         shd_s = f"{shdv:.2f}" if shdv is not None else "N/A"
         if g is None:
             lines.append(
-                f"  {alg}: {cond}, F1={f1v:.2f}, SHD={shd_s} (gap closed: N/A)"
+                f"  {alg}: {cond}, F1_dir={f1v:.2f}, SHD={shd_s} (gap closed: N/A)"
             )
         else:
             lines.append(
-                f"  {alg}: {cond}, F1={f1v:.2f}, SHD={shd_s} (gap closed: {g:.2f}%)"
+                f"  {alg}: {cond}, F1_dir={f1v:.2f}, SHD={shd_s} (gap closed: {g:.2f}%)"
             )
 
     cllm = s["c_llm_only"]
     gcl = cllm["gap_closed_pct_max_vs_algorithms"]
+    df1_c = cllm.get("directed_f1")
+    sk1_c = cllm.get("f1")
+    df1_s = f"{df1_c:.2f}" if df1_c is not None else "N/A"
+    sk1_s = f"{sk1_c:.2f}" if sk1_c is not None else "N/A"
+    shd_c = cllm.get("shd")
+    shd_line = f"{float(shd_c):.2f}" if shd_c is not None else "N/A"
     lines.append(
-        f"C-LLM-only: F1={cllm['f1']:.2f}, SHD={cllm['shd']:.2f}"
+        f"C-LLM-only: F1_dir={df1_s}, F1_skel={sk1_s}, SHD={shd_line}"
         + (f" (gap closed: {gcl:.2f}%)" if gcl is not None else " (gap closed: N/A)")
     )
 
@@ -697,15 +803,16 @@ def _fmt_headline_block(s: dict[str, Any]) -> str:
     o_parts = []
     for alg in ALGORITHMS:
         o = orch[alg]
-        if o["failed"] or o["f1"] is None:
-            o_parts.append(f"{alg} F1=N/A (failed)")
+        dfv = o["directed_f1"]
+        if o["failed"] or dfv is None:
+            o_parts.append(f"{alg} F1_dir=N/A (failed)")
         else:
-            o_parts.append(f"{alg} F1={o['f1']:.2f}")
+            o_parts.append(f"{alg} F1_dir={dfv:.2f}")
     lines.append("Oracle (C5) ceiling: " + ", ".join(o_parts))
 
     d = s["cd_vs_llm_only_delta"]
     lines.append(
-        "CD-vs-LLM-only delta (best LLM+CD F1 - C-LLM-only F1) = " + _signed(d)
+        "CD-vs-LLM-only delta (best LLM+CD F1_dir - C-LLM-only F1_dir) = " + _signed(d)
     )
     coverage = s.get("coverage_conditional")
     if coverage:
@@ -746,6 +853,9 @@ def main() -> None:
     tables_dir = REPO_ROOT / "tables"
     figures_dir = REPO_ROOT / "figures"
     write_ablation_table(agg, llm_row, tables_dir / "ablation_table.tex")
+    write_ablation_table_directed(
+        agg, llm_row, tables_dir / "ablation_table_directed.tex"
+    )
     write_constraint_quality_table(quality, tables_dir / "constraint_quality.tex")
     write_aupr_extension_table(results, tables_dir / "aupr_extension.tex")
 
@@ -757,7 +867,8 @@ def main() -> None:
     summary = headline_summary(agg, llm_row, quality)
     print(_fmt_headline_block(summary))
     print(
-        "Wrote tables/ablation_table.tex, tables/constraint_quality.tex\n"
+        "Wrote tables/ablation_table.tex, tables/ablation_table_directed.tex, "
+        "tables/constraint_quality.tex, tables/aupr_extension.tex\n"
         "Wrote figures/gap_closed.{pdf,png}, figures/cd_vs_llm_only.{pdf,png}, "
         "figures/threshold_sensitivity.{pdf,png}, "
         "figures/coverage_conditional_quality.{pdf,png}"

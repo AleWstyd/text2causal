@@ -12,7 +12,11 @@ import networkx as nx
 
 import experiments.run_condition as _rc
 from constraints.constraint_builder import load_priors
-from evaluation.harness import evaluate
+from evaluation.harness import (
+    backfill_directed_metrics_in_results,
+    evaluate,
+    row_ok_metrics_missing_directed_f1,
+)
 from utils.load_data import load_sachs_dataset
 
 DATASET_NAME: Final[str] = "sachs"
@@ -372,22 +376,48 @@ def run_ablation(
         if cllm_k not in existing:
             pending_cllm = True
 
-    if not pending_algo and not pending_cllm:
-        n_ok = sum(1 for r in results if r.get("status") == "ok")
-        n_fail = sum(1 for r in results if r.get("status") == "failed")
+    def _print_summary(results_: list[dict[str, Any]]) -> None:
+        n_ok = sum(1 for r in results_ if r.get("status") == "ok")
+        n_fail = sum(1 for r in results_ if r.get("status") == "failed")
         ges_tot = sum(
             len(r.get("dropped_due_to_cycle") or [])
-            for r in results
+            for r in results_
             if r.get("algorithm") == "GES"
         )
         print(
-            f"Summary: cells_in_file={len(results)} expected={n_expected} "
+            f"Summary: cells_in_file={len(results_)} expected={n_expected} "
             f"ok={n_ok} failed={n_fail} ges_dropped_edges={ges_tot}"
         )
+
+    needs_metric_backfill = any(row_ok_metrics_missing_directed_f1(r) for r in results)
+
+    if not pending_algo and not pending_cllm:
+        if needs_metric_backfill:
+            data_df, true_graph = load_sachs_dataset()
+            variable_names = list(data_df.columns)
+            n_bf = backfill_directed_metrics_in_results(
+                results, variable_names, true_graph
+            )
+            payload = {
+                "results": results,
+                **_summarise_payload(results, n_expected),
+            }
+            _atomic_write_json(output_path, payload)
+            print(f"Backfilled directed metrics for {n_bf} ok rows.")
+        _print_summary(results)
         return
 
     data_df, true_graph = load_sachs_dataset()
     variable_names = list(data_df.columns)
+    if needs_metric_backfill:
+        n_bf = backfill_directed_metrics_in_results(results, variable_names, true_graph)
+        payload = {
+            "results": results,
+            **_summarise_payload(results, n_expected),
+        }
+        _atomic_write_json(output_path, payload)
+        print(f"Backfilled directed metrics for {n_bf} ok rows.")
+
     data_matrix = data_df.to_numpy()
     priors_cache = _load_priors_cache()
 
@@ -451,17 +481,7 @@ def run_ablation(
             f"(shd={mt.get('shd')})"
         )
 
-    n_ok = sum(1 for r in results if r.get("status") == "ok")
-    n_fail = sum(1 for r in results if r.get("status") == "failed")
-    ges_tot = sum(
-        len(r.get("dropped_due_to_cycle") or [])
-        for r in results
-        if r.get("algorithm") == "GES"
-    )
-    print(
-        f"Summary: cells_in_file={len(results)} expected={n_expected} "
-        f"ok={n_ok} failed={n_fail} ges_dropped_edges={ges_tot}"
-    )
+    _print_summary(results)
 
 
 def main() -> None:

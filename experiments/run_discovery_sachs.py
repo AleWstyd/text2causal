@@ -9,6 +9,10 @@ from pathlib import Path
 from typing import Any, Final
 
 from constraints.constraint_builder import load_priors
+from evaluation.harness import (
+    backfill_directed_metrics_in_results,
+    row_ok_metrics_missing_directed_f1,
+)
 from experiments.run_condition import run_condition
 from utils.load_data import load_sachs_dataset
 
@@ -196,28 +200,18 @@ def run_sweep(
     existing_keys = {_cell_result_key(r) for r in results}
     pending = [c for c in cells if row_key_from_spec(c) not in existing_keys]
 
-    if pending:
+    needs_bf = any(row_ok_metrics_missing_directed_f1(r) for r in results)
+
+    if pending or needs_bf:
         data_df, true_graph = load_sachs_dataset()
         variable_names = list(data_df.columns)
         data_matrix = data_df.to_numpy()
         priors_cache = _load_priors_cache()
 
-        n_todo = len(pending)
-        for i, cell in enumerate(pending, start=1):
-            priors = priors_cache.get(cell.priors_source)
-            res = run_condition(
-                dataset_name=DATASET_NAME,
-                data=data_matrix,
-                variable_names=variable_names,
-                true_graph=true_graph,
-                priors=priors,
-                priors_source=cell.priors_source,
-                algorithm=cell.algorithm,
-                threshold=cell.threshold,
-                seed=cell.seed,
+        if needs_bf:
+            n_bf = backfill_directed_metrics_in_results(
+                results, variable_names, true_graph
             )
-            results.append(res)
-            results.sort(key=_result_sort_key)
             payload = {
                 "dataset": DATASET_NAME,
                 "n_cells_expected": n_cells_expected,
@@ -225,16 +219,45 @@ def run_sweep(
                 **_summarise_payload(results),
             }
             _atomic_write_json(output_path, payload)
-
-            status = res.get("status", "?")
-            shd = res.get("metrics", {}) or {}
-            shd_s = shd.get("shd")
-            shd_part = f"shd={shd_s}" if shd_s is not None else "shd=n/a"
-            thr_disp = _threshold_key(cell.threshold)
             print(
-                f"[{i}/{n_todo}] {res['condition']} {cell.algorithm} "
-                f"{thr_disp} {cell.seed} -> {status} ({shd_part})"
+                f"Backfilled directed metrics for {n_bf} ok rows "
+                f"in {output_path.as_posix()}."
             )
+
+        if pending:
+            n_todo = len(pending)
+            for i, cell in enumerate(pending, start=1):
+                priors = priors_cache.get(cell.priors_source)
+                res = run_condition(
+                    dataset_name=DATASET_NAME,
+                    data=data_matrix,
+                    variable_names=variable_names,
+                    true_graph=true_graph,
+                    priors=priors,
+                    priors_source=cell.priors_source,
+                    algorithm=cell.algorithm,
+                    threshold=cell.threshold,
+                    seed=cell.seed,
+                )
+                results.append(res)
+                results.sort(key=_result_sort_key)
+                payload = {
+                    "dataset": DATASET_NAME,
+                    "n_cells_expected": n_cells_expected,
+                    "results": results,
+                    **_summarise_payload(results),
+                }
+                _atomic_write_json(output_path, payload)
+
+                status = res.get("status", "?")
+                shd = res.get("metrics", {}) or {}
+                shd_s = shd.get("shd")
+                shd_part = f"shd={shd_s}" if shd_s is not None else "shd=n/a"
+                thr_disp = _threshold_key(cell.threshold)
+                print(
+                    f"[{i}/{n_todo}] {res['condition']} {cell.algorithm} "
+                    f"{thr_disp} {cell.seed} -> {status} ({shd_part})"
+                )
 
     n_ok = sum(1 for r in results if r.get("status") == "ok")
     n_fail = sum(1 for r in results if r.get("status") == "failed")

@@ -15,7 +15,16 @@ from utils.load_data import load_sachs_dataset
 
 RESULT_PATH = Path("experiments/baseline_sachs.json")
 SEEDS = range(10)
-METRICS = ("shd", "aupr", "precision", "recall", "f1")
+METRICS = (
+    "shd",
+    "aupr",
+    "precision",
+    "recall",
+    "f1",
+    "directed_precision",
+    "directed_recall",
+    "directed_f1",
+)
 
 
 def _summarise(seed_metrics: list[dict[str, float]]) -> dict[str, dict[str, float]]:
@@ -30,7 +39,10 @@ def _summarise(seed_metrics: list[dict[str, float]]) -> dict[str, dict[str, floa
 
 
 def _print_summary(results: dict[str, dict[str, dict[str, float]]]) -> None:
-    header = f"{'Algorithm':<10} {'SHD':>15} {'AUPR':>15} {'Precision':>15} {'Recall':>15} {'F1':>15}"
+    header = (
+        f"{'Algorithm':<10} {'SHD':>8} {'AUPR':>8} {'P':>8} {'R':>8} "
+        f"{'F1':>8} {'dP':>8} {'dR':>8} {'dF1':>8}"
+    )
     print(header)
     print("-" * len(header))
     for algorithm, metrics in results.items():
@@ -39,7 +51,8 @@ def _print_summary(results: dict[str, dict[str, dict[str, float]]]) -> None:
             value = metrics[metric]
             fields.append(f"{value['mean']:.4f} +/- {value['std']:.4f}")
         print(
-            f"{fields[0]:<10} {fields[1]:>15} {fields[2]:>15} {fields[3]:>15} {fields[4]:>15} {fields[5]:>15}"
+            f"{fields[0]:<10} {fields[1]:>8} {fields[2]:>8} {fields[3]:>8} "
+            f"{fields[4]:>8} {fields[5]:>8} {fields[6]:>8} {fields[7]:>8} {fields[8]:>8}"
         )
 
 

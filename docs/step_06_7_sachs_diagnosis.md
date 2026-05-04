@@ -48,7 +48,10 @@ The Sachs result should be interpreted as:
 2. Direct reaction-level evidence is especially strong: precision = 0.83,
    recall = 1.00, strict hallucination = 0.00.
 3. PC and GES show local reaction-stratum orientation gains, and PC still shows
-   an AUPR gain (0.52 to 0.56), but direction-aware F1 remains flat.
+   an AUPR gain (0.52 to 0.56). **Skeleton** F1 (undirected edge overlap) stays
+   flat across PC conditions; **directed** F1 is the headline orientation metric
+   in Step 6 reporting (`tables/ablation_table_directed.tex`) and can move when
+   recovered skeletons match but arc directions differ.
 4. LiNGAM is the limiting algorithm. Sparse forbidden-only priors complete
    successfully, but they still underperform C0 LiNGAM and worsen 3/5
    reaction-stratum true edges.

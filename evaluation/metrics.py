@@ -16,6 +16,11 @@ def _normalize_edges(edges):
     return {tuple(sorted([u, v])) for u, v in edges}
 
 
+def _directed_edges(edges):
+    """Directed edge pairs as ``(str, str)`` ordered tuples (no normalisation)."""
+    return {(str(u), str(v)) for u, v in edges}
+
+
 def _retrieve_adjacency_matrix(graph, order_nodes=None, weight=False):
     if isinstance(graph, np.ndarray):
         return graph
@@ -74,7 +79,11 @@ def shd(target_graph, predicted_graph, double_for_anticausal=True):
 
 
 def precision(predicted_edges, true_edges):
+    """Skeleton (undirected) precision: edges are compared after sorting endpoints.
 
+    A predicted arc matches a true arc if the unordered pair is the same; the
+    reverse orientation counts as a true positive.
+    """
     predicted = _normalize_edges(predicted_edges)
     true = _normalize_edges(true_edges)
 
@@ -87,13 +96,44 @@ def precision(predicted_edges, true_edges):
 
 
 def recall(predicted_edges, true_edges):
+    """Skeleton (undirected) recall: edges are compared after sorting endpoints.
 
+    See :func:`precision` for the orientation-agnostic matching rule.
+    """
     predicted = _normalize_edges(predicted_edges)
     true = _normalize_edges(true_edges)
 
     correct = predicted.intersection(true)
 
     return len(correct) / len(true)
+
+
+def directed_precision(predicted_edges, true_edges):
+    """Directed precision: ``(u, v)`` must match exactly; no endpoint swapping."""
+    predicted = _directed_edges(predicted_edges)
+    true = _directed_edges(true_edges)
+    if len(predicted) == 0:
+        return 0.0
+    correct = predicted.intersection(true)
+    return len(correct) / len(predicted)
+
+
+def directed_recall(predicted_edges, true_edges):
+    """Directed recall: ``(u, v)`` must match exactly; no endpoint swapping."""
+    predicted = _directed_edges(predicted_edges)
+    true = _directed_edges(true_edges)
+    if len(true) == 0:
+        return 0.0
+    correct = predicted.intersection(true)
+    return len(correct) / len(true)
+
+
+def directed_f1(predicted_edges, true_edges):
+    """Harmonic mean of :func:`directed_precision` and :func:`directed_recall`."""
+    return f1_score(
+        directed_precision(predicted_edges, true_edges),
+        directed_recall(predicted_edges, true_edges),
+    )
 
 
 def f1_score(p, r):

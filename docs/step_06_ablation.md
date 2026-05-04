@@ -18,7 +18,9 @@
 | `experiments/ablation_results_sachs.json` | Per-cell metrics, mean ± std aggregations |
 | `experiments/constraint_quality_sachs.json` | Precision/recall/hallucination/coverage of priors |
 | `experiments/cost_report.json` | Tokens, dollars, wall-clock per stage |
-| `tables/ablation_table.tex` | LaTeX table per metric × condition × algorithm |
+| `tables/ablation_table.tex` | LaTeX table per metric × condition × algorithm (**skeleton F1** — undirected overlap; see caption) |
+| `tables/ablation_table_directed.tex` | Same layout with **directed F1** (ordered arcs); headline table for orientation-aware reporting |
+| `tables/aupr_extension.tex` | PC-only AUPR + skeleton F1 + directed F1 (`F1\textsubscript{dir}`) |
 | `tables/constraint_quality.tex` | Constraint-quality LaTeX table |
 | `figures/gap_closed.{pdf,png}` | Headline figure: % of C0→C5 gap closed per condition × algorithm; includes a separate C-LLM-only bar (no algorithm dimension) |
 | `figures/cd_vs_llm_only.{pdf,png}` | Direct comparison: best LLM+CD condition (C2/C3) vs C-LLM-only, per dataset |

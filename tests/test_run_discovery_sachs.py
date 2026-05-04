@@ -42,7 +42,16 @@ def _minimal_result(
         "priors_source": priors_source,
         "status": status,
         "error": None,
-        "metrics": {"shd": shd} if status == "ok" else None,
+        "metrics": (
+            {
+                "shd": shd,
+                "directed_precision": 0.0,
+                "directed_recall": 0.0,
+                "directed_f1": 0.0,
+            }
+            if status == "ok"
+            else None
+        ),
         "predicted_edges": [],
         "constraint_summary": None,
         "dropped_due_to_cycle": [],

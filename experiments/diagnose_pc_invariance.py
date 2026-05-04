@@ -73,7 +73,16 @@ def _pc_condition_summary(results: list[dict[str, Any]]) -> dict[str, Any]:
                         if metric in (row.get("metrics") or {})
                     ]
                 )
-                for metric in ("shd", "aupr", "precision", "recall", "f1")
+                for metric in (
+                    "shd",
+                    "aupr",
+                    "precision",
+                    "recall",
+                    "f1",
+                    "directed_precision",
+                    "directed_recall",
+                    "directed_f1",
+                )
             },
             "edge_set": [list(edge) for edge in sorted(edge_sets)[0]]
             if edge_sets
@@ -119,21 +128,24 @@ def _alpha_spot_check() -> list[dict[str, Any]]:
 def _write_aupr_table(summary: dict[str, Any], output_path: Path) -> None:
     lines = [
         r"% PC AUPR extension: mean $\pm$ std over successful seeds from ablation_results_sachs.json.",
-        r"\begin{tabular}{lcc}",
+        r"% F1 = skeleton (undirected); F1\textsubscript{dir} = directed arc overlap.",
+        r"\begin{tabular}{lccc}",
         r"\hline",
-        r"condition & AUPR & F1 \\",
+        r"condition & AUPR & F1 & F1\textsubscript{dir} \\",
         r"\hline",
     ]
     for condition in CONDITIONS:
         metrics = summary[condition]["metrics"]
         aupr = metrics["aupr"]
         f1 = metrics["f1"]
-        if aupr["mean"] is None or f1["mean"] is None:
-            lines.append(f"{condition} & N/A & N/A \\\\")
+        df1 = metrics["directed_f1"]
+        if aupr["mean"] is None or f1["mean"] is None or df1["mean"] is None:
+            lines.append(f"{condition} & N/A & N/A & N/A \\\\")
             continue
         lines.append(
             f"{condition} & ${aupr['mean']:.2f} \\pm {aupr['std']:.2f}$ "
-            f"& ${f1['mean']:.2f} \\pm {f1['std']:.2f}$ \\\\"
+            f"& ${f1['mean']:.2f} \\pm {f1['std']:.2f}$ "
+            f"& ${df1['mean']:.2f} \\pm {df1['std']:.2f}$ \\\\"
         )
     lines.extend([r"\hline", r"\end{tabular}", ""])
     _atomic_write_text(output_path, "\n".join(lines))
