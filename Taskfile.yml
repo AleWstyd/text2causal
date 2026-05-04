@@ -91,6 +91,18 @@ tasks:
     cmds:
       - uv run python -m experiments.constraint_quality
 
+  report-sachs:
+    desc: Step 6 reporting - tables, figures, headline summary on Sachs
+    cmds:
+      - uv run python -m experiments.report
+
+  ablation:
+    desc: Step 6 full ablation pipeline (sweep, constraint quality, report)
+    cmds:
+      - uv run python -m experiments.runner
+      - uv run python -m experiments.constraint_quality
+      - uv run python -m experiments.report
+
   format:
     desc: Format code with ruff
     cmds:

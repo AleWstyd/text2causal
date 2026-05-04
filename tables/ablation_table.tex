@@ -1,0 +1,18 @@
+% Sachs ablation: mean $\pm$ std over seeds with status=ok; $\pm$ is sample std over those seeds (0 if only one successful seed).
+% \textsuperscript{*} N/A: no successful runs or inapplicable cell. \textsuperscript{\dag}: fewer than 10/10 successful seeds (see caption).
+\begin{tabular}{l|cc|cc|cc}
+\hline
+ & \multicolumn{2}{c|}{PC} & \multicolumn{2}{c|}{GES} & \multicolumn{2}{c}{LiNGAM} \\
+ & SHD & F1 & SHD & F1 & SHD & F1 \\
+\hline
+C0 & $22.00 \pm 0.00$ & $0.52 \pm 0.00$ & $29.00 \pm 0.00$ & $0.53 \pm 0.00$ & $34.00 \pm 0.00$ & $0.59 \pm 0.00$ \\
+C0.5 & $22.00 \pm 0.00$ & $0.52 \pm 0.00$ & $29.00 \pm 0.00$ & $0.53 \pm 0.00$ & $34.00 \pm 0.00$ & $0.59 \pm 0.00$ \\
+C1 & $20.00 \pm 0.00$ & $0.52 \pm 0.00$ & $24.00 \pm 0.00$ & $0.57 \pm 0.00$ & $43.00 \pm 0.00$ & $0.53 \pm 0.00$ \\
+C2 & $20.00 \pm 0.00$ & $0.52 \pm 0.00$ & $28.00 \pm 0.00$ & $0.48 \pm 0.00$ & N/A (failed)\textsuperscript{*} & N/A (failed)\textsuperscript{*} \\
+C3 & $20.00 \pm 0.00$ & $0.52 \pm 0.00$ & $27.00 \pm 0.00$ & $0.53 \pm 0.00$ & N/A (failed)\textsuperscript{*} & N/A (failed)\textsuperscript{*} \\
+C4 & $20.00 \pm 0.00$ & $0.52 \pm 0.00$ & $27.00 \pm 0.00$ & $0.53 \pm 0.00$ & N/A (failed)\textsuperscript{*} & N/A (failed)\textsuperscript{*} \\
+C-LLM-only\textsuperscript{$\dagger$} & $18.00$ & $0.47$ & --- & --- & --- & --- \\ % single DAG; no PC/GES/LiNGAM split—metrics repeated only under PC columns
+C5 & $20.00 \pm 0.00$ & $0.52 \pm 0.00$ & $17.00 \pm 0.00$ & $0.65 \pm 0.00$ & N/A (failed)\textsuperscript{*} & N/A (failed)\textsuperscript{*} \\
+\hline
+% C-LLM-only row: dagger marks algorithm-free DAG; values shown only under PC columns (--- elsewhere).
+\end{tabular}
