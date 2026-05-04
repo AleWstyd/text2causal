@@ -9,7 +9,7 @@
     "/Users/mjarosl/personal-projects/text2causal/cache/llm",
     "/Users/mjarosl/personal-projects/text2causal/cache/llm_adversarial"
   ],
-  "headline": "LLM cache: 285 completion(s); 550,403 prompt + 301,003 completion tokens; estimated $2.0052 USD at Baseten Model API rates ($1.74/M in, $3.48/M out, snapshot 2026-05-04).",
+  "headline": "LLM cache: 359 completion(s); 571,353 prompt + 386,076 completion tokens; estimated $2.3377 USD at Baseten Model API rates ($1.74/M in, $3.48/M out, snapshot 2026-05-04).",
   "latency_disclosure": "Approximate; per-call latency is not stored in the cache. Multipliers used: grounding=10s, reasoning=30s, freetext=30s. See experiments/cost_report.py for details.",
   "price_per_m_input_usd": 1.74,
   "price_per_m_output_usd": 3.48,
@@ -24,10 +24,10 @@
         "prompt_tokens": 29868
       },
       "deepseek-ai/DeepSeek-V4-Pro": {
-        "completion_tokens": 254456,
-        "estimated_cost_usd": 1.50083178,
-        "n_entries": 203,
-        "prompt_tokens": 353635
+        "completion_tokens": 339529,
+        "estimated_cost_usd": 1.83333882,
+        "n_entries": 277,
+        "prompt_tokens": 374585
       },
       "openai/gpt-oss-120b": {
         "completion_tokens": 37904,
@@ -56,17 +56,17 @@
         "prompt_tokens": 534144
       },
       "unknown": {
-        "completion_tokens": 3672,
-        "estimated_cost_usd": 0.03809034,
-        "n_entries": 3,
-        "prompt_tokens": 14547
+        "completion_tokens": 88745,
+        "estimated_cost_usd": 0.37059738,
+        "n_entries": 77,
+        "prompt_tokens": 35497
       }
     },
     "totals": {
-      "completion_tokens": 301003,
-      "estimated_cost_usd": 2.00519166,
-      "n_entries": 285,
-      "prompt_tokens": 550403
+      "completion_tokens": 386076,
+      "estimated_cost_usd": 2.3376987,
+      "n_entries": 359,
+      "prompt_tokens": 571353
     }
   }
 }

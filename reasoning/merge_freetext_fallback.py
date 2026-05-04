@@ -69,9 +69,10 @@ def merge_with_freetext_fallback(
 ) -> dict[str, Any]:
     """Return a new priors blob with ``no_context`` slots filled from free-text claims where available.
 
-    Reactome-grounded rows are unchanged. Each substituted row uses the free-text
-    ``cause``, ``effect``, ``confidence``, and ``constraint_type`` with
-    ``source=\"freetext_fallback\"``.
+    Reactome-grounded rows are unchanged. Each substituted row copies the free-text
+    ``cause``, ``effect``, ``confidence``, and ``constraint_type``; ``source`` is
+    ``per_pair_freetext_fallback`` when the incoming claim carries that label
+    (PR2b), otherwise ``freetext_fallback`` (paragraph extraction).
 
     If ``column_set`` is ``None``, it is inferred from ``reactome_priors`` via
     :func:`infer_column_set_from_priors`.
@@ -101,7 +102,11 @@ def merge_with_freetext_fallback(
                 merged = dict(ft)
                 merged["var_a"] = str(rec["var_a"])
                 merged["var_b"] = str(rec["var_b"])
-                merged["source"] = "freetext_fallback"
+                merged["source"] = (
+                    "per_pair_freetext_fallback"
+                    if str(ft.get("source", "")) == "per_pair_freetext_fallback"
+                    else "freetext_fallback"
+                )
                 new_pairs.append(merged)
                 fallback_applied.append([merged["var_a"], merged["var_b"]])
             else:
@@ -121,7 +126,11 @@ def merge_with_freetext_fallback(
             merged = dict(ft)
             merged["var_a"] = va
             merged["var_b"] = vb
-            merged["source"] = "freetext_fallback"
+            merged["source"] = (
+                "per_pair_freetext_fallback"
+                if str(ft.get("source", "")) == "per_pair_freetext_fallback"
+                else "freetext_fallback"
+            )
             new_pairs.append(merged)
             fallback_applied.append([va, vb])
         else:

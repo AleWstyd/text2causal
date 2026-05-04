@@ -1,0 +1,250 @@
+{
+  "dataset_name": "sachs",
+  "n_hard_forbidden_reverse": 1,
+  "n_hard_required": 3,
+  "n_pairs_queried": 24,
+  "n_relations_emitted": 18,
+  "n_relations_skipped_unknown_var": 6,
+  "n_soft_prior": 14,
+  "n_unknown": 0,
+  "pairs": [
+    {
+      "cause": "PIP2",
+      "confidence": 0.6,
+      "constraint_type": "soft_prior",
+      "effect": "P38",
+      "reasoning": "PIP2 hydrolysis generates DAG and IP3, which activate PKC and calcium signaling, both of which can lead to P38 phosphorylation; direct regulation of PIP2 levels by P38 is less well-established in T cells.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "P38",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.6,
+      "constraint_type": "soft_prior",
+      "effect": "P38",
+      "reasoning": "Canonically, PIP3 acts upstream through PI3K signaling to activate MAP kinase pathways, including p38, via guanine nucleotide exchange factors (GEFs) for Rac/CDC42, which stimulate the PAK-MKK3/6-p38 cascade. Direct reversal is less established.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "P38",
+      "var_b": "PIP3"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.95,
+      "constraint_type": "hard_required",
+      "effect": "P38",
+      "reasoning": "In T cell signaling, PLC\u03b31 activation leads to the generation of second messengers that activate PKC and Ras/MAPK pathways, culminating in p38 phosphorylation. Thus, PLC\u03b31 acts upstream of p38.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "P38",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 0.75,
+      "constraint_type": "soft_prior",
+      "effect": "pjnk",
+      "reasoning": "PIP2 hydrolysis by PLC\u03b3 generates DAG, which activates PKC; PKC can activate the JNK cascade leading to JNK phosphorylation (pjnk). Therefore, PIP2 acts upstream of pjnk.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PIP2",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "PIP3",
+      "reasoning": "PKA can phosphorylate the p85 regulatory subunit of PI3K, inhibiting its activity and thereby reducing PIP3 levels; conversely, PIP3-mediated PDK1 activation primarily regulates Akt rather than directly controlling PKA, which is mainly cAMP-dependent.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PIP3",
+      "var_b": "PKA"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "pjnk",
+      "reasoning": "PI3K-generated PIP3 can activate Rac/Cdc42 signaling leading to JNK phosphorylation, while JNK is not known to directly modulate PIP3 levels.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PIP3",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 0.65,
+      "constraint_type": "soft_prior",
+      "effect": "pmek",
+      "reasoning": "PIP3 activates Akt, which can phosphorylate and inhibit C-Raf, reducing MEK phosphorylation (pmek). No established mechanism for pmek regulating PIP3.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PIP3",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "p44/42",
+      "reasoning": "PKA is known to inhibit the MAPK pathway, including phosphorylation and inhibition of Raf, which reduces MEK and ERK (p44/42) phosphorylation. In T cells, cAMP/PKA signaling attenuates ERK activation.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PKA",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.85,
+      "constraint_type": "soft_prior",
+      "effect": "pjnk",
+      "reasoning": "PKA, activated by cAMP, is known to inhibit JNK signaling pathways, leading to decreased phosphorylation of JNK (pjnk) in T cells and other cells.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PKA",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "pmek",
+      "reasoning": "PKA, activated by cAMP, inhibits the MAPK pathway at the level of Raf, thereby reducing MEK phosphorylation (pmek). This places PKA upstream as a negative regulator.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PKA",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "pjnk",
+      "reasoning": "In T cells, PKC isoforms such as PKC\u03b8 are known to activate the JNK signaling pathway through MAP kinase kinase kinases, leading to phosphorylation of JNK (pjnk). Thus, PKC acts upstream of JNK phosphorylation.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PKC",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 0.85,
+      "constraint_type": "soft_prior",
+      "effect": "pmek",
+      "reasoning": "PKC activates the RAF-MEK-ERK cascade; PKC phosphorylates and activates RAF, which then phosphorylates MEK. Direct phosphorylation of MEK by PKC has also been reported, making PKC an upstream activator of MEK phosphorylation.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PKC",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "praf",
+      "reasoning": "Protein kinase C (PKC) directly phosphorylates and activates Raf (praf), a well-established mechanism in growth factor signaling.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "PKC",
+      "var_b": "praf"
+    },
+    {
+      "cause": "pakts473",
+      "confidence": 0.85,
+      "constraint_type": "soft_prior",
+      "effect": "pjnk",
+      "reasoning": "Activated Akt (pakts473) phosphorylates and inhibits ASK1, an upstream kinase of JNK, thereby suppressing JNK phosphorylation. Thus, Akt negatively regulates JNK activity.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "pakts473",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "pakts473",
+      "confidence": 0.85,
+      "constraint_type": "soft_prior",
+      "effect": "pmek",
+      "reasoning": "Akt phosphorylates and inhibits Raf-1, reducing MEK phosphorylation, establishing a negative causal influence from activated Akt to MEK.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "pakts473",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "pakts473",
+      "confidence": 0.95,
+      "constraint_type": "hard_required",
+      "effect": "praf",
+      "reasoning": "Akt (phosphorylated at S473) phosphorylates c-Raf at S259, leading to Raf inhibition, a well-established cross-talk between PI3K/Akt and Ras/Raf/MEK pathways. No evidence supports Raf directly phosphorylating Akt at S473.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "pakts473",
+      "var_b": "praf"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.85,
+      "constraint_type": "soft_prior",
+      "effect": "pmek",
+      "reasoning": "In T cell signaling, PLC\u03b3 (plcg) activation leads to PKC activation via DAG, and PKC can phosphorylate and activate Raf, which then activates MEK (pmek). Thus, plcg is upstream of pmek.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "plcg",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.9,
+      "constraint_type": "hard_forbidden_reverse",
+      "effect": "praf",
+      "reasoning": "PLCgamma generates DAG, which activates PKC, and PKC phosphorylates and activates Raf. Thus, plcg activation promotes praf, while the reverse (praf causing plcg activation) is not supported by known signaling pathways.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "plcg",
+      "var_b": "praf"
+    }
+  ],
+  "served_models": [
+    "deepseek-ai/DeepSeek-V4-Pro"
+  ],
+  "source_kind": "per_pair_freetext_fallback"
+}

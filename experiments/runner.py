@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import os
 from dataclasses import dataclass
@@ -31,6 +32,20 @@ CAUSAL_PRIORS: Final[Path] = Path("experiments/causal_priors_sachs.json")
 CAUSAL_PRIORS_WITH_FALLBACK: Final[Path] = Path(
     "experiments/causal_priors_sachs_with_fallback.json"
 )
+
+
+def _freetext_fallback_row_stale(row: dict[str, Any], *, path: Path) -> bool:
+    """True when a stored C3+ft row predates the current merged priors JSON on disk."""
+
+    if str(row.get("priors_source")) != "reactome_llm_with_freetext_fallback":
+        return False
+    if not path.is_file():
+        return False
+    current = hashlib.sha256(path.read_bytes()).hexdigest()
+    stored = (row.get("notes") or {}).get("source_priors_hash")
+    return stored != current
+
+
 PREDICTED_DAG_GML: Final[Path] = Path("experiments/predicted_dag_llm_only_sachs.gml")
 PREDICTED_DAG_META: Final[Path] = Path(
     "experiments/predicted_dag_llm_only_sachs.meta.json"
@@ -390,6 +405,11 @@ def run_ablation(
         if _result_row_base_key(row) not in expected_bases
         or result_row_key(row) in expected_keys
     ]
+    results = [
+        row
+        for row in results
+        if not _freetext_fallback_row_stale(row, path=CAUSAL_PRIORS_WITH_FALLBACK)
+    ]
     existing = {result_row_key(r) for r in results}
 
     pending_algo = [c for c in algo_scheduled if algo_key(c) not in existing]
@@ -468,6 +488,14 @@ def run_ablation(
             seed=cell.seed,
             lingam_prior_mode=cell.lingam_prior_mode,
         )
+        if cell.priors_source == "reactome_llm_with_freetext_fallback":
+            fb_path = CAUSAL_PRIORS_WITH_FALLBACK
+            notes = dict(res.get("notes") or {})
+            notes["source_priors_hash"] = hashlib.sha256(
+                fb_path.read_bytes()
+            ).hexdigest()
+            notes["priors_json_path"] = fb_path.as_posix()
+            res["notes"] = notes
         if cell.condition == "C0.5":
             res["condition"] = "C0.5"
         elif res["condition"] != cell.condition:

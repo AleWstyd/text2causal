@@ -153,5 +153,95 @@ class MergeFreetextFallbackTests(unittest.TestCase):
         self.assertEqual(out["n_high_confidence"], 1)
 
 
+class TwoStageFallbackPipelineTests(unittest.TestCase):
+    """Match ``experiments.run_reasoning_with_fallback`` cumulative accounting."""
+
+    def test_paragraph_then_per_pair_fills_disjoint_no_context(self) -> None:
+        reactome = {
+            "pairs": [
+                {
+                    "var_a": "A",
+                    "var_b": "B",
+                    "cause": "unknown",
+                    "effect": "unknown",
+                    "confidence": 0.0,
+                    "constraint_type": "no_context",
+                },
+                {
+                    "var_a": "A",
+                    "var_b": "C",
+                    "cause": "A",
+                    "effect": "C",
+                    "confidence": 0.95,
+                    "constraint_type": "hard_required",
+                    "source": "reactome_llm",
+                },
+            ],
+            "no_context_pairs": [["X", "Y"]],
+        }
+        paragraph = {
+            "pairs": [
+                {
+                    "var_a": "A",
+                    "var_b": "B",
+                    "cause": "A",
+                    "effect": "B",
+                    "confidence": 0.95,
+                    "constraint_type": "hard_required",
+                    "source": "freetext_llm",
+                }
+            ]
+        }
+        per_pair = {
+            "pairs": [
+                {
+                    "var_a": "X",
+                    "var_b": "Y",
+                    "cause": "X",
+                    "effect": "Y",
+                    "confidence": 0.95,
+                    "constraint_type": "hard_required",
+                    "source": "per_pair_freetext_fallback",
+                }
+            ]
+        }
+        col = {"A", "B", "C", "X", "Y"}
+
+        mid = merge_with_freetext_fallback(reactome, paragraph, column_set=col)
+        n_para = int(mid["n_fallback_applied"])
+        fb_total = list(mid["fallback_applied_pairs"] or [])
+
+        final = merge_with_freetext_fallback(mid, per_pair, column_set=col)
+        n_pp = int(final["n_fallback_applied"])
+        fb_total.extend(list(final["fallback_applied_pairs"] or []))
+
+        final["n_fallback_applied"] = n_para + n_pp
+        final["fallback_applied_pairs"] = sorted(
+            fb_total,
+            key=lambda p: (p[0], p[1]),
+        )
+
+        self.assertEqual(n_para, 1)
+        self.assertEqual(n_pp, 1)
+        self.assertEqual(final["n_fallback_applied"], 2)
+        self.assertEqual(
+            final["fallback_applied_pairs"],
+            [["A", "B"], ["X", "Y"]],
+        )
+        intact = next(
+            p for p in final["pairs"] if p["var_a"] == "A" and p["var_b"] == "C"
+        )
+        self.assertEqual(intact["constraint_type"], "hard_required")
+        self.assertEqual(intact.get("source"), "reactome_llm")
+        sub_ab = next(
+            p for p in final["pairs"] if p["var_a"] == "A" and p["var_b"] == "B"
+        )
+        self.assertEqual(sub_ab["source"], "freetext_fallback")
+        sub_xy = next(
+            p for p in final["pairs"] if p["var_a"] == "X" and p["var_b"] == "Y"
+        )
+        self.assertEqual(sub_xy["source"], "per_pair_freetext_fallback")
+
+
 if __name__ == "__main__":
     unittest.main()

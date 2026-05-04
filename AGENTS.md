@@ -46,6 +46,7 @@ Active research pipeline (this is where new work goes):
 - `evaluation/` — `harness.py` evaluates a predicted graph against ground truth; `metrics.py` carries the primitives.
 - `constraints/constraint_builder.py` — translates priors into PC `BackgroundKnowledge`, LiNGAM prior matrices, and post-hoc GES edits. Will grow in Step 5.
 - `causal_discovery/` — algorithm wrappers (`run_pc.py`, `run_ges.py`, `run_lingam.py`).
+- `reasoning/` — Step 4 causal reasoning (`reason.py`), merge of free-text into no-context rows (`merge_freetext_fallback.py`), per-pair parametric fallback for uncovered pairs (`freetext_fallback.py`).
 - `experiments/` — runnable scripts and their JSON outputs (`baseline_sachs.py`/`.json`, `reactome_coverage.py`/`.json`, `run_grounding_sachs.py`, `grounding_sachs_gold.json`, `grounding_dream4.json`, `run_discovery_sachs.py`/`.json` Step 5 Sachs sweep, `runner.py` Step 6 ablation sweep → `ablation_results_sachs.json`, `constraint_quality.py` Step 6 Phase 3 → `constraint_quality_sachs.json`, `report.py` Step 6 Phase 4 → LaTeX under `tables/` and figures under `figures/`, `cost_report.py` Step 6 Phase 5 → `cost_report.json`). Most scripts write one committed JSON artefact; the Step 5 sweep persists incrementally to `experiments/discovery_results_sachs.json`; Step 6 persists incrementally to `experiments/ablation_results_sachs.json`.
 - `tables/` — Step 6 Phase 4 paper `tabular` snippets (`ablation_table.tex`, `constraint_quality.tex`).
 - `figures/` — Step 6 Phase 4 matplotlib outputs (each plot as `.pdf` and `.png`).
@@ -85,7 +86,9 @@ Prefer `Taskfile.yml` targets when they exist:
 - `task ground-sachs` — batched LLM grounding for Sachs columns → `experiments/grounding_sachs.json`.
 - `task oracle-priors-sachs` — Step 6 Phase 1 oracle ground-truth priors for Sachs → `experiments/oracle_priors_sachs.json`.
 - `task freetext-sachs` — Step 6 Phase 1 C1 free-text LLM priors for Sachs → `experiments/freetext_priors_sachs.json` (uses committed `cache/llm/` on replay).
-- `task reason-with-fallback-sachs` — Merge Reactome pairwise priors with free-text claims for `no_context` slots → `experiments/causal_priors_*_with_fallback.json` (offline; depends on committed C1 + Step 4 JSONs).
+- `task per-pair-freetext-fallback` — one cached LLM call per unordered Reactome `no_context` pair → `experiments/per_pair_freetext_priors_{sachs,dream4_psn,liverdream}.json`.
+- `task fallback-priors` — two-stage merge: paragraph `freetext_priors_*.json` (when present), then `per_pair_freetext_priors_*.json` (when present), into `experiments/causal_priors_*_with_fallback.json` for C3+ft.
+- `task reason-with-fallback-sachs` — alias for `task fallback-priors` (same script; covers Sachs, DREAM4 PSN, and LiverDREAM jobs).
 - `task run` — launches the **legacy Streamlit LUCAS skeleton** (kept for the C1 ablation only; not the research pipeline entrypoint).
 
 If a needed workflow is not in `Taskfile.yml`, use the narrowest direct command possible and mention that no Task target existed. If the workflow is recurring and a future agent will run it, add a Task target in the same PR.
@@ -133,6 +136,7 @@ Test discipline for new code:
 
 ## Repo-Specific Guidance
 
+- **C3+ft** loads `causal_priors_*_with_fallback.json`, built by `task fallback-priors`: paragraph `freetext_priors_*.json` first, then optional `per_pair_freetext_priors_*.json` (one LLM call per unordered `no_context` pair) so uncovered Sachs pairs such as PKA/PKC substrates receive a parametric fallback.
 - The primary research dataset is **Sachs** (`utils.load_data.load_sachs_dataset`); the secondary is **DREAM4 PSN** (Step 7). LUCAS is legacy.
 - `experiments/reactome_coverage.json` records the live coverage figures and the explicit `escalation_decision` (whether to fall back to OmniPath as the primary structured source). Risk #2 in the dev plan is keyed to **node** coverage, not pair coverage.
 - `extract_llm_constraints()` (legacy LUCAS path) filters relations by confidence threshold and validates them against dataset variable names. Do not change its semantics; the Step-3+ research pipeline does not use it.

@@ -1,0 +1,120 @@
+{
+  "dataset_name": "liverdream",
+  "n_hard_forbidden_reverse": 0,
+  "n_hard_required": 2,
+  "n_pairs_queried": 13,
+  "n_relations_emitted": 8,
+  "n_relations_skipped_unknown_var": 5,
+  "n_soft_prior": 6,
+  "n_unknown": 0,
+  "pairs": [
+    {
+      "cause": "akt",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "ikb",
+      "reasoning": "Akt phosphorylates and activates IKK, which in turn phosphorylates I\u03baB (typically on S32/S36), leading to its degradation. This places Akt upstream of I\u03baB phosphorylation in a well-established signaling cascade.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "akt",
+      "var_b": "ikb"
+    },
+    {
+      "cause": "akt",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "jnk12",
+      "reasoning": "Akt phosphorylates and inhibits ASK1, a MAP3K upstream of JNK, leading to reduced JNK activity; this crosstalk is well-documented in anti-apoptotic signaling.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "akt",
+      "var_b": "jnk12"
+    },
+    {
+      "cause": "akt",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "mek12",
+      "reasoning": "AKT phosphorylates and inactivates Raf kinases, which are direct upstream activators of MEK1/2, thereby negatively regulating MEK activity.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "akt",
+      "var_b": "mek12"
+    },
+    {
+      "cause": "erk12",
+      "confidence": 0.75,
+      "constraint_type": "soft_prior",
+      "effect": "hsp27",
+      "reasoning": "ERK1/2 phosphorylates and activates RSK (p90 ribosomal S6 kinase), which then phosphorylates HSP27 at Ser15, establishing a plausible causal link from ERK12 to HSP27, although the p38-MK2 axis is the primary regulatory pathway.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "erk12",
+      "var_b": "hsp27"
+    },
+    {
+      "cause": "hsp27",
+      "confidence": 0.7,
+      "constraint_type": "soft_prior",
+      "effect": "jnk12",
+      "reasoning": "Hsp27 can act as a negative regulator of JNK signaling by binding to and inhibiting upstream activators such as ASK1 or by scaffolding interactions that reduce JNK phosphorylation, thereby providing cytoprotective effects.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "hsp27",
+      "var_b": "jnk12"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 0.65,
+      "constraint_type": "soft_prior",
+      "effect": "hsp27",
+      "reasoning": "MEK1/2 activates ERK1/2, which through downstream kinases like RSK can phosphorylate hsp27. Although the p38 pathway is the primary regulator, cross-talk from the ERK pathway provides a plausible, though indirect, causal link from MEK to hsp27 phosphorylation.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "hsp27",
+      "var_b": "mek12"
+    },
+    {
+      "cause": "jnk12",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "ikb",
+      "reasoning": "JNK is a kinase known to directly phosphorylate I\u03baB\u03b1 at Ser32/36, triggering its degradation, which is a rapid post-translational crosstalk between MAPK and NF-\u03baB pathways.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "ikb",
+      "var_b": "jnk12"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 0.7,
+      "constraint_type": "soft_prior",
+      "effect": "ikb",
+      "reasoning": "MEK1/2 signaling via ERK can cross-activate the NF-\u03baB pathway (e.g., through MSK or p90RSK) leading to I\u03baB phosphorylation and degradation, while I\u03baB is not known to directly regulate MEK activity.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "per_pair_freetext_fallback",
+      "var_a": "ikb",
+      "var_b": "mek12"
+    }
+  ],
+  "served_models": [
+    "deepseek-ai/DeepSeek-V4-Pro"
+  ],
+  "source_kind": "per_pair_freetext_fallback"
+}

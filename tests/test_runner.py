@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import unittest
 from pathlib import Path
@@ -56,6 +57,28 @@ def _minimal_algo_row(
 
 
 class TestRunner(unittest.TestCase):
+    def test_freetext_fallback_stale_row_detection(self) -> None:
+        path = Path("experiments/causal_priors_sachs_with_fallback.json")
+        if not path.is_file():
+            self.skipTest("committed priors file missing")
+        good = hashlib.sha256(path.read_bytes()).hexdigest()
+        stale_row = {
+            "priors_source": "reactome_llm_with_freetext_fallback",
+            "notes": {"source_priors_hash": "0" * 64},
+        }
+        fresh_row = {
+            "priors_source": "reactome_llm_with_freetext_fallback",
+            "notes": {"source_priors_hash": good},
+        }
+        self.assertTrue(r._freetext_fallback_row_stale(stale_row, path=path))
+        self.assertFalse(r._freetext_fallback_row_stale(fresh_row, path=path))
+        self.assertFalse(
+            r._freetext_fallback_row_stale(
+                {"priors_source": "reactome_llm", "notes": {}},
+                path=path,
+            )
+        )
+
     def test_idempotency_skips_run_condition(self) -> None:
         existing = _minimal_algo_row(
             condition="C0",

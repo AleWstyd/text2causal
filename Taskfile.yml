@@ -27,9 +27,19 @@ tasks:
       - uv run python -m unittest discover -s tests -v
 
   reason-with-fallback-sachs:
-    desc: Merge Reactome priors with free-text fallback for no-context pairs (Sachs + DREAM4 + LiverDREAM when files exist)
+    desc: Alias for fallback-priors (two-stage merge for Sachs + DREAM4 PSN + LiverDREAM)
     cmds:
       - uv run python -m experiments.run_reasoning_with_fallback
+
+  fallback-priors:
+    desc: Two-stage merge — paragraph freetext_priors_*.json (if present) then per_pair_freetext_priors_*.json (if present) → causal_priors_*_with_fallback.json
+    cmds:
+      - uv run python -m experiments.run_reasoning_with_fallback
+
+  per-pair-freetext-fallback:
+    desc: Per-pair LLM priors for Reactome no-context pairs (Sachs + DREAM4 PSN + LiverDREAM; uses cache/llm)
+    cmds:
+      - uv run python -m experiments.run_per_pair_freetext_fallback
 
   baseline-sachs:
     desc: Run the Sachs unconstrained PC/GES/LiNGAM baseline

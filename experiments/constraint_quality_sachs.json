@@ -164,15 +164,15 @@
       ]
     },
     "reactome_llm_with_freetext_fallback": {
-      "n_predicted_forward": 17,
-      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 31,
+      "n_predicted_forbidden": 1,
       "n_true_edges": 18,
-      "precision_forward": 0.5294117647058824,
-      "recall_forward": 0.5,
-      "precision_forbidden": 0.0,
+      "precision_forward": 0.4838709677419355,
+      "recall_forward": 0.8333333333333334,
+      "precision_forbidden": 1.0,
       "hallucination_strict": 0.0,
-      "hallucination_loose": 0.47058823529411764,
-      "coverage": 0.3090909090909091,
+      "hallucination_loose": 0.5161290322580645,
+      "coverage": 0.6363636363636364,
       "true_positives": [
         [
           "PIP2",
@@ -192,6 +192,30 @@
         ],
         [
           "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -227,6 +251,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -240,6 +268,34 @@
         [
           "PIP3",
           "p44/42"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "pmek"
         ],
         [
           "praf",
@@ -532,15 +588,15 @@
       ]
     },
     "reactome_llm_with_freetext_fallback": {
-      "n_predicted_forward": 17,
+      "n_predicted_forward": 18,
       "n_predicted_forbidden": 0,
       "n_true_edges": 13,
-      "precision_forward": 0.5294117647058824,
-      "recall_forward": 0.6923076923076923,
+      "precision_forward": 0.5555555555555556,
+      "recall_forward": 0.7692307692307693,
       "precision_forbidden": 0.0,
       "hallucination_strict": 0.0,
-      "hallucination_loose": 0.47058823529411764,
-      "coverage": 0.5151515151515151,
+      "hallucination_loose": 0.4444444444444444,
+      "coverage": 0.5454545454545454,
       "true_positives": [
         [
           "PIP2",
@@ -557,6 +613,10 @@
         [
           "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -924,5 +984,5 @@
       "n_true_edges_in_stratum": 5
     }
   },
-  "headline": "reactome_llm precision=0.53 recall=0.50 hallucination_strict=0.00 coverage=0.31; reactome_llm_with_freetext_fallback precision=0.53 recall=0.50 hallucination_strict=0.00 coverage=0.31; omnipath_reactome_only precision=0.00 recall=0.00 hallucination_strict=0.00 coverage=0.03; omnipath_all precision=0.19 recall=0.33 hallucination_strict=0.19 coverage=0.39; freetext_llm precision=1.00 recall=0.33 hallucination_strict=0.00 coverage=0.05"
+  "headline": "reactome_llm precision=0.53 recall=0.50 hallucination_strict=0.00 coverage=0.31; reactome_llm_with_freetext_fallback precision=0.48 recall=0.83 hallucination_strict=0.00 coverage=0.64; omnipath_reactome_only precision=0.00 recall=0.00 hallucination_strict=0.00 coverage=0.03; omnipath_all precision=0.19 recall=0.33 hallucination_strict=0.19 coverage=0.39; freetext_llm precision=1.00 recall=0.33 hallucination_strict=0.00 coverage=0.05"
 }

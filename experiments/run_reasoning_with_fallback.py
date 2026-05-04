@@ -47,20 +47,65 @@ def main() -> None:
         if not causal_path.is_file():
             print(f"[skip {name}] missing {causal_path}")
             continue
-        if not ft_path.is_file():
-            print(f"[skip {name}] missing {ft_path} (no free-text priors)")
-            continue
+
         causal = json.loads(causal_path.read_text(encoding="utf-8"))
         if not isinstance(causal, dict):
             raise TypeError(f"Expected object in {causal_path}")
-        freetext = json.loads(ft_path.read_text(encoding="utf-8"))
-        if not isinstance(freetext, dict):
-            raise TypeError(f"Expected object in {ft_path}")
+
+        per_pair_path = (
+            REPO_ROOT / "experiments" / f"per_pair_freetext_priors_{name}.json"
+        )
+
+        has_para = ft_path.is_file()
+        has_pp = per_pair_path.is_file()
+
+        if not has_para and not has_pp:
+            print(
+                f"[skip {name}] missing both {ft_path.name} and "
+                f"{per_pair_path.name} (no free-text priors)"
+            )
+            continue
+
         col = infer_column_set_from_priors(causal)
-        merged = merge_with_freetext_fallback(causal, freetext, column_set=col)
-        _atomic_write_json(out_path, merged)
-        n_fb = merged.get("n_fallback_applied", 0)
-        print(f"[{name}] wrote {out_path} (n_fallback_applied={n_fb})")
+
+        current = causal
+        fb_total: list[list[str]] = []
+        n_para = 0
+        n_pp = 0
+
+        if has_para:
+            freetext = json.loads(ft_path.read_text(encoding="utf-8"))
+            if not isinstance(freetext, dict):
+                raise TypeError(f"Expected object in {ft_path}")
+            current = merge_with_freetext_fallback(
+                causal,
+                freetext,
+                column_set=col,
+            )
+            n_para = int(current.get("n_fallback_applied", 0))
+            fb_total.extend(list(current.get("fallback_applied_pairs") or []))
+            print(f"[{name}] paragraph freetext: n_fallback_applied={n_para}")
+
+        if has_pp:
+            per_pair = json.loads(per_pair_path.read_text(encoding="utf-8"))
+            if not isinstance(per_pair, dict):
+                raise TypeError(f"Expected object in {per_pair_path}")
+            current = merge_with_freetext_fallback(
+                current,
+                per_pair,
+                column_set=col,
+            )
+            n_pp = int(current.get("n_fallback_applied", 0))
+            fb_total.extend(list(current.get("fallback_applied_pairs") or []))
+            print(f"[{name}] per-pair freetext: n_fallback_applied={n_pp}")
+
+        current["n_fallback_applied"] = n_para + n_pp
+        current["fallback_applied_pairs"] = sorted(
+            fb_total,
+            key=lambda p: (p[0], p[1]),
+        )
+        _atomic_write_json(out_path, current)
+        print(f"[{name}] wrote {out_path} (n_fallback_applied total={n_para + n_pp})")
 
 
 if __name__ == "__main__":

@@ -1,11 +1,11 @@
 {
   "dataset": "sachs",
-  "ges_total_dropped_due_to_cycle": 150,
+  "ges_total_dropped_due_to_cycle": 180,
   "matrix": "step6_canonical",
   "n_cells_completed": 241,
   "n_cells_expected": 241,
   "n_cells_failed": 0,
-  "pc_total_dropped_due_to_cycle": 510,
+  "pc_total_dropped_due_to_cycle": 570,
   "results": [
     {
       "algorithm": null,
@@ -25567,15 +25567,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -25583,6 +25583,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -25595,15 +25607,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -25620,10 +25638,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -25651,6 +25665,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -25667,6 +25685,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -25675,11 +25697,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -25702,6 +25732,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -25714,32 +25752,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -25755,15 +25781,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -25771,6 +25797,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -25783,15 +25821,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -25808,10 +25852,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -25839,6 +25879,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -25855,6 +25899,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -25863,11 +25911,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -25890,6 +25946,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -25902,32 +25966,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -25943,15 +25995,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -25959,6 +26011,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -25971,15 +26035,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -25996,10 +26066,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -26027,6 +26093,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -26043,6 +26113,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -26051,11 +26125,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -26078,6 +26160,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -26090,32 +26180,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -26131,15 +26209,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -26147,6 +26225,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -26159,15 +26249,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -26184,10 +26280,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -26215,6 +26307,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -26231,6 +26327,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -26239,11 +26339,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -26266,6 +26374,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -26278,32 +26394,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -26319,15 +26423,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -26335,6 +26439,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -26347,15 +26463,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -26372,10 +26494,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -26403,6 +26521,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -26419,6 +26541,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -26427,11 +26553,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -26454,6 +26588,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -26466,32 +26608,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -26507,15 +26637,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -26523,6 +26653,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -26535,15 +26677,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -26560,10 +26708,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -26591,6 +26735,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -26607,6 +26755,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -26615,11 +26767,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -26642,6 +26802,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -26654,32 +26822,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -26695,15 +26851,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -26711,6 +26867,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -26723,15 +26891,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -26748,10 +26922,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -26779,6 +26949,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -26795,6 +26969,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -26803,11 +26981,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -26830,6 +27016,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -26842,32 +27036,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -26883,15 +27065,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -26899,6 +27081,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -26911,15 +27105,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -26936,10 +27136,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -26967,6 +27163,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -26983,6 +27183,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -26991,11 +27195,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -27018,6 +27230,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -27030,32 +27250,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -27071,15 +27279,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -27087,6 +27295,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -27099,15 +27319,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27124,10 +27350,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -27155,6 +27377,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -27171,6 +27397,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -27179,11 +27409,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -27206,6 +27444,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -27218,32 +27464,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -27259,15 +27493,15 @@
       "algorithm": "GES",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -27275,6 +27509,18 @@
         [
           "PIP3",
           "PKC"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -27287,15 +27533,21 @@
       ],
       "error": null,
       "metrics": {
-        "aupr": 0.5674865538501902,
-        "directed_f1": 0.490566037735849,
-        "directed_precision": 0.37142857142857144,
-        "directed_recall": 0.7222222222222222,
-        "f1": 0.5283018867924528,
-        "precision": 0.4,
-        "recall": 0.7777777777777778,
-        "shd": 27.0
+        "aupr": 0.6317660635842454,
+        "directed_f1": 0.5454545454545455,
+        "directed_precision": 0.40540540540540543,
+        "directed_recall": 0.8333333333333334,
+        "f1": 0.5818181818181818,
+        "precision": 0.43243243243243246,
+        "recall": 0.8888888888888888,
+        "shd": 25.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27312,10 +27564,6 @@
         [
           "P38",
           "pjnk"
-        ],
-        [
-          "P38",
-          "plcg"
         ],
         [
           "P38",
@@ -27343,6 +27591,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -27359,6 +27611,10 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
         ],
         [
@@ -27367,11 +27623,19 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
           "PKA",
           "pakts473"
+        ],
+        [
+          "PKA",
+          "pjnk"
         ],
         [
           "PKA",
@@ -27394,6 +27658,14 @@
           "pmek"
         ],
         [
+          "PKC",
+          "praf"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
           "plcg",
           "p44/42"
         ],
@@ -27406,32 +27678,20 @@
           "pjnk"
         ],
         [
-          "pmek",
-          "p44/42"
+          "plcg",
+          "pmek"
         ],
         [
           "pmek",
-          "pakts473"
+          "p44/42"
         ],
         [
           "pmek",
           "pjnk"
         ],
         [
-          "pmek",
-          "plcg"
-        ],
-        [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
-        ],
-        [
-          "praf",
-          "plcg"
         ],
         [
           "praf",
@@ -27447,15 +27707,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -27467,6 +27727,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -27482,7 +27746,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -27496,14 +27776,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -27534,6 +27818,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -27558,6 +27846,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -27582,19 +27874,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -27647,10 +27927,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -27666,15 +27942,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -27686,6 +27962,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -27701,7 +27981,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -27715,14 +28011,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -27753,6 +28053,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -27777,6 +28081,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -27801,19 +28109,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -27866,10 +28162,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -27885,15 +28177,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -27905,6 +28197,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -27920,7 +28216,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -27934,14 +28246,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -27972,6 +28288,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -27996,6 +28316,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -28020,19 +28344,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -28085,10 +28397,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -28104,15 +28412,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -28124,6 +28432,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -28139,7 +28451,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -28153,14 +28481,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -28191,6 +28523,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -28215,6 +28551,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -28239,19 +28579,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -28304,10 +28632,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -28323,15 +28647,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -28343,6 +28667,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -28358,7 +28686,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -28372,14 +28716,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -28410,6 +28758,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -28434,6 +28786,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -28458,19 +28814,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -28523,10 +28867,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -28542,15 +28882,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -28562,6 +28902,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -28577,7 +28921,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -28591,14 +28951,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -28629,6 +28993,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -28653,6 +29021,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -28677,19 +29049,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -28742,10 +29102,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -28761,15 +29117,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -28781,6 +29137,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -28796,7 +29156,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -28810,14 +29186,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -28848,6 +29228,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -28872,6 +29256,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -28896,19 +29284,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -28961,10 +29337,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -28980,15 +29352,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -29000,6 +29372,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -29015,7 +29391,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -29029,14 +29421,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -29067,6 +29463,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -29091,6 +29491,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -29115,19 +29519,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -29180,10 +29572,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -29199,15 +29587,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -29219,6 +29607,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -29234,7 +29626,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -29248,14 +29656,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -29286,6 +29698,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -29310,6 +29726,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -29334,19 +29754,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -29399,10 +29807,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -29418,15 +29822,15 @@
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -29438,6 +29842,10 @@
         [
           "PIP2",
           "PKC"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP3",
@@ -29453,7 +29861,23 @@
         ],
         [
           "PIP3",
+          "pjnk"
+        ],
+        [
+          "PIP3",
           "plcg"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "praf"
         ],
         [
           "plcg",
@@ -29467,14 +29891,18 @@
       "error": null,
       "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.483129824038915,
-        "directed_f1": 0.39999999999999997,
-        "directed_precision": 0.2972972972972973,
-        "directed_recall": 0.6111111111111112,
-        "f1": 0.4363636363636364,
-        "precision": 0.32432432432432434,
+        "aupr": 0.5295552931916568,
+        "directed_f1": 0.4528301886792453,
+        "directed_precision": 0.34285714285714286,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.4528301886792453,
+        "precision": 0.34285714285714286,
         "recall": 0.6666666666666666,
-        "shd": 33.0
+        "shd": 29.0
+      },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
@@ -29505,6 +29933,10 @@
         ],
         [
           "PKA",
+          "PIP3"
+        ],
+        [
+          "PKA",
           "p44/42"
         ],
         [
@@ -29529,6 +29961,10 @@
         ],
         [
           "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
           "praf"
         ],
         [
@@ -29553,19 +29989,7 @@
         ],
         [
           "pjnk",
-          "PIP3"
-        ],
-        [
-          "pjnk",
-          "PKA"
-        ],
-        [
-          "pjnk",
           "p44/42"
-        ],
-        [
-          "pjnk",
-          "pakts473"
         ],
         [
           "pjnk",
@@ -29618,10 +30042,6 @@
         [
           "praf",
           "p44/42"
-        ],
-        [
-          "praf",
-          "pakts473"
         ],
         [
           "praf",
@@ -29637,15 +30057,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -29668,6 +30088,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -29685,6 +30109,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -29710,6 +30154,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -29726,6 +30174,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -29746,6 +30198,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -29851,8 +30323,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",
@@ -29868,15 +30340,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -29899,6 +30371,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -29916,6 +30392,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -29941,6 +30437,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -29957,6 +30457,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -29977,6 +30481,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -30082,8 +30606,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",
@@ -30099,15 +30623,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -30130,6 +30654,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -30147,6 +30675,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -30172,6 +30720,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -30188,6 +30740,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -30208,6 +30764,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -30313,8 +30889,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",
@@ -30330,15 +30906,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -30361,6 +30937,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -30378,6 +30958,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -30403,6 +31003,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -30419,6 +31023,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -30439,6 +31047,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -30544,8 +31172,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",
@@ -30561,15 +31189,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -30592,6 +31220,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -30609,6 +31241,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -30634,6 +31286,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -30650,6 +31306,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -30670,6 +31330,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -30775,8 +31455,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",
@@ -30792,15 +31472,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -30823,6 +31503,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -30840,6 +31524,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -30865,6 +31569,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -30881,6 +31589,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -30901,6 +31613,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -31006,8 +31738,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",
@@ -31023,15 +31755,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -31054,6 +31786,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -31071,6 +31807,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -31096,6 +31852,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -31112,6 +31872,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -31132,6 +31896,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -31237,8 +32021,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",
@@ -31254,15 +32038,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -31285,6 +32069,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -31302,6 +32090,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -31327,6 +32135,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -31343,6 +32155,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -31363,6 +32179,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -31468,8 +32304,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",
@@ -31485,15 +32321,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -31516,6 +32352,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -31533,6 +32373,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -31558,6 +32418,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -31574,6 +32438,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -31594,6 +32462,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -31699,8 +32587,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",
@@ -31716,15 +32604,15 @@
       "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
-        "discarded_below_threshold": 0,
+        "discarded_below_threshold": 6,
         "discarded_unknown": 28,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 16,
-        "kept_forbidden": 0,
-        "kept_required": 34,
+        "hard_forbidden_reverse": 2,
+        "hard_required": 22,
+        "kept_forbidden": 2,
+        "kept_required": 62,
         "no_context": 0,
-        "soft_prior": 18,
-        "total": 62,
+        "soft_prior": 46,
+        "total": 98,
         "unknown": 28
       },
       "dataset": "sachs",
@@ -31747,6 +32635,10 @@
         ],
         [
           "PIP2",
+          "pjnk"
+        ],
+        [
+          "PIP2",
           "pmek"
         ],
         [
@@ -31764,6 +32656,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -31789,6 +32701,10 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "notes": {
+        "priors_json_path": "experiments/causal_priors_sachs_with_fallback.json",
+        "source_priors_hash": "14795ec2689f189fb85d8ee4861ae13e5499899a6fb70a54631d60e4ced5febb"
+      },
       "pc_post_hoc_dropped_due_to_cycle": [
         [
           "P38",
@@ -31805,6 +32721,10 @@
         [
           "PIP2",
           "pakts473"
+        ],
+        [
+          "PIP2",
+          "pjnk"
         ],
         [
           "PIP2",
@@ -31825,6 +32745,26 @@
         [
           "PIP3",
           "pakts473"
+        ],
+        [
+          "PIP3",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "PIP3"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "P38"
         ],
         [
           "plcg",
@@ -31930,8 +32870,8 @@
           "pmek"
         ],
         [
-          "praf",
-          "plcg"
+          "plcg",
+          "praf"
         ],
         [
           "praf",

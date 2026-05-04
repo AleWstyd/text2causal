@@ -7,6 +7,10 @@ reliably convert those priors into a Sachs F1 improvement.
 
 ## What Changed
 
+### Per-pair fallback for the no-context stratum (PR2b)
+
+Paragraph `freetext_priors_sachs.json` does not intersect `no_context_pairs`, so the first **C3+ft** merge (`n_fallback_applied = 0`) left Sachs identical to **C3**. PR2b adds `task per-pair-freetext-fallback`: one cached LLM JSON per *unordered* Reactome no-context pair (`reasoning/freetext_fallback.py`), merged in a second round by `task fallback-priors`. On the committed May 2026 artefact run: **24** Sachs queries, **18** accepted directional claims, **36** prior-slot substitutions when both ordered rows exist; downstream **GES** mean directed F1 moves **0.491 → 0.546** (SHD **27 → 25**) and **LiNGAM** **0.400 → 0.453** (**33 → 29**); **PC** is unchanged (**0.524**, SHD **20**). All **6** true Sachs edges in the no-context stratum (PKA/PKC substrate arcs) are oriented correctly in `per_pair_freetext_priors_sachs.json`.
+
 ### Canonical Reactome+LLM LiNGAM cells now complete
 
 Step 6.5 showed that dense required-edge matrices over-constrain
