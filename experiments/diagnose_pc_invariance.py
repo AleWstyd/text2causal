@@ -108,8 +108,8 @@ def _alpha_spot_check() -> list[dict[str, Any]]:
 
     rows: list[dict[str, Any]] = []
     for alpha in ALPHAS:
-        c0 = run_pc(data_matrix, variable_names, None, alpha=alpha)
-        c5 = run_pc(data_matrix, variable_names, oracle_pk, alpha=alpha)
+        c0, _ = run_pc(data_matrix, variable_names, None, alpha=alpha)
+        c5, _ = run_pc(data_matrix, variable_names, oracle_pk, alpha=alpha)
         c0_metrics = evaluate(c0, true_graph)
         c5_metrics = evaluate(c5, true_graph)
         rows.append(

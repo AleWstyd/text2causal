@@ -72,6 +72,8 @@ class RunConditionC0Tests(unittest.TestCase):
                     self.assertIn(key, result["metrics"])
                 self.assertIsNone(result["constraint_summary"])
                 self.assertEqual(result["dropped_due_to_cycle"], [])
+                self.assertEqual(result["pc_post_hoc_required_added"], 0)
+                self.assertEqual(result["pc_post_hoc_dropped_due_to_cycle"], [])
 
 
 class RunConditionOracleTests(unittest.TestCase):
@@ -92,6 +94,37 @@ class RunConditionOracleTests(unittest.TestCase):
         self.assertEqual(result["status"], "ok")
         assert result["metrics"] is not None
         self.assertLess(result["metrics"]["shd"], 8.0)
+        self.assertEqual(result["lingam_prior_mode"], "forbidden_only")
+
+
+class RunConditionLingamDefaultModeTests(unittest.TestCase):
+    def test_constrained_lingam_defaults_to_forbidden_only_without_kwarg(self) -> None:
+        rng = np.random.default_rng(414)
+        data, names, true_graph = _synth_chain_data(rng)
+        priors = [
+            ClaimRecord(
+                var_a="X0",
+                var_b="X1",
+                cause="X0",
+                effect="X1",
+                confidence=0.8,
+                constraint_type="hard_required",
+                source="reactome_llm",
+            ),
+        ]
+        result = run_condition(
+            dataset_name="synth_chain",
+            data=data,
+            variable_names=names,
+            true_graph=true_graph,
+            priors=priors,
+            priors_source="reactome_llm",
+            algorithm="LiNGAM",
+            threshold=0.7,
+            seed=0,
+        )
+        self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["lingam_prior_mode"], "forbidden_only")
 
 
 class RunConditionReactomeThresholdTests(unittest.TestCase):
@@ -197,6 +230,7 @@ class RunConditionLiNGAMOverconstraintTests(unittest.TestCase):
                 algorithm="LiNGAM",
                 threshold=None,
                 seed=0,
+                lingam_prior_mode="all",
             )
         self.assertEqual(result["status"], "failed")
         err = result["error"] or ""

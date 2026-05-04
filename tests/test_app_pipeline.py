@@ -330,7 +330,10 @@ class AppPipelineTests(unittest.TestCase):
             list(result["constrained_graph"].edges()),
             [("Smoking", "Lung_Cancer")],
         )
-        self.assertEqual(result["constraint_mode"], "native_pc_background_knowledge")
+        self.assertEqual(
+            result["constraint_mode"],
+            "native_pc_background_knowledge_plus_post_hoc_edges",
+        )
 
     def test_build_graph_figure_returns_matplotlib_figure(self):
         graph = nx.DiGraph()

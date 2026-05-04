@@ -72,7 +72,10 @@ def run_baseline() -> dict[str, dict[str, dict[str, float]]]:
         for seed in SEEDS:
             random.seed(seed)
             np.random.seed(seed)
-            predicted_graph = runner(data_matrix, variable_names, None)
+            if algorithm == "PC":
+                predicted_graph, _ = runner(data_matrix, variable_names, None)
+            else:
+                predicted_graph = runner(data_matrix, variable_names, None)
             seed_metrics.append(evaluate(predicted_graph, true_graph))
         results[algorithm] = _summarise(seed_metrics)
 

@@ -21,6 +21,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -53,6 +55,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -85,6 +89,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -117,6 +123,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -149,6 +157,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -181,6 +191,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -213,6 +225,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -245,6 +259,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -277,6 +293,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -309,6 +327,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -341,6 +361,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -381,6 +403,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -421,6 +445,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -461,6 +487,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -501,6 +529,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -541,6 +571,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -581,6 +613,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -621,6 +655,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -661,6 +697,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -701,6 +739,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -741,6 +781,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -797,6 +839,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -853,6 +897,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -909,6 +955,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -965,6 +1013,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -1021,6 +1071,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -1077,6 +1129,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -1133,6 +1187,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -1189,6 +1245,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -1245,6 +1303,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -1312,6 +1372,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1355,6 +1417,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1398,6 +1462,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1441,6 +1507,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1484,6 +1552,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1527,6 +1597,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1570,6 +1642,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1613,6 +1687,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1656,6 +1732,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1699,6 +1777,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -1742,6 +1822,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -1793,6 +1875,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -1844,6 +1928,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -1895,6 +1981,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -1946,6 +2034,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -1997,6 +2087,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -2048,6 +2140,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -2099,6 +2193,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -2150,6 +2246,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -2201,6 +2299,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -2242,6 +2342,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2252,6 +2353,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2309,6 +2412,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2319,6 +2423,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2376,6 +2482,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2386,6 +2493,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2443,6 +2552,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2453,6 +2563,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2510,6 +2622,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2520,6 +2633,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2577,6 +2692,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2587,6 +2703,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2644,6 +2762,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2654,6 +2773,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2711,6 +2832,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2721,6 +2843,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2778,6 +2902,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2788,6 +2913,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2845,6 +2972,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -2855,6 +2983,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -2922,6 +3052,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -2965,6 +3097,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -3008,6 +3142,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -3051,6 +3187,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -3094,6 +3232,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -3137,6 +3277,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -3180,6 +3322,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -3223,6 +3367,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -3266,6 +3412,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -3309,6 +3457,8 @@
         "recall": 0.2,
         "shd": 7.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
@@ -3352,6 +3502,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3403,6 +3555,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3454,6 +3608,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3505,6 +3661,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3556,6 +3714,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3607,6 +3767,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3658,6 +3820,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3709,6 +3873,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3760,6 +3926,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3811,6 +3979,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -3852,6 +4022,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -3862,6 +4033,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -3919,6 +4092,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -3929,6 +4103,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -3986,6 +4162,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -3996,6 +4173,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -4053,6 +4232,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -4063,6 +4243,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -4120,6 +4302,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -4130,6 +4313,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -4187,6 +4372,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -4197,6 +4383,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -4254,6 +4442,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -4264,6 +4453,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -4321,6 +4512,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -4331,6 +4523,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -4388,6 +4582,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -4398,6 +4593,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -4455,6 +4652,7 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.20331632653061227,
         "directed_f1": 0.15384615384615385,
@@ -4465,6 +4663,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -4532,6 +4732,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4571,6 +4773,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4610,6 +4814,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4649,6 +4855,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4688,6 +4896,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4727,6 +4937,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4766,6 +4978,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4805,6 +5019,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4844,6 +5060,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4883,6 +5101,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4922,6 +5142,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -4973,6 +5195,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -5024,6 +5248,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -5075,6 +5301,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -5126,6 +5354,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -5177,6 +5407,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -5228,6 +5460,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -5279,6 +5513,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -5330,6 +5566,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -5381,6 +5619,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -5433,6 +5673,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -5501,6 +5743,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -5569,6 +5813,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -5637,6 +5883,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -5705,6 +5953,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -5773,6 +6023,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -5841,6 +6093,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -5909,6 +6163,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -5977,6 +6233,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -6045,1586 +6303,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 9,
-      "status": "ok",
-      "threshold": 0.9
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 0,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 1,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 2,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 3,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 4,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 5,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 6,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 7,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 8,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.6408163265306122,
-        "directed_f1": 0.33333333333333337,
-        "directed_precision": 1.0,
-        "directed_recall": 0.2,
-        "f1": 0.33333333333333337,
-        "precision": 1.0,
-        "recall": 0.2,
-        "shd": 4.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 9,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 0,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 1,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 2,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 3,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 4,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 5,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 6,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 7,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 8,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
-      },
-      "predicted_edges": [
-        [
-          "mek12",
-          "erk12"
-        ],
-        [
-          "mek12",
-          "jnk12"
-        ],
-        [
-          "p38",
-          "erk12"
-        ],
-        [
-          "p38",
-          "hsp27"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 9,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 0,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 1,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 2,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 3,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 4,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 5,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 6,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 7,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
-      "predicted_edges": [
-        [
-          "akt",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "akt"
-        ],
-        [
-          "erk12",
-          "mek12"
-        ],
-        [
-          "erk12",
-          "p38"
-        ],
-        [
-          "hsp27",
-          "jnk12"
-        ],
-        [
-          "hsp27",
-          "p38"
-        ],
-        [
-          "jnk12",
-          "ikb"
-        ],
-        [
-          "jnk12",
-          "mek12"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 8,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "LiNGAM",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 14,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 2,
-        "kept_forbidden": 0,
-        "kept_required": 2,
-        "no_context": 0,
-        "soft_prior": 0,
-        "total": 16,
-        "unknown": 14
-      },
-      "dataset": "liverdream",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "lingam_prior_mode": "forbidden_only",
-      "metrics": {
-        "aupr": 0.20331632653061227,
-        "directed_f1": 0.15384615384615385,
-        "directed_precision": 0.125,
-        "directed_recall": 0.2,
-        "f1": 0.4615384615384615,
-        "precision": 0.375,
-        "recall": 0.6,
-        "shd": 11.0
-      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -7662,6 +6342,1646 @@
       "priors_source": "reactome_llm",
       "seed": 9,
       "status": "ok",
+      "threshold": 0.9
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 0,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 1,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 2,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 3,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 4,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 5,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 6,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 7,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 8,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "PC",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.6408163265306122,
+        "directed_f1": 0.33333333333333337,
+        "directed_precision": 1.0,
+        "directed_recall": 0.2,
+        "f1": 0.33333333333333337,
+        "precision": 1.0,
+        "recall": 0.2,
+        "shd": 4.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 9,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 0,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 1,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 2,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 3,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 4,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 5,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 6,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 7,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 8,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.48061224489795923,
+        "directed_f1": 0.4444444444444445,
+        "directed_precision": 0.5,
+        "directed_recall": 0.4,
+        "f1": 0.4444444444444445,
+        "precision": 0.5,
+        "recall": 0.4,
+        "shd": 5.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 9,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 0,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 1,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 2,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 3,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 4,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 5,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 6,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 7,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 8,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "LiNGAM",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 14,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 2,
+        "kept_forbidden": 0,
+        "kept_required": 2,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 16,
+        "unknown": 14
+      },
+      "dataset": "liverdream",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.20331632653061227,
+        "directed_f1": 0.15384615384615385,
+        "directed_precision": 0.125,
+        "directed_recall": 0.2,
+        "f1": 0.4615384615384615,
+        "precision": 0.375,
+        "recall": 0.6,
+        "shd": 11.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "jnk12"
+        ],
+        [
+          "hsp27",
+          "p38"
+        ],
+        [
+          "jnk12",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 9,
+      "status": "ok",
       "threshold": 0.7
     },
     {
@@ -7692,6 +8012,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -7731,6 +8053,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -7770,6 +8094,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -7809,6 +8135,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -7848,6 +8176,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -7887,6 +8217,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -7926,6 +8258,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -7965,6 +8299,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8004,6 +8340,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8043,6 +8381,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8082,6 +8422,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8133,6 +8475,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8184,6 +8528,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8235,6 +8581,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8286,6 +8634,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8337,6 +8687,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8388,6 +8740,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8439,6 +8793,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8490,6 +8846,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8541,6 +8899,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -8593,6 +8953,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -8661,6 +9023,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -8729,6 +9093,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -8797,6 +9163,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -8865,6 +9233,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -8933,6 +9303,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -9001,6 +9373,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -9069,6 +9443,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -9137,6 +9513,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -9205,6 +9583,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -9272,6 +9652,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9311,6 +9693,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9350,6 +9734,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9389,6 +9775,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9428,6 +9816,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9467,6 +9857,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9506,6 +9898,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9545,6 +9939,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9584,6 +9980,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9623,6 +10021,8 @@
         "recall": 0.2,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9662,6 +10062,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9713,6 +10115,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9764,6 +10168,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9815,6 +10221,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9866,6 +10274,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9917,6 +10327,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -9968,6 +10380,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -10019,6 +10433,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -10070,6 +10486,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -10121,6 +10539,8 @@
         "recall": 0.4,
         "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "mek12",
@@ -10173,6 +10593,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10241,6 +10663,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10309,6 +10733,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10377,6 +10803,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10445,6 +10873,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10513,6 +10943,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10581,6 +11013,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10649,6 +11083,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10717,6 +11153,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10785,6 +11223,8 @@
         "recall": 0.6,
         "shd": 11.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -10843,16 +11283,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -10894,16 +11348,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -10945,16 +11413,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -10996,16 +11478,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -11047,16 +11543,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -11098,16 +11608,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -11149,16 +11673,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -11200,16 +11738,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -11251,16 +11803,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -11302,16 +11868,30 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 0.48061224489795923,
-        "directed_f1": 0.4444444444444445,
-        "directed_precision": 0.5,
-        "directed_recall": 0.4,
-        "f1": 0.4444444444444445,
-        "precision": 0.5,
-        "recall": 0.4,
-        "shd": 5.0
+        "aupr": 0.8571428571428572,
+        "directed_f1": 0.8333333333333333,
+        "directed_precision": 0.7142857142857143,
+        "directed_recall": 1.0,
+        "f1": 0.8333333333333333,
+        "precision": 0.7142857142857143,
+        "recall": 1.0,
+        "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 3,
       "predicted_edges": [
+        [
+          "akt",
+          "ikb"
+        ],
+        [
+          "akt",
+          "mek12"
+        ],
+        [
+          "erk12",
+          "hsp27"
+        ],
         [
           "hsp27",
           "jnk12"
@@ -11362,6 +11942,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11425,6 +12007,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11488,6 +12072,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11551,6 +12137,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11614,6 +12202,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11677,6 +12267,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11740,6 +12332,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11803,6 +12397,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11866,6 +12462,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11929,6 +12527,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "akt",
@@ -11982,24 +12582,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12028,10 +12631,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",
@@ -12057,24 +12656,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12103,10 +12705,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",
@@ -12132,24 +12730,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12178,10 +12779,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",
@@ -12207,24 +12804,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12253,10 +12853,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",
@@ -12282,24 +12878,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12328,10 +12927,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",
@@ -12357,24 +12952,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12403,10 +13001,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",
@@ -12432,24 +13026,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12478,10 +13075,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",
@@ -12507,24 +13100,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12553,10 +13149,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",
@@ -12582,24 +13174,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12628,10 +13223,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",
@@ -12657,24 +13248,27 @@
       "dataset": "liverdream",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.05102040816326531,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.6666666666666666,
-        "precision": 0.5,
-        "recall": 1.0,
-        "shd": 15.0
+        "f1": 0.5714285714285714,
+        "precision": 0.4444444444444444,
+        "recall": 0.8,
+        "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "erk12",
           "mek12"
         ],
         [
-          "hsp27",
-          "erk12"
+          "erk12",
+          "p38"
         ],
         [
           "hsp27",
@@ -12703,10 +13297,6 @@
         [
           "mek12",
           "akt"
-        ],
-        [
-          "p38",
-          "erk12"
         ]
       ],
       "priors_source": "oracle",

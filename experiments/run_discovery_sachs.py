@@ -163,14 +163,18 @@ def _load_priors_cache() -> dict[str, list[Any] | None]:
 def _summarise_payload(results: list[dict[str, Any]]) -> dict[str, Any]:
     n_failed = sum(1 for r in results if r.get("status") == "failed")
     ges_dropped = 0
+    pc_dropped = 0
     for r in results:
+        dropped = r.get("dropped_due_to_cycle") or []
         if r.get("algorithm") == "GES":
-            dropped = r.get("dropped_due_to_cycle") or []
             ges_dropped += len(dropped)
+        if r.get("algorithm") == "PC":
+            pc_dropped += len(dropped)
     return {
         "n_cells_completed": len(results),
         "n_cells_failed": n_failed,
         "ges_total_dropped_due_to_cycle": ges_dropped,
+        "pc_total_dropped_due_to_cycle": pc_dropped,
     }
 
 
@@ -262,13 +266,18 @@ def run_sweep(
     n_ok = sum(1 for r in results if r.get("status") == "ok")
     n_fail = sum(1 for r in results if r.get("status") == "failed")
     ges_tot = 0
+    pc_tot = 0
     for r in results:
+        dropped = r.get("dropped_due_to_cycle") or []
         if r.get("algorithm") == "GES":
-            ges_tot += len(r.get("dropped_due_to_cycle") or [])
+            ges_tot += len(dropped)
+        if r.get("algorithm") == "PC":
+            pc_tot += len(dropped)
 
     print(
         f"Summary: cells_in_file={len(results)} expected={n_cells_expected} "
-        f"ok={n_ok} failed={n_fail} ges_dropped_edges={ges_tot}"
+        f"ok={n_ok} failed={n_fail} ges_dropped_edges={ges_tot} "
+        f"pc_dropped_edges={pc_tot}"
     )
 
 

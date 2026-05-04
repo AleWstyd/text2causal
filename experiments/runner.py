@@ -120,9 +120,13 @@ def _summarise_payload(
 ) -> dict[str, Any]:
     n_failed = sum(1 for r in results if r.get("status") == "failed")
     ges_dropped = 0
+    pc_dropped = 0
     for r in results:
+        dropped = r.get("dropped_due_to_cycle") or []
         if r.get("algorithm") == "GES":
-            ges_dropped += len(r.get("dropped_due_to_cycle") or [])
+            ges_dropped += len(dropped)
+        if r.get("algorithm") == "PC":
+            pc_dropped += len(dropped)
     return {
         "dataset": DATASET_NAME,
         "matrix": MATRIX_ID,
@@ -130,6 +134,7 @@ def _summarise_payload(
         "n_cells_completed": len(results),
         "n_cells_failed": n_failed,
         "ges_total_dropped_due_to_cycle": ges_dropped,
+        "pc_total_dropped_due_to_cycle": pc_dropped,
     }
 
 
@@ -167,6 +172,7 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
                     threshold=0.7,
                     algorithm=alg,
                     seed=seed,
+                    lingam_prior_mode=("forbidden_only" if alg == "LiNGAM" else None),
                 )
             )
     for alg in _ALGORITHMS:
@@ -179,6 +185,7 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
                     threshold=0.7,
                     algorithm=alg,
                     seed=seed,
+                    lingam_prior_mode=("forbidden_only" if alg == "LiNGAM" else None),
                 )
             )
     for thr, cond in ((0.9, "C2"), (0.7, "C3"), (0.6, "C4")):
@@ -220,6 +227,7 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
                     threshold=None,
                     algorithm=alg,
                     seed=seed,
+                    lingam_prior_mode=("forbidden_only" if alg == "LiNGAM" else None),
                 )
             )
     cells.sort(
@@ -401,9 +409,15 @@ def run_ablation(
             for r in results_
             if r.get("algorithm") == "GES"
         )
+        pc_tot = sum(
+            len(r.get("dropped_due_to_cycle") or [])
+            for r in results_
+            if r.get("algorithm") == "PC"
+        )
         print(
             f"Summary: cells_in_file={len(results_)} expected={n_expected} "
-            f"ok={n_ok} failed={n_fail} ges_dropped_edges={ges_tot}"
+            f"ok={n_ok} failed={n_fail} ges_dropped_edges={ges_tot} "
+            f"pc_dropped_edges={pc_tot}"
         )
 
     needs_metric_backfill = any(row_ok_metrics_missing_directed_f1(r) for r in results)

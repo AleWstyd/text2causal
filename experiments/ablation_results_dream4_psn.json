@@ -22,6 +22,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -74,6 +76,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -126,6 +130,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -178,6 +184,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -230,6 +238,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -282,6 +292,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -334,6 +346,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -386,6 +400,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -438,6 +454,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -490,6 +508,8 @@
         "recall": 0.7777777777777778,
         "shd": 4.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -542,6 +562,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -594,6 +616,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -646,6 +670,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -698,6 +724,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -750,6 +778,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -802,6 +832,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -854,6 +886,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -906,6 +940,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -958,6 +994,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -1010,6 +1048,8 @@
         "recall": 0.7777777777777778,
         "shd": 16.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "HSP27",
@@ -1062,6 +1102,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1122,6 +1164,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1182,6 +1226,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1242,6 +1288,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1302,6 +1350,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1362,6 +1412,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1422,6 +1474,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1482,6 +1536,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1542,6 +1598,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1602,6 +1660,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1673,6 +1733,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1744,6 +1806,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1815,6 +1879,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1886,6 +1952,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -1957,6 +2025,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2028,6 +2098,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2099,6 +2171,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2170,6 +2244,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2241,6 +2317,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2312,6 +2390,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2383,6 +2463,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2454,6 +2536,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2525,6 +2609,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2596,6 +2682,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2667,6 +2755,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2738,6 +2828,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2809,6 +2901,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2880,6 +2974,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -2951,6 +3047,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -3022,6 +3120,8 @@
         "recall": 1.0,
         "shd": 14.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -3083,80 +3183,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -3182,80 +3253,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -3281,80 +3323,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -3380,80 +3393,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -3479,80 +3463,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -3578,80 +3533,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -3677,80 +3603,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -3776,80 +3673,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -3875,80 +3743,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -3974,80 +3813,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32164115646258506,
-        "directed_f1": 0.24000000000000005,
-        "directed_precision": 0.1875,
-        "directed_recall": 0.3333333333333333,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 19.0
+        "aupr": 0.846797052154195,
+        "directed_f1": 0.823529411764706,
+        "directed_precision": 0.875,
+        "directed_recall": 0.7777777777777778,
+        "f1": 0.823529411764706,
+        "precision": 0.875,
+        "recall": 0.7777777777777778,
+        "shd": 3.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
+          "AKT",
           "IKB"
         ],
         [
-          "p38",
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "omnipath_reactome_only",
@@ -4083,6 +3893,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4154,6 +3966,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4225,6 +4039,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4296,6 +4112,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4367,6 +4185,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4438,6 +4258,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4509,6 +4331,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4580,6 +4404,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4651,6 +4477,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4722,6 +4550,8 @@
         "recall": 1.0,
         "shd": 2.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4798,6 +4628,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4870,6 +4702,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -4942,6 +4776,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -5014,6 +4850,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -5086,6 +4924,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -5158,6 +4998,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -5230,6 +5072,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -5302,6 +5146,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -5374,6 +5220,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -5446,6 +5294,8 @@
         "recall": 0.8888888888888888,
         "shd": 13.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -5503,76 +5353,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -5598,76 +5423,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -5693,76 +5493,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -5788,76 +5563,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -5883,76 +5633,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -5978,76 +5703,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -6073,76 +5773,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -6168,76 +5843,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -6263,76 +5913,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -6358,76 +5983,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.17052154195011338,
-        "directed_f1": 0.08333333333333334,
-        "directed_precision": 0.06666666666666667,
-        "directed_recall": 0.1111111111111111,
-        "f1": 0.7499999999999999,
-        "precision": 0.6,
-        "recall": 1.0,
-        "shd": 22.0
+        "aupr": 0.7389455782312925,
+        "directed_f1": 0.7058823529411765,
+        "directed_precision": 0.75,
+        "directed_recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "shd": 5.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
-        ],
-        [
-          "HSP27",
+          "AKT",
           "ERK12"
         ],
         [
-          "HSP27",
+          "AKT",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
+          "ERK12",
+          "HSP27"
         ],
         [
           "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
+          "HSP27"
         ],
         [
           "JNK",
-          "AKT"
+          "HSP27"
         ],
         [
           "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
+          "IKB"
         ],
         [
           "MEK1",
-          "AKT"
-        ],
-        [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
           "JNK"
         ],
         [
           "p38",
-          "MEK1"
+          "JNK"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -6463,6 +6063,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -6534,6 +6136,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -6605,6 +6209,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -6676,6 +6282,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -6747,6 +6355,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -6818,6 +6428,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -6889,6 +6501,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -6960,6 +6574,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7031,6 +6647,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7102,6 +6720,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7173,6 +6793,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7244,6 +6866,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7315,6 +6939,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7386,6 +7012,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7457,6 +7085,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7528,6 +7158,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7599,6 +7231,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7670,6 +7304,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7741,6 +7377,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7812,6 +7450,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7884,6 +7524,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -7952,6 +7594,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -8020,6 +7664,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -8088,6 +7734,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -8156,6 +7804,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -8224,6 +7874,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -8292,6 +7944,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -8360,6 +8014,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -8428,6 +8084,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -8496,6 +8154,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -8554,716 +8214,6 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 0,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 1,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 2,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 3,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 4,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 5,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 6,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 7,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 8,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 9,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
         "aupr": 0.95,
         "directed_f1": 0.9473684210526316,
         "directed_precision": 0.9,
@@ -9273,6 +8223,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9321,7 +8273,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -9348,6 +8300,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9396,7 +8350,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -9423,6 +8377,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9471,7 +8427,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -9498,6 +8454,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9546,7 +8504,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -9573,6 +8531,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9621,7 +8581,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -9648,6 +8608,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9696,7 +8658,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -9723,6 +8685,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9771,7 +8735,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -9798,6 +8762,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9846,7 +8812,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -9873,6 +8839,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9921,7 +8889,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -9948,6 +8916,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -9996,6 +8966,776 @@
       "threshold": 0.7
     },
     {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 0,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 1,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 2,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 3,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 4,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 5,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 6,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 7,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 8,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 9,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
       "algorithm": "LiNGAM",
       "condition": "C3",
       "constraint_summary": {
@@ -10024,6 +9764,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10092,6 +9834,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10160,6 +9904,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10228,6 +9974,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10296,6 +10044,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10364,6 +10114,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10432,6 +10184,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10500,6 +10254,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10568,6 +10324,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10636,6 +10394,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -10694,716 +10454,6 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 0,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 1,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 2,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 3,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 4,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 5,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 6,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 7,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 8,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm_with_freetext_fallback",
-      "seed": 9,
-      "status": "ok",
-      "threshold": 0.7
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C3+ft",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
         "aupr": 0.95,
         "directed_f1": 0.9473684210526316,
         "directed_precision": 0.9,
@@ -11413,6 +10463,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -11461,7 +10513,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -11488,6 +10540,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -11536,7 +10590,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -11563,6 +10617,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -11611,7 +10667,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -11638,6 +10694,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -11686,7 +10744,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -11713,6 +10771,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -11761,7 +10821,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -11788,6 +10848,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -11836,7 +10898,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -11863,6 +10925,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -11911,7 +10975,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -11938,6 +11002,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -11986,7 +11052,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -12013,6 +11079,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -12061,7 +11129,7 @@
       "threshold": 0.7
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C3+ft",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -12088,6 +11156,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -12136,6 +11206,776 @@
       "threshold": 0.7
     },
     {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 0,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 1,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 2,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 3,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 4,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 5,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 6,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 7,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 8,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C3+ft",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm_with_freetext_fallback",
+      "seed": 9,
+      "status": "ok",
+      "threshold": 0.7
+    },
+    {
       "algorithm": "LiNGAM",
       "condition": "C3+ft",
       "constraint_summary": {
@@ -12164,6 +12004,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12232,6 +12074,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12300,6 +12144,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12368,6 +12214,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12436,6 +12284,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12504,6 +12354,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12572,6 +12424,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12640,6 +12494,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12708,6 +12564,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12776,6 +12634,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -12834,716 +12694,6 @@
       "dropped_due_to_cycle": [],
       "error": null,
       "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 0,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 1,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 2,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 3,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 4,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 5,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 6,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 7,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 8,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "PC",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
-        "aupr": 1.0,
-        "directed_f1": 1.0,
-        "directed_precision": 1.0,
-        "directed_recall": 1.0,
-        "f1": 1.0,
-        "precision": 1.0,
-        "recall": 1.0,
-        "shd": 0.0
-      },
-      "predicted_edges": [
-        [
-          "AKT",
-          "IKB"
-        ],
-        [
-          "AKT",
-          "MEK1"
-        ],
-        [
-          "ERK12",
-          "HSP27"
-        ],
-        [
-          "IKB",
-          "HSP27"
-        ],
-        [
-          "JNK",
-          "IKB"
-        ],
-        [
-          "MEK1",
-          "ERK12"
-        ],
-        [
-          "MEK1",
-          "JNK"
-        ],
-        [
-          "p38",
-          "HSP27"
-        ],
-        [
-          "p38",
-          "JNK"
-        ]
-      ],
-      "priors_source": "reactome_llm",
-      "seed": 9,
-      "status": "ok",
-      "threshold": 0.6
-    },
-    {
-      "algorithm": "GES",
-      "condition": "C4",
-      "constraint_summary": {
-        "discarded_below_threshold": 0,
-        "discarded_unknown": 0,
-        "hard_forbidden_reverse": 0,
-        "hard_required": 9,
-        "kept_forbidden": 0,
-        "kept_required": 10,
-        "no_context": 0,
-        "soft_prior": 1,
-        "total": 10,
-        "unknown": 0
-      },
-      "dataset": "dream4_psn_synthetic",
-      "dropped_due_to_cycle": [],
-      "error": null,
-      "metrics": {
         "aupr": 0.95,
         "directed_f1": 0.9473684210526316,
         "directed_precision": 0.9,
@@ -13553,6 +12703,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -13601,7 +12753,7 @@
       "threshold": 0.6
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C4",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -13628,6 +12780,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -13676,7 +12830,7 @@
       "threshold": 0.6
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C4",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -13703,6 +12857,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -13751,7 +12907,7 @@
       "threshold": 0.6
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C4",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -13778,6 +12934,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -13826,7 +12984,7 @@
       "threshold": 0.6
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C4",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -13853,6 +13011,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -13901,7 +13061,7 @@
       "threshold": 0.6
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C4",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -13928,6 +13088,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -13976,7 +13138,7 @@
       "threshold": 0.6
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C4",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -14003,6 +13165,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -14051,7 +13215,7 @@
       "threshold": 0.6
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C4",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -14078,6 +13242,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -14126,7 +13292,7 @@
       "threshold": 0.6
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C4",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -14153,6 +13319,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -14201,7 +13369,7 @@
       "threshold": 0.6
     },
     {
-      "algorithm": "GES",
+      "algorithm": "PC",
       "condition": "C4",
       "constraint_summary": {
         "discarded_below_threshold": 0,
@@ -14228,6 +13396,8 @@
         "recall": 1.0,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 1,
       "predicted_edges": [
         [
           "AKT",
@@ -14276,6 +13446,776 @@
       "threshold": 0.6
     },
     {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 0,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 1,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 2,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 3,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 4,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 5,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 6,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 7,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 8,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
+      "algorithm": "GES",
+      "condition": "C4",
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 9,
+        "kept_forbidden": 0,
+        "kept_required": 10,
+        "no_context": 0,
+        "soft_prior": 1,
+        "total": 10,
+        "unknown": 0
+      },
+      "dataset": "dream4_psn_synthetic",
+      "dropped_due_to_cycle": [],
+      "error": null,
+      "metrics": {
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "priors_source": "reactome_llm",
+      "seed": 9,
+      "status": "ok",
+      "threshold": 0.6
+    },
+    {
       "algorithm": "LiNGAM",
       "condition": "C4",
       "constraint_summary": {
@@ -14304,6 +14244,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14372,6 +14314,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14440,6 +14384,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14508,6 +14454,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14576,6 +14524,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14644,6 +14594,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14712,6 +14664,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14780,6 +14734,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14848,6 +14804,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14916,6 +14874,8 @@
         "recall": 0.1111111111111111,
         "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -14983,6 +14943,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15054,6 +15016,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15125,6 +15089,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15196,6 +15162,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15267,6 +15235,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15338,6 +15308,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15409,6 +15381,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15480,6 +15454,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15551,6 +15527,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15622,6 +15600,8 @@
         "recall": 1.0,
         "shd": 0.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15698,6 +15678,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15770,6 +15752,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15842,6 +15826,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15914,6 +15900,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -15986,6 +15974,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -16058,6 +16048,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -16130,6 +16122,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -16202,6 +16196,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -16274,6 +16270,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -16346,6 +16344,8 @@
         "recall": 0.8888888888888888,
         "shd": 1.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
@@ -16403,80 +16403,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",
@@ -16502,80 +16473,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",
@@ -16601,80 +16543,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",
@@ -16700,80 +16613,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",
@@ -16799,80 +16683,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",
@@ -16898,80 +16753,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",
@@ -16997,80 +16823,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",
@@ -17096,80 +16893,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",
@@ -17195,80 +16963,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",
@@ -17294,80 +17033,51 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.09183673469387756,
         "directed_f1": 0.0,
         "directed_precision": 0.0,
         "directed_recall": 0.0,
-        "f1": 0.72,
-        "precision": 0.5625,
-        "recall": 1.0,
-        "shd": 25.0
+        "f1": 0.11764705882352941,
+        "precision": 0.125,
+        "recall": 0.1111111111111111,
+        "shd": 17.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
-          "ERK12",
-          "MEK1"
+          "AKT",
+          "ERK12"
         ],
         [
-          "HSP27",
-          "ERK12"
+          "AKT",
+          "JNK"
+        ],
+        [
+          "ERK12",
+          "IKB"
+        ],
+        [
+          "ERK12",
+          "JNK"
         ],
         [
           "HSP27",
           "IKB"
         ],
         [
-          "HSP27",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "p38"
-        ],
-        [
-          "IKB",
-          "AKT"
-        ],
-        [
-          "IKB",
-          "JNK"
-        ],
-        [
-          "IKB",
-          "MEK1"
-        ],
-        [
-          "IKB",
-          "p38"
-        ],
-        [
           "JNK",
-          "AKT"
-        ],
-        [
-          "JNK",
-          "ERK12"
-        ],
-        [
-          "JNK",
-          "MEK1"
-        ],
-        [
-          "JNK",
-          "p38"
+          "HSP27"
         ],
         [
           "MEK1",
-          "AKT"
+          "HSP27"
         ],
         [
-          "p38",
-          "ERK12"
-        ],
-        [
-          "p38",
-          "MEK1"
+          "MEK1",
+          "IKB"
         ]
       ],
       "priors_source": "oracle",

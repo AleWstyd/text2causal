@@ -4,7 +4,8 @@
   "matrix": "step6_canonical",
   "n_cells_completed": 241,
   "n_cells_expected": 241,
-  "n_cells_failed": 10,
+  "n_cells_failed": 0,
+  "pc_total_dropped_due_to_cycle": 510,
   "results": [
     {
       "algorithm": null,
@@ -3119,6 +3120,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -3239,6 +3242,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -3359,6 +3364,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -3479,6 +3486,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -3599,6 +3608,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -3719,6 +3730,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -3839,6 +3852,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -3959,6 +3974,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -4079,6 +4096,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -4199,6 +4218,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -5750,6 +5771,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -5760,6 +5782,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -5929,6 +5953,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -5939,6 +5964,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -6108,6 +6135,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -6118,6 +6146,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -6287,6 +6317,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -6297,6 +6328,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -6466,6 +6499,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -6476,6 +6510,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -6645,6 +6681,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -6655,6 +6692,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -6824,6 +6863,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -6834,6 +6874,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -7003,6 +7045,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -7013,6 +7056,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -7182,6 +7227,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -7192,6 +7238,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -7361,6 +7409,7 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
         "aupr": 0.44972451790633605,
         "directed_f1": 0.3703703703703704,
@@ -7371,6 +7420,8 @@
         "recall": 0.8888888888888888,
         "shd": 34.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "PIP2",
@@ -7550,6 +7601,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -7681,6 +7734,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -7812,6 +7867,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -7943,6 +8000,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -8074,6 +8133,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -8205,6 +8266,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -8336,6 +8399,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -8467,6 +8532,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -8598,6 +8665,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -8729,6 +8798,8 @@
         "recall": 0.6111111111111112,
         "shd": 22.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -10370,64 +10441,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -10435,19 +10485,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -10455,15 +10505,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -10471,23 +10513,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -10496,6 +10526,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -10514,7 +10548,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -10523,19 +10581,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -10561,64 +10619,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -10626,19 +10663,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -10646,15 +10683,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -10662,23 +10691,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -10687,6 +10704,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -10705,7 +10726,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -10714,19 +10759,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -10752,64 +10797,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -10817,19 +10841,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -10837,15 +10861,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -10853,23 +10869,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -10878,6 +10882,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -10896,7 +10904,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -10905,19 +10937,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -10943,64 +10975,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -11008,19 +11019,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -11028,15 +11039,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -11044,23 +11047,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -11069,6 +11060,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -11087,7 +11082,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -11096,19 +11115,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -11134,64 +11153,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -11199,19 +11197,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -11219,15 +11217,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -11235,23 +11225,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -11260,6 +11238,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -11278,7 +11260,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -11287,19 +11293,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -11325,64 +11331,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -11390,19 +11375,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -11410,15 +11395,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -11426,23 +11403,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -11451,6 +11416,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -11469,7 +11438,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -11478,19 +11471,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -11516,64 +11509,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -11581,19 +11553,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -11601,15 +11573,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -11617,23 +11581,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -11642,6 +11594,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -11660,7 +11616,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -11669,19 +11649,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -11707,64 +11687,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -11772,19 +11731,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -11792,15 +11751,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -11808,23 +11759,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -11833,6 +11772,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -11851,7 +11794,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -11860,19 +11827,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -11898,64 +11865,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -11963,19 +11909,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -11983,15 +11929,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -11999,23 +11937,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -12024,6 +11950,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -12042,7 +11972,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -12051,19 +12005,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -12089,64 +12043,43 @@
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
       "error": null,
+      "lingam_prior_mode": "forbidden_only",
       "metrics": {
-        "aupr": 0.32964257964257965,
-        "directed_f1": 0.24561403508771928,
-        "directed_precision": 0.1794871794871795,
-        "directed_recall": 0.3888888888888889,
-        "f1": 0.5263157894736842,
-        "precision": 0.38461538461538464,
+        "aupr": 0.37783025055752334,
+        "directed_f1": 0.3018867924528302,
+        "directed_precision": 0.22857142857142856,
+        "directed_recall": 0.4444444444444444,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
         "recall": 0.8333333333333334,
-        "shd": 43.0
+        "shd": 37.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
-        [
-          "P38",
-          "PIP2"
-        ],
-        [
-          "PIP2",
-          "plcg"
-        ],
-        [
-          "PIP3",
-          "PIP2"
-        ],
-        [
-          "PIP3",
-          "plcg"
-        ],
         [
           "PKA",
           "P38"
         ],
         [
           "PKA",
-          "PIP2"
+          "p44/42"
         ],
         [
           "PKA",
-          "plcg"
+          "pakts473"
         ],
         [
           "PKA",
           "pmek"
         ],
         [
-          "PKA",
-          "praf"
-        ],
-        [
           "PKC",
           "P38"
         ],
         [
           "PKC",
           "PIP2"
-        ],
-        [
-          "PKC",
-          "pakts473"
         ],
         [
           "PKC",
@@ -12154,19 +12087,19 @@
         ],
         [
           "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
           "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
         ],
         [
           "p44/42",
           "P38"
-        ],
-        [
-          "p44/42",
-          "PIP2"
-        ],
-        [
-          "p44/42",
-          "PKA"
         ],
         [
           "p44/42",
@@ -12174,15 +12107,7 @@
         ],
         [
           "p44/42",
-          "plcg"
-        ],
-        [
-          "p44/42",
           "pmek"
-        ],
-        [
-          "p44/42",
-          "praf"
         ],
         [
           "pakts473",
@@ -12190,23 +12115,11 @@
         ],
         [
           "pakts473",
-          "PIP2"
-        ],
-        [
-          "pakts473",
-          "PKA"
-        ],
-        [
-          "pakts473",
-          "plcg"
+          "PIP3"
         ],
         [
           "pakts473",
           "pmek"
-        ],
-        [
-          "pakts473",
-          "praf"
         ],
         [
           "pjnk",
@@ -12215,6 +12128,10 @@
         [
           "pjnk",
           "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
         ],
         [
           "pjnk",
@@ -12233,7 +12150,31 @@
           "plcg"
         ],
         [
-          "pjnk",
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
           "praf"
         ],
         [
@@ -12242,19 +12183,19 @@
         ],
         [
           "pmek",
-          "PIP2"
-        ],
-        [
-          "pmek",
-          "plcg"
-        ],
-        [
-          "pmek",
-          "praf"
+          "PIP3"
         ],
         [
           "praf",
-          "PIP2"
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
         ]
       ],
       "priors_source": "freetext_llm",
@@ -12278,7 +12219,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -12290,6 +12244,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -12409,7 +12378,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -12421,6 +12403,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -12540,7 +12537,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -12552,6 +12562,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -12671,7 +12696,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -12683,6 +12721,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -12802,7 +12855,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -12814,6 +12880,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -12933,7 +13014,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -12945,6 +13039,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -13064,7 +13173,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -13076,6 +13198,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -13195,7 +13332,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -13207,6 +13357,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -13326,7 +13491,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -13338,6 +13516,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -13457,7 +13650,20 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -13469,6 +13675,21 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -16988,7 +17209,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -17000,6 +17242,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -17119,7 +17384,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -17131,6 +17417,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -17250,7 +17559,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -17262,6 +17592,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -17381,7 +17734,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -17393,6 +17767,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -17512,7 +17909,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -17524,6 +17942,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -17643,7 +18084,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -17655,6 +18117,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -17774,7 +18259,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -17786,6 +18292,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -17905,7 +18434,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -17917,6 +18467,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -18036,7 +18609,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -18048,6 +18642,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -18167,7 +18784,28 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -18179,6 +18817,29 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -21938,7 +22599,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -21950,6 +22660,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -22069,7 +22830,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -22081,6 +22891,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -22200,7 +23061,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -22212,6 +23122,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -22331,7 +23292,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -22343,6 +23353,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -22462,7 +23523,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -22474,6 +23584,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -22593,7 +23754,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -22605,6 +23815,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -22724,7 +23985,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -22736,6 +24046,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -22855,7 +24216,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -22867,6 +24277,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -22986,7 +24447,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -22998,6 +24508,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -23117,7 +24678,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -23129,6 +24739,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -26888,7 +28549,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -26900,6 +28610,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27019,7 +28780,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -27031,6 +28841,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27150,7 +29011,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -27162,6 +29072,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27281,7 +29242,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -27293,6 +29303,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27412,7 +29473,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -27424,6 +29534,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27543,7 +29704,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -27555,6 +29765,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27674,7 +29935,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -27686,6 +29996,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27805,7 +30166,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -27817,6 +30227,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -27936,7 +30397,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -27948,6 +30458,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -28067,7 +30628,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -28079,6 +30689,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -31838,7 +34499,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -31850,6 +34560,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -31969,7 +34730,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -31981,6 +34791,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -32100,7 +34961,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -32112,6 +35022,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -32231,7 +35192,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -32243,6 +35253,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -32362,7 +35423,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -32374,6 +35484,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -32493,7 +35654,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -32505,6 +35715,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -32624,7 +35885,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -32636,6 +35946,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -32755,7 +36116,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -32767,6 +36177,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -32886,7 +36347,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -32898,6 +36408,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -33017,7 +36578,56 @@
         "unknown": 28
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -33029,6 +36639,57 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -34815,141 +38476,1501 @@
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 0,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 1,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 2,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 3,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 4,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 5,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 6,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 7,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 8,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C5",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 0,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 18,
+        "kept_forbidden": 0,
+        "kept_required": 18,
+        "no_context": 0,
+        "soft_prior": 0,
+        "total": 18,
+        "unknown": 0
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 18 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.0743801652892562,
+        "directed_f1": 0.0,
+        "directed_precision": 0.0,
+        "directed_recall": 0.0,
+        "f1": 0.30434782608695654,
+        "precision": 0.25,
+        "recall": 0.3888888888888889,
+        "shd": 46.0
+      },
+      "pc_post_hoc_dropped_due_to_cycle": [],
+      "pc_post_hoc_required_added": 0,
+      "predicted_edges": [
+        [
+          "PIP2",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "pjnk",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "oracle",
       "seed": 9,
-      "status": "failed",
+      "status": "ok",
       "threshold": null
     },
     {
@@ -34968,7 +39989,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -34980,6 +40030,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -35099,7 +40180,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -35111,6 +40221,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -35230,7 +40371,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -35242,6 +40412,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -35361,7 +40562,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -35373,6 +40603,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -35492,7 +40753,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -35504,6 +40794,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -35623,7 +40944,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -35635,6 +40985,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -35754,7 +41135,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -35766,6 +41176,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -35885,7 +41326,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -35897,6 +41367,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -36016,7 +41517,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -36028,6 +41558,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",
@@ -36147,7 +41708,36 @@
         "unknown": 0
       },
       "dataset": "sachs",
-      "dropped_due_to_cycle": [],
+      "dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
       "error": null,
       "metrics": {
         "aupr": 0.563647842056933,
@@ -36159,6 +41749,37 @@
         "recall": 0.6111111111111112,
         "shd": 20.0
       },
+      "pc_post_hoc_dropped_due_to_cycle": [
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ]
+      ],
+      "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "P38",

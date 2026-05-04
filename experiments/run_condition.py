@@ -10,7 +10,7 @@ import numpy as np
 
 from causal_discovery.run_ges import run_ges
 from causal_discovery.run_lingam import run_lingam
-from causal_discovery.run_pc import run_pc
+from causal_discovery.run_pc import consume_pc_post_hoc_required_added, run_pc
 from constraints.constraint_builder import (
     ClaimRecord,
     ConstraintBuilder,
@@ -163,6 +163,8 @@ def _build_lingam_sweep_matrix(
     builder: ConstraintBuilder,
     lingam_prior_mode: str,
 ) -> np.ndarray:
+    if lingam_prior_mode == "all":
+        return builder.build_lingam_prior_matrix()
     if lingam_prior_mode == "sparse_required":
         return builder.build_lingam_sparse_prior_matrix(
             lingam_required_mode="all",
@@ -218,8 +220,13 @@ def run_condition(
         "predicted_edges": [],
         "constraint_summary": None,
         "dropped_due_to_cycle": [],
+        "pc_post_hoc_required_added": 0,
+        "pc_post_hoc_dropped_due_to_cycle": [],
     }
-    if lingam_prior_mode is not None:
+    if algorithm == "LiNGAM" and priors_source != "none":
+        eff_lingam = lingam_prior_mode or "forbidden_only"
+        out["lingam_prior_mode"] = eff_lingam
+    elif lingam_prior_mode is not None:
         out["lingam_prior_mode"] = lingam_prior_mode
 
     try:
@@ -236,19 +243,22 @@ def run_condition(
             constraint_summary = builder.summary()
 
         dropped: list[tuple[str, str]] = []
+        pc_required_added = 0
 
         np.random.seed(seed)
         random.seed(seed)
 
         if algorithm == "PC":
             pk = _prior_knowledge_or_none(builder)
-            predicted = run_pc(data, variable_names, pk)
+            predicted, pc_dropped = run_pc(data, variable_names, pk)
+            pc_required_added = consume_pc_post_hoc_required_added(predicted)
+            dropped = pc_dropped
         elif algorithm == "LiNGAM":
-            if builder is None or lingam_prior_mode is None:
-                pk = _prior_knowledge_or_none(builder)
-                predicted = run_lingam(data, variable_names, pk)
+            if builder is None:
+                predicted = run_lingam(data, variable_names, None)
             else:
-                matrix = _build_lingam_sweep_matrix(builder, lingam_prior_mode)
+                eff_mode = lingam_prior_mode or "forbidden_only"
+                matrix = _build_lingam_sweep_matrix(builder, eff_mode)
                 predicted = run_lingam(
                     data,
                     variable_names,
@@ -270,6 +280,12 @@ def run_condition(
         out["dropped_due_to_cycle"] = [
             [pair[0], pair[1]] for pair in sorted(dropped, key=lambda t: (t[0], t[1]))
         ]
+        out["pc_post_hoc_required_added"] = int(pc_required_added)
+        out["pc_post_hoc_dropped_due_to_cycle"] = (
+            [[pair[0], pair[1]] for pair in sorted(dropped, key=lambda t: (t[0], t[1]))]
+            if algorithm == "PC"
+            else []
+        )
 
     except Exception as exc:  # noqa: BLE001 — sweep must not crash the runner
         out["status"] = "failed"
@@ -278,5 +294,7 @@ def run_condition(
         out["predicted_edges"] = []
         out["constraint_summary"] = None
         out["dropped_due_to_cycle"] = []
+        out["pc_post_hoc_required_added"] = 0
+        out["pc_post_hoc_dropped_due_to_cycle"] = []
 
     return out

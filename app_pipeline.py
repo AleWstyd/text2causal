@@ -37,6 +37,12 @@ RelationExtractor = Callable[[list[str], str], list[RelationRecord]]
 AlgorithmRunner = Callable[[Any, list[str], PriorKnowledge | None], Any]
 
 
+def _unwrap_algorithm_graph(algorithm_name: str, result: Any) -> Any:
+    if algorithm_name == "PC" and isinstance(result, tuple):
+        return result[0]
+    return result
+
+
 def get_algorithm_runners() -> dict[str, AlgorithmRunner]:
     from causal_discovery.run_ges import run_ges
     from causal_discovery.run_lingam import run_lingam
@@ -135,18 +141,22 @@ def run_algorithm_simulation(
 
     validate_prior_knowledge(prior_knowledge, variable_names)
 
-    baseline_graph = available_runners[algorithm_name](
-        data_matrix, variable_names, None
+    baseline_graph = _unwrap_algorithm_graph(
+        algorithm_name,
+        available_runners[algorithm_name](data_matrix, variable_names, None),
     )
 
     if algorithm_name == "GES":
         constrained_graph = apply_constraints(baseline_graph.copy(), prior_knowledge)
         constraint_mode = "post_hoc_direct_edge_constraints"
     elif algorithm_name == "PC":
-        constrained_graph = available_runners[algorithm_name](
-            data_matrix, variable_names, prior_knowledge
+        constrained_graph = _unwrap_algorithm_graph(
+            algorithm_name,
+            available_runners[algorithm_name](
+                data_matrix, variable_names, prior_knowledge
+            ),
         )
-        constraint_mode = "native_pc_background_knowledge"
+        constraint_mode = "native_pc_background_knowledge_plus_post_hoc_edges"
     else:
         constrained_graph = available_runners[algorithm_name](
             data_matrix, variable_names, prior_knowledge
