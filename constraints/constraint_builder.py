@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 from dataclasses import dataclass
 from pathlib import Path
+from typing import Literal
 
 import numpy as np
 from causallearn.graph.GraphNode import GraphNode
@@ -10,6 +11,7 @@ from causallearn.utils.PCUtils.BackgroundKnowledge import BackgroundKnowledge
 
 
 Edge = tuple[str, str]
+LingamRequiredMode = Literal["all", "none", "top_confidence"]
 
 _VALID_CLAIM_CONSTRAINT_TYPES = frozenset(
     {"hard_required", "soft_prior", "hard_forbidden_reverse", "unknown", "no_context"}
@@ -45,6 +47,10 @@ def _deduplicate_edges(edges: list[Edge]) -> list[Edge]:
         unique_edges.append(edge)
 
     return unique_edges
+
+
+def _edge_sort_key(edge: Edge) -> tuple[str, str]:
+    return (edge[0], edge[1])
 
 
 def build_prior_knowledge(
@@ -371,10 +377,110 @@ class ConstraintBuilder:
         return build_pc_background_knowledge(self.to_prior_knowledge())
 
     def build_lingam_prior_matrix(self) -> np.ndarray:
+        """Build the default LiNGAM prior matrix from the filtered prior knowledge."""
         return build_lingam_prior_knowledge(
             self.to_prior_knowledge(),
             self.variable_names,
         )
+
+    def build_lingam_sparse_prior_matrix(
+        self,
+        *,
+        lingam_required_mode: LingamRequiredMode = "all",
+        lingam_required_min_confidence: float | None = None,
+        lingam_max_required: int | None = None,
+        forbid_reverse_of_required: bool = False,
+    ) -> np.ndarray:
+        """Build a LiNGAM-specific prior matrix with optional sparse required edges.
+
+        ``causal-learn`` DirectLiNGAM can fail when the prior matrix contains many
+        required edges. This helper keeps PC/GES semantics unchanged while letting
+        the Step 6.5 sweep test weaker LiNGAM encodings:
+
+        - ``all`` matches the default builder, optionally raising the confidence bar.
+        - ``none`` emits no required edges; useful with ``forbid_reverse_of_required``.
+        - ``top_confidence`` keeps at most ``lingam_max_required`` required edges.
+        """
+
+        if lingam_required_mode not in {"all", "none", "top_confidence"}:
+            raise ValueError(
+                "lingam_required_mode must be one of 'all', 'none', 'top_confidence'"
+            )
+        if lingam_max_required is not None and lingam_max_required < 0:
+            raise ValueError("lingam_max_required must be non-negative or None")
+        if lingam_required_mode == "top_confidence" and lingam_max_required is None:
+            raise ValueError(
+                "lingam_max_required is required when lingam_required_mode='top_confidence'"
+            )
+
+        n_features = len(self.variable_names)
+        feature_to_index = {
+            feature_name: index for index, feature_name in enumerate(self.variable_names)
+        }
+        matrix = np.full((n_features, n_features), -1, dtype=int)
+
+        required_candidates: dict[Edge, float] = {}
+        forbidden_edges: set[Edge] = set()
+
+        for claim in self.priors:
+            if claim.constraint_type not in _VALID_CLAIM_CONSTRAINT_TYPES:
+                self._raise_bad_constraint_type(claim)
+            if (
+                claim.constraint_type in {"unknown", "no_context"}
+                or claim.cause == "unknown"
+                or claim.effect == "unknown"
+            ):
+                continue
+            if claim.confidence < self.confidence_threshold:
+                continue
+
+            if claim.constraint_type in {"hard_required", "soft_prior"}:
+                edge = (claim.cause, claim.effect)
+                if (
+                    lingam_required_min_confidence is None
+                    or claim.confidence >= lingam_required_min_confidence
+                ):
+                    prev = required_candidates.get(edge)
+                    if prev is None or claim.confidence > prev:
+                        required_candidates[edge] = claim.confidence
+                if forbid_reverse_of_required:
+                    forbidden_edges.add((claim.effect, claim.cause))
+            elif claim.constraint_type == "hard_forbidden_reverse":
+                forbidden_edges.add((claim.effect, claim.cause))
+            else:
+                self._raise_bad_constraint_type(claim)
+
+        if lingam_required_mode == "none":
+            selected_required: list[Edge] = []
+        else:
+            selected_required = [
+                edge
+                for edge, _confidence in sorted(
+                    required_candidates.items(),
+                    key=lambda item: (-item[1], _edge_sort_key(item[0])),
+                )
+            ]
+            if lingam_required_mode == "top_confidence":
+                assert lingam_max_required is not None
+                selected_required = selected_required[:lingam_max_required]
+
+        required_set = set(selected_required)
+        opposing = _opposing_required_edges(selected_required)
+        if opposing is not None:
+            u, v = opposing
+            raise ValueError(
+                f"LiNGAM prior contains opposing required edges: {u} -> {v} and {v} -> {u}"
+            )
+
+        for cause, effect in sorted(forbidden_edges, key=_edge_sort_key):
+            if (cause, effect) in required_set:
+                continue
+            matrix[feature_to_index[cause], feature_to_index[effect]] = 0
+
+        for cause, effect in selected_required:
+            matrix[feature_to_index[cause], feature_to_index[effect]] = 1
+
+        return matrix
 
     def build_ges_post_hoc_edits(self) -> tuple[list[Edge], list[Edge]]:
         """Return ``(edges_to_add, edges_to_forbid)`` for post-hoc GES editing."""

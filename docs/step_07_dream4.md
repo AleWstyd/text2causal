@@ -4,6 +4,14 @@
 
 **Goal.** Apply the full pipeline to the DREAM4 Predictive Signalling Network Modelling dataset (MCF7 breast cancer, ~7 antibody-measured human signalling proteins) with **no code changes** — only configuration changes.
 
+**Outcome note (Step 7 execution).** The official DREAM4 PSN Synapse project was
+reachable only as metadata in this environment; listing/downloading files
+requires authenticated Synapse access. The Day-1 tripwire therefore fired and
+the documented synthetic-from-Reactome fallback was used. The fallback is a
+7-node HepG2-signalling SCM over the measured DREAM4 phosphoprotein panel
+(`AKT`, `MEK1`, `ERK12`, `JNK`, `IKB`, `p38`, `HSP27`), with artefacts generated
+by `task dream4-psn`.
+
 **Depends on.** Steps 1–6 complete and clean on Sachs.
 
 **Effort.** 2–3 days.

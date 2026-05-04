@@ -1,0 +1,41 @@
+{
+  "dataset": "dream4_psn_synthetic",
+  "pairs": [
+    {
+      "cause": "AKT",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "MEK1",
+      "source": "omnipath_all",
+      "var_a": "AKT",
+      "var_b": "MEK1"
+    },
+    {
+      "cause": "MEK1",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "ERK12",
+      "source": "omnipath_all",
+      "var_a": "MEK1",
+      "var_b": "ERK12"
+    },
+    {
+      "cause": "p38",
+      "confidence": 0.8,
+      "constraint_type": "soft_prior",
+      "effect": "JNK",
+      "source": "omnipath_all",
+      "var_a": "p38",
+      "var_b": "JNK"
+    },
+    {
+      "cause": "p38",
+      "confidence": 0.7,
+      "constraint_type": "soft_prior",
+      "effect": "MEK1",
+      "source": "omnipath_all",
+      "var_a": "p38",
+      "var_b": "MEK1"
+    }
+  ]
+}

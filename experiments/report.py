@@ -179,7 +179,6 @@ def write_ablation_table(
 
         row_parts = [condition]
         for alg in ALGORITHMS:
-            lingam_fail_row = condition in {"C2", "C3", "C4", "C5"} and alg == "LiNGAM"
             for metric in ("shd", "f1"):
                 row_parts.append(
                     _cell_tex(
@@ -187,7 +186,6 @@ def write_ablation_table(
                         condition,
                         alg,
                         metric,
-                        force_na=lingam_fail_row,
                     )
                 )
         lines.append(" & ".join(row_parts) + r" \\")
@@ -226,6 +224,49 @@ def write_constraint_quality_table(quality: dict[str, Any], output_path: Path) -
     output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def write_aupr_extension_table(results: list[dict[str, Any]], output_path: Path) -> None:
+    """Write PC-only AUPR/F1 snippet from ablation rows."""
+    rows = [
+        row
+        for row in results
+        if row.get("algorithm") == "PC"
+        and row.get("condition") in CONDITION_ORDER
+        and row.get("status") == "ok"
+    ]
+    lines = [
+        r"% PC AUPR extension: mean $\pm$ std over successful seeds from ablation_results_sachs.json.",
+        r"\begin{tabular}{lcc}",
+        r"\hline",
+        r"condition & AUPR & F1 \\",
+        r"\hline",
+    ]
+    for condition in CONDITION_ORDER:
+        vals_aupr = [
+            float((row.get("metrics") or {})["aupr"])
+            for row in rows
+            if row.get("condition") == condition and "aupr" in (row.get("metrics") or {})
+        ]
+        vals_f1 = [
+            float((row.get("metrics") or {})["f1"])
+            for row in rows
+            if row.get("condition") == condition and "f1" in (row.get("metrics") or {})
+        ]
+        if not vals_aupr or not vals_f1:
+            lines.append(f"{condition} & N/A & N/A \\\\")
+            continue
+        aupr_mean = statistics.mean(vals_aupr)
+        aupr_std = statistics.stdev(vals_aupr) if len(vals_aupr) >= 2 else 0.0
+        f1_mean = statistics.mean(vals_f1)
+        f1_std = statistics.stdev(vals_f1) if len(vals_f1) >= 2 else 0.0
+        lines.append(
+            f"{condition} & ${aupr_mean:.2f} \\pm {aupr_std:.2f}$ "
+            f"& ${f1_mean:.2f} \\pm {f1_std:.2f}$ \\\\"
+        )
+    lines.extend([r"\hline", r"\end{tabular}"])
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def _mean_metric(
     agg: dict[str, Any], condition: str, algorithm: str, metric: str
 ) -> float | None:
@@ -250,7 +291,9 @@ def gap_closed_pct(
 
 
 def headline_summary(
-    agg: dict[str, Any], llm_only_row: dict[str, Any]
+    agg: dict[str, Any],
+    llm_only_row: dict[str, Any],
+    quality: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     """Deterministic summary dict (rounded); nested structures sorted by key where relevant."""
     metrics_llm = llm_only_row.get("metrics") or {}
@@ -343,6 +386,18 @@ def headline_summary(
     if best_cd_f1 is not None and f1_cllm is not None:
         delta = round2(best_cd_f1 - float(f1_cllm))
 
+    coverage_block = None
+    if quality is not None and "coverage_conditional" in quality:
+        coverage_block = {}
+        for src in CONSTRAINT_SOURCES:
+            row = quality["coverage_conditional"][src]
+            coverage_block[src] = {
+                "precision": round2(float(row["precision_forward"])),
+                "recall": round2(float(row["recall_forward"])),
+                "hallucination_strict": round2(float(row["hallucination_strict"])),
+                "coverage": round2(float(row["coverage"])),
+            }
+
     return {
         "best_condition_per_algorithm": best_by_alg,
         "gap_closed_pct": gap_closed_best,
@@ -355,6 +410,7 @@ def headline_summary(
         "oracle_best_f1": best_oracle_f1,
         "best_llm_cd_f1": round2(best_cd_f1) if best_cd_f1 is not None else None,
         "cd_vs_llm_only_delta": delta,
+        "coverage_conditional": coverage_block,
     }
 
 
@@ -558,6 +614,42 @@ def figure_threshold_sensitivity(
     plt.close(fig)
 
 
+def figure_coverage_conditional_quality(
+    quality: dict[str, Any],
+    output_dir: Path,
+) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    block = quality.get("coverage_conditional") or quality.get("by_source")
+    metrics = ("precision_forward", "recall_forward", "hallucination_strict")
+    metric_labels = ("Precision", "Recall", "Strict hallucination")
+    x = np.arange(len(CONSTRAINT_SOURCES), dtype=float)
+    width = 0.23
+
+    fig, ax = plt.subplots(figsize=(7.0, 4.0), dpi=120)
+    for j, metric in enumerate(metrics):
+        vals = [float(block[src][metric]) for src in CONSTRAINT_SOURCES]
+        ax.bar(
+            x + (j - 1) * width,
+            vals,
+            width=width,
+            label=metric_labels[j],
+            color=_GAP_PALETTE[j % len(_GAP_PALETTE)],
+        )
+    ax.set_xticks(x)
+    ax.set_xticklabels(
+        [src.replace("_", "\n") for src in CONSTRAINT_SOURCES],
+        fontsize=8,
+    )
+    ax.set_ylim(0.0, 1.05)
+    ax.set_ylabel("Rate on Reactome-covered pair subset")
+    ax.set_title("Sachs: constraint quality conditional on Reactome evidence")
+    ax.legend(loc="upper right", fontsize=8)
+    fig.tight_layout()
+    for ext in ("pdf", "png"):
+        fig.savefig(output_dir / f"coverage_conditional_quality.{ext}", bbox_inches="tight")
+    plt.close(fig)
+
+
 def _signed(delta: float | None) -> str:
     if delta is None:
         return "N/A"
@@ -610,6 +702,17 @@ def _fmt_headline_block(s: dict[str, Any]) -> str:
     lines.append(
         "CD-vs-LLM-only delta (best LLM+CD F1 - C-LLM-only F1) = " + _signed(d)
     )
+    coverage = s.get("coverage_conditional")
+    if coverage:
+        reactome = coverage["reactome_llm"]
+        omnipath = coverage["omnipath_all"]
+        lines.append(
+            "Coverage-conditional quality: "
+            f"Reactome+LLM P={reactome['precision']:.2f}, "
+            f"R={reactome['recall']:.2f}, H={reactome['hallucination_strict']:.2f}; "
+            f"OmniPath-all P={omnipath['precision']:.2f}, "
+            f"R={omnipath['recall']:.2f}, H={omnipath['hallucination_strict']:.2f}"
+        )
     return "\n".join(lines)
 
 
@@ -639,17 +742,20 @@ def main() -> None:
     figures_dir = REPO_ROOT / "figures"
     write_ablation_table(agg, llm_row, tables_dir / "ablation_table.tex")
     write_constraint_quality_table(quality, tables_dir / "constraint_quality.tex")
+    write_aupr_extension_table(results, tables_dir / "aupr_extension.tex")
 
     figure_gap_closed(agg, llm_row, figures_dir)
     figure_cd_vs_llm_only(agg, llm_row, figures_dir)
     figure_threshold_sensitivity(disc_results, figures_dir)
+    figure_coverage_conditional_quality(quality, figures_dir)
 
-    summary = headline_summary(agg, llm_row)
+    summary = headline_summary(agg, llm_row, quality)
     print(_fmt_headline_block(summary))
     print(
         "Wrote tables/ablation_table.tex, tables/constraint_quality.tex\n"
         "Wrote figures/gap_closed.{pdf,png}, figures/cd_vs_llm_only.{pdf,png}, "
-        "figures/threshold_sensitivity.{pdf,png}"
+        "figures/threshold_sensitivity.{pdf,png}, "
+        "figures/coverage_conditional_quality.{pdf,png}"
     )
 
 

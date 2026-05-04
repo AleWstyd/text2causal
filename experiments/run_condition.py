@@ -154,6 +154,30 @@ def _json_safe_metrics(metrics: dict[str, float]) -> dict[str, float]:
     return {k: float(v) for k, v in metrics.items()}
 
 
+def _build_lingam_sweep_matrix(
+    builder: ConstraintBuilder,
+    lingam_prior_mode: str,
+) -> np.ndarray:
+    if lingam_prior_mode == "sparse_required":
+        return builder.build_lingam_sparse_prior_matrix(
+            lingam_required_mode="all",
+            lingam_required_min_confidence=0.95,
+        )
+    if lingam_prior_mode == "forbidden_only":
+        return builder.build_lingam_sparse_prior_matrix(
+            lingam_required_mode="none",
+            forbid_reverse_of_required=True,
+        )
+    if lingam_prior_mode == "hybrid_top5":
+        return builder.build_lingam_sparse_prior_matrix(
+            lingam_required_mode="top_confidence",
+            lingam_required_min_confidence=0.7,
+            lingam_max_required=5,
+            forbid_reverse_of_required=True,
+        )
+    raise ValueError(f"Unknown lingam_prior_mode: {lingam_prior_mode!r}")
+
+
 def run_condition(
     *,
     dataset_name: str,
@@ -165,6 +189,7 @@ def run_condition(
     algorithm: str,
     threshold: float | None,
     seed: int,
+    lingam_prior_mode: str | None = None,
 ) -> dict[str, Any]:
     _validate_run_condition_inputs(
         priors=priors,
@@ -189,6 +214,8 @@ def run_condition(
         "constraint_summary": None,
         "dropped_due_to_cycle": [],
     }
+    if lingam_prior_mode is not None:
+        out["lingam_prior_mode"] = lingam_prior_mode
 
     try:
         builder = make_constraint_builder(
@@ -212,8 +239,17 @@ def run_condition(
             pk = _prior_knowledge_or_none(builder)
             predicted = run_pc(data, variable_names, pk)
         elif algorithm == "LiNGAM":
-            pk = _prior_knowledge_or_none(builder)
-            predicted = run_lingam(data, variable_names, pk)
+            if builder is None or lingam_prior_mode is None:
+                pk = _prior_knowledge_or_none(builder)
+                predicted = run_lingam(data, variable_names, pk)
+            else:
+                matrix = _build_lingam_sweep_matrix(builder, lingam_prior_mode)
+                predicted = run_lingam(
+                    data,
+                    variable_names,
+                    prior_matrix=matrix,
+                    apply_prior_knowledge_softly=True,
+                )
         elif algorithm == "GES":
             predicted = run_ges(data, variable_names, None)
             if priors_source != "none" and builder is not None:

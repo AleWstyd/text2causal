@@ -1,0 +1,97 @@
+{
+  "dataset": "dream4_psn_synthetic",
+  "fallback_reason": "Official DREAM4 PSN files require authenticated Synapse access; synthetic fallback used.",
+  "pairs": [
+    {
+      "cause": "AKT",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "MEK1",
+      "source": "reactome_llm",
+      "var_a": "AKT",
+      "var_b": "MEK1"
+    },
+    {
+      "cause": "AKT",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "IKB",
+      "source": "reactome_llm",
+      "var_a": "AKT",
+      "var_b": "IKB"
+    },
+    {
+      "cause": "MEK1",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "ERK12",
+      "source": "reactome_llm",
+      "var_a": "MEK1",
+      "var_b": "ERK12"
+    },
+    {
+      "cause": "MEK1",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "JNK",
+      "source": "reactome_llm",
+      "var_a": "MEK1",
+      "var_b": "JNK"
+    },
+    {
+      "cause": "p38",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "JNK",
+      "source": "reactome_llm",
+      "var_a": "p38",
+      "var_b": "JNK"
+    },
+    {
+      "cause": "JNK",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "IKB",
+      "source": "reactome_llm",
+      "var_a": "JNK",
+      "var_b": "IKB"
+    },
+    {
+      "cause": "p38",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "HSP27",
+      "source": "reactome_llm",
+      "var_a": "p38",
+      "var_b": "HSP27"
+    },
+    {
+      "cause": "ERK12",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "HSP27",
+      "source": "reactome_llm",
+      "var_a": "ERK12",
+      "var_b": "HSP27"
+    },
+    {
+      "cause": "IKB",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "HSP27",
+      "source": "reactome_llm",
+      "var_a": "IKB",
+      "var_b": "HSP27"
+    },
+    {
+      "cause": "p38",
+      "confidence": 0.7,
+      "constraint_type": "soft_prior",
+      "effect": "MEK1",
+      "source": "reactome_llm",
+      "var_a": "p38",
+      "var_b": "MEK1"
+    }
+  ],
+  "schema_version": "step07.synthetic_priors.v1"
+}

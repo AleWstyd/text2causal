@@ -1,0 +1,9 @@
+{
+  "dataset": "dream4_psn_synthetic",
+  "escalate_to_omnipath": false,
+  "node_coverage": "7/7",
+  "node_coverage_fraction": 1.0,
+  "note": "Official DREAM4 PSN data was inaccessible without authenticated Synapse access; synthetic fallback uses Reactome-resolvable human signalling proteins.",
+  "source": "Reactome smoke accessions from hand-curated gold grounding",
+  "tripwire_threshold": 0.8
+}

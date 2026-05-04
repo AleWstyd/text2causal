@@ -16,10 +16,23 @@ def _is_lingam_empty_candidate_error(exc: BaseException) -> bool:
     return "argmax" in msg and "empty sequence" in msg
 
 
-def run_lingam(data, variable_names, prior_knowledge: PriorKnowledge | None = None):
+def run_lingam(
+    data,
+    variable_names,
+    prior_knowledge: PriorKnowledge | None = None,
+    prior_matrix: np.ndarray | None = None,
+    apply_prior_knowledge_softly: bool = False,
+):
     lingam_prior_knowledge = None
     n_features = len(variable_names)
-    if prior_knowledge is not None:
+    if prior_matrix is not None and prior_knowledge is not None:
+        raise ValueError("Pass either prior_knowledge or prior_matrix, not both")
+
+    if prior_matrix is not None:
+        lingam_prior_knowledge = prior_matrix
+        n_required = int(np.sum(lingam_prior_knowledge == 1))
+        n_forbidden = int(np.sum(lingam_prior_knowledge == 0))
+    elif prior_knowledge is not None:
         lingam_prior_knowledge = build_lingam_prior_knowledge(
             prior_knowledge, variable_names
         )
@@ -29,14 +42,17 @@ def run_lingam(data, variable_names, prior_knowledge: PriorKnowledge | None = No
         n_required = 0
         n_forbidden = 0
 
-    model = lingam.DirectLiNGAM(prior_knowledge=lingam_prior_knowledge)
+    model = lingam.DirectLiNGAM(
+        prior_knowledge=lingam_prior_knowledge,
+        apply_prior_knowledge_softly=apply_prior_knowledge_softly,
+    )
 
     try:
         model.fit(data)
     except (ValueError, IndexError) as exc:
         if not _is_lingam_empty_candidate_error(exc):
             raise
-        if prior_knowledge is not None:
+        if prior_knowledge is not None or prior_matrix is not None:
             raise RuntimeError(
                 "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot "
                 "complete the causal-order search because the candidate set was empty at "

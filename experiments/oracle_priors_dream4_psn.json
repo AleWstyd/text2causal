@@ -1,0 +1,86 @@
+{
+  "dataset": "dream4_psn_synthetic",
+  "pairs": [
+    {
+      "cause": "AKT",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "MEK1",
+      "source": "oracle",
+      "var_a": "AKT",
+      "var_b": "MEK1"
+    },
+    {
+      "cause": "AKT",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "IKB",
+      "source": "oracle",
+      "var_a": "AKT",
+      "var_b": "IKB"
+    },
+    {
+      "cause": "MEK1",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "ERK12",
+      "source": "oracle",
+      "var_a": "MEK1",
+      "var_b": "ERK12"
+    },
+    {
+      "cause": "MEK1",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "JNK",
+      "source": "oracle",
+      "var_a": "MEK1",
+      "var_b": "JNK"
+    },
+    {
+      "cause": "p38",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "JNK",
+      "source": "oracle",
+      "var_a": "p38",
+      "var_b": "JNK"
+    },
+    {
+      "cause": "JNK",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "IKB",
+      "source": "oracle",
+      "var_a": "JNK",
+      "var_b": "IKB"
+    },
+    {
+      "cause": "p38",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "HSP27",
+      "source": "oracle",
+      "var_a": "p38",
+      "var_b": "HSP27"
+    },
+    {
+      "cause": "ERK12",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "HSP27",
+      "source": "oracle",
+      "var_a": "ERK12",
+      "var_b": "HSP27"
+    },
+    {
+      "cause": "IKB",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "HSP27",
+      "source": "oracle",
+      "var_a": "IKB",
+      "var_b": "HSP27"
+    }
+  ]
+}

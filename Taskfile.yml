@@ -101,6 +101,26 @@ tasks:
     cmds:
       - uv run python -m experiments.cost_report
 
+  lingam-sweep-sachs:
+    desc: Step 6.5 A1 — Sachs LiNGAM sparse-prior sweep
+    cmds:
+      - uv run python -m experiments.lingam_sweep_sachs
+
+  diagnose-pc-sachs:
+    desc: Step 6.5 A2 — diagnose PC invariance and write AUPR snippet
+    cmds:
+      - uv run python -m experiments.diagnose_pc_invariance
+
+  dream4-psn:
+    desc: Step 7 — DREAM4 PSN fallback synthetic dataset + ablation/report artefacts
+    cmds:
+      - uv run python -m experiments.run_synthetic_dream4_psn
+
+  paper:
+    desc: Compile paper/main.tex when LaTeX is available; otherwise validate paper inputs
+    cmds:
+      - uv run python -m experiments.build_paper
+
   ablation:
     desc: Step 6 full ablation pipeline (sweep, constraint quality, report, cost report)
     cmds:

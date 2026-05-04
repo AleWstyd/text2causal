@@ -1,0 +1,184 @@
+{
+  "by_source": {
+    "freetext_llm": {
+      "coverage": 0.07142857142857142,
+      "false_positives_loose": [],
+      "false_positives_strict": [],
+      "hallucination_loose": 0.0,
+      "hallucination_strict": 0.0,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 3,
+      "n_true_edges": 9,
+      "precision_forbidden": 0.0,
+      "precision_forward": 1.0,
+      "recall_forward": 0.3333333333333333,
+      "true_positives": [
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ]
+      ]
+    },
+    "omnipath_all": {
+      "coverage": 0.09523809523809523,
+      "false_positives_loose": [
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "false_positives_strict": [],
+      "hallucination_loose": 0.25,
+      "hallucination_strict": 0.0,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 4,
+      "n_true_edges": 9,
+      "precision_forbidden": 0.0,
+      "precision_forward": 0.75,
+      "recall_forward": 0.3333333333333333,
+      "true_positives": [
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ]
+    },
+    "omnipath_reactome_only": {
+      "coverage": 0.047619047619047616,
+      "false_positives_loose": [],
+      "false_positives_strict": [],
+      "hallucination_loose": 0.0,
+      "hallucination_strict": 0.0,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 2,
+      "n_true_edges": 9,
+      "precision_forbidden": 0.0,
+      "precision_forward": 1.0,
+      "recall_forward": 0.2222222222222222,
+      "true_positives": [
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ]
+      ]
+    },
+    "reactome_llm": {
+      "coverage": 0.23809523809523808,
+      "false_positives_loose": [
+        [
+          "p38",
+          "MEK1"
+        ]
+      ],
+      "false_positives_strict": [],
+      "hallucination_loose": 0.1,
+      "hallucination_strict": 0.0,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 10,
+      "n_true_edges": 9,
+      "precision_forbidden": 0.0,
+      "precision_forward": 0.9,
+      "recall_forward": 1.0,
+      "true_positives": [
+        [
+          "AKT",
+          "IKB"
+        ],
+        [
+          "AKT",
+          "MEK1"
+        ],
+        [
+          "ERK12",
+          "HSP27"
+        ],
+        [
+          "IKB",
+          "HSP27"
+        ],
+        [
+          "JNK",
+          "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ]
+      ]
+    }
+  },
+  "confidence_threshold": 0.7,
+  "dataset": "dream4_psn_synthetic",
+  "n_total_ordered_pairs": 42,
+  "n_true_edges": 9,
+  "true_edges": [
+    [
+      "AKT",
+      "IKB"
+    ],
+    [
+      "AKT",
+      "MEK1"
+    ],
+    [
+      "ERK12",
+      "HSP27"
+    ],
+    [
+      "IKB",
+      "HSP27"
+    ],
+    [
+      "JNK",
+      "IKB"
+    ],
+    [
+      "MEK1",
+      "ERK12"
+    ],
+    [
+      "MEK1",
+      "JNK"
+    ],
+    [
+      "p38",
+      "HSP27"
+    ],
+    [
+      "p38",
+      "JNK"
+    ]
+  ]
+}

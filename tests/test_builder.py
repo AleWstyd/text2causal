@@ -386,5 +386,50 @@ class ClassVersusFreeFunctionTests(unittest.TestCase):
         self.assertEqual(f, f2)
 
 
+class SparseLingamMatrixTests(unittest.TestCase):
+    def test_sparse_required_confidence_gate(self) -> None:
+        priors = [
+            ClaimRecord("A", "B", "A", "B", 0.95, "hard_required", "reactome_llm"),
+            ClaimRecord("B", "C", "B", "C", 0.80, "soft_prior", "reactome_llm"),
+        ]
+        b = ConstraintBuilder(priors, ["A", "B", "C"], 0.7)
+        mat = b.build_lingam_sparse_prior_matrix(
+            lingam_required_mode="all",
+            lingam_required_min_confidence=0.95,
+        )
+        self.assertEqual(mat[0, 1], 1)
+        self.assertEqual(mat[1, 2], -1)
+
+    def test_forbidden_only_forbids_reverse_without_requiring_forward(self) -> None:
+        priors = [
+            ClaimRecord("A", "B", "A", "B", 0.80, "soft_prior", "reactome_llm"),
+        ]
+        b = ConstraintBuilder(priors, ["A", "B"], 0.7)
+        mat = b.build_lingam_sparse_prior_matrix(
+            lingam_required_mode="none",
+            forbid_reverse_of_required=True,
+        )
+        self.assertEqual(mat[0, 1], -1)
+        self.assertEqual(mat[1, 0], 0)
+
+    def test_hybrid_keeps_top_confidence_required_edges(self) -> None:
+        priors = [
+            ClaimRecord("A", "B", "A", "B", 0.95, "hard_required", "reactome_llm"),
+            ClaimRecord("B", "C", "B", "C", 0.90, "soft_prior", "reactome_llm"),
+            ClaimRecord("C", "D", "C", "D", 0.85, "soft_prior", "reactome_llm"),
+        ]
+        b = ConstraintBuilder(priors, ["A", "B", "C", "D"], 0.7)
+        mat = b.build_lingam_sparse_prior_matrix(
+            lingam_required_mode="top_confidence",
+            lingam_required_min_confidence=0.7,
+            lingam_max_required=2,
+            forbid_reverse_of_required=True,
+        )
+        self.assertEqual(mat[0, 1], 1)
+        self.assertEqual(mat[1, 2], 1)
+        self.assertEqual(mat[2, 3], -1)
+        self.assertEqual(mat[3, 2], 0)
+
+
 if __name__ == "__main__":
     unittest.main()

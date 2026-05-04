@@ -1,0 +1,97 @@
+{
+  "accuracy_vs_gold": 1.0,
+  "dataset": "dream4_psn_synthetic",
+  "groundings": {
+    "AKT": {
+      "canonical_name": "AKT1",
+      "confidence": 1.0,
+      "gene_names": [
+        "AKT1"
+      ],
+      "ids": [
+        "P31749"
+      ],
+      "kind": "protein",
+      "reactome_validated": true
+    },
+    "ERK12": {
+      "canonical_name": "ERK1/2",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAPK3",
+        "MAPK1"
+      ],
+      "ids": [
+        "P27361",
+        "P28482"
+      ],
+      "kind": "family",
+      "reactome_validated": true
+    },
+    "HSP27": {
+      "canonical_name": "HSPB1",
+      "confidence": 1.0,
+      "gene_names": [
+        "HSPB1"
+      ],
+      "ids": [
+        "P04792"
+      ],
+      "kind": "protein",
+      "reactome_validated": true
+    },
+    "IKB": {
+      "canonical_name": "NFKBIA",
+      "confidence": 1.0,
+      "gene_names": [
+        "NFKBIA"
+      ],
+      "ids": [
+        "P25963"
+      ],
+      "kind": "protein",
+      "reactome_validated": true
+    },
+    "JNK": {
+      "canonical_name": "JNK1/2/3",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAPK8",
+        "MAPK9",
+        "MAPK10"
+      ],
+      "ids": [
+        "P45983",
+        "P45984",
+        "P53779"
+      ],
+      "kind": "family",
+      "reactome_validated": true
+    },
+    "MEK1": {
+      "canonical_name": "MAP2K1",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAP2K1"
+      ],
+      "ids": [
+        "Q02750"
+      ],
+      "kind": "protein",
+      "reactome_validated": true
+    },
+    "p38": {
+      "canonical_name": "MAPK14",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAPK14"
+      ],
+      "ids": [
+        "Q16539"
+      ],
+      "kind": "protein",
+      "reactome_validated": true
+    }
+  },
+  "source": "hand-curated fallback gold; official data inaccessible without Synapse authentication"
+}

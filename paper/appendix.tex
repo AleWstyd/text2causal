@@ -1,0 +1,39 @@
+\section{Pipeline Artefacts}
+
+Every numerical claim in the current draft is backed by a committed JSON
+artefact:
+
+\begin{itemize}
+  \item \texttt{experiments/ablation\_results\_sachs.json}
+  \item \texttt{experiments/constraint\_quality\_sachs.json}
+  \item \texttt{experiments/pc\_invariance\_sachs.json}
+  \item \texttt{experiments/lingam\_sweep\_sachs.json}
+  \item \texttt{experiments/ablation\_results\_dream4\_psn.json}
+  \item \texttt{experiments/constraint\_quality\_dream4\_psn.json}
+  \item \texttt{experiments/cost\_report.json}
+\end{itemize}
+
+\section{Model and Cache Disclosure}
+
+The LLM cache contains 66 completions: 154,254 prompt tokens and 113,825
+completion tokens. At the May 4, 2026 Baseten Model API price snapshot, the
+estimated cost is 0.6645 USD. Cached entries record the served model; the Sachs
+reasoning run was served primarily by \texttt{deepseek-ai/DeepSeek-V4-Pro}, with
+earlier grounding entries served by \texttt{Qwen/Qwen3-235B-A22B}.
+
+\section{Reactome Access}
+
+Reactome calls use the public Content Service REST API and are cached under
+\texttt{cache/reactome}. The client uses entity lookup, enhanced reaction query,
+participant expansion, pathway co-membership, regulator-chain, and co-complex
+evidence layers. Cache replay lets reviewers regenerate reported numbers without
+Reactome network access.
+
+\section{DREAM4 Fallback}
+
+The intended DREAM4 Predictive Signalling Network Modeling project is available
+as Synapse metadata at \texttt{syn2825304}, but file listing/download required
+authenticated Synapse access in this environment. The Step 7 tripwire therefore
+fired. The fallback dataset is a synthetic linear non-Gaussian SCM derived from
+the DREAM4 HepG2 phosphoprotein panel and Reactome/literature-compatible
+signalling structure.

@@ -32,3 +32,19 @@ def load_sachs_dataset() -> tuple[pd.DataFrame, nx.DiGraph]:
 
     data, true_graph = load_dataset("sachs")
     return data, true_graph
+
+
+def load_dream4_psn_dataset(
+    data_path: str = "data/dream4_psn/data.csv",
+    graph_path: str = "data/dream4_psn/ground_truth.gml",
+) -> tuple[pd.DataFrame, nx.DiGraph]:
+    """Load the Step 7 DREAM4-PSN fallback dataset.
+
+    The official DREAM4 PSN archive requires authenticated Synapse access in
+    this environment, so Step 7 stores a Reactome/literature-derived synthetic
+    signalling SCM under ``data/dream4_psn``.
+    """
+
+    data = pd.read_csv(data_path)
+    graph = nx.read_gml(graph_path, label="label")
+    return data, graph

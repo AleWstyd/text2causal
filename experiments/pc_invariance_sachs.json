@@ -1,0 +1,1307 @@
+{
+  "alpha_spot_check": [
+    {
+      "alpha": 0.01,
+      "c0_edges": [
+        [
+          "P38",
+          "pjnk"
+        ],
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP3",
+          "PIP2"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "c0_metrics": {
+        "aupr": 0.4746900826446281,
+        "f1": 0.4761904761904762,
+        "precision": 0.4166666666666667,
+        "recall": 0.5555555555555556,
+        "shd": 24.0
+      },
+      "c5_edges": [
+        [
+          "P38",
+          "pjnk"
+        ],
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "PIP3"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "pjnk"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "c5_metrics": {
+        "aupr": 0.5191689623507806,
+        "f1": 0.4761904761904762,
+        "precision": 0.4166666666666667,
+        "recall": 0.5555555555555556,
+        "shd": 22.0
+      },
+      "identical": false
+    },
+    {
+      "alpha": 0.05,
+      "c0_edges": [
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP3",
+          "PIP2"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "c0_metrics": {
+        "aupr": 0.5191689623507806,
+        "f1": 0.5238095238095238,
+        "precision": 0.4583333333333333,
+        "recall": 0.6111111111111112,
+        "shd": 22.0
+      },
+      "c5_edges": [
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "PIP3"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "c5_metrics": {
+        "aupr": 0.563647842056933,
+        "f1": 0.5238095238095238,
+        "precision": 0.4583333333333333,
+        "recall": 0.6111111111111112,
+        "shd": 20.0
+      },
+      "identical": false
+    },
+    {
+      "alpha": 0.1,
+      "c0_edges": [
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP3",
+          "PIP2"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "pmek",
+          "plcg"
+        ],
+        [
+          "pmek",
+          "praf"
+        ],
+        [
+          "praf",
+          "plcg"
+        ]
+      ],
+      "c0_metrics": {
+        "aupr": 0.4746900826446281,
+        "f1": 0.5238095238095238,
+        "precision": 0.4583333333333333,
+        "recall": 0.6111111111111112,
+        "shd": 24.0
+      },
+      "c5_edges": [
+        [
+          "P38",
+          "pjnk"
+        ],
+        [
+          "PIP2",
+          "PIP3"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "plcg"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "c5_metrics": {
+        "aupr": 0.5544811753902663,
+        "f1": 0.5116279069767442,
+        "precision": 0.44,
+        "recall": 0.6111111111111112,
+        "shd": 21.0
+      },
+      "identical": false
+    }
+  ],
+  "conditions": {
+    "C0": {
+      "edge_set": [
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP3",
+          "PIP2"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "identical_to_c0": true,
+      "metrics": {
+        "aupr": {
+          "mean": 0.5191689623507806,
+          "n": 10,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.5238095238095238,
+          "n": 10,
+          "std": 0.0
+        },
+        "precision": {
+          "mean": 0.4583333333333333,
+          "n": 10,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.6111111111111112,
+          "n": 10,
+          "std": 0.0
+        },
+        "shd": {
+          "mean": 22.0,
+          "n": 10,
+          "std": 0.0
+        }
+      },
+      "n_ok": 10,
+      "n_unique_edge_sets": 1
+    },
+    "C2": {
+      "edge_set": [
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "PIP3"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "identical_to_c0": false,
+      "metrics": {
+        "aupr": {
+          "mean": 0.563647842056933,
+          "n": 10,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.5238095238095238,
+          "n": 10,
+          "std": 0.0
+        },
+        "precision": {
+          "mean": 0.4583333333333333,
+          "n": 10,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.6111111111111112,
+          "n": 10,
+          "std": 0.0
+        },
+        "shd": {
+          "mean": 20.0,
+          "n": 10,
+          "std": 0.0
+        }
+      },
+      "n_ok": 10,
+      "n_unique_edge_sets": 1
+    },
+    "C3": {
+      "edge_set": [
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "PIP3"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "identical_to_c0": false,
+      "metrics": {
+        "aupr": {
+          "mean": 0.563647842056933,
+          "n": 10,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.5238095238095238,
+          "n": 10,
+          "std": 0.0
+        },
+        "precision": {
+          "mean": 0.4583333333333333,
+          "n": 10,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.6111111111111112,
+          "n": 10,
+          "std": 0.0
+        },
+        "shd": {
+          "mean": 20.0,
+          "n": 10,
+          "std": 0.0
+        }
+      },
+      "n_ok": 10,
+      "n_unique_edge_sets": 1
+    },
+    "C4": {
+      "edge_set": [
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "PIP3"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "identical_to_c0": false,
+      "metrics": {
+        "aupr": {
+          "mean": 0.563647842056933,
+          "n": 10,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.5238095238095238,
+          "n": 10,
+          "std": 0.0
+        },
+        "precision": {
+          "mean": 0.4583333333333333,
+          "n": 10,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.6111111111111112,
+          "n": 10,
+          "std": 0.0
+        },
+        "shd": {
+          "mean": 20.0,
+          "n": 10,
+          "std": 0.0
+        }
+      },
+      "n_ok": 10,
+      "n_unique_edge_sets": 1
+    },
+    "C5": {
+      "edge_set": [
+        [
+          "P38",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "PIP3"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pjnk"
+        ],
+        [
+          "PKA",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "p44/42",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "p44/42"
+        ],
+        [
+          "pakts473",
+          "pjnk"
+        ],
+        [
+          "pakts473",
+          "plcg"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "praf"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "praf",
+          "plcg"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "identical_to_c0": false,
+      "metrics": {
+        "aupr": {
+          "mean": 0.563647842056933,
+          "n": 10,
+          "std": 0.0
+        },
+        "f1": {
+          "mean": 0.5238095238095238,
+          "n": 10,
+          "std": 0.0
+        },
+        "precision": {
+          "mean": 0.4583333333333333,
+          "n": 10,
+          "std": 0.0
+        },
+        "recall": {
+          "mean": 0.6111111111111112,
+          "n": 10,
+          "std": 0.0
+        },
+        "shd": {
+          "mean": 20.0,
+          "n": 10,
+          "std": 0.0
+        }
+      },
+      "n_ok": 10,
+      "n_unique_edge_sets": 1
+    }
+  },
+  "dataset": "sachs",
+  "diagnosis": {
+    "alpha_spot_check_any_oracle_change": true,
+    "canonical_pc_edges_identical_across_conditions": false
+  }
+}

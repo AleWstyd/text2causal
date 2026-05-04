@@ -7,14 +7,19 @@ from constraints.constraint_builder import (
 )
 
 
-def run_pc(data, variable_names, prior_knowledge: PriorKnowledge | None = None):
+def run_pc(
+    data,
+    variable_names,
+    prior_knowledge: PriorKnowledge | None = None,
+    alpha: float = 0.05,
+):
     background_knowledge = None
     if prior_knowledge is not None:
         background_knowledge = build_pc_background_knowledge(prior_knowledge)
 
     cg = pc(
         data,
-        alpha=0.05,
+        alpha=alpha,
         indep_test="fisherz",
         background_knowledge=background_knowledge,
         node_names=variable_names,

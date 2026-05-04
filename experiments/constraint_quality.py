@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from itertools import combinations
 from pathlib import Path
 from typing import Any
 
@@ -20,16 +21,28 @@ _PRIORS_FILES: tuple[tuple[str, Path], ...] = (
 )
 
 
-def _llm_coverage_numerator(priors: list[ClaimRecord]) -> int:
+def _unordered(edge: tuple[str, str]) -> tuple[str, str]:
+    return tuple(sorted(edge))
+
+
+def _llm_coverage_numerator(
+    priors: list[ClaimRecord],
+    allowed_unordered_pairs: set[tuple[str, str]] | None = None,
+) -> int:
     seen: set[tuple[str, str]] = set()
     for c in priors:
         if c.constraint_type in {"unknown", "no_context"}:
+            continue
+        if allowed_unordered_pairs is not None and _unordered((c.var_a, c.var_b)) not in allowed_unordered_pairs:
             continue
         seen.add((c.var_a, c.var_b))
     return len(seen)
 
 
-def _omnipath_directed_pair_count_from_json(path: Path) -> int:
+def _omnipath_directed_pair_count_from_json(
+    path: Path,
+    allowed_unordered_pairs: set[tuple[str, str]] | None = None,
+) -> int:
     data = json.loads(path.read_text(encoding="utf-8"))
     raw_items = data.get("claims") or data.get("pairs") or []
     if not isinstance(raw_items, list):
@@ -40,6 +53,8 @@ def _omnipath_directed_pair_count_from_json(path: Path) -> int:
             continue
         va: str = str(item["var_a"])
         vb: str = str(item["var_b"])
+        if allowed_unordered_pairs is not None and _unordered((va, vb)) not in allowed_unordered_pairs:
+            continue
         if item.get("is_directed") is True:
             directed.add((va, vb))
             continue
@@ -93,6 +108,7 @@ def compute_quality(
     confidence_threshold: float = 0.7,
     n_total_pairs: int,
     omnipath_coverage_numerator: int | None = None,
+    allowed_unordered_pairs: set[tuple[str, str]] | None = None,
 ) -> dict[str, Any]:
     """Compute precision, recall, hallucination (strict + loose), coverage.
 
@@ -108,6 +124,16 @@ def compute_quality(
     """
     predicted_forward = _forward_predicted_edges(priors, confidence_threshold)
     predicted_forbidden = _forbidden_predicted_edges(priors, confidence_threshold)
+    if allowed_unordered_pairs is not None:
+        predicted_forward = {
+            edge for edge in predicted_forward if _unordered(edge) in allowed_unordered_pairs
+        }
+        predicted_forbidden = {
+            edge
+            for edge in predicted_forbidden
+            if _unordered(edge) in allowed_unordered_pairs
+        }
+        true_edges = {edge for edge in true_edges if _unordered(edge) in allowed_unordered_pairs}
 
     n_true = len(true_edges)
     n_fwd = len(predicted_forward)
@@ -140,7 +166,7 @@ def compute_quality(
     if omnipath_coverage_numerator is not None:
         cov_num = omnipath_coverage_numerator
     else:
-        cov_num = _llm_coverage_numerator(priors)
+        cov_num = _llm_coverage_numerator(priors, allowed_unordered_pairs)
     coverage = cov_num / n_total_pairs if n_total_pairs else 0.0
 
     return {
@@ -178,35 +204,131 @@ def _headline(by_source: dict[str, dict[str, Any]]) -> str:
     return "; ".join(parts)
 
 
-def main() -> None:
-    repo_root = Path(__file__).resolve().parents[1]
-    _data, true_graph = load_sachs_dataset()
-    true_edges: set[tuple[str, str]] = {tuple(e) for e in true_graph.edges()}
-    n_nodes = true_graph.number_of_nodes()
-    n_total_ordered_pairs = n_nodes * (n_nodes - 1)
+def _parse_pair_list(raw_pairs: list[list[str]]) -> set[tuple[str, str]]:
+    return {_unordered((str(a), str(b))) for a, b in raw_pairs}
 
+
+def _reactome_union_covered_pairs(
+    reactome_coverage_path: Path,
+    variables: list[str],
+) -> set[tuple[str, str]]:
+    coverage = json.loads(reactome_coverage_path.read_text(encoding="utf-8"))
+    all_pairs = {_unordered((a, b)) for a, b in combinations(variables, 2)}
+    missing = _parse_pair_list(coverage.get("pairs_missing_by_layer_union") or [])
+    return all_pairs - missing
+
+
+def _reaction_covered_pairs(
+    reactome_coverage_path: Path,
+    variables: list[str],
+) -> set[tuple[str, str]]:
+    coverage = json.loads(reactome_coverage_path.read_text(encoding="utf-8"))
+    all_pairs = {_unordered((a, b)) for a, b in combinations(variables, 2)}
+    missing = _parse_pair_list(coverage.get("pairs_missing") or [])
+    return all_pairs - missing
+
+
+def _quality_by_source(
+    *,
+    repo_root: Path,
+    true_edges: set[tuple[str, str]],
+    n_total_pairs: int,
+    allowed_unordered_pairs: set[tuple[str, str]] | None = None,
+) -> dict[str, dict[str, Any]]:
     by_source: dict[str, dict[str, Any]] = {}
     for source_key, rel_path in _PRIORS_FILES:
         path = repo_root / rel_path
         priors = load_priors(path)
         cov_override: int | None = None
         if source_key.startswith("omnipath"):
-            cov_override = _omnipath_directed_pair_count_from_json(path)
+            cov_override = _omnipath_directed_pair_count_from_json(
+                path,
+                allowed_unordered_pairs,
+            )
         by_source[source_key] = compute_quality(
             priors,
             true_edges,
             confidence_threshold=0.7,
-            n_total_pairs=n_total_ordered_pairs,
+            n_total_pairs=n_total_pairs,
             omnipath_coverage_numerator=cov_override,
+            allowed_unordered_pairs=allowed_unordered_pairs,
         )
+    return by_source
+
+
+def _reactome_edge_quality_cascade(
+    *,
+    repo_root: Path,
+    true_edges: set[tuple[str, str]],
+    variables: list[str],
+) -> dict[str, Any]:
+    coverage_path = repo_root / "experiments" / "reactome_coverage.json"
+    reaction_pairs = _reaction_covered_pairs(coverage_path, variables)
+    union_pairs = _reactome_union_covered_pairs(coverage_path, variables)
+    no_coverage_pairs = {
+        _unordered(edge) for edge in true_edges if _unordered(edge) not in union_pairs
+    }
+    strata = {
+        "reaction": reaction_pairs,
+        "any_evidence_layer": union_pairs,
+        "no_coverage": no_coverage_pairs,
+    }
+
+    reactome_priors = load_priors(repo_root / "experiments" / "causal_priors_sachs.json")
+    out: dict[str, Any] = {}
+    for name, pairs in strata.items():
+        out[name] = compute_quality(
+            reactome_priors,
+            true_edges,
+            confidence_threshold=0.7,
+            n_total_pairs=max(len(pairs) * 2, 1),
+            allowed_unordered_pairs=pairs,
+        )
+        out[name]["n_unordered_pairs"] = len(pairs)
+        out[name]["n_true_edges_in_stratum"] = sum(
+            1 for edge in true_edges if _unordered(edge) in pairs
+        )
+    return out
+
+
+def main() -> None:
+    repo_root = Path(__file__).resolve().parents[1]
+    data, true_graph = load_sachs_dataset()
+    true_edges: set[tuple[str, str]] = {tuple(e) for e in true_graph.edges()}
+    n_nodes = true_graph.number_of_nodes()
+    n_total_ordered_pairs = n_nodes * (n_nodes - 1)
+    variables = list(data.columns)
+
+    by_source = _quality_by_source(
+        repo_root=repo_root,
+        true_edges=true_edges,
+        n_total_pairs=n_total_ordered_pairs,
+    )
+
+    coverage_path = repo_root / "experiments" / "reactome_coverage.json"
+    covered_pairs = _reactome_union_covered_pairs(coverage_path, variables)
+    coverage_conditional = _quality_by_source(
+        repo_root=repo_root,
+        true_edges=true_edges,
+        n_total_pairs=len(covered_pairs) * 2,
+        allowed_unordered_pairs=covered_pairs,
+    )
+    edge_quality_cascade = _reactome_edge_quality_cascade(
+        repo_root=repo_root,
+        true_edges=true_edges,
+        variables=variables,
+    )
 
     out: dict[str, Any] = {
         "dataset": "sachs",
         "confidence_threshold": 0.7,
         "n_total_ordered_pairs": n_total_ordered_pairs,
+        "n_reactome_union_unordered_pairs": len(covered_pairs),
         "n_true_edges": len(true_edges),
         "true_edges": _sorted_edge_list(true_edges),
         "by_source": by_source,
+        "coverage_conditional": coverage_conditional,
+        "edge_quality_cascade": edge_quality_cascade,
         "headline": _headline(by_source),
     }
 

@@ -1,10 +1,18 @@
 {
   "dataset": "sachs",
   "ges_total_dropped_due_to_cycle": 120,
+  "lingam_sweep_promoted": {
+    "condition": "C3",
+    "f1": 0.5660377358490566,
+    "mode": "forbidden_only",
+    "n_ok_same_cell": 10,
+    "shd": 37.0,
+    "threshold": 0.7
+  },
   "matrix": "step6_canonical",
   "n_cells_completed": 211,
   "n_cells_expected": 211,
-  "n_cells_failed": 40,
+  "n_cells_failed": 30,
   "results": [
     {
       "algorithm": null,
@@ -18142,141 +18150,1731 @@
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 0,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 1,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 2,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 3,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 4,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 5,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 6,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 7,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 8,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {
       "algorithm": "LiNGAM",
       "condition": "C3",
-      "constraint_summary": null,
+      "constraint_summary": {
+        "discarded_below_threshold": 0,
+        "discarded_unknown": 28,
+        "hard_forbidden_reverse": 0,
+        "hard_required": 16,
+        "kept_forbidden": 0,
+        "kept_required": 34,
+        "no_context": 0,
+        "soft_prior": 18,
+        "total": 62,
+        "unknown": 28
+      },
       "dataset": "sachs",
       "dropped_due_to_cycle": [],
-      "error": "LiNGAM prior matrix over-constrained: causal-learn DirectLiNGAM cannot complete the causal-order search because the candidate set was empty at some step. This is a known DirectLiNGAM limitation under dense priors; the prior matrix has 17 required edges and 0 forbidden edges across 11 features. See dev_plan_v2.md Risk #6 / Step 5 LiNGAM caveat.",
-      "metrics": null,
-      "predicted_edges": [],
+      "error": null,
+      "lingam_prior_mode": "forbidden_only",
+      "metrics": {
+        "aupr": 0.37783025055752334,
+        "f1": 0.5660377358490566,
+        "precision": 0.42857142857142855,
+        "recall": 0.8333333333333334,
+        "shd": 37.0
+      },
+      "predicted_edges": [
+        [
+          "PKA",
+          "P38"
+        ],
+        [
+          "PKA",
+          "p44/42"
+        ],
+        [
+          "PKA",
+          "pakts473"
+        ],
+        [
+          "PKA",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "P38"
+        ],
+        [
+          "PKC",
+          "PIP2"
+        ],
+        [
+          "PKC",
+          "pjnk"
+        ],
+        [
+          "PKC",
+          "plcg"
+        ],
+        [
+          "PKC",
+          "pmek"
+        ],
+        [
+          "PKC",
+          "praf"
+        ],
+        [
+          "p44/42",
+          "P38"
+        ],
+        [
+          "p44/42",
+          "pakts473"
+        ],
+        [
+          "p44/42",
+          "pmek"
+        ],
+        [
+          "pakts473",
+          "P38"
+        ],
+        [
+          "pakts473",
+          "PIP3"
+        ],
+        [
+          "pakts473",
+          "pmek"
+        ],
+        [
+          "pjnk",
+          "P38"
+        ],
+        [
+          "pjnk",
+          "PIP2"
+        ],
+        [
+          "pjnk",
+          "PIP3"
+        ],
+        [
+          "pjnk",
+          "PKA"
+        ],
+        [
+          "pjnk",
+          "p44/42"
+        ],
+        [
+          "pjnk",
+          "pakts473"
+        ],
+        [
+          "pjnk",
+          "plcg"
+        ],
+        [
+          "plcg",
+          "P38"
+        ],
+        [
+          "plcg",
+          "PIP3"
+        ],
+        [
+          "plcg",
+          "PKA"
+        ],
+        [
+          "plcg",
+          "p44/42"
+        ],
+        [
+          "plcg",
+          "pakts473"
+        ],
+        [
+          "plcg",
+          "pmek"
+        ],
+        [
+          "plcg",
+          "praf"
+        ],
+        [
+          "pmek",
+          "P38"
+        ],
+        [
+          "pmek",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PIP3"
+        ],
+        [
+          "praf",
+          "PKA"
+        ],
+        [
+          "praf",
+          "pakts473"
+        ]
+      ],
       "priors_source": "reactome_llm",
       "seed": 9,
-      "status": "failed",
+      "status": "ok",
       "threshold": 0.7
     },
     {

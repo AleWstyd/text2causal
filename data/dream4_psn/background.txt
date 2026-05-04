@@ -1,0 +1,1 @@
+The DREAM4 predictive-signalling benchmark measured phosphoprotein responses in human HepG2 cells under ligand and kinase-inhibitor perturbations. The measured signalling readouts include AKT, MEK1, ERK1/2, JNK, p38, IKB, and HSP27, covering MAPK, stress kinase, PI3K/AKT, and NF-kB-related response branches.

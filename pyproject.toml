@@ -5,15 +5,15 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "causal-learn>=0.1.4.4",
-    "cdt>=0.6.0",
-    "openai>=1.68.0",
-    "matplotlib>=3.10.1",
-    "networkx>=3.5",
-    "pandas>=2.2,<3",
-    "streamlit>=1.44.0",
-    "httpx>=0.28.1",
-    "pypath-omnipath>=0.16.20",
-    "torch>=2.11.0",
-    "omnipath>=1.0.12",
+    "causal-learn==0.1.4.4",
+    "cdt==0.6.0",
+    "openai==2.32.0",
+    "matplotlib==3.10.8",
+    "networkx==3.6.1",
+    "pandas==2.3.3",
+    "streamlit==1.55.0",
+    "httpx==0.28.1",
+    "pypath-omnipath==0.16.20",
+    "torch==2.11.0",
+    "omnipath==1.0.12",
 ]

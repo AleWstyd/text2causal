@@ -2028,17 +2028,17 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "causal-learn", specifier = ">=0.1.4.4" },
-    { name = "cdt", specifier = ">=0.6.0" },
-    { name = "httpx", specifier = ">=0.28.1" },
-    { name = "matplotlib", specifier = ">=3.10.1" },
-    { name = "networkx", specifier = ">=3.5" },
-    { name = "omnipath", specifier = ">=1.0.12" },
-    { name = "openai", specifier = ">=1.68.0" },
-    { name = "pandas", specifier = ">=2.2,<3" },
-    { name = "pypath-omnipath", specifier = ">=0.16.20" },
-    { name = "streamlit", specifier = ">=1.44.0" },
-    { name = "torch", specifier = ">=2.11.0" },
+    { name = "causal-learn", specifier = "==0.1.4.4" },
+    { name = "cdt", specifier = "==0.6.0" },
+    { name = "httpx", specifier = "==0.28.1" },
+    { name = "matplotlib", specifier = "==3.10.8" },
+    { name = "networkx", specifier = "==3.6.1" },
+    { name = "omnipath", specifier = "==1.0.12" },
+    { name = "openai", specifier = "==2.32.0" },
+    { name = "pandas", specifier = "==2.3.3" },
+    { name = "pypath-omnipath", specifier = "==0.16.20" },
+    { name = "streamlit", specifier = "==1.55.0" },
+    { name = "torch", specifier = "==2.11.0" },
 ]
 
 [[package]]
