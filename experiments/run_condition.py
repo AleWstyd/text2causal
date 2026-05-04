@@ -21,11 +21,12 @@ from utils.graph_utils import apply_post_hoc_edits
 
 _VALID_PRIORS_SOURCES = frozenset(
     {
+        "freetext_llm",
         "none",
-        "reactome_llm",
         "omnipath_all",
         "omnipath_reactome_only",
         "oracle",
+        "reactome_llm",
     }
 )
 _VALID_ALGORITHMS = frozenset({"PC", "GES", "LiNGAM"})
@@ -48,6 +49,10 @@ def _derive_condition_label(priors_source: str, threshold: float | None) -> str:
         if threshold == 0.6:
             return "C4"
         return f"C_llm_t{threshold}"
+    if priors_source == "freetext_llm":
+        if threshold == 0.7:
+            return "C1"
+        return f"C_freetext_t{threshold}"
     raise ValueError(f"Unknown priors_source for condition label: {priors_source!r}")
 
 

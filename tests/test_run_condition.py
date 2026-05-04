@@ -12,7 +12,11 @@ import numpy as np
 from causal_discovery import run_lingam as run_lingam_mod
 from constraints.constraint_builder import ClaimRecord
 from experiments import run_condition as run_condition_mod
-from experiments.run_condition import _derive_condition_label, run_condition
+from experiments.run_condition import (
+    _VALID_PRIORS_SOURCES,
+    _derive_condition_label,
+    run_condition,
+)
 
 
 def _synth_chain_data(
@@ -301,6 +305,23 @@ class RunConditionValidationTests(unittest.TestCase):
                 seed=0,
             )
 
+    def test_freetext_llm_in_valid_sources_unknown_raises(self) -> None:
+        self.assertIn("freetext_llm", _VALID_PRIORS_SOURCES)
+        rng = np.random.default_rng(818)
+        data, names, true_graph = _synth_chain_data(rng)
+        with self.assertRaises(ValueError):
+            run_condition(
+                dataset_name="synth_chain",
+                data=data,
+                variable_names=names,
+                true_graph=true_graph,
+                priors=None,
+                priors_source="unknown_llm_source",
+                algorithm="PC",
+                threshold=0.7,
+                seed=0,
+            )
+
     def test_invalid_algorithm(self) -> None:
         rng = np.random.default_rng(909)
         data, names, true_graph = _synth_chain_data(rng)
@@ -351,6 +372,8 @@ class DeriveConditionLabelTests(unittest.TestCase):
             ("reactome_llm", 0.7, "C3"),
             ("reactome_llm", 0.6, "C4"),
             ("reactome_llm", 0.65, "C_llm_t0.65"),
+            ("freetext_llm", 0.7, "C1"),
+            ("freetext_llm", 0.5, "C_freetext_t0.5"),
         ]
         for priors_source, thr, expected in cases:
             with self.subTest(priors_source=priors_source, thr=thr):
