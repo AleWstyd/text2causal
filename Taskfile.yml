@@ -86,6 +86,11 @@ tasks:
     cmds:
       - uv run python -m experiments.runner
 
+  constraint-quality-sachs:
+    desc: Step 6 constraint quality evaluation (precision/recall/hallucination/coverage per priors source)
+    cmds:
+      - uv run python -m experiments.constraint_quality
+
   format:
     desc: Format code with ruff
     cmds:
