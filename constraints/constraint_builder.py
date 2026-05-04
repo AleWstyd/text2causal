@@ -24,7 +24,7 @@ class ClaimRecord:
     effect: str  # may be "unknown"
     confidence: float
     constraint_type: str  # recognised types only at filter time
-    source: str  # "reactome_llm" | "omnipath_all" | "omnipath_reactome_only"
+    source: str  # e.g. "reactome_llm" | "omnipath_all" | "omnipath_reactome_only" | "oracle" | "freetext_llm"
 
 
 @dataclass(frozen=True)
@@ -179,14 +179,19 @@ def load_priors(path: Path | str) -> list[ClaimRecord]:
         return []
 
     if "served_models" in data or any("served_models" in c for c in items):
-        source = "reactome_llm"
+        file_default_source = "reactome_llm"
     elif "reactome_only" in p.name.lower():
-        source = "omnipath_reactome_only"
+        file_default_source = "omnipath_reactome_only"
     else:
-        source = "omnipath_all"
+        file_default_source = "omnipath_all"
 
     records: list[ClaimRecord] = []
     for item in items:
+        raw_src = item.get("source")
+        if isinstance(raw_src, str) and raw_src.strip():
+            record_source = raw_src.strip()
+        else:
+            record_source = file_default_source
         records.append(
             ClaimRecord(
                 var_a=str(item["var_a"]),
@@ -195,7 +200,7 @@ def load_priors(path: Path | str) -> list[ClaimRecord]:
                 effect=str(item["effect"]),
                 confidence=float(item["confidence"]),
                 constraint_type=str(item["constraint_type"]),
-                source=source,
+                source=record_source,
             )
         )
     return records

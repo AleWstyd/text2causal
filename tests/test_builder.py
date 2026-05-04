@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import json
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -61,6 +63,73 @@ class LoadPriorsTests(unittest.TestCase):
             load_priors(_FIX / "omnipath_reactome_only_min.json")[0].source,
             "omnipath_reactome_only",
         )
+
+    def test_per_record_source_oracle(self) -> None:
+        payload = {
+            "pairs": [
+                {
+                    "var_a": "A",
+                    "var_b": "B",
+                    "cause": "A",
+                    "effect": "B",
+                    "confidence": 1.0,
+                    "constraint_type": "hard_required",
+                    "source": "oracle",
+                }
+            ]
+        }
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "priors.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            recs = load_priors(path)
+        self.assertEqual(len(recs), 1)
+        self.assertEqual(recs[0].source, "oracle")
+
+    def test_per_record_source_freetext_llm(self) -> None:
+        payload = {
+            "pairs": [
+                {
+                    "var_a": "X",
+                    "var_b": "Y",
+                    "cause": "X",
+                    "effect": "Y",
+                    "confidence": 0.5,
+                    "constraint_type": "soft_prior",
+                    "source": "freetext_llm",
+                }
+            ]
+        }
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "priors.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            recs = load_priors(path)
+        self.assertEqual(len(recs), 1)
+        self.assertEqual(recs[0].source, "freetext_llm")
+
+    def test_per_record_source_overrides_file_detection(self) -> None:
+        """Filename and served_models would imply reactome_llm; record source wins."""
+        payload = {
+            "background_text_path": "data/sachs/background.txt",
+            "served_models": ["deepseek-ai/DeepSeek-V4-Pro"],
+            "pairs": [
+                {
+                    "var_a": "A",
+                    "var_b": "B",
+                    "cause": "A",
+                    "effect": "B",
+                    "confidence": 1.0,
+                    "constraint_type": "hard_required",
+                    "source": "oracle",
+                    "served_models": ["deepseek-ai/DeepSeek-V4-Pro"],
+                }
+            ],
+        }
+        with tempfile.TemporaryDirectory() as td:
+            path = Path(td) / "freetext_priors_sachs.json"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            recs = load_priors(path)
+        self.assertEqual(len(recs), 1)
+        self.assertEqual(recs[0].source, "oracle")
 
 
 class SummaryAccountingTests(unittest.TestCase):

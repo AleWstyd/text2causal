@@ -61,6 +61,16 @@ tasks:
     cmds:
       - uv run python -m experiments.run_dag_llm_only_sachs
 
+  oracle-priors-sachs:
+    desc: Step 6 Phase 1 — ground-truth oracle prior claims for Sachs
+    cmds:
+      - uv run python -m experiments.run_oracle_priors_sachs
+
+  freetext-sachs:
+    desc: Step 6 Phase 1 — C1 free-text LLM priors for Sachs (cached LLM)
+    cmds:
+      - uv run python -m experiments.run_freetext_sachs
+
   lint:
     desc: Run ruff checks
     cmds:

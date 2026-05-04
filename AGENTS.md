@@ -76,6 +76,8 @@ Prefer `Taskfile.yml` targets when they exist:
 - `task discover-sachs` — Step 5 Sachs constrained-discovery sweep → `experiments/discovery_results_sachs.json`.
 - `task reactome-coverage` — Sachs (+ DREAM4 smoke) Reactome coverage probe → `experiments/reactome_coverage.json`.
 - `task ground-sachs` — batched LLM grounding for Sachs columns → `experiments/grounding_sachs.json`.
+- `task oracle-priors-sachs` — Step 6 Phase 1 oracle ground-truth priors for Sachs → `experiments/oracle_priors_sachs.json`.
+- `task freetext-sachs` — Step 6 Phase 1 C1 free-text LLM priors for Sachs → `experiments/freetext_priors_sachs.json` (uses committed `cache/llm/` on replay).
 - `task run` — launches the **legacy Streamlit LUCAS skeleton** (kept for the C1 ablation only; not the research pipeline entrypoint).
 
 If a needed workflow is not in `Taskfile.yml`, use the narrowest direct command possible and mention that no Task target existed. If the workflow is recurring and a future agent will run it, add a Task target in the same PR.

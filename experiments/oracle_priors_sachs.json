@@ -1,0 +1,168 @@
+{
+  "n_pairs_total": 110,
+  "n_pairs_with_edge": 18,
+  "pairs": [
+    {
+      "cause": "PIP2",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "PIP3",
+      "source": "oracle",
+      "var_a": "PIP2",
+      "var_b": "PIP3"
+    },
+    {
+      "cause": "PIP2",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "PKC",
+      "source": "oracle",
+      "var_a": "PIP2",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "pakts473",
+      "source": "oracle",
+      "var_a": "PIP3",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "plcg",
+      "source": "oracle",
+      "var_a": "PIP3",
+      "var_b": "plcg"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "P38",
+      "source": "oracle",
+      "var_a": "PKA",
+      "var_b": "P38"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "p44/42",
+      "source": "oracle",
+      "var_a": "PKA",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "pakts473",
+      "source": "oracle",
+      "var_a": "PKA",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "pjnk",
+      "source": "oracle",
+      "var_a": "PKA",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "pmek",
+      "source": "oracle",
+      "var_a": "PKA",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "PKA",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "praf",
+      "source": "oracle",
+      "var_a": "PKA",
+      "var_b": "praf"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "P38",
+      "source": "oracle",
+      "var_a": "PKC",
+      "var_b": "P38"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "pjnk",
+      "source": "oracle",
+      "var_a": "PKC",
+      "var_b": "pjnk"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "pmek",
+      "source": "oracle",
+      "var_a": "PKC",
+      "var_b": "pmek"
+    },
+    {
+      "cause": "PKC",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "praf",
+      "source": "oracle",
+      "var_a": "PKC",
+      "var_b": "praf"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "PIP2",
+      "source": "oracle",
+      "var_a": "plcg",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "PKC",
+      "source": "oracle",
+      "var_a": "plcg",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "pmek",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "p44/42",
+      "source": "oracle",
+      "var_a": "pmek",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "praf",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "pmek",
+      "source": "oracle",
+      "var_a": "praf",
+      "var_b": "pmek"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "background_text_path": "data/sachs/background.txt",
+  "n_hard_forbidden_reverse": 0,
+  "n_hard_required": 6,
+  "n_relations_emitted": 6,
+  "n_relations_skipped_unknown_var": 0,
+  "n_soft_prior": 0,
+  "n_unknown": 0,
+  "pairs": [
+    {
+      "cause": "PIP2",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "PIP3",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "freetext_llm",
+      "var_a": "PIP2",
+      "var_b": "PIP3"
+    },
+    {
+      "cause": "PIP3",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "pakts473",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "freetext_llm",
+      "var_a": "PIP3",
+      "var_b": "pakts473"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "PIP2",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "freetext_llm",
+      "var_a": "plcg",
+      "var_b": "PIP2"
+    },
+    {
+      "cause": "plcg",
+      "confidence": 0.9,
+      "constraint_type": "hard_required",
+      "effect": "PKC",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "freetext_llm",
+      "var_a": "plcg",
+      "var_b": "PKC"
+    },
+    {
+      "cause": "pmek",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "p44/42",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "freetext_llm",
+      "var_a": "pmek",
+      "var_b": "p44/42"
+    },
+    {
+      "cause": "praf",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "pmek",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "source": "freetext_llm",
+      "var_a": "praf",
+      "var_b": "pmek"
+    }
+  ],
+  "served_models": [
+    "deepseek-ai/DeepSeek-V4-Pro"
+  ]
+}
