@@ -159,6 +159,13 @@ def _json_safe_metrics(metrics: dict[str, float]) -> dict[str, float]:
     return {k: float(v) for k, v in metrics.items()}
 
 
+_VALID_LINGAM_PRIOR_MODES: frozenset[str] = frozenset(
+    {"post_hoc", "all", "sparse_required", "forbidden_only", "hybrid_top5"}
+)
+
+_DEFAULT_LINGAM_PRIOR_MODE: str = "post_hoc"
+
+
 def _build_lingam_sweep_matrix(
     builder: ConstraintBuilder,
     lingam_prior_mode: str,
@@ -224,9 +231,19 @@ def run_condition(
         "pc_post_hoc_dropped_due_to_cycle": [],
     }
     if algorithm == "LiNGAM" and priors_source != "none":
-        eff_lingam = lingam_prior_mode or "forbidden_only"
+        eff_lingam = lingam_prior_mode or _DEFAULT_LINGAM_PRIOR_MODE
+        if eff_lingam not in _VALID_LINGAM_PRIOR_MODES:
+            raise ValueError(
+                f"Unknown lingam_prior_mode: {eff_lingam!r}; "
+                f"expected one of {sorted(_VALID_LINGAM_PRIOR_MODES)}"
+            )
         out["lingam_prior_mode"] = eff_lingam
     elif lingam_prior_mode is not None:
+        if lingam_prior_mode not in _VALID_LINGAM_PRIOR_MODES:
+            raise ValueError(
+                f"Unknown lingam_prior_mode: {lingam_prior_mode!r}; "
+                f"expected one of {sorted(_VALID_LINGAM_PRIOR_MODES)}"
+            )
         out["lingam_prior_mode"] = lingam_prior_mode
 
     try:
@@ -257,14 +274,19 @@ def run_condition(
             if builder is None:
                 predicted = run_lingam(data, variable_names, None)
             else:
-                eff_mode = lingam_prior_mode or "forbidden_only"
-                matrix = _build_lingam_sweep_matrix(builder, eff_mode)
-                predicted = run_lingam(
-                    data,
-                    variable_names,
-                    prior_matrix=matrix,
-                    apply_prior_knowledge_softly=True,
-                )
+                eff_mode = lingam_prior_mode or _DEFAULT_LINGAM_PRIOR_MODE
+                if eff_mode == "post_hoc":
+                    predicted = run_lingam(data, variable_names, None)
+                    add, forbid = builder.build_ges_post_hoc_edits()
+                    predicted, dropped = apply_post_hoc_edits(predicted, add, forbid)
+                else:
+                    matrix = _build_lingam_sweep_matrix(builder, eff_mode)
+                    predicted = run_lingam(
+                        data,
+                        variable_names,
+                        prior_matrix=matrix,
+                        apply_prior_knowledge_softly=True,
+                    )
         elif algorithm == "GES":
             predicted = run_ges(data, variable_names, None)
             if priors_source != "none" and builder is not None:

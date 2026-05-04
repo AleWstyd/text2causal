@@ -317,10 +317,12 @@ def _run_ablation() -> dict[str, Any]:
                     algorithm=algorithm,
                     threshold=cond.threshold,
                     seed=seed,
-                    lingam_prior_mode="forbidden_only"
-                    if algorithm == "LiNGAM"
-                    and cond.name in {"C2", "C3", "C3+ft", "C4"}
-                    else None,
+                    lingam_prior_mode=(
+                        "post_hoc"
+                        if algorithm == "LiNGAM"
+                        and cond.name in {"C2", "C3", "C3+ft", "C4"}
+                        else None
+                    ),
                 )
                 row["condition"] = cond.name
                 results.append(row)

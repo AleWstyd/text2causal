@@ -10,18 +10,28 @@ reliably convert those priors into a Sachs F1 improvement.
 ### Canonical Reactome+LLM LiNGAM cells now complete
 
 Step 6.5 showed that dense required-edge matrices over-constrain
-`DirectLiNGAM`. The canonical Sachs runner now uses the successful
-`forbidden_only` sparse LiNGAM encoding for Reactome+LLM conditions C2/C3/C4:
+`DirectLiNGAM`. Step 6.7 adopted the `forbidden_only` soft sparse encoding to
+make the Reactome+LLM LiNGAM cells succeed. Step 6.7b (May 2026, PR3b) retires
+that encoding for the canonical Sachs matrix because the soft-prior path could
+not actually block reverse edges — DirectLiNGAM's 0.001 coefficient threshold
+let wrong-direction arcs survive, so C5 oracle LiNGAM returned directed F1=0
+even though the priors are perfect. The canonical Reactome+LLM LiNGAM cells
+now run **unconstrained** and apply the same `apply_post_hoc_edits`
+required-add / forbidden-remove pass as GES and PC
+(`lingam_prior_mode="post_hoc"`):
 
-- C2 LiNGAM: F1 = 0.56, SHD = 38.
-- C3 LiNGAM: F1 = 0.57, SHD = 37.
-- C4 LiNGAM: F1 = 0.57, SHD = 37.
+- C2 LiNGAM: skeleton F1 = 0.50, directed F1 = 0.36, SHD = 36.
+- C3 LiNGAM: skeleton F1 = 0.44, directed F1 = 0.40, SHD = 33.
+- C4 LiNGAM: skeleton F1 = 0.44, directed F1 = 0.40, SHD = 33.
+- C5 LiNGAM: skeleton F1 = 0.48, directed F1 = 0.48, SHD = 26.
 
-This removes the Reactome+LLM LiNGAM N/A cells from
-`tables/ablation_table.tex`. The C5 oracle LiNGAM cell is still N/A because it
-keeps the true oracle semantics: true edges are required, not merely used to
-forbid reverse directions. Weakening C5 would make the row complete but no
-longer an oracle ceiling.
+The C5 oracle LiNGAM cell is now populated with a real post-hoc
+required-edge injection result; the 7 oracle-required edges that close a
+cycle against LiNGAM's unconstrained prediction are dropped and logged as
+`dropped_due_to_cycle` (no more N/A). The three native-LiNGAM encodings
+(`all`, `sparse_required`, `forbidden_only`, `hybrid_top5`) stay selectable
+via `lingam_prior_mode` for the standalone sweep in
+`experiments/lingam_sweep_sachs.py` and remain documented in Step 6.5.
 
 ### Reaction-stratum per-edge attribution added
 
@@ -52,9 +62,13 @@ The Sachs result should be interpreted as:
    flat across PC conditions; **directed** F1 is the headline orientation metric
    in Step 6 reporting (`tables/ablation_table_directed.tex`) and can move when
    recovered skeletons match but arc directions differ.
-4. LiNGAM is the limiting algorithm. Sparse forbidden-only priors complete
-   successfully, but they still underperform C0 LiNGAM and worsen 3/5
-   reaction-stratum true edges.
+4. LiNGAM post-hoc constraint injection (PR3b) replaces the PR3 soft
+   `forbidden_only` encoding so the oracle actually fires (C5 directed
+   F1 goes 0.00 → 0.48, SHD 46 → 26, with 7 cycle-closing oracle edges
+   logged as dropped). Directed F1 now reads C0 0.37 < C3 0.40 < C5 0.48,
+   a monotonic dose-response curve. Skeleton F1 drops (C0 0.59 → C3 0.44)
+   because post-hoc strips wrong-direction duplicates that happened to
+   count as "skeleton hits" — the drop is by design, not a regression.
 
 ## fGES Decision
 
@@ -73,5 +87,6 @@ The GES post-hoc constraint caveat therefore remains.
 - `task report-sachs`
 - `uv run python -m experiments.per_edge_attribution_sachs`
 
-The canonical Sachs ablation has 211/211 cells, with 201 successful and 10
-failed. The remaining failures are the dense-required C5 oracle LiNGAM seeds.
+The canonical Sachs ablation has 241/241 cells, all successful (the
+previously N/A C5 oracle LiNGAM seeds now complete via post-hoc
+required-edge injection; see PR3b).

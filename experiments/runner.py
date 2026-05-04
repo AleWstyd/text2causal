@@ -172,7 +172,7 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
                     threshold=0.7,
                     algorithm=alg,
                     seed=seed,
-                    lingam_prior_mode=("forbidden_only" if alg == "LiNGAM" else None),
+                    lingam_prior_mode=("post_hoc" if alg == "LiNGAM" else None),
                 )
             )
     for alg in _ALGORITHMS:
@@ -185,7 +185,7 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
                     threshold=0.7,
                     algorithm=alg,
                     seed=seed,
-                    lingam_prior_mode=("forbidden_only" if alg == "LiNGAM" else None),
+                    lingam_prior_mode=("post_hoc" if alg == "LiNGAM" else None),
                 )
             )
     for thr, cond in ((0.9, "C2"), (0.7, "C3"), (0.6, "C4")):
@@ -199,9 +199,7 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
                         threshold=thr,
                         algorithm=alg,
                         seed=seed,
-                        lingam_prior_mode=(
-                            "forbidden_only" if alg == "LiNGAM" else None
-                        ),
+                        lingam_prior_mode=("post_hoc" if alg == "LiNGAM" else None),
                     )
                 )
     for alg in _ALGORITHMS:
@@ -214,7 +212,7 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
                     threshold=0.7,
                     algorithm=alg,
                     seed=seed,
-                    lingam_prior_mode=("forbidden_only" if alg == "LiNGAM" else None),
+                    lingam_prior_mode=("post_hoc" if alg == "LiNGAM" else None),
                 )
             )
     for alg in _ALGORITHMS:
@@ -227,7 +225,7 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
                     threshold=None,
                     algorithm=alg,
                     seed=seed,
-                    lingam_prior_mode=("forbidden_only" if alg == "LiNGAM" else None),
+                    lingam_prior_mode=("post_hoc" if alg == "LiNGAM" else None),
                 )
             )
     cells.sort(

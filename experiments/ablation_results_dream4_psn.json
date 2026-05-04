@@ -3183,27 +3183,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3216,6 +3216,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -3253,27 +3257,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3286,6 +3290,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -3323,27 +3331,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3356,6 +3364,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -3393,27 +3405,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3426,6 +3438,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -3463,27 +3479,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3496,6 +3512,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -3533,27 +3553,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3566,6 +3586,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -3603,27 +3627,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3636,6 +3660,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -3673,27 +3701,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3706,6 +3734,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -3743,27 +3775,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3776,6 +3808,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -3813,27 +3849,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.846797052154195,
-        "directed_f1": 0.823529411764706,
-        "directed_precision": 0.875,
-        "directed_recall": 0.7777777777777778,
-        "f1": 0.823529411764706,
-        "precision": 0.875,
-        "recall": 0.7777777777777778,
-        "shd": 3.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -3846,6 +3882,10 @@
         [
           "JNK",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
         ],
         [
           "MEK1",
@@ -5353,27 +5393,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -5385,15 +5425,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -5423,27 +5467,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -5455,15 +5499,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -5493,27 +5541,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -5525,15 +5573,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -5563,27 +5615,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -5595,15 +5647,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -5633,27 +5689,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -5665,15 +5721,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -5703,27 +5763,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -5735,15 +5795,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -5773,27 +5837,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -5805,15 +5869,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -5843,27 +5911,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -5875,15 +5943,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -5913,27 +5985,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -5945,15 +6017,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -5983,27 +6059,27 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.7389455782312925,
-        "directed_f1": 0.7058823529411765,
-        "directed_precision": 0.75,
-        "directed_recall": 0.6666666666666666,
-        "f1": 0.7058823529411765,
-        "precision": 0.75,
-        "recall": 0.6666666666666666,
-        "shd": 5.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "IKB"
+          "MEK1"
         ],
         [
           "ERK12",
@@ -6015,15 +6091,19 @@
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "JNK",
           "IKB"
         ],
         [
           "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
           "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
         ],
         [
           "p38",
@@ -7513,51 +7593,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -7583,51 +7667,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -7653,51 +7741,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -7723,51 +7815,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -7793,51 +7889,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -7863,51 +7963,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -7933,51 +8037,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -8003,51 +8111,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -8073,51 +8185,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -8143,51 +8259,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -9753,51 +9873,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -9823,51 +9951,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -9893,51 +10029,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -9963,51 +10107,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -10033,51 +10185,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -10103,51 +10263,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -10173,51 +10341,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -10243,51 +10419,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -10313,51 +10497,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -10383,51 +10575,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -11993,51 +12193,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -12063,51 +12271,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -12133,51 +12349,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -12203,51 +12427,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -12273,51 +12505,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -12343,51 +12583,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -12413,51 +12661,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -12483,51 +12739,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -12553,51 +12817,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -12623,51 +12895,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm_with_freetext_fallback",
@@ -14233,51 +14513,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -14303,51 +14591,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -14373,51 +14669,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -14443,51 +14747,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -14513,51 +14825,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -14583,51 +14903,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -14653,51 +14981,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -14723,51 +15059,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -14793,51 +15137,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -14863,51 +15215,59 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 0.95,
+        "directed_f1": 0.9473684210526316,
+        "directed_precision": 0.9,
+        "directed_recall": 1.0,
+        "f1": 0.9473684210526316,
+        "precision": 0.9,
+        "recall": 1.0,
+        "shd": 1.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
+        ],
+        [
+          "p38",
+          "MEK1"
         ]
       ],
       "priors_source": "reactome_llm",
@@ -16403,51 +16763,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",
@@ -16473,51 +16837,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",
@@ -16543,51 +16911,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",
@@ -16613,51 +16985,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",
@@ -16683,51 +17059,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",
@@ -16753,51 +17133,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",
@@ -16823,51 +17207,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",
@@ -16893,51 +17281,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",
@@ -16963,51 +17355,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",
@@ -17033,51 +17429,55 @@
       "dataset": "dream4_psn_synthetic",
       "dropped_due_to_cycle": [],
       "error": null,
-      "lingam_prior_mode": "forbidden_only",
+      "lingam_prior_mode": "post_hoc",
       "metrics": {
-        "aupr": 0.09183673469387756,
-        "directed_f1": 0.0,
-        "directed_precision": 0.0,
-        "directed_recall": 0.0,
-        "f1": 0.11764705882352941,
-        "precision": 0.125,
-        "recall": 0.1111111111111111,
-        "shd": 17.0
+        "aupr": 1.0,
+        "directed_f1": 1.0,
+        "directed_precision": 1.0,
+        "directed_recall": 1.0,
+        "f1": 1.0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "shd": 0.0
       },
       "pc_post_hoc_dropped_due_to_cycle": [],
       "pc_post_hoc_required_added": 0,
       "predicted_edges": [
         [
           "AKT",
-          "ERK12"
+          "IKB"
         ],
         [
           "AKT",
-          "JNK"
+          "MEK1"
         ],
         [
           "ERK12",
-          "IKB"
+          "HSP27"
         ],
         [
-          "ERK12",
-          "JNK"
-        ],
-        [
-          "HSP27",
-          "IKB"
+          "IKB",
+          "HSP27"
         ],
         [
           "JNK",
-          "HSP27"
-        ],
-        [
-          "MEK1",
-          "HSP27"
-        ],
-        [
-          "MEK1",
           "IKB"
+        ],
+        [
+          "MEK1",
+          "ERK12"
+        ],
+        [
+          "MEK1",
+          "JNK"
+        ],
+        [
+          "p38",
+          "HSP27"
+        ],
+        [
+          "p38",
+          "JNK"
         ]
       ],
       "priors_source": "oracle",

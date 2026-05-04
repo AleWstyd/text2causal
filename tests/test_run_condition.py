@@ -94,11 +94,11 @@ class RunConditionOracleTests(unittest.TestCase):
         self.assertEqual(result["status"], "ok")
         assert result["metrics"] is not None
         self.assertLess(result["metrics"]["shd"], 8.0)
-        self.assertEqual(result["lingam_prior_mode"], "forbidden_only")
+        self.assertEqual(result["lingam_prior_mode"], "post_hoc")
 
 
 class RunConditionLingamDefaultModeTests(unittest.TestCase):
-    def test_constrained_lingam_defaults_to_forbidden_only_without_kwarg(self) -> None:
+    def test_constrained_lingam_defaults_to_post_hoc_without_kwarg(self) -> None:
         rng = np.random.default_rng(414)
         data, names, true_graph = _synth_chain_data(rng)
         priors = [
@@ -124,7 +124,72 @@ class RunConditionLingamDefaultModeTests(unittest.TestCase):
             seed=0,
         )
         self.assertEqual(result["status"], "ok")
+        self.assertEqual(result["lingam_prior_mode"], "post_hoc")
+
+    def test_explicit_forbidden_only_mode_preserved(self) -> None:
+        rng = np.random.default_rng(415)
+        data, names, true_graph = _synth_chain_data(rng)
+        priors = [
+            ClaimRecord(
+                var_a="X0",
+                var_b="X1",
+                cause="X0",
+                effect="X1",
+                confidence=0.8,
+                constraint_type="hard_required",
+                source="reactome_llm",
+            ),
+        ]
+        result = run_condition(
+            dataset_name="synth_chain",
+            data=data,
+            variable_names=names,
+            true_graph=true_graph,
+            priors=priors,
+            priors_source="reactome_llm",
+            algorithm="LiNGAM",
+            threshold=0.7,
+            seed=0,
+            lingam_prior_mode="forbidden_only",
+        )
+        self.assertEqual(result["status"], "ok")
         self.assertEqual(result["lingam_prior_mode"], "forbidden_only")
+
+    def test_post_hoc_injects_required_edges_as_dag(self) -> None:
+        rng = np.random.default_rng(416)
+        data, names, true_graph = _synth_chain_data(rng, n_samples=600)
+        # Over-wrong priors: deliberately require the reverse of the true chain
+        # direction on one edge so that post-hoc injection has to flip a wrong
+        # edge LiNGAM learns from the data. The output must still be a DAG.
+        priors = [
+            ClaimRecord(
+                var_a="X0",
+                var_b="X2",
+                cause="X0",
+                effect="X2",
+                confidence=1.0,
+                constraint_type="hard_required",
+                source="reactome_llm",
+            ),
+        ]
+        result = run_condition(
+            dataset_name="synth_chain",
+            data=data,
+            variable_names=names,
+            true_graph=true_graph,
+            priors=priors,
+            priors_source="reactome_llm",
+            algorithm="LiNGAM",
+            threshold=0.5,
+            seed=0,
+        )
+        self.assertEqual(result["status"], "ok")
+        pred = nx.DiGraph()
+        pred.add_nodes_from(names)
+        pred.add_edges_from(tuple(edge) for edge in result["predicted_edges"])
+        self.assertTrue(nx.is_directed_acyclic_graph(pred))
+        self.assertTrue(pred.has_edge("X0", "X2"))
+        self.assertFalse(pred.has_edge("X2", "X0"))
 
 
 class RunConditionReactomeThresholdTests(unittest.TestCase):

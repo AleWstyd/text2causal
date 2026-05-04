@@ -436,7 +436,7 @@ def _run_ablation() -> dict[str, Any]:
                     threshold=cond.threshold,
                     seed=seed,
                     lingam_prior_mode=(
-                        "forbidden_only"
+                        "post_hoc"
                         if algorithm == "LiNGAM"
                         and cond.name in {"C2", "C3", "C3+ft", "C4"}
                         else None
