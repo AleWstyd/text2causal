@@ -1,0 +1,62 @@
+{
+  "approx_wall_clock_seconds": {
+    "freetext": 30,
+    "grounding": 10,
+    "reasoning": 1920,
+    "total": 1960
+  },
+  "headline": "LLM cache: 66 completion(s); 154,254 prompt + 113,825 completion tokens; estimated $0.6645 USD at Baseten Model API rates ($1.74/M in, $3.48/M out, snapshot 2026-05-04).",
+  "latency_disclosure": "Approximate; per-call latency is not stored in the cache. Multipliers used: grounding=10s, reasoning=30s, freetext=30s. See experiments/cost_report.py for details.",
+  "price_per_m_input_usd": 1.74,
+  "price_per_m_output_usd": 3.48,
+  "price_source_url": "https://www.baseten.co/pricing",
+  "snapshot_date": "2026-05-04",
+  "summary": {
+    "by_served_model": {
+      "Qwen/Qwen3-235B-A22B": {
+        "completion_tokens": 8643,
+        "estimated_cost_usd": 0.08204796,
+        "n_entries": 4,
+        "prompt_tokens": 29868
+      },
+      "deepseek-ai/DeepSeek-V4-Pro": {
+        "completion_tokens": 105182,
+        "estimated_cost_usd": 0.582465,
+        "n_entries": 62,
+        "prompt_tokens": 124386
+      }
+    },
+    "by_stage": {
+      "freetext": {
+        "completion_tokens": 2306,
+        "estimated_cost_usd": 0.00911064,
+        "n_entries": 1,
+        "prompt_tokens": 624
+      },
+      "grounding": {
+        "completion_tokens": 2918,
+        "estimated_cost_usd": 0.01204776,
+        "n_entries": 1,
+        "prompt_tokens": 1088
+      },
+      "reasoning": {
+        "completion_tokens": 108601,
+        "estimated_cost_usd": 0.64335456,
+        "n_entries": 64,
+        "prompt_tokens": 152542
+      },
+      "unknown": {
+        "completion_tokens": 0,
+        "estimated_cost_usd": 0.0,
+        "n_entries": 0,
+        "prompt_tokens": 0
+      }
+    },
+    "totals": {
+      "completion_tokens": 113825,
+      "estimated_cost_usd": 0.66451296,
+      "n_entries": 66,
+      "prompt_tokens": 154254
+    }
+  }
+}

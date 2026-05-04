@@ -46,7 +46,7 @@ Active research pipeline (this is where new work goes):
 - `evaluation/` — `harness.py` evaluates a predicted graph against ground truth; `metrics.py` carries the primitives.
 - `constraints/constraint_builder.py` — translates priors into PC `BackgroundKnowledge`, LiNGAM prior matrices, and post-hoc GES edits. Will grow in Step 5.
 - `causal_discovery/` — algorithm wrappers (`run_pc.py`, `run_ges.py`, `run_lingam.py`).
-- `experiments/` — runnable scripts and their JSON outputs (`baseline_sachs.py`/`.json`, `reactome_coverage.py`/`.json`, `run_grounding_sachs.py`, `grounding_sachs_gold.json`, `grounding_dream4.json`, `run_discovery_sachs.py`/`.json` Step 5 Sachs sweep, `runner.py` Step 6 ablation sweep → `ablation_results_sachs.json`, `constraint_quality.py` Step 6 Phase 3 → `constraint_quality_sachs.json`, `report.py` Step 6 Phase 4 → LaTeX under `tables/` and figures under `figures/`). Most scripts write one committed JSON artefact; the Step 5 sweep persists incrementally to `experiments/discovery_results_sachs.json`; Step 6 persists incrementally to `experiments/ablation_results_sachs.json`.
+- `experiments/` — runnable scripts and their JSON outputs (`baseline_sachs.py`/`.json`, `reactome_coverage.py`/`.json`, `run_grounding_sachs.py`, `grounding_sachs_gold.json`, `grounding_dream4.json`, `run_discovery_sachs.py`/`.json` Step 5 Sachs sweep, `runner.py` Step 6 ablation sweep → `ablation_results_sachs.json`, `constraint_quality.py` Step 6 Phase 3 → `constraint_quality_sachs.json`, `report.py` Step 6 Phase 4 → LaTeX under `tables/` and figures under `figures/`, `cost_report.py` Step 6 Phase 5 → `cost_report.json`). Most scripts write one committed JSON artefact; the Step 5 sweep persists incrementally to `experiments/discovery_results_sachs.json`; Step 6 persists incrementally to `experiments/ablation_results_sachs.json`.
 - `tables/` — Step 6 Phase 4 paper `tabular` snippets (`ablation_table.tex`, `constraint_quality.tex`).
 - `figures/` — Step 6 Phase 4 matplotlib outputs (each plot as `.pdf` and `.png`).
 - `utils/load_data.py` — dataset loaders (`load_sachs_dataset`, `load_lucas_dataset`).
@@ -79,7 +79,8 @@ Prefer `Taskfile.yml` targets when they exist:
 - `task ablation-sachs` — Step 6 canonical ablation sweep on Sachs → `experiments/ablation_results_sachs.json`.
 - `task constraint-quality-sachs` — Step 6 constraint quality (priors vs ground truth) → `experiments/constraint_quality_sachs.json`.
 - `task report-sachs` — Step 6 Phase 4 reporting → `tables/*.tex`, `figures/*.{pdf,png}` from committed JSON artefacts.
-- `task ablation` — Step 6 runner + constraint quality + report (full ablation pipeline excluding cost report).
+- `task cost-report` — Step 6 Phase 5 LLM cache token/cost summary → `experiments/cost_report.json`.
+- `task ablation` — Step 6 runner + constraint quality + cost report + report (full ablation pipeline).
 - `task reactome-coverage` — Sachs (+ DREAM4 smoke) Reactome coverage probe → `experiments/reactome_coverage.json`.
 - `task ground-sachs` — batched LLM grounding for Sachs columns → `experiments/grounding_sachs.json`.
 - `task oracle-priors-sachs` — Step 6 Phase 1 oracle ground-truth priors for Sachs → `experiments/oracle_priors_sachs.json`.

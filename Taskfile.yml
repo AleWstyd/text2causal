@@ -96,11 +96,17 @@ tasks:
     cmds:
       - uv run python -m experiments.report
 
+  cost-report:
+    desc: Aggregate LLM cache costs and tokens; writes experiments/cost_report.json
+    cmds:
+      - uv run python -m experiments.cost_report
+
   ablation:
-    desc: Step 6 full ablation pipeline (sweep, constraint quality, report)
+    desc: Step 6 full ablation pipeline (sweep, constraint quality, report, cost report)
     cmds:
       - uv run python -m experiments.runner
       - uv run python -m experiments.constraint_quality
+      - uv run python -m experiments.cost_report
       - uv run python -m experiments.report
 
   format:
