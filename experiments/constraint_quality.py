@@ -33,7 +33,10 @@ def _llm_coverage_numerator(
     for c in priors:
         if c.constraint_type in {"unknown", "no_context"}:
             continue
-        if allowed_unordered_pairs is not None and _unordered((c.var_a, c.var_b)) not in allowed_unordered_pairs:
+        if (
+            allowed_unordered_pairs is not None
+            and _unordered((c.var_a, c.var_b)) not in allowed_unordered_pairs
+        ):
             continue
         seen.add((c.var_a, c.var_b))
     return len(seen)
@@ -53,7 +56,10 @@ def _omnipath_directed_pair_count_from_json(
             continue
         va: str = str(item["var_a"])
         vb: str = str(item["var_b"])
-        if allowed_unordered_pairs is not None and _unordered((va, vb)) not in allowed_unordered_pairs:
+        if (
+            allowed_unordered_pairs is not None
+            and _unordered((va, vb)) not in allowed_unordered_pairs
+        ):
             continue
         if item.get("is_directed") is True:
             directed.add((va, vb))
@@ -126,14 +132,18 @@ def compute_quality(
     predicted_forbidden = _forbidden_predicted_edges(priors, confidence_threshold)
     if allowed_unordered_pairs is not None:
         predicted_forward = {
-            edge for edge in predicted_forward if _unordered(edge) in allowed_unordered_pairs
+            edge
+            for edge in predicted_forward
+            if _unordered(edge) in allowed_unordered_pairs
         }
         predicted_forbidden = {
             edge
             for edge in predicted_forbidden
             if _unordered(edge) in allowed_unordered_pairs
         }
-        true_edges = {edge for edge in true_edges if _unordered(edge) in allowed_unordered_pairs}
+        true_edges = {
+            edge for edge in true_edges if _unordered(edge) in allowed_unordered_pairs
+        }
 
     n_true = len(true_edges)
     n_fwd = len(predicted_forward)
@@ -274,7 +284,9 @@ def _reactome_edge_quality_cascade(
         "no_coverage": no_coverage_pairs,
     }
 
-    reactome_priors = load_priors(repo_root / "experiments" / "causal_priors_sachs.json")
+    reactome_priors = load_priors(
+        repo_root / "experiments" / "causal_priors_sachs.json"
+    )
     out: dict[str, Any] = {}
     for name, pairs in strata.items():
         out[name] = compute_quality(

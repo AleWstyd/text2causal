@@ -1,0 +1,1379 @@
+{
+  "ablation_path": "experiments/ablation_results_sachs.json",
+  "by_algorithm": {
+    "GES": {
+      "mean_c3_minus_c0_forward_rate": 0.4,
+      "n_edges": 5,
+      "n_edges_improved_by_c3": 2,
+      "n_edges_unchanged_by_c3": 3,
+      "n_edges_worsened_by_c3": 0
+    },
+    "LiNGAM": {
+      "mean_c3_minus_c0_forward_rate": -0.6,
+      "n_edges": 5,
+      "n_edges_improved_by_c3": 0,
+      "n_edges_unchanged_by_c3": 2,
+      "n_edges_worsened_by_c3": 3
+    },
+    "PC": {
+      "mean_c3_minus_c0_forward_rate": 0.2,
+      "n_edges": 5,
+      "n_edges_improved_by_c3": 1,
+      "n_edges_unchanged_by_c3": 4,
+      "n_edges_worsened_by_c3": 0
+    }
+  },
+  "conditions_compared": [
+    "C0",
+    "C2",
+    "C3",
+    "C4"
+  ],
+  "dataset": "sachs",
+  "default_prior_condition": "C3",
+  "per_edge": [
+    {
+      "algorithm": "PC",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C3",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C4",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 1.0,
+      "edge": [
+        "PIP2",
+        "PIP3"
+      ]
+    },
+    {
+      "algorithm": "GES",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C3",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C4",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 0.0,
+      "edge": [
+        "PIP2",
+        "PIP3"
+      ]
+    },
+    {
+      "algorithm": "LiNGAM",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "LiNGAM",
+          "condition": "C2",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "LiNGAM",
+          "condition": "C3",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "LiNGAM",
+          "condition": "C4",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP2",
+            "PIP3"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": -1.0,
+      "edge": [
+        "PIP2",
+        "PIP3"
+      ]
+    },
+    {
+      "algorithm": "PC",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 1.0,
+          "algorithm": "PC",
+          "condition": "C0",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "PC",
+          "condition": "C2",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "PC",
+          "condition": "C3",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "PC",
+          "condition": "C4",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 0.0,
+      "edge": [
+        "PIP3",
+        "pakts473"
+      ]
+    },
+    {
+      "algorithm": "GES",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 1.0,
+          "algorithm": "GES",
+          "condition": "C0",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "GES",
+          "condition": "C2",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C3",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C4",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 1.0,
+      "edge": [
+        "PIP3",
+        "pakts473"
+      ]
+    },
+    {
+      "algorithm": "LiNGAM",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C3",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C4",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "PIP3",
+            "pakts473"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 0.0,
+      "edge": [
+        "PIP3",
+        "pakts473"
+      ]
+    },
+    {
+      "algorithm": "PC",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C3",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C4",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 0.0,
+      "edge": [
+        "plcg",
+        "PIP2"
+      ]
+    },
+    {
+      "algorithm": "GES",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "GES",
+          "condition": "C3",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "GES",
+          "condition": "C4",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 0.0,
+      "edge": [
+        "plcg",
+        "PIP2"
+      ]
+    },
+    {
+      "algorithm": "LiNGAM",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "LiNGAM",
+          "condition": "C2",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "LiNGAM",
+          "condition": "C3",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "LiNGAM",
+          "condition": "C4",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "plcg",
+            "PIP2"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": -1.0,
+      "edge": [
+        "plcg",
+        "PIP2"
+      ]
+    },
+    {
+      "algorithm": "PC",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 1.0,
+          "algorithm": "PC",
+          "condition": "C0",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "PC",
+          "condition": "C2",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "PC",
+          "condition": "C3",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "PC",
+          "condition": "C4",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 0.0,
+      "edge": [
+        "pmek",
+        "p44/42"
+      ]
+    },
+    {
+      "algorithm": "GES",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C3",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C4",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 0.0,
+      "edge": [
+        "pmek",
+        "p44/42"
+      ]
+    },
+    {
+      "algorithm": "LiNGAM",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C3",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C4",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "pmek",
+            "p44/42"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 0.0,
+      "edge": [
+        "pmek",
+        "p44/42"
+      ]
+    },
+    {
+      "algorithm": "PC",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C3",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "PC",
+          "condition": "C4",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 0.0,
+      "edge": [
+        "praf",
+        "pmek"
+      ]
+    },
+    {
+      "algorithm": "GES",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 10
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 1.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C3",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "GES",
+          "condition": "C4",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": 1.0,
+      "edge": [
+        "praf",
+        "pmek"
+      ]
+    },
+    {
+      "algorithm": "LiNGAM",
+      "baseline_condition": "C0",
+      "conditions": [
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C0",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 0.0,
+          "algorithm": "LiNGAM",
+          "condition": "C2",
+          "counts": {
+            "absent": 0,
+            "bidirectional": 0,
+            "forward": 10,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 1.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "LiNGAM",
+          "condition": "C3",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        },
+        {
+          "absent_rate": 1.0,
+          "algorithm": "LiNGAM",
+          "condition": "C4",
+          "counts": {
+            "absent": 10,
+            "bidirectional": 0,
+            "forward": 0,
+            "reverse": 0
+          },
+          "edge": [
+            "praf",
+            "pmek"
+          ],
+          "forward_rate": 0.0,
+          "n_failed": 0,
+          "n_ok": 10,
+          "reverse_rate": 0.0
+        }
+      ],
+      "default_prior_condition": "C3",
+      "default_prior_forward_delta": -1.0,
+      "edge": [
+        "praf",
+        "pmek"
+      ]
+    }
+  ],
+  "quality_path": "experiments/constraint_quality_sachs.json",
+  "reaction_evidence_true_edges": [
+    [
+      "PIP2",
+      "PIP3"
+    ],
+    [
+      "PIP3",
+      "pakts473"
+    ],
+    [
+      "plcg",
+      "PIP2"
+    ],
+    [
+      "pmek",
+      "p44/42"
+    ],
+    [
+      "praf",
+      "pmek"
+    ]
+  ]
+}

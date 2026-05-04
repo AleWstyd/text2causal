@@ -41,6 +41,7 @@ class _AlgorithmicCell:
     threshold: float | None
     algorithm: str
     seed: int
+    lingam_prior_mode: str | None = None
 
 
 @dataclass(frozen=True)
@@ -75,18 +76,27 @@ def result_sort_key(row: dict[str, Any]) -> tuple[str, str, str, float, int]:
     )
 
 
-def result_row_key(row: dict[str, Any]) -> tuple[str, str, str, str, int]:
+def result_row_key(row: dict[str, Any]) -> tuple[str, str, str, str, int, str]:
     alg = row.get("algorithm")
     alg_part = "_llm_only" if alg is None else str(alg)
     seed = row.get("seed")
     seed_part = -1 if seed is None else int(seed)
+    lingam_mode = row.get("lingam_prior_mode")
+    lingam_part = "_none" if lingam_mode is None else str(lingam_mode)
     return (
         str(row["condition"]),
         str(row["priors_source"]),
         alg_part,
         _threshold_key(row["threshold"] if "threshold" in row else None),
         seed_part,
+        lingam_part,
     )
+
+
+def _result_row_base_key(row: dict[str, Any]) -> tuple[str, str, str, str, int]:
+    """Key without LiNGAM mode, used to retire stale canonical rows."""
+    key = result_row_key(row)
+    return key[:5]
 
 
 def _atomic_write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -175,6 +185,9 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
                         threshold=thr,
                         algorithm=alg,
                         seed=seed,
+                        lingam_prior_mode=(
+                            "forbidden_only" if alg == "LiNGAM" else None
+                        ),
                     )
                 )
     for alg in _ALGORITHMS:
@@ -323,21 +336,39 @@ def run_ablation(
         raw = json.loads(output_path.read_text(encoding="utf-8"))
         results = list(raw.get("results") or [])
 
-    existing = {result_row_key(r) for r in results}
-
-    def algo_key(c: _AlgorithmicCell) -> tuple[str, str, str, str, int]:
+    def algo_key(c: _AlgorithmicCell) -> tuple[str, str, str, str, int, str]:
         return (
             c.condition,
             c.priors_source,
             c.algorithm,
             _threshold_key(c.threshold),
             c.seed,
+            "_none" if c.lingam_prior_mode is None else c.lingam_prior_mode,
         )
+
+    expected_algo_keys = {algo_key(c) for c in algo_scheduled}
+    expected_keys = set(expected_algo_keys)
+    if cllm_scheduled is not None:
+        expected_keys.add(
+            ("C-LLM-only", "reactome_llm", "_llm_only", "none", -1, "_none")
+        )
+    expected_bases = {key[:5] for key in expected_keys}
+    # Step 6.7 changes the canonical Reactome+LLM LiNGAM rows from dense
+    # matrices to forbidden-only sparse matrices. Remove stale rows with the
+    # same condition/source/algorithm/threshold/seed but the old mode so the
+    # result file remains a true canonical matrix rather than an append-only log.
+    results = [
+        row
+        for row in results
+        if _result_row_base_key(row) not in expected_bases
+        or result_row_key(row) in expected_keys
+    ]
+    existing = {result_row_key(r) for r in results}
 
     pending_algo = [c for c in algo_scheduled if algo_key(c) not in existing]
     pending_cllm = False
     if cllm_scheduled is not None:
-        cllm_k = ("C-LLM-only", "reactome_llm", "_llm_only", "none", -1)
+        cllm_k = ("C-LLM-only", "reactome_llm", "_llm_only", "none", -1, "_none")
         if cllm_k not in existing:
             pending_cllm = True
 
@@ -376,6 +407,7 @@ def run_ablation(
             algorithm=cell.algorithm,
             threshold=cell.threshold,
             seed=cell.seed,
+            lingam_prior_mode=cell.lingam_prior_mode,
         )
         if cell.condition == "C0.5":
             res["condition"] = "C0.5"

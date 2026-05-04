@@ -82,7 +82,9 @@ def _pc_condition_summary(results: list[dict[str, Any]]) -> dict[str, Any]:
 
     if c0_edges is not None:
         for condition in CONDITIONS:
-            edge_tuple = tuple(tuple(edge) for edge in by_condition[condition]["edge_set"])
+            edge_tuple = tuple(
+                tuple(edge) for edge in by_condition[condition]["edge_set"]
+            )
             by_condition[condition]["identical_to_c0"] = edge_tuple == c0_edges
 
     return by_condition

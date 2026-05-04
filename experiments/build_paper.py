@@ -15,11 +15,23 @@ def main() -> None:
     latexmk = shutil.which("latexmk")
     pdflatex = shutil.which("pdflatex")
     if latexmk:
-        subprocess.run([latexmk, "-pdf", "-interaction=nonstopmode", "main.tex"], cwd=paper.parent, check=True)
+        subprocess.run(
+            [latexmk, "-pdf", "-interaction=nonstopmode", "main.tex"],
+            cwd=paper.parent,
+            check=True,
+        )
         return
     if pdflatex:
-        subprocess.run([pdflatex, "-interaction=nonstopmode", "main.tex"], cwd=paper.parent, check=True)
-        subprocess.run([pdflatex, "-interaction=nonstopmode", "main.tex"], cwd=paper.parent, check=True)
+        subprocess.run(
+            [pdflatex, "-interaction=nonstopmode", "main.tex"],
+            cwd=paper.parent,
+            check=True,
+        )
+        subprocess.run(
+            [pdflatex, "-interaction=nonstopmode", "main.tex"],
+            cwd=paper.parent,
+            check=True,
+        )
         return
     required = [
         root / "paper" / "appendix.tex",

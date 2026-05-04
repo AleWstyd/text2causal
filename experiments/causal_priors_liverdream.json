@@ -1,0 +1,473 @@
+{
+  "conflicts": [],
+  "dataset": "liverdream",
+  "evidence_layers": [
+    "reaction",
+    "co_pathway",
+    "regulator_chain",
+    "co_complex"
+  ],
+  "n_conflicts": 0,
+  "n_high_confidence": 2,
+  "n_no_context": 26,
+  "n_pairs_total": 42,
+  "n_processed": 42,
+  "n_with_context": 16,
+  "no_context_pairs": [
+    [
+      "akt",
+      "ikb"
+    ],
+    [
+      "akt",
+      "jnk12"
+    ],
+    [
+      "akt",
+      "mek12"
+    ],
+    [
+      "erk12",
+      "hsp27"
+    ],
+    [
+      "erk12",
+      "ikb"
+    ],
+    [
+      "hsp27",
+      "erk12"
+    ],
+    [
+      "hsp27",
+      "ikb"
+    ],
+    [
+      "hsp27",
+      "jnk12"
+    ],
+    [
+      "hsp27",
+      "mek12"
+    ],
+    [
+      "ikb",
+      "akt"
+    ],
+    [
+      "ikb",
+      "erk12"
+    ],
+    [
+      "ikb",
+      "hsp27"
+    ],
+    [
+      "ikb",
+      "jnk12"
+    ],
+    [
+      "ikb",
+      "mek12"
+    ],
+    [
+      "ikb",
+      "p38"
+    ],
+    [
+      "jnk12",
+      "akt"
+    ],
+    [
+      "jnk12",
+      "hsp27"
+    ],
+    [
+      "jnk12",
+      "ikb"
+    ],
+    [
+      "jnk12",
+      "mek12"
+    ],
+    [
+      "mek12",
+      "akt"
+    ],
+    [
+      "mek12",
+      "hsp27"
+    ],
+    [
+      "mek12",
+      "ikb"
+    ],
+    [
+      "mek12",
+      "jnk12"
+    ],
+    [
+      "mek12",
+      "p38"
+    ],
+    [
+      "p38",
+      "ikb"
+    ],
+    [
+      "p38",
+      "mek12"
+    ]
+  ],
+  "pairs": [
+    {
+      "cause": "unknown",
+      "confidence": 0.1,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "Only pathway co-participation is provided, without specific reactions indicating input, output, catalytic, or regulatory roles. Without a directional relationship in a known reaction, causality cannot be established.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-6811558",
+        "R-HSA-9634638"
+      ],
+      "var_a": "akt",
+      "var_b": "erk12"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "The provided context only indicates that both entities co-participate in the pathway R-HSA-9009391, without specifying any reactions or roles that could establish a causal direction. As no input/output/catalyst/regulator relationships are available, direction cannot be determined.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "akt",
+      "var_b": "hsp27"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "The provided pathway contexts show both AKT and p38 co-participating, but no reaction-level data indicates a direct upstream-downstream relationship. They likely regulate common targets (KSRP, MITF) in parallel, with no established causal direction between them.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-450604",
+        "R-HSA-9824585"
+      ],
+      "var_a": "akt",
+      "var_b": "p38"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.1,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "The provided information only indicates that erk12 and akt co-participate in two Reactome pathways, without specifying any directed biochemical reactions (input/output, catalysis, or regulation). Without reaction-level causal signals, the direction cannot be established.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-6811558",
+        "R-HSA-9634638"
+      ],
+      "var_a": "erk12",
+      "var_b": "akt"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "Both erk12 and jnk12 act as catalysts in the same reaction (R-HSA-168053), with no evidence of one acting as input, output, or regulator of the other. No causal direction can be inferred.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "erk12",
+      "var_b": "jnk12"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [
+        "R-HSA-5674496"
+      ],
+      "effect": "erk12",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 249,
+      "reasoning": "Multiple reactions show mek12 acting as a catalyst or input for reactions where erk12 is output (e.g., MAP2Ks phosphorylate MAPKs), indicating mek12 \u2192 erk12 activation, consistent with the canonical MAPK cascade. A single reaction shows erk12 in a catalyst complex phosphorylating mek12, representing a feedback loop, but this does not outweigh the primary direction.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-109860",
+        "R-HSA-109862",
+        "R-HSA-5672973",
+        "R-HSA-5674373",
+        "R-HSA-6802910",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-9610156",
+        "R-HSA-9652165"
+      ],
+      "var_a": "erk12",
+      "var_b": "mek12"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.3,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [
+        "R-HSA-6800434"
+      ],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 10,
+      "reasoning": "ERK1/2 and p38 co-participate in multiple pathways but no reaction establishes a clear upstream-downstream relationship. In R-HSA-168053 both act as catalysts, and in R-HSA-6800434 they appear as both inputs and outputs inconsistently, contradicting any directional inference.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-168053"
+      ],
+      "var_a": "erk12",
+      "var_b": "p38"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "Only a pathway name is provided; no specific reactions detail how hsp27 and akt interact, so causal direction cannot be determined.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "hsp27",
+      "var_b": "akt"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "Both hsp27 and p38 participate in the VEGFA-VEGFR2 Pathway, but no specific reaction details (input/output/catalyst/regulator) are provided to determine a causal direction between them. Therefore, the direction is unknown.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "hsp27",
+      "var_b": "p38"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 4,
+      "reasoning": "Both jnk12 and erk12 act only as catalysts in the same reaction R-HSA-168053, providing no direct input-to-output relationship. No provided reactions show one entity regulating production or activity of the other, so the causal direction cannot be determined.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "jnk12",
+      "var_b": "erk12"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 3,
+      "reasoning": "Both jnk12 and p38 act as catalysts in the same reaction (R-HSA-168053), phosphorylating ATF-2, but there is no evidence of one regulating or producing the other. Their co-participation as parallel kinases does not establish a direct causal direction.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-168053"
+      ],
+      "var_a": "jnk12",
+      "var_b": "p38"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 0.95,
+      "conflict": null,
+      "constraint_type": "hard_required",
+      "contradicting_reactions": [
+        "R-HSA-5674496"
+      ],
+      "effect": "erk12",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 249,
+      "reasoning": "mek12 acts as a catalyst in numerous reactions producing phosphorylated erk12, consistent with the canonical MAPK pathway where MEK kinases phosphorylate and activate ERK kinases. A single negative feedback reaction (R-HSA-5674496) does not challenge this well-established forward direction.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-109860",
+        "R-HSA-109862",
+        "R-HSA-5672973",
+        "R-HSA-5674373",
+        "R-HSA-6802910",
+        "R-HSA-6802921",
+        "R-HSA-6802922",
+        "R-HSA-9610156",
+        "R-HSA-9652165"
+      ],
+      "var_a": "mek12",
+      "var_b": "erk12"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 2,
+      "reasoning": "Only pathway-level co-participation is provided for 'R-HSA-450604' and 'R-HSA-9824585'. No specific reaction roles (input, output, catalyst, regulator) are given, so causal direction cannot be inferred.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-450604",
+        "R-HSA-9824585"
+      ],
+      "var_a": "p38",
+      "var_b": "akt"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.3,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [
+        "R-HSA-6800434"
+      ],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 10,
+      "reasoning": "Both proteins act as co-catalysts in reaction R-HSA-168053, which does not establish a causal direction between them. In reaction R-HSA-6800434, both are annotated with multiple and conflicting input/output roles, precluding reliable directionality. Thus, causal direction is unknown.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-168053"
+      ],
+      "var_a": "p38",
+      "var_b": "erk12"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.0,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 1,
+      "reasoning": "No specific reactions provided, so we cannot determine the causal direction from the pathway co-participation alone.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [],
+      "var_a": "p38",
+      "var_b": "hsp27"
+    },
+    {
+      "cause": "unknown",
+      "confidence": 0.2,
+      "conflict": null,
+      "constraint_type": "unknown",
+      "contradicting_reactions": [],
+      "effect": "unknown",
+      "n_passes": 2,
+      "notes": [],
+      "reactome_context_size": 3,
+      "reasoning": "Both p38 and jnk12 act as catalysts in the same reaction (R-HSA-168053) phosphorylating ATF-2, with no direct regulatory interaction between them. Co-participation in pathways does not establish a causal direction.",
+      "served_models": [
+        "deepseek-ai/DeepSeek-V4-Pro"
+      ],
+      "supporting_reactions": [
+        "R-HSA-168053"
+      ],
+      "var_a": "p38",
+      "var_b": "jnk12"
+    }
+  ],
+  "schema_version": "step04.causal_priors.v1",
+  "served_models": {
+    "deepseek-ai/DeepSeek-V4-Pro": 32
+  },
+  "vocabulary": [
+    "akt",
+    "erk12",
+    "hsp27",
+    "ikb",
+    "jnk12",
+    "mek12",
+    "p38"
+  ]
+}

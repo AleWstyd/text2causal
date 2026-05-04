@@ -224,7 +224,9 @@ def write_constraint_quality_table(quality: dict[str, Any], output_path: Path) -
     output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def write_aupr_extension_table(results: list[dict[str, Any]], output_path: Path) -> None:
+def write_aupr_extension_table(
+    results: list[dict[str, Any]], output_path: Path
+) -> None:
     """Write PC-only AUPR/F1 snippet from ablation rows."""
     rows = [
         row
@@ -244,7 +246,8 @@ def write_aupr_extension_table(results: list[dict[str, Any]], output_path: Path)
         vals_aupr = [
             float((row.get("metrics") or {})["aupr"])
             for row in rows
-            if row.get("condition") == condition and "aupr" in (row.get("metrics") or {})
+            if row.get("condition") == condition
+            and "aupr" in (row.get("metrics") or {})
         ]
         vals_f1 = [
             float((row.get("metrics") or {})["f1"])
@@ -646,7 +649,9 @@ def figure_coverage_conditional_quality(
     ax.legend(loc="upper right", fontsize=8)
     fig.tight_layout()
     for ext in ("pdf", "png"):
-        fig.savefig(output_dir / f"coverage_conditional_quality.{ext}", bbox_inches="tight")
+        fig.savefig(
+            output_dir / f"coverage_conditional_quality.{ext}", bbox_inches="tight"
+        )
     plt.close(fig)
 
 

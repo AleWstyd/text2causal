@@ -38,7 +38,9 @@ class LingamSweepCell:
 def _atomic_write_json(path: Path, payload: dict[str, Any]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    tmp.write_text(
+        json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8"
+    )
     os.replace(tmp, path)
 
 
@@ -97,7 +99,8 @@ def _best_ok(results: list[dict[str, Any]]) -> dict[str, Any] | None:
     ok_rows = [
         row
         for row in results
-        if row.get("status") == "ok" and (row.get("metrics") or {}).get("f1") is not None
+        if row.get("status") == "ok"
+        and (row.get("metrics") or {}).get("f1") is not None
     ]
     if not ok_rows:
         return None

@@ -1,0 +1,32 @@
+{
+  "claims_kept": [
+    {
+      "cause": "mek12",
+      "confidence": 0.95,
+      "constraint_type": "hard_required",
+      "effect": "erk12"
+    }
+  ],
+  "dropped_due_to_cycle": [],
+  "edge_count": 1,
+  "is_acyclic": true,
+  "n_above_threshold": 2,
+  "n_after_constraint_filter": 2,
+  "n_claims_in_priors": 16,
+  "n_claims_kept": 1,
+  "n_dropped_due_to_cycle": 0,
+  "n_dropped_other": 0,
+  "node_count": 7,
+  "schema_version": "step04.dag_llm_only.v1",
+  "source_priors_hash": "1afcb87fbb1534a19faaeed62379c11d441e87c3a64c58aea9f2153acc5954d3",
+  "threshold": 0.7,
+  "variable_names": [
+    "akt",
+    "mek12",
+    "erk12",
+    "ikb",
+    "jnk12",
+    "p38",
+    "hsp27"
+  ]
+}

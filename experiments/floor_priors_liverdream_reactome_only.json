@@ -1,0 +1,244 @@
+{
+  "confidence_formula": "min(1.0, n_sources / 3.0)",
+  "constraint_rule": "confidence >= 0.9 -> hard_required; 0.6 <= confidence < 0.9 -> soft_prior; otherwise unknown. See reasoning/_constraint_rule.py.",
+  "dataset": "liverdream",
+  "family_aggregation_rule": "A directed OmniPath edge from any UniProt member of var_a's grounding to any UniProt member of var_b's grounding counts as the family-level edge var_a \u2192 var_b. The contributing primary sources are unioned across all member-pair rows.",
+  "n_hard_required": 0,
+  "n_pairs_no_edge": 40,
+  "n_pairs_skipped_metabolite": 0,
+  "n_pairs_total": 42,
+  "n_pairs_with_edge": 2,
+  "n_soft_prior": 0,
+  "n_unknown_kept": 2,
+  "no_edge_pairs": [
+    [
+      "akt",
+      "erk12"
+    ],
+    [
+      "akt",
+      "hsp27"
+    ],
+    [
+      "akt",
+      "ikb"
+    ],
+    [
+      "akt",
+      "jnk12"
+    ],
+    [
+      "akt",
+      "mek12"
+    ],
+    [
+      "akt",
+      "p38"
+    ],
+    [
+      "erk12",
+      "akt"
+    ],
+    [
+      "erk12",
+      "hsp27"
+    ],
+    [
+      "erk12",
+      "ikb"
+    ],
+    [
+      "erk12",
+      "jnk12"
+    ],
+    [
+      "erk12",
+      "p38"
+    ],
+    [
+      "hsp27",
+      "akt"
+    ],
+    [
+      "hsp27",
+      "erk12"
+    ],
+    [
+      "hsp27",
+      "ikb"
+    ],
+    [
+      "hsp27",
+      "jnk12"
+    ],
+    [
+      "hsp27",
+      "mek12"
+    ],
+    [
+      "hsp27",
+      "p38"
+    ],
+    [
+      "ikb",
+      "akt"
+    ],
+    [
+      "ikb",
+      "erk12"
+    ],
+    [
+      "ikb",
+      "hsp27"
+    ],
+    [
+      "ikb",
+      "jnk12"
+    ],
+    [
+      "ikb",
+      "mek12"
+    ],
+    [
+      "ikb",
+      "p38"
+    ],
+    [
+      "jnk12",
+      "akt"
+    ],
+    [
+      "jnk12",
+      "erk12"
+    ],
+    [
+      "jnk12",
+      "hsp27"
+    ],
+    [
+      "jnk12",
+      "ikb"
+    ],
+    [
+      "jnk12",
+      "mek12"
+    ],
+    [
+      "jnk12",
+      "p38"
+    ],
+    [
+      "mek12",
+      "akt"
+    ],
+    [
+      "mek12",
+      "hsp27"
+    ],
+    [
+      "mek12",
+      "ikb"
+    ],
+    [
+      "mek12",
+      "jnk12"
+    ],
+    [
+      "mek12",
+      "p38"
+    ],
+    [
+      "p38",
+      "akt"
+    ],
+    [
+      "p38",
+      "erk12"
+    ],
+    [
+      "p38",
+      "hsp27"
+    ],
+    [
+      "p38",
+      "ikb"
+    ],
+    [
+      "p38",
+      "jnk12"
+    ],
+    [
+      "p38",
+      "mek12"
+    ]
+  ],
+  "pairs": [
+    {
+      "cause": "erk12",
+      "confidence": 0.3333,
+      "consensus_sign": "conflicting",
+      "constraint_type": "unknown",
+      "effect": "mek12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "P36507"
+        ],
+        [
+          "P27361",
+          "Q02750"
+        ],
+        [
+          "P28482",
+          "P36507"
+        ],
+        [
+          "P28482",
+          "Q02750"
+        ]
+      ],
+      "n_sources": 1,
+      "sources": [
+        "Reactome_ProtMapper"
+      ],
+      "var_a": "erk12",
+      "var_b": "mek12"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 0.3333,
+      "consensus_sign": "activates",
+      "constraint_type": "unknown",
+      "effect": "erk12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P36507",
+          "P27361"
+        ],
+        [
+          "P36507",
+          "P28482"
+        ],
+        [
+          "Q02750",
+          "P27361"
+        ],
+        [
+          "Q02750",
+          "P28482"
+        ]
+      ],
+      "n_sources": 1,
+      "sources": [
+        "Reactome_ProtMapper"
+      ],
+      "var_a": "mek12",
+      "var_b": "erk12"
+    }
+  ],
+  "schema_version": "step04.floor.v1",
+  "skipped_metabolite_pairs": [],
+  "source_filter": "reactome_only"
+}

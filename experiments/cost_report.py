@@ -294,7 +294,10 @@ def _round_cost_tree(x: Any) -> Any:
 
 
 def main() -> None:
-    entries = walk_cache(REPO_ROOT / "cache" / "llm")
+    cache_dirs = [REPO_ROOT / "cache" / "llm", REPO_ROOT / "cache" / "llm_adversarial"]
+    entries: list[dict[str, Any]] = []
+    for cache_dir in cache_dirs:
+        entries.extend(walk_cache(cache_dir))
     summary = aggregate(entries)
     approx_clock = _approx_wall_clock_seconds(summary["by_stage"])
     headline = _build_headline(summary)
@@ -304,6 +307,7 @@ def main() -> None:
         "price_per_m_input_usd": PRICE_PER_M_INPUT_USD,
         "price_per_m_output_usd": PRICE_PER_M_OUTPUT_USD,
         "price_source_url": PRICE_SOURCE_URL,
+        "cache_dirs": [path.as_posix() for path in cache_dirs if path.is_dir()],
         "summary": summary,
         "approx_wall_clock_seconds": approx_clock,
         "latency_disclosure": _LATENCY_DISCLOSURE,

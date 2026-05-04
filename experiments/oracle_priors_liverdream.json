@@ -1,0 +1,50 @@
+{
+  "dataset": "liverdream",
+  "pairs": [
+    {
+      "cause": "akt",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "ikb",
+      "source": "oracle",
+      "var_a": "akt",
+      "var_b": "ikb"
+    },
+    {
+      "cause": "akt",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "mek12",
+      "source": "oracle",
+      "var_a": "akt",
+      "var_b": "mek12"
+    },
+    {
+      "cause": "erk12",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "hsp27",
+      "source": "oracle",
+      "var_a": "erk12",
+      "var_b": "hsp27"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "erk12",
+      "source": "oracle",
+      "var_a": "mek12",
+      "var_b": "erk12"
+    },
+    {
+      "cause": "p38",
+      "confidence": 1.0,
+      "constraint_type": "hard_required",
+      "effect": "hsp27",
+      "source": "oracle",
+      "var_a": "p38",
+      "var_b": "hsp27"
+    }
+  ]
+}

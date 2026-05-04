@@ -111,10 +111,30 @@ tasks:
     cmds:
       - uv run python -m experiments.diagnose_pc_invariance
 
+  per-edge-attribution-sachs:
+    desc: Step 6.7 — per-edge attribution for Sachs reaction-evidence true edges
+    cmds:
+      - uv run python -m experiments.per_edge_attribution_sachs
+
   dream4-psn:
     desc: Step 7 — DREAM4 PSN fallback synthetic dataset + ablation/report artefacts
     cmds:
       - uv run python -m experiments.run_synthetic_dream4_psn
+
+  liverdream:
+    desc: Step 7' — real public LiverDREAM / CellNOpt second-dataset pipeline
+    cmds:
+      - uv run python -m experiments.run_liverdream_real
+
+  multi-llm-agreement:
+    desc: Robustness — compare Reactome-context priors across LLM models
+    cmds:
+      - uv run python -m experiments.multi_llm_agreement
+
+  adversarial-sachs:
+    desc: Robustness — adversarial Sachs Reactome-context sanity test
+    cmds:
+      - uv run python -m experiments.adversarial_sanity_sachs
 
   paper:
     desc: Compile paper/main.tex when LaTeX is available; otherwise validate paper inputs

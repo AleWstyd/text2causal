@@ -1,0 +1,863 @@
+{
+  "confidence_formula": "min(1.0, n_sources / 3.0)",
+  "constraint_rule": "confidence >= 0.9 -> hard_required; 0.6 <= confidence < 0.9 -> soft_prior; otherwise unknown. See reasoning/_constraint_rule.py.",
+  "dataset": "liverdream",
+  "family_aggregation_rule": "A directed OmniPath edge from any UniProt member of var_a's grounding to any UniProt member of var_b's grounding counts as the family-level edge var_a \u2192 var_b. The contributing primary sources are unioned across all member-pair rows.",
+  "n_hard_required": 17,
+  "n_pairs_no_edge": 16,
+  "n_pairs_skipped_metabolite": 0,
+  "n_pairs_total": 42,
+  "n_pairs_with_edge": 26,
+  "n_soft_prior": 6,
+  "n_unknown_kept": 3,
+  "no_edge_pairs": [
+    [
+      "akt",
+      "mek12"
+    ],
+    [
+      "akt",
+      "p38"
+    ],
+    [
+      "hsp27",
+      "erk12"
+    ],
+    [
+      "hsp27",
+      "jnk12"
+    ],
+    [
+      "hsp27",
+      "mek12"
+    ],
+    [
+      "hsp27",
+      "p38"
+    ],
+    [
+      "ikb",
+      "akt"
+    ],
+    [
+      "ikb",
+      "erk12"
+    ],
+    [
+      "ikb",
+      "hsp27"
+    ],
+    [
+      "ikb",
+      "jnk12"
+    ],
+    [
+      "ikb",
+      "mek12"
+    ],
+    [
+      "ikb",
+      "p38"
+    ],
+    [
+      "jnk12",
+      "hsp27"
+    ],
+    [
+      "jnk12",
+      "ikb"
+    ],
+    [
+      "mek12",
+      "akt"
+    ],
+    [
+      "mek12",
+      "ikb"
+    ]
+  ],
+  "pairs": [
+    {
+      "cause": "akt",
+      "confidence": 0.6667,
+      "consensus_sign": "activates",
+      "constraint_type": "soft_prior",
+      "effect": "erk12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "P27361"
+        ],
+        [
+          "P31749",
+          "P28482"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "SIGNOR",
+        "Wang"
+      ],
+      "var_a": "akt",
+      "var_b": "erk12"
+    },
+    {
+      "cause": "akt",
+      "confidence": 1.0,
+      "consensus_sign": "inhibits",
+      "constraint_type": "hard_required",
+      "effect": "hsp27",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "P04792"
+        ],
+        [
+          "P31751",
+          "P04792"
+        ]
+      ],
+      "n_sources": 14,
+      "sources": [
+        "Adhesome",
+        "HINT",
+        "HPRD_MIMP",
+        "Lit-BM-17",
+        "MIMP",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "Sparser_ProtMapper",
+        "iPTMnet",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "akt",
+      "var_b": "hsp27"
+    },
+    {
+      "cause": "akt",
+      "confidence": 0.3333,
+      "consensus_sign": "unknown",
+      "constraint_type": "unknown",
+      "effect": "ikb",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "P25963"
+        ]
+      ],
+      "n_sources": 1,
+      "sources": [
+        "Macrophage"
+      ],
+      "var_a": "akt",
+      "var_b": "ikb"
+    },
+    {
+      "cause": "akt",
+      "confidence": 0.6667,
+      "consensus_sign": "conflicting",
+      "constraint_type": "soft_prior",
+      "effect": "jnk12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P31749",
+          "P45983"
+        ],
+        [
+          "P31751",
+          "P45983"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "InnateDB",
+        "Wang"
+      ],
+      "var_a": "akt",
+      "var_b": "jnk12"
+    },
+    {
+      "cause": "erk12",
+      "confidence": 1.0,
+      "consensus_sign": "unknown",
+      "constraint_type": "hard_required",
+      "effect": "akt",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P28482",
+          "P31749"
+        ]
+      ],
+      "n_sources": 3,
+      "sources": [
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "iPTMnet"
+      ],
+      "var_a": "erk12",
+      "var_b": "akt"
+    },
+    {
+      "cause": "erk12",
+      "confidence": 0.3333,
+      "consensus_sign": "activates",
+      "constraint_type": "unknown",
+      "effect": "hsp27",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P28482",
+          "P04792"
+        ]
+      ],
+      "n_sources": 1,
+      "sources": [
+        "Wang"
+      ],
+      "var_a": "erk12",
+      "var_b": "hsp27"
+    },
+    {
+      "cause": "erk12",
+      "confidence": 0.3333,
+      "consensus_sign": "inhibits",
+      "constraint_type": "unknown",
+      "effect": "ikb",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "P25963"
+        ],
+        [
+          "P28482",
+          "P25963"
+        ]
+      ],
+      "n_sources": 1,
+      "sources": [
+        "Wang"
+      ],
+      "var_a": "erk12",
+      "var_b": "ikb"
+    },
+    {
+      "cause": "erk12",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "jnk12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "P45983"
+        ],
+        [
+          "P28482",
+          "P45983"
+        ]
+      ],
+      "n_sources": 6,
+      "sources": [
+        "Adhesome",
+        "Cui2007",
+        "HPRD",
+        "PhosphoNetworks",
+        "PhosphoPoint",
+        "Wang"
+      ],
+      "var_a": "erk12",
+      "var_b": "jnk12"
+    },
+    {
+      "cause": "erk12",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "mek12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "P36507"
+        ],
+        [
+          "P27361",
+          "Q02750"
+        ],
+        [
+          "P28482",
+          "P36507"
+        ],
+        [
+          "P28482",
+          "Q02750"
+        ]
+      ],
+      "n_sources": 35,
+      "sources": [
+        "CancerCellMap",
+        "ELM",
+        "HINT",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "InnateDB",
+        "IntAct",
+        "KEA",
+        "LMPID",
+        "Lit-BM-17",
+        "MIMP",
+        "NCI-PID_ProtMapper",
+        "NetPath",
+        "PhosphoNetworks",
+        "PhosphoPoint",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "PhosphoSite_noref",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "RLIMS-P_ProtMapper",
+        "Reactome_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "Sparser_ProtMapper",
+        "Wang",
+        "iPTMnet",
+        "phosphoELM",
+        "phosphoELM_KEA",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "erk12",
+      "var_b": "mek12"
+    },
+    {
+      "cause": "erk12",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "p38",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P27361",
+          "Q16539"
+        ],
+        [
+          "P28482",
+          "Q16539"
+        ]
+      ],
+      "n_sources": 11,
+      "sources": [
+        "CancerCellMap",
+        "HINT",
+        "HPRD",
+        "InnateDB",
+        "IntAct",
+        "Lit-BM-17",
+        "NetPath",
+        "PhosphoPoint",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "erk12",
+      "var_b": "p38"
+    },
+    {
+      "cause": "hsp27",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "akt",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P04792",
+          "P31749"
+        ]
+      ],
+      "n_sources": 7,
+      "sources": [
+        "Adhesome",
+        "HINT",
+        "Lit-BM-17",
+        "ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "Sparser_ProtMapper"
+      ],
+      "var_a": "hsp27",
+      "var_b": "akt"
+    },
+    {
+      "cause": "hsp27",
+      "confidence": 1.0,
+      "consensus_sign": "inhibits",
+      "constraint_type": "hard_required",
+      "effect": "ikb",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P04792",
+          "P25963"
+        ]
+      ],
+      "n_sources": 8,
+      "sources": [
+        "CancerCellMap",
+        "HINT",
+        "HPRD",
+        "InnateDB",
+        "NetPath",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "hsp27",
+      "var_b": "ikb"
+    },
+    {
+      "cause": "jnk12",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "akt",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P45983",
+          "P31749"
+        ],
+        [
+          "P45984",
+          "P31749"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper"
+      ],
+      "var_a": "jnk12",
+      "var_b": "akt"
+    },
+    {
+      "cause": "jnk12",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "erk12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P45983",
+          "P27361"
+        ],
+        [
+          "P45983",
+          "P28482"
+        ],
+        [
+          "P45984",
+          "P27361"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "Adhesome",
+        "Cui2007",
+        "HPRD",
+        "Wang"
+      ],
+      "var_a": "jnk12",
+      "var_b": "erk12"
+    },
+    {
+      "cause": "jnk12",
+      "confidence": 1.0,
+      "consensus_sign": "inhibits",
+      "constraint_type": "hard_required",
+      "effect": "mek12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P45983",
+          "Q02750"
+        ],
+        [
+          "P45984",
+          "P36507"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "Cui2007",
+        "KEA",
+        "NetworKIN_KEA",
+        "Wang"
+      ],
+      "var_a": "jnk12",
+      "var_b": "mek12"
+    },
+    {
+      "cause": "jnk12",
+      "confidence": 0.6667,
+      "consensus_sign": "activates",
+      "constraint_type": "soft_prior",
+      "effect": "p38",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P45983",
+          "Q16539"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "HPRD",
+        "PhosphoPoint"
+      ],
+      "var_a": "jnk12",
+      "var_b": "p38"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "erk12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P36507",
+          "P27361"
+        ],
+        [
+          "P36507",
+          "P28482"
+        ],
+        [
+          "Q02750",
+          "P27361"
+        ],
+        [
+          "Q02750",
+          "P28482"
+        ]
+      ],
+      "n_sources": 43,
+      "sources": [
+        "ACSN",
+        "BEL-Large-Corpus_ProtMapper",
+        "CancerCellMap",
+        "Cui2007",
+        "ELM",
+        "HINT",
+        "HPRD",
+        "HPRD-phos",
+        "HPRD_KEA",
+        "HPRD_MIMP",
+        "InnateDB",
+        "IntAct",
+        "KEA",
+        "KEGG-MEDICUS",
+        "LMPID",
+        "Lit-BM-17",
+        "MIMP",
+        "Macrophage",
+        "NCI-PID_ProtMapper",
+        "NetPath",
+        "PhosphoNetworks",
+        "PhosphoPoint",
+        "PhosphoSite",
+        "PhosphoSite_KEA",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "PhosphoSite_noref",
+        "ProtMapper",
+        "REACH_ProtMapper",
+        "RLIMS-P_ProtMapper",
+        "Reactome_ProtMapper",
+        "SIGNOR",
+        "SIGNOR_ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "SignaLink3",
+        "Sparser_ProtMapper",
+        "Wang",
+        "dbPTM",
+        "iPTMnet",
+        "phosphoELM",
+        "phosphoELM_KEA",
+        "phosphoELM_MIMP"
+      ],
+      "var_a": "mek12",
+      "var_b": "erk12"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 0.6667,
+      "consensus_sign": "activates",
+      "constraint_type": "soft_prior",
+      "effect": "hsp27",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P36507",
+          "P04792"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "Cui2007",
+        "Wang"
+      ],
+      "var_a": "mek12",
+      "var_b": "hsp27"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "jnk12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P36507",
+          "P45983"
+        ],
+        [
+          "P36507",
+          "P45984"
+        ],
+        [
+          "Q02750",
+          "P45983"
+        ],
+        [
+          "Q02750",
+          "P45984"
+        ]
+      ],
+      "n_sources": 3,
+      "sources": [
+        "Cui2007",
+        "KEGG-MEDICUS",
+        "Wang"
+      ],
+      "var_a": "mek12",
+      "var_b": "jnk12"
+    },
+    {
+      "cause": "mek12",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "p38",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "P36507",
+          "Q16539"
+        ],
+        [
+          "Q02750",
+          "Q16539"
+        ]
+      ],
+      "n_sources": 9,
+      "sources": [
+        "CancerCellMap",
+        "HPRD",
+        "KEGG-MEDICUS",
+        "NCI-PID_ProtMapper",
+        "NetPath",
+        "ProtMapper",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "mek12",
+      "var_b": "p38"
+    },
+    {
+      "cause": "p38",
+      "confidence": 0.6667,
+      "consensus_sign": "unknown",
+      "constraint_type": "soft_prior",
+      "effect": "akt",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "Q16539",
+          "P31751"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "ProtMapper",
+        "SIGNOR_ProtMapper"
+      ],
+      "var_a": "p38",
+      "var_b": "akt"
+    },
+    {
+      "cause": "p38",
+      "confidence": 1.0,
+      "consensus_sign": "conflicting",
+      "constraint_type": "hard_required",
+      "effect": "erk12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "Q16539",
+          "P27361"
+        ],
+        [
+          "Q16539",
+          "P28482"
+        ]
+      ],
+      "n_sources": 11,
+      "sources": [
+        "ACSN",
+        "CancerCellMap",
+        "HINT",
+        "HPRD",
+        "InnateDB",
+        "IntAct",
+        "Lit-BM-17",
+        "NetPath",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "p38",
+      "var_b": "erk12"
+    },
+    {
+      "cause": "p38",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "hsp27",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "Q16539",
+          "P04792"
+        ]
+      ],
+      "n_sources": 7,
+      "sources": [
+        "MIMP",
+        "PhosphoSite_MIMP",
+        "PhosphoSite_ProtMapper",
+        "PhosphoSite_noref",
+        "ProtMapper",
+        "Wang",
+        "iPTMnet"
+      ],
+      "var_a": "p38",
+      "var_b": "hsp27"
+    },
+    {
+      "cause": "p38",
+      "confidence": 1.0,
+      "consensus_sign": "inhibits",
+      "constraint_type": "hard_required",
+      "effect": "ikb",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "Q16539",
+          "P25963"
+        ]
+      ],
+      "n_sources": 4,
+      "sources": [
+        "Macrophage",
+        "NCI-PID_ProtMapper",
+        "ProtMapper",
+        "Wang"
+      ],
+      "var_a": "p38",
+      "var_b": "ikb"
+    },
+    {
+      "cause": "p38",
+      "confidence": 0.6667,
+      "consensus_sign": "activates",
+      "constraint_type": "soft_prior",
+      "effect": "jnk12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "Q16539",
+          "P45984"
+        ]
+      ],
+      "n_sources": 2,
+      "sources": [
+        "Cui2007",
+        "Wang"
+      ],
+      "var_a": "p38",
+      "var_b": "jnk12"
+    },
+    {
+      "cause": "p38",
+      "confidence": 1.0,
+      "consensus_sign": "activates",
+      "constraint_type": "hard_required",
+      "effect": "mek12",
+      "is_directed": true,
+      "member_edges": [
+        [
+          "Q16539",
+          "P36507"
+        ],
+        [
+          "Q16539",
+          "Q02750"
+        ]
+      ],
+      "n_sources": 9,
+      "sources": [
+        "ACSN",
+        "CancerCellMap",
+        "Cui2007",
+        "HPRD",
+        "NetPath",
+        "PhosphoPoint",
+        "SPIKE",
+        "SPIKE_LC",
+        "Wang"
+      ],
+      "var_a": "p38",
+      "var_b": "mek12"
+    }
+  ],
+  "schema_version": "step04.floor.v1",
+  "skipped_metabolite_pairs": [],
+  "source_filter": "all"
+}

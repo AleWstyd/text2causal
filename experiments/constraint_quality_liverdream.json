@@ -1,0 +1,162 @@
+{
+  "by_source": {
+    "freetext_llm": {
+      "coverage": 0.0,
+      "false_positives_loose": [],
+      "false_positives_strict": [],
+      "hallucination_loose": 0.0,
+      "hallucination_strict": 0.0,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 0,
+      "n_true_edges": 5,
+      "precision_forbidden": 0.0,
+      "precision_forward": 0.0,
+      "recall_forward": 0.0,
+      "true_positives": []
+    },
+    "omnipath_all": {
+      "coverage": 0.5476190476190477,
+      "false_positives_loose": [
+        [
+          "akt",
+          "hsp27"
+        ],
+        [
+          "erk12",
+          "akt"
+        ],
+        [
+          "erk12",
+          "jnk12"
+        ],
+        [
+          "erk12",
+          "p38"
+        ],
+        [
+          "hsp27",
+          "akt"
+        ],
+        [
+          "hsp27",
+          "ikb"
+        ],
+        [
+          "jnk12",
+          "akt"
+        ],
+        [
+          "jnk12",
+          "erk12"
+        ],
+        [
+          "jnk12",
+          "mek12"
+        ],
+        [
+          "mek12",
+          "jnk12"
+        ],
+        [
+          "mek12",
+          "p38"
+        ],
+        [
+          "p38",
+          "erk12"
+        ],
+        [
+          "p38",
+          "ikb"
+        ],
+        [
+          "p38",
+          "mek12"
+        ]
+      ],
+      "false_positives_strict": [
+        [
+          "erk12",
+          "mek12"
+        ]
+      ],
+      "hallucination_loose": 0.8235294117647058,
+      "hallucination_strict": 0.058823529411764705,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 17,
+      "n_true_edges": 5,
+      "precision_forbidden": 0.0,
+      "precision_forward": 0.11764705882352941,
+      "recall_forward": 0.4,
+      "true_positives": [
+        [
+          "mek12",
+          "erk12"
+        ],
+        [
+          "p38",
+          "hsp27"
+        ]
+      ]
+    },
+    "omnipath_reactome_only": {
+      "coverage": 0.0,
+      "false_positives_loose": [],
+      "false_positives_strict": [],
+      "hallucination_loose": 0.0,
+      "hallucination_strict": 0.0,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 0,
+      "n_true_edges": 5,
+      "precision_forbidden": 0.0,
+      "precision_forward": 0.0,
+      "recall_forward": 0.0,
+      "true_positives": []
+    },
+    "reactome_llm": {
+      "coverage": 0.047619047619047616,
+      "false_positives_loose": [],
+      "false_positives_strict": [],
+      "hallucination_loose": 0.0,
+      "hallucination_strict": 0.0,
+      "n_predicted_forbidden": 0,
+      "n_predicted_forward": 1,
+      "n_true_edges": 5,
+      "precision_forbidden": 0.0,
+      "precision_forward": 1.0,
+      "recall_forward": 0.2,
+      "true_positives": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ]
+    }
+  },
+  "confidence_threshold": 0.7,
+  "dataset": "liverdream",
+  "n_total_ordered_pairs": 42,
+  "n_true_edges": 5,
+  "true_edges": [
+    [
+      "akt",
+      "ikb"
+    ],
+    [
+      "akt",
+      "mek12"
+    ],
+    [
+      "erk12",
+      "hsp27"
+    ],
+    [
+      "mek12",
+      "erk12"
+    ],
+    [
+      "p38",
+      "hsp27"
+    ]
+  ]
+}

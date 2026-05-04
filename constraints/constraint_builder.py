@@ -415,7 +415,8 @@ class ConstraintBuilder:
 
         n_features = len(self.variable_names)
         feature_to_index = {
-            feature_name: index for index, feature_name in enumerate(self.variable_names)
+            feature_name: index
+            for index, feature_name in enumerate(self.variable_names)
         }
         matrix = np.full((n_features, n_features), -1, dtype=int)
 

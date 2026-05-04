@@ -187,7 +187,9 @@ def _claim(
 def _write_priors() -> None:
     true_claims = [_claim(a, b, 0.9, "reactome_llm") for a, b in TRUE_EDGES]
     # Keep one plausible but not ground-truth pathway-context claim to avoid an oracle clone.
-    reactome_claims = true_claims + [_claim("p38", "MEK1", 0.7, "reactome_llm", "soft_prior")]
+    reactome_claims = true_claims + [
+        _claim("p38", "MEK1", 0.7, "reactome_llm", "soft_prior")
+    ]
     freetext_claims = [
         _claim("AKT", "MEK1", 0.8, "freetext_llm", "soft_prior"),
         _claim("MEK1", "ERK12", 0.8, "freetext_llm", "soft_prior"),
@@ -262,11 +264,24 @@ def _conditions() -> tuple[Condition, ...]:
             EXPERIMENTS_DIR / "floor_priors_dream4_psn_reactome_only.json",
             0.7,
         ),
-        Condition("C1", "freetext_llm", EXPERIMENTS_DIR / "freetext_priors_dream4_psn.json", 0.7),
-        Condition("C2", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_dream4_psn.json", 0.9),
-        Condition("C3", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_dream4_psn.json", 0.7),
-        Condition("C4", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_dream4_psn.json", 0.6),
-        Condition("C5", "oracle", EXPERIMENTS_DIR / "oracle_priors_dream4_psn.json", None),
+        Condition(
+            "C1",
+            "freetext_llm",
+            EXPERIMENTS_DIR / "freetext_priors_dream4_psn.json",
+            0.7,
+        ),
+        Condition(
+            "C2", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_dream4_psn.json", 0.9
+        ),
+        Condition(
+            "C3", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_dream4_psn.json", 0.7
+        ),
+        Condition(
+            "C4", "reactome_llm", EXPERIMENTS_DIR / "causal_priors_dream4_psn.json", 0.6
+        ),
+        Condition(
+            "C5", "oracle", EXPERIMENTS_DIR / "oracle_priors_dream4_psn.json", None
+        ),
     )
 
 
@@ -307,7 +322,10 @@ def _run_ablation() -> dict[str, Any]:
     llm_graph = nx.DiGraph()
     llm_graph.add_nodes_from(variables)
     for claim in priors:
-        if claim.confidence >= 0.7 and claim.constraint_type in {"hard_required", "soft_prior"}:
+        if claim.confidence >= 0.7 and claim.constraint_type in {
+            "hard_required",
+            "soft_prior",
+        }:
             llm_graph.add_edge(claim.cause, claim.effect)
     if not nx.is_directed_acyclic_graph(llm_graph):
         llm_graph = nx.DiGraph(nx.dag.transitive_reduction(_graph()))
@@ -347,7 +365,8 @@ def _constraint_quality() -> dict[str, Any]:
     n_pairs = true_graph.number_of_nodes() * (true_graph.number_of_nodes() - 1)
     sources = {
         "reactome_llm": EXPERIMENTS_DIR / "causal_priors_dream4_psn.json",
-        "omnipath_reactome_only": EXPERIMENTS_DIR / "floor_priors_dream4_psn_reactome_only.json",
+        "omnipath_reactome_only": EXPERIMENTS_DIR
+        / "floor_priors_dream4_psn_reactome_only.json",
         "omnipath_all": EXPERIMENTS_DIR / "floor_priors_dream4_psn_all.json",
         "freetext_llm": EXPERIMENTS_DIR / "freetext_priors_dream4_psn.json",
     }
@@ -396,7 +415,9 @@ def _write_dream4_tables_and_figures(ablation: dict[str, Any]) -> None:
     lines.extend([r"\hline", r"\end{tabular}", ""])
     _atomic_write(TABLES_DIR / "ablation_table_dream4.tex", "\n".join(lines))
 
-    sachs = json.loads((EXPERIMENTS_DIR / "ablation_results_sachs.json").read_text(encoding="utf-8"))
+    sachs = json.loads(
+        (EXPERIMENTS_DIR / "ablation_results_sachs.json").read_text(encoding="utf-8")
+    )
     sachs_agg = aggregate(sachs["results"])
     cross = [
         r"% Cross-dataset F1 summary; DREAM4 is the documented synthetic fallback.",
@@ -429,7 +450,9 @@ def _write_dream4_tables_and_figures(ablation: dict[str, Any]) -> None:
     values = []
     for label in labels:
         if label == "C-LLM-only":
-            row = next(row for row in ablation["results"] if row.get("condition") == label)
+            row = next(
+                row for row in ablation["results"] if row.get("condition") == label
+            )
             values.append(float(row["metrics"]["f1"]))
         else:
             vals = [

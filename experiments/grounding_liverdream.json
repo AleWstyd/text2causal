@@ -1,0 +1,225 @@
+{
+  "dataset": "liverdream",
+  "gold": {
+    "akt": {
+      "canonical_name": "AKT1/2",
+      "column": "akt",
+      "confidence": 1.0,
+      "gene_names": [
+        "AKT1",
+        "AKT2"
+      ],
+      "ids": [
+        "P31749",
+        "P31751"
+      ],
+      "kind": "family",
+      "reactome_validated": true,
+      "reasoning": "CellNOpt LiverDREAM uses lowercase akt for AKT family readout."
+    },
+    "erk12": {
+      "canonical_name": "ERK1/2",
+      "column": "erk12",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAPK3",
+        "MAPK1"
+      ],
+      "ids": [
+        "P27361",
+        "P28482"
+      ],
+      "kind": "family",
+      "reactome_validated": true,
+      "reasoning": "erk12 denotes the ERK1/2 MAPK family."
+    },
+    "hsp27": {
+      "canonical_name": "HSPB1",
+      "column": "hsp27",
+      "confidence": 1.0,
+      "gene_names": [
+        "HSPB1"
+      ],
+      "ids": [
+        "P04792"
+      ],
+      "kind": "protein",
+      "reactome_validated": true,
+      "reasoning": "hsp27 denotes heat shock protein beta-1."
+    },
+    "ikb": {
+      "canonical_name": "NFKBIA",
+      "column": "ikb",
+      "confidence": 1.0,
+      "gene_names": [
+        "NFKBIA"
+      ],
+      "ids": [
+        "P25963"
+      ],
+      "kind": "protein",
+      "reactome_validated": true,
+      "reasoning": "ikb denotes inhibitor of NF-kB alpha."
+    },
+    "jnk12": {
+      "canonical_name": "JNK1/2",
+      "column": "jnk12",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAPK8",
+        "MAPK9"
+      ],
+      "ids": [
+        "P45983",
+        "P45984"
+      ],
+      "kind": "family",
+      "reactome_validated": true,
+      "reasoning": "jnk12 denotes JNK1/2 stress MAP kinases."
+    },
+    "mek12": {
+      "canonical_name": "MEK1/2",
+      "column": "mek12",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAP2K1",
+        "MAP2K2"
+      ],
+      "ids": [
+        "Q02750",
+        "P36507"
+      ],
+      "kind": "family",
+      "reactome_validated": true,
+      "reasoning": "mek12 denotes the MEK1/2 MAP2K family."
+    },
+    "p38": {
+      "canonical_name": "MAPK14",
+      "column": "p38",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAPK14"
+      ],
+      "ids": [
+        "Q16539"
+      ],
+      "kind": "protein",
+      "reactome_validated": true,
+      "reasoning": "p38 denotes the p38 MAPK readout, represented by MAPK14."
+    }
+  },
+  "metrics": {
+    "exact_id_accuracy": 1.0,
+    "n": 7,
+    "validated_fraction": 1.0
+  },
+  "predicted": {
+    "akt": {
+      "canonical_name": "AKT1/2",
+      "column": "akt",
+      "confidence": 1.0,
+      "gene_names": [
+        "AKT1",
+        "AKT2"
+      ],
+      "ids": [
+        "P31749",
+        "P31751"
+      ],
+      "kind": "family",
+      "reactome_validated": true,
+      "reasoning": "CellNOpt LiverDREAM uses lowercase akt for AKT family readout."
+    },
+    "erk12": {
+      "canonical_name": "ERK1/2",
+      "column": "erk12",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAPK3",
+        "MAPK1"
+      ],
+      "ids": [
+        "P27361",
+        "P28482"
+      ],
+      "kind": "family",
+      "reactome_validated": true,
+      "reasoning": "erk12 denotes the ERK1/2 MAPK family."
+    },
+    "hsp27": {
+      "canonical_name": "HSPB1",
+      "column": "hsp27",
+      "confidence": 1.0,
+      "gene_names": [
+        "HSPB1"
+      ],
+      "ids": [
+        "P04792"
+      ],
+      "kind": "protein",
+      "reactome_validated": true,
+      "reasoning": "hsp27 denotes heat shock protein beta-1."
+    },
+    "ikb": {
+      "canonical_name": "NFKBIA",
+      "column": "ikb",
+      "confidence": 1.0,
+      "gene_names": [
+        "NFKBIA"
+      ],
+      "ids": [
+        "P25963"
+      ],
+      "kind": "protein",
+      "reactome_validated": true,
+      "reasoning": "ikb denotes inhibitor of NF-kB alpha."
+    },
+    "jnk12": {
+      "canonical_name": "JNK1/2",
+      "column": "jnk12",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAPK8",
+        "MAPK9"
+      ],
+      "ids": [
+        "P45983",
+        "P45984"
+      ],
+      "kind": "family",
+      "reactome_validated": true,
+      "reasoning": "jnk12 denotes JNK1/2 stress MAP kinases."
+    },
+    "mek12": {
+      "canonical_name": "MEK1/2",
+      "column": "mek12",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAP2K1",
+        "MAP2K2"
+      ],
+      "ids": [
+        "Q02750",
+        "P36507"
+      ],
+      "kind": "family",
+      "reactome_validated": true,
+      "reasoning": "mek12 denotes the MEK1/2 MAP2K family."
+    },
+    "p38": {
+      "canonical_name": "MAPK14",
+      "column": "p38",
+      "confidence": 1.0,
+      "gene_names": [
+        "MAPK14"
+      ],
+      "ids": [
+        "Q16539"
+      ],
+      "kind": "protein",
+      "reactome_validated": true,
+      "reasoning": "p38 denotes the p38 MAPK readout, represented by MAPK14."
+    }
+  },
+  "source": "hand-curated CellNOpt LiverDREAM grounding"
+}

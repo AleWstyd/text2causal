@@ -48,3 +48,14 @@ def load_dream4_psn_dataset(
     data = pd.read_csv(data_path)
     graph = nx.read_gml(graph_path, label="label")
     return data, graph
+
+
+def load_liverdream_dataset(
+    data_path: str = "data/liverdream/data.csv",
+    graph_path: str = "data/liverdream/ground_truth.gml",
+) -> tuple[pd.DataFrame, nx.DiGraph]:
+    """Load the real public LiverDREAM / CellNOpt signalling benchmark."""
+
+    data = pd.read_csv(data_path)
+    graph = nx.read_gml(graph_path, label="label")
+    return data, graph

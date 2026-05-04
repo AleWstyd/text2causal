@@ -1,0 +1,14 @@
+{
+  "background_text_path": "data/liverdream/background.txt",
+  "dataset": "liverdream",
+  "n_hard_forbidden_reverse": 0,
+  "n_hard_required": 0,
+  "n_relations_emitted": 0,
+  "n_relations_skipped_unknown_var": 0,
+  "n_soft_prior": 0,
+  "n_unknown": 0,
+  "pairs": [],
+  "served_models": [
+    "deepseek-ai/DeepSeek-V4-Pro"
+  ]
+}

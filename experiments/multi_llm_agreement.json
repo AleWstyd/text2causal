@@ -1,0 +1,313 @@
+{
+  "datasets": {
+    "liverdream": {
+      "canonical_forward_edges_at_0_7": [
+        [
+          "mek12",
+          "erk12"
+        ]
+      ],
+      "canonical_path": "experiments/causal_priors_liverdream.json",
+      "models": {
+        "openai/gpt-oss-120b": {
+          "c3_downstream_f1": {
+            "GES": {
+              "mean_f1": 0.4000000000000001,
+              "n_failed": 0,
+              "n_ok": 10,
+              "std_f1": 0.0
+            },
+            "LiNGAM": {
+              "mean_f1": 0.4615384615384615,
+              "n_failed": 0,
+              "n_ok": 10,
+              "std_f1": 0.0
+            },
+            "PC": {
+              "mean_f1": 0.4444444444444445,
+              "n_failed": 0,
+              "n_ok": 10,
+              "std_f1": 0.0
+            }
+          },
+          "constraint_quality": {
+            "coverage": 0.14285714285714285,
+            "false_positives_loose": [
+              [
+                "akt",
+                "hsp27"
+              ]
+            ],
+            "false_positives_strict": [],
+            "hallucination_loose": 0.3333333333333333,
+            "hallucination_strict": 0.0,
+            "n_predicted_forbidden": 0,
+            "n_predicted_forward": 3,
+            "n_true_edges": 5,
+            "precision_forbidden": 0.0,
+            "precision_forward": 0.6666666666666666,
+            "recall_forward": 0.4,
+            "true_positives": [
+              [
+                "mek12",
+                "erk12"
+              ],
+              [
+                "p38",
+                "hsp27"
+              ]
+            ]
+          },
+          "forward_edges_at_0_7": [
+            [
+              "akt",
+              "hsp27"
+            ],
+            [
+              "mek12",
+              "erk12"
+            ],
+            [
+              "p38",
+              "hsp27"
+            ]
+          ],
+          "jaccard_vs_canonical": 0.3333333333333333,
+          "priors_path": "experiments/multi_llm_priors_liverdream_openai_gpt_oss_120b.json"
+        }
+      }
+    },
+    "sachs": {
+      "canonical_forward_edges_at_0_7": [
+        [
+          "P38",
+          "praf"
+        ],
+        [
+          "PIP2",
+          "PIP3"
+        ],
+        [
+          "PIP2",
+          "PKC"
+        ],
+        [
+          "PIP2",
+          "p44/42"
+        ],
+        [
+          "PIP2",
+          "pakts473"
+        ],
+        [
+          "PIP2",
+          "pmek"
+        ],
+        [
+          "PIP2",
+          "praf"
+        ],
+        [
+          "PIP3",
+          "PKC"
+        ],
+        [
+          "PIP3",
+          "p44/42"
+        ],
+        [
+          "PIP3",
+          "pakts473"
+        ],
+        [
+          "PIP3",
+          "plcg"
+        ],
+        [
+          "PKA",
+          "praf"
+        ],
+        [
+          "plcg",
+          "PIP2"
+        ],
+        [
+          "plcg",
+          "PKC"
+        ],
+        [
+          "pmek",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "p44/42"
+        ],
+        [
+          "praf",
+          "pmek"
+        ]
+      ],
+      "canonical_path": "experiments/causal_priors_sachs.json",
+      "models": {
+        "openai/gpt-oss-120b": {
+          "c3_downstream_f1": {
+            "GES": {
+              "mean_f1": 0.5384615384615384,
+              "n_failed": 0,
+              "n_ok": 10,
+              "std_f1": 0.0
+            },
+            "LiNGAM": {
+              "mean_f1": 0.5660377358490566,
+              "n_failed": 0,
+              "n_ok": 10,
+              "std_f1": 0.0
+            },
+            "PC": {
+              "mean_f1": 0.5116279069767442,
+              "n_failed": 0,
+              "n_ok": 10,
+              "std_f1": 0.0
+            }
+          },
+          "constraint_quality": {
+            "coverage": 0.2727272727272727,
+            "false_positives_loose": [
+              [
+                "PIP2",
+                "p44/42"
+              ],
+              [
+                "PIP2",
+                "pakts473"
+              ],
+              [
+                "PIP2",
+                "pmek"
+              ],
+              [
+                "PIP2",
+                "praf"
+              ],
+              [
+                "PIP3",
+                "PKC"
+              ],
+              [
+                "PIP3",
+                "p44/42"
+              ],
+              [
+                "plcg",
+                "pjnk"
+              ],
+              [
+                "praf",
+                "p44/42"
+              ]
+            ],
+            "false_positives_strict": [],
+            "hallucination_loose": 0.5714285714285714,
+            "hallucination_strict": 0.0,
+            "n_predicted_forbidden": 0,
+            "n_predicted_forward": 14,
+            "n_true_edges": 18,
+            "precision_forbidden": 0.0,
+            "precision_forward": 0.42857142857142855,
+            "recall_forward": 0.3333333333333333,
+            "true_positives": [
+              [
+                "PIP2",
+                "PIP3"
+              ],
+              [
+                "PIP3",
+                "pakts473"
+              ],
+              [
+                "PIP3",
+                "plcg"
+              ],
+              [
+                "PKA",
+                "praf"
+              ],
+              [
+                "plcg",
+                "PKC"
+              ],
+              [
+                "pmek",
+                "p44/42"
+              ]
+            ]
+          },
+          "forward_edges_at_0_7": [
+            [
+              "PIP2",
+              "PIP3"
+            ],
+            [
+              "PIP2",
+              "p44/42"
+            ],
+            [
+              "PIP2",
+              "pakts473"
+            ],
+            [
+              "PIP2",
+              "pmek"
+            ],
+            [
+              "PIP2",
+              "praf"
+            ],
+            [
+              "PIP3",
+              "PKC"
+            ],
+            [
+              "PIP3",
+              "p44/42"
+            ],
+            [
+              "PIP3",
+              "pakts473"
+            ],
+            [
+              "PIP3",
+              "plcg"
+            ],
+            [
+              "PKA",
+              "praf"
+            ],
+            [
+              "plcg",
+              "PKC"
+            ],
+            [
+              "plcg",
+              "pjnk"
+            ],
+            [
+              "pmek",
+              "p44/42"
+            ],
+            [
+              "praf",
+              "p44/42"
+            ]
+          ],
+          "jaccard_vs_canonical": 0.7222222222222222,
+          "priors_path": "experiments/multi_llm_priors_sachs_openai_gpt_oss_120b.json"
+        }
+      }
+    }
+  },
+  "models": [
+    "openai/gpt-oss-120b"
+  ]
+}
