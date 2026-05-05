@@ -19,8 +19,15 @@ def run_ges(data, variable_names, prior_knowledge: PriorKnowledge | None = None)
     n = len(variable_names)
 
     for i in range(n):
-        for j in range(n):
-            if adjacency[i, j] == 1:
-                graph.add_edge(variable_names[i], variable_names[j])
+        for j in range(i + 1, n):
+            aij, aji = adjacency[i, j], adjacency[j, i]
+            u, v = variable_names[i], variable_names[j]
+            if aij == -1 and aji == -1:
+                graph.add_edge(u, v)
+                graph.add_edge(v, u)
+            elif aij == -1 and aji == 1:
+                graph.add_edge(u, v)
+            elif aij == 1 and aji == -1:
+                graph.add_edge(v, u)
 
     return graph

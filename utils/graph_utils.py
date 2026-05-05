@@ -38,11 +38,11 @@ def apply_post_hoc_edits(
         if cause == effect:
             raise ValueError(f"Self-loop required edge is not allowed: {cause!r}")
 
-        if g.has_edge(cause, effect):
-            continue
-
         if g.has_edge(effect, cause):
             g.remove_edge(effect, cause)
+
+        if g.has_edge(cause, effect):
+            continue
 
         g.add_edge(cause, effect)
         if not nx.is_directed_acyclic_graph(g):

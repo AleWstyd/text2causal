@@ -43,7 +43,7 @@ Active research pipeline (this is where new work goes):
 - `llm/client.py` — OpenRouter chat-completion wrapper that records the per-request `served_model`. The model identifier is pinned in `llm/client.py:MODEL`; do not hardcode it in other modules.
 - `llm/prompts.py` — shared prompt templates used by Step 3+ (research pipeline).
 - `grounding/` — Step 3 variable grounding (LLM-driven dataset-column → UniProt / ChEBI / family mapping with Reactome validation). `ground.py` is the entry point; `evaluate.py` is the gold-standard scoring helper.
-- `evaluation/` — `harness.py` evaluates a predicted graph against ground truth; `metrics.py` carries the primitives.
+- `evaluation/` — `harness.py` evaluates a predicted graph against ground truth (skeleton F1, directed F1, **CPDAG F1**, SHD, SHD-CPDAG, AUPR); `metrics.py` primitives; `cpdag_metrics.py` CPDAG-aware precision/recall/F1 and SHD-CPDAG (Chickering 1995; Tsamardinos & Brown 2008).
 - `constraints/constraint_builder.py` — translates priors into PC `BackgroundKnowledge`, LiNGAM prior matrices, and post-hoc GES edits. Will grow in Step 5.
 - `causal_discovery/` — algorithm wrappers (`run_pc.py`, `run_ges.py`, `run_lingam.py`).
 - `reasoning/` — Step 4 causal reasoning (`reason.py`), merge of free-text into no-context rows (`merge_freetext_fallback.py`), per-pair parametric fallback for uncovered pairs (`freetext_fallback.py`).
@@ -142,7 +142,7 @@ Test discipline for new code:
 - `extract_llm_constraints()` (legacy LUCAS path) filters relations by confidence threshold and validates them against dataset variable names. Do not change its semantics; the Step-3+ research pipeline does not use it.
 - All three CD algorithms apply prior constraints **post hoc** as direct edge edits (`utils.graph_utils.apply_post_hoc_edits`): `GES` never had a native prior hook; `PC` native `BackgroundKnowledge` does not retain required edges the Fisher-Z skeleton removes, so we re-inject them; `LiNGAM` native `prior_knowledge` leaves coefficients above the 0.001 threshold even with `apply_prior_knowledge_softly=True` (offending arcs survive), so constrained runs default to `lingam_prior_mode="post_hoc"`. Cycle-closing injection drops are logged in `dropped_due_to_cycle` (and `pc_post_hoc_*` for PC). This uniform post-hoc treatment is a known methodological caveat — to be reported, not silently fixed (see dev plan Risk #6). The native-LiNGAM modes (`all`, `sparse_required`, `forbidden_only`, `hybrid_top5`) remain available via `lingam_prior_mode` for sweeps but are not used by the canonical matrix.
 - LiNGAM prior-matrix convention: `1` required, `0` forbidden, `-1` unknown (default fill). Do not change this.
-- If you change confidence handling, prior-knowledge validation, graph metric computation, or any cached prompt / response contract, add tests for the edge cases introduced.
+- If you change confidence handling, prior-knowledge validation, graph metric computation (skeleton, directed, or **CPDAG** scores), or any cached prompt / response contract, add tests for the edge cases introduced.
 
 ## External API and Model Changes
 

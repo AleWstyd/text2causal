@@ -20,14 +20,24 @@ def _ok_row(
     f1: float,
     shd: float,
     directed_f1: float | None = None,
+    cpdag_f1: float | None = None,
+    shd_cpdag: float | None = None,
 ) -> dict:
     df1 = float(f1) if directed_f1 is None else float(directed_f1)
+    cf1 = float(df1) if cpdag_f1 is None else float(cpdag_f1)
+    shdc = float(shd) if shd_cpdag is None else float(shd_cpdag)
     return {
         "condition": condition,
         "algorithm": algorithm,
         "seed": seed,
         "status": "ok",
-        "metrics": {"f1": f1, "directed_f1": df1, "shd": shd},
+        "metrics": {
+            "f1": f1,
+            "directed_f1": df1,
+            "cpdag_f1": cf1,
+            "shd": shd,
+            "shd_cpdag": shdc,
+        },
     }
 
 
@@ -55,6 +65,8 @@ class TestAggregate(unittest.TestCase):
         self.assertAlmostEqual(f1["std"], 0.20, places=6)
         df1 = agg["C0"]["PC"]["directed_f1"]
         self.assertAlmostEqual(df1["mean"], 0.30, places=6)
+        cp = agg["C0"]["PC"]["cpdag_f1"]
+        self.assertAlmostEqual(cp["mean"], 0.30, places=6)
         shd = agg["C0"]["PC"]["shd"]
         self.assertAlmostEqual(shd["mean"], 7.0, places=6)
 
@@ -79,6 +91,8 @@ class TestAggregate(unittest.TestCase):
         df1 = agg["C2"]["LiNGAM"]["directed_f1"]
         self.assertEqual(df1["n_ok"], 0)
         self.assertIsNone(df1["mean"])
+        cf = agg["C2"]["LiNGAM"]["cpdag_f1"]
+        self.assertEqual(cf["n_ok"], 0)
 
     def test_skips_llm_only_rows(self) -> None:
         rows = [
@@ -88,7 +102,13 @@ class TestAggregate(unittest.TestCase):
                 "algorithm": None,
                 "seed": None,
                 "status": "ok",
-                "metrics": {"f1": 0.99, "directed_f1": 0.99, "shd": 0.0},
+                "metrics": {
+                    "f1": 0.99,
+                    "directed_f1": 0.99,
+                    "cpdag_f1": 0.99,
+                    "shd": 0.0,
+                    "shd_cpdag": 0.0,
+                },
             },
         ]
         agg = report.aggregate(rows)
@@ -103,21 +123,27 @@ class TestHeadlineSummary(unittest.TestCase):
                 "PC": {
                     "f1": {"mean": 0.20, "std": 0.0, "n_ok": 10},
                     "directed_f1": {"mean": 0.20, "std": 0.0, "n_ok": 10},
+                    "cpdag_f1": {"mean": 0.20, "std": 0.0, "n_ok": 10},
                     "shd": {"mean": 1.0, "std": 0.0, "n_ok": 10},
+                    "shd_cpdag": {"mean": 1.0, "std": 0.0, "n_ok": 10},
                 },
             },
             "C3": {
                 "PC": {
                     "f1": {"mean": 0.50, "std": 0.0, "n_ok": 10},
                     "directed_f1": {"mean": 0.50, "std": 0.0, "n_ok": 10},
+                    "cpdag_f1": {"mean": 0.50, "std": 0.0, "n_ok": 10},
                     "shd": {"mean": 2.0, "std": 0.0, "n_ok": 10},
+                    "shd_cpdag": {"mean": 2.0, "std": 0.0, "n_ok": 10},
                 },
             },
             "C5": {
                 "PC": {
                     "f1": {"mean": 0.80, "std": 0.0, "n_ok": 10},
                     "directed_f1": {"mean": 0.80, "std": 0.0, "n_ok": 10},
+                    "cpdag_f1": {"mean": 0.80, "std": 0.0, "n_ok": 10},
                     "shd": {"mean": 3.0, "std": 0.0, "n_ok": 10},
+                    "shd_cpdag": {"mean": 3.0, "std": 0.0, "n_ok": 10},
                 },
             },
         }
@@ -125,20 +151,32 @@ class TestHeadlineSummary(unittest.TestCase):
             agg["C0"][alg] = {
                 "f1": {"mean": 0.10, "std": 0.0, "n_ok": 10},
                 "directed_f1": {"mean": 0.10, "std": 0.0, "n_ok": 10},
+                "cpdag_f1": {"mean": 0.10, "std": 0.0, "n_ok": 10},
             }
             agg["C3"][alg] = {
                 "f1": {"mean": 0.15, "std": 0.0, "n_ok": 10},
                 "directed_f1": {"mean": 0.15, "std": 0.0, "n_ok": 10},
+                "cpdag_f1": {"mean": 0.15, "std": 0.0, "n_ok": 10},
             }
             agg["C5"][alg] = {
                 "f1": {"mean": 0.60, "std": 0.0, "n_ok": 10},
                 "directed_f1": {"mean": 0.60, "std": 0.0, "n_ok": 10},
+                "cpdag_f1": {"mean": 0.60, "std": 0.0, "n_ok": 10},
             }
 
-        llm = {"metrics": {"f1": 0.40, "directed_f1": 0.40, "shd": 18.0}}
+        llm = {
+            "metrics": {
+                "f1": 0.40,
+                "directed_f1": 0.40,
+                "cpdag_f1": 0.40,
+                "shd": 18.0,
+                "shd_cpdag": 18.0,
+            }
+        }
         s = report.headline_summary(agg, llm)
         pc_best = s["best_condition_per_algorithm"]["PC"]
         self.assertEqual(pc_best["condition"], "C3")
+        self.assertEqual(pc_best["condition_cpdag"], "C3")
         self.assertEqual(pc_best["gap_closed_pct"], 50.0)
         self.assertEqual(s["gap_closed_pct"], 50.0)
 
@@ -150,18 +188,31 @@ class TestHeadlineSummary(unittest.TestCase):
                 agg[cond][alg] = {
                     "f1": {"mean": 0.10, "std": 0.0, "n_ok": 10},
                     "directed_f1": {"mean": 0.10, "std": 0.0, "n_ok": 10},
+                    "cpdag_f1": {"mean": 0.10, "std": 0.0, "n_ok": 10},
                     "shd": {"mean": 1.0, "std": 0.0, "n_ok": 10},
+                    "shd_cpdag": {"mean": 1.0, "std": 0.0, "n_ok": 10},
                 }
-        agg["C2"]["PC"]["f1"]["mean"] = 0.75
         agg["C2"]["PC"]["directed_f1"]["mean"] = 0.75
+        agg["C2"]["PC"]["cpdag_f1"] = {"mean": 0.75, "std": 0.0, "n_ok": 10}
         agg["C5"]["PC"]["f1"]["mean"] = 0.90
         agg["C5"]["PC"]["directed_f1"]["mean"] = 0.90
+        agg["C5"]["PC"]["cpdag_f1"] = {"mean": 0.90, "std": 0.0, "n_ok": 10}
         agg["C5"]["GES"]["f1"]["mean"] = 0.85
         agg["C5"]["GES"]["directed_f1"]["mean"] = 0.85
+        agg["C5"]["GES"]["cpdag_f1"] = {"mean": 0.85, "std": 0.0, "n_ok": 10}
         agg["C5"]["LiNGAM"]["f1"]["mean"] = 0.80
         agg["C5"]["LiNGAM"]["directed_f1"]["mean"] = 0.80
+        agg["C5"]["LiNGAM"]["cpdag_f1"] = {"mean": 0.80, "std": 0.0, "n_ok": 10}
 
-        llm = {"metrics": {"f1": 0.40, "directed_f1": 0.40, "shd": 12.0}}
+        llm = {
+            "metrics": {
+                "f1": 0.40,
+                "directed_f1": 0.40,
+                "cpdag_f1": 0.40,
+                "shd": 12.0,
+                "shd_cpdag": 12.0,
+            }
+        }
         s = report.headline_summary(agg, llm)
         self.assertEqual(s["cd_vs_llm_only_delta"], 0.35)
 
@@ -171,7 +222,15 @@ class TestHeadlineSummary(unittest.TestCase):
             for i in range(5)
         ]
         agg = report.aggregate(rows)
-        llm = {"metrics": {"f1": 0.4, "directed_f1": 0.4, "shd": 10.0}}
+        llm = {
+            "metrics": {
+                "f1": 0.4,
+                "directed_f1": 0.4,
+                "cpdag_f1": 0.4,
+                "shd": 10.0,
+                "shd_cpdag": 10.0,
+            }
+        }
         a = report.headline_summary(agg, llm)
         b = report.headline_summary(agg, llm)
         self.assertEqual(a, b)
@@ -184,7 +243,15 @@ class TestWritersAndFigures(unittest.TestCase):
                 _ok_row(condition="C0", algorithm="PC", seed=0, f1=0.5, shd=10.0),
             ]
         )
-        llm = {"metrics": {"f1": 0.47, "directed_f1": 0.47, "shd": 18.0}}
+        llm = {
+            "metrics": {
+                "f1": 0.47,
+                "directed_f1": 0.47,
+                "cpdag_f1": 0.47,
+                "shd": 18.0,
+                "shd_cpdag": 18.0,
+            }
+        }
         p = Path(__file__).resolve().parent / "_tmp_ablation_test.tex"
         try:
             report.write_ablation_table(agg, llm, p)
@@ -202,12 +269,43 @@ class TestWritersAndFigures(unittest.TestCase):
                 _ok_row(condition="C0", algorithm="PC", seed=0, f1=0.5, shd=10.0),
             ]
         )
-        llm = {"metrics": {"f1": 0.47, "directed_f1": 0.47, "shd": 18.0}}
+        llm = {
+            "metrics": {
+                "f1": 0.47,
+                "directed_f1": 0.47,
+                "cpdag_f1": 0.47,
+                "shd": 18.0,
+                "shd_cpdag": 18.0,
+            }
+        }
         p = Path(__file__).resolve().parent / "_tmp_ablation_dir_test.tex"
         try:
             report.write_ablation_table_directed(agg, llm, p)
             text = p.read_text(encoding="utf-8")
             self.assertIn("F1\\textsubscript{dir}", text)
+        finally:
+            p.unlink(missing_ok=True)
+
+    def test_write_ablation_table_cpdag_smoke(self) -> None:
+        agg = report.aggregate(
+            [
+                _ok_row(condition="C0", algorithm="PC", seed=0, f1=0.5, shd=10.0),
+            ]
+        )
+        llm = {
+            "metrics": {
+                "f1": 0.47,
+                "directed_f1": 0.47,
+                "cpdag_f1": 0.47,
+                "shd": 18.0,
+                "shd_cpdag": 18.0,
+            }
+        }
+        p = Path(__file__).resolve().parent / "_tmp_ablation_cpdag_test.tex"
+        try:
+            report.write_ablation_table_cpdag(agg, llm, p)
+            text = p.read_text(encoding="utf-8")
+            self.assertIn("F1\\textsubscript{cpdag}", text)
         finally:
             p.unlink(missing_ok=True)
 
@@ -255,7 +353,15 @@ class TestWritersAndFigures(unittest.TestCase):
                 for c in ["C2", "C3", "C3+ft", "C4", "C5"]
             ]
         )
-        llm = {"metrics": {"f1": 0.46, "directed_f1": 0.46, "shd": 17.0}}
+        llm = {
+            "metrics": {
+                "f1": 0.46,
+                "directed_f1": 0.46,
+                "cpdag_f1": 0.46,
+                "shd": 17.0,
+                "shd_cpdag": 17.0,
+            }
+        }
         base = Path(__file__).resolve().parent / "_fig_smoke"
         base.mkdir(exist_ok=True)
         try:

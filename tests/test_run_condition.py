@@ -68,7 +68,20 @@ class RunConditionC0Tests(unittest.TestCase):
                 self.assertEqual(result["status"], "ok")
                 self.assertIsNotNone(result["metrics"])
                 assert result["metrics"] is not None
-                for key in ("shd", "aupr", "precision", "recall", "f1"):
+                for key in (
+                    "shd",
+                    "shd_cpdag",
+                    "aupr",
+                    "precision",
+                    "recall",
+                    "f1",
+                    "directed_precision",
+                    "directed_recall",
+                    "directed_f1",
+                    "cpdag_precision",
+                    "cpdag_recall",
+                    "cpdag_f1",
+                ):
                     self.assertIn(key, result["metrics"])
                 self.assertIsNone(result["constraint_summary"])
                 self.assertEqual(result["dropped_due_to_cycle"], [])

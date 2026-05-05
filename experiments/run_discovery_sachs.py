@@ -10,7 +10,9 @@ from typing import Any, Final
 
 from constraints.constraint_builder import load_priors
 from evaluation.harness import (
+    backfill_cpdag_metrics_in_results,
     backfill_directed_metrics_in_results,
+    row_ok_metrics_missing_cpdag_f1,
     row_ok_metrics_missing_directed_f1,
 )
 from experiments.run_condition import run_condition
@@ -204,7 +206,9 @@ def run_sweep(
     existing_keys = {_cell_result_key(r) for r in results}
     pending = [c for c in cells if row_key_from_spec(c) not in existing_keys]
 
-    needs_bf = any(row_ok_metrics_missing_directed_f1(r) for r in results)
+    needs_dir = any(row_ok_metrics_missing_directed_f1(r) for r in results)
+    needs_cp = any(row_ok_metrics_missing_cpdag_f1(r) for r in results)
+    needs_bf = needs_dir or needs_cp
 
     if pending or needs_bf:
         data_df, true_graph = load_sachs_dataset()
@@ -213,7 +217,10 @@ def run_sweep(
         priors_cache = _load_priors_cache()
 
         if needs_bf:
-            n_bf = backfill_directed_metrics_in_results(
+            n_dir = backfill_directed_metrics_in_results(
+                results, variable_names, true_graph
+            )
+            n_cp = backfill_cpdag_metrics_in_results(
                 results, variable_names, true_graph
             )
             payload = {
@@ -223,10 +230,15 @@ def run_sweep(
                 **_summarise_payload(results),
             }
             _atomic_write_json(output_path, payload)
-            print(
-                f"Backfilled directed metrics for {n_bf} ok rows "
-                f"in {output_path.as_posix()}."
-            )
+            parts = []
+            if n_dir:
+                parts.append(f"directed: {n_dir} ok rows")
+            if n_cp:
+                parts.append(f"CPDAG: {n_cp} ok rows")
+            if parts:
+                print(
+                    f"Backfilled metrics ({', '.join(parts)}) in {output_path.as_posix()}."
+                )
 
         if pending:
             n_todo = len(pending)

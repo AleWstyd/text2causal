@@ -46,7 +46,16 @@ class ApplyPostHocEditsTests(unittest.TestCase):
         self.assertEqual(dropped, [])
         self.assertEqual(out.number_of_edges(), 1)
 
-    def test_reverse_removed_before_forward_added(self) -> None:
+    def test_required_orients_undirected_pair(self) -> None:
+        g = nx.DiGraph()
+        g.add_edge("A", "B")
+        g.add_edge("B", "A")
+        out, dropped = apply_post_hoc_edits(g, [("A", "B")], [])
+        self.assertEqual(dropped, [])
+        self.assertTrue(out.has_edge("A", "B"))
+        self.assertFalse(out.has_edge("B", "A"))
+
+    def test_required_keeps_forward_when_reverse_was_wrong_direction(self) -> None:
         g = nx.DiGraph()
         g.add_edge("B", "A")
         out, dropped = apply_post_hoc_edits(g, [("A", "B")], [])

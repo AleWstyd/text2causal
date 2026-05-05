@@ -1,0 +1,21 @@
+% Sachs ablation (CPDAG F1): mean $\pm$ std over seeds with status=ok.
+% Undirected CPDAG edges aligned with a gold arc count as 0.5 in precision/recall (Chickering 1995; Tsamardinos \& Brown 2008).
+% SHD column is SHD-CPDAG. See \texttt{ablation\_table\_directed.tex} for directed-only F1.
+% \textsuperscript{*} N/A: no successful runs or inapplicable cell. \textsuperscript{\dag}: fewer than 10/10 successful seeds (see caption).
+\begin{tabular}{l|cc|cc|cc}
+\hline
+ & \multicolumn{2}{c|}{PC} & \multicolumn{2}{c|}{GES} & \multicolumn{2}{c}{LiNGAM} \\
+ & SHD\textsubscript{CPDAG} & F1\textsubscript{cpdag} & SHD\textsubscript{CPDAG} & F1\textsubscript{cpdag} & SHD\textsubscript{CPDAG} & F1\textsubscript{cpdag} \\
+\hline
+C0 & $22.00 \pm 0.00$ & $0.47 \pm 0.00$ & $32.00 \pm 0.00$ & $0.18 \pm 0.00$ & $28.00 \pm 0.00$ & $0.37 \pm 0.00$ \\
+C0.5 & $22.00 \pm 0.00$ & $0.47 \pm 0.00$ & $32.00 \pm 0.00$ & $0.18 \pm 0.00$ & $28.00 \pm 0.00$ & $0.37 \pm 0.00$ \\
+C1 & $21.00 \pm 0.00$ & $0.51 \pm 0.00$ & $31.00 \pm 0.00$ & $0.21 \pm 0.00$ & $28.00 \pm 0.00$ & $0.39 \pm 0.00$ \\
+C2 & $21.00 \pm 0.00$ & $0.51 \pm 0.00$ & $32.00 \pm 0.00$ & $0.19 \pm 0.00$ & $32.00 \pm 0.00$ & $0.36 \pm 0.00$ \\
+C3 & $21.00 \pm 0.00$ & $0.51 \pm 0.00$ & $30.00 \pm 0.00$ & $0.22 \pm 0.00$ & $32.00 \pm 0.00$ & $0.40 \pm 0.00$ \\
+C3+ft & $21.00 \pm 0.00$ & $0.51 \pm 0.00$ & $30.00 \pm 0.00$ & $0.24 \pm 0.00$ & $29.00 \pm 0.00$ & $0.45 \pm 0.00$ \\
+C4 & $21.00 \pm 0.00$ & $0.51 \pm 0.00$ & $30.00 \pm 0.00$ & $0.22 \pm 0.00$ & $32.00 \pm 0.00$ & $0.40 \pm 0.00$ \\
+C-LLM-only\textsuperscript{$\dagger$} & $18.00$ & $0.47$ & --- & --- & --- & --- \\ % single DAG; no PC/GES/LiNGAM split—metrics repeated only under PC columns
+C5 & $21.00 \pm 0.00$ & $0.51 \pm 0.00$ & $31.00 \pm 0.00$ & $0.24 \pm 0.00$ & $26.00 \pm 0.00$ & $0.48 \pm 0.00$ \\
+\hline
+% C-LLM-only row: dagger marks algorithm-free DAG; values shown only under PC columns (--- elsewhere).
+\end{tabular}

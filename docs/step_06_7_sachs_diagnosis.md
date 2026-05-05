@@ -74,6 +74,35 @@ The Sachs result should be interpreted as:
    because post-hoc strips wrong-direction duplicates that happened to
    count as "skeleton hits" — the drop is by design, not a regression.
 
+## PR4 update (CPDAG metrics + GES adjacency fix)
+
+PR4 adds `cpdag_f1` / `shd_cpdag` and exports PC/GES CPDAG undirected edges as
+mutual `(u,v)+(v,u)` arcs in the `nx.DiGraph` passed to evaluation.
+
+`run_ges` previously read only `adj[i,j]==1`, which does not match the
+`causal-learn` GES documentation (`G[j,i]=1` and `G[i,j]=-1` for `i → j`, and
+`-1` on both endpoints for undirected). The corrected converter aligns with PC
+and with the library docstring; **Sachs ablation JSON was regenerated** so GES
+rows are not comparable to pre-PR4 committed numbers.
+
+**Sachs headline (mean over seeds; regenerated artefact):**
+
+- **PC:** C0 CPDAG F1 = **0.47** → best non-oracle **C1** CPDAG F1 = **0.51**
+  (directed: **0.45** → **0.50**). Oracle **C5:** CPDAG F1 **0.51**, directed **0.50**.
+- **GES:** C0 CPDAG F1 = **0.18** → best non-oracle **C3+ft** CPDAG F1 = **0.24**
+  (directed: **0.19** → **0.23**). Oracle **C5:** CPDAG F1 **0.24**, directed **0.23**.
+- **LiNGAM:** `cpdag_*` equals `directed_*` (fully directed output).
+
+**PC oracle C5:** still **7** `dropped_due_to_cycle` edges per seed
+(**70** summed over 10 seeds). Orienting undirected pairs in
+`apply_post_hoc_edits` does not reduce this on the current Sachs oracle run
+(the failing required injections are not resolved by removing a single reverse
+arc alone).
+
+Primary Step 6 table for orientation scoring: **`tables/ablation_table_cpdag.tex`**
+(CPDAG F1 headline); **`tables/ablation_table_directed.tex`** remains for
+strict directed overlap.
+
 ## fGES Decision
 
 The optional `pytetrad` fGES route was checked and skipped for this

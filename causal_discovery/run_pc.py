@@ -52,9 +52,16 @@ def run_pc(
     n = len(variable_names)
 
     for i in range(n):
-        for j in range(n):
-            if adjacency[i, j] == -1 and adjacency[j, i] == 1:
-                graph.add_edge(variable_names[i], variable_names[j])
+        for j in range(i + 1, n):
+            aij, aji = adjacency[i, j], adjacency[j, i]
+            u, v = variable_names[i], variable_names[j]
+            if aij == -1 and aji == -1:
+                graph.add_edge(u, v)
+                graph.add_edge(v, u)
+            elif aij == -1 and aji == 1:
+                graph.add_edge(u, v)
+            elif aij == 1 and aji == -1:
+                graph.add_edge(v, u)
 
     graph.graph[_PC_POST_HOC_META_KEY] = 0
     dropped: list[tuple[str, str]] = []

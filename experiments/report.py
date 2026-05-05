@@ -27,8 +27,15 @@ CONDITION_ORDER: Final[tuple[str, ...]] = (
     "C5",
 )
 ALGORITHMS: Final[tuple[str, ...]] = ("PC", "GES", "LiNGAM")
-AGGREGATE_METRICS: Final[tuple[str, ...]] = ("shd", "f1", "directed_f1")
+AGGREGATE_METRICS: Final[tuple[str, ...]] = (
+    "shd",
+    "f1",
+    "directed_f1",
+    "cpdag_f1",
+    "shd_cpdag",
+)
 HEADLINE_F1_METRIC: Final[str] = "directed_f1"
+HEADLINE_CPDAG_METRIC: Final[str] = "cpdag_f1"
 
 GAP_CONDITIONS: Final[tuple[str, ...]] = (
     "C0.5",
@@ -278,6 +285,69 @@ def write_ablation_table_directed(
     output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def write_ablation_table_cpdag(
+    agg: dict[str, Any],
+    llm_only_row: dict[str, Any],
+    output_path: Path,
+) -> None:
+    """Same layout as :func:`write_ablation_table_directed` using ``shd_cpdag`` / ``cpdag_f1``."""
+    lines: list[str] = [
+        r"% Sachs ablation (CPDAG F1): mean $\pm$ std over seeds with status=ok.",
+        r"% Undirected CPDAG edges aligned with a gold arc count as 0.5 in precision/recall (Chickering 1995; Tsamardinos \& Brown 2008).",
+        r"% SHD column is SHD-CPDAG. See \texttt{ablation\_table\_directed.tex} for directed-only F1.",
+        r"% \textsuperscript{*} N/A: no successful runs or inapplicable cell. \textsuperscript{\dag}: fewer than 10/10 successful seeds (see caption).",
+        r"\begin{tabular}{l|cc|cc|cc}",
+        r"\hline",
+        r" & \multicolumn{2}{c|}{PC} & \multicolumn{2}{c|}{GES} & \multicolumn{2}{c}{LiNGAM} \\",
+        r" & SHD\textsubscript{CPDAG} & F1\textsubscript{cpdag} & SHD\textsubscript{CPDAG} & F1\textsubscript{cpdag} & SHD\textsubscript{CPDAG} & F1\textsubscript{cpdag} \\",
+        r"\hline",
+    ]
+
+    table_rows = [c for c in CONDITION_ORDER if c != "C5"] + ["C-LLM-only", "C5"]
+    for condition in table_rows:
+        if condition == "C-LLM-only":
+            m = llm_only_row.get("metrics") or {}
+            shd_v = (
+                round2(float(m["shd_cpdag"]))
+                if m.get("shd_cpdag") is not None
+                else None
+            )
+            c_f1 = (
+                round2(float(m["cpdag_f1"])) if m.get("cpdag_f1") is not None else None
+            )
+            assert shd_v is not None and c_f1 is not None
+            row = (
+                r"C-LLM-only\textsuperscript{$\dagger$} & "
+                rf"${shd_v:.2f}$ & ${c_f1:.2f}$ & --- & --- & --- & --- \\"
+            )
+            lines.append(
+                row
+                + r" % single DAG; no PC/GES/LiNGAM split—metrics repeated only under PC columns"
+            )
+            continue
+
+        row_parts = [condition]
+        for alg in ALGORITHMS:
+            for metric in ("shd_cpdag", "cpdag_f1"):
+                row_parts.append(
+                    _cell_tex(
+                        agg,
+                        condition,
+                        alg,
+                        metric,
+                    )
+                )
+        lines.append(" & ".join(row_parts) + r" \\")
+
+    lines.append(r"\hline")
+    lines.append(
+        r"% C-LLM-only row: dagger marks algorithm-free DAG; values shown only under PC columns (--- elsewhere)."
+    )
+    lines.append(r"\end{tabular}")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def write_constraint_quality_table(quality: dict[str, Any], output_path: Path) -> None:
     """Build from ``constraint_quality_sachs.json`` ``by_source`` block."""
     by_source = quality["by_source"]
@@ -306,7 +376,7 @@ def write_constraint_quality_table(quality: dict[str, Any], output_path: Path) -
 def write_aupr_extension_table(
     results: list[dict[str, Any]], output_path: Path
 ) -> None:
-    """Write PC-only AUPR / skeleton F1 / directed F1 snippet from ablation rows."""
+    """Write PC-only AUPR / skeleton F1 / directed F1 / CPDAG F1 snippet."""
     rows = [
         row
         for row in results
@@ -316,10 +386,10 @@ def write_aupr_extension_table(
     ]
     lines = [
         r"% PC AUPR extension: mean $\pm$ std over successful seeds from ablation_results_sachs.json.",
-        r"% F1 = skeleton (undirected); F1\textsubscript{dir} = directed arc overlap.",
-        r"\begin{tabular}{lccc}",
+        r"% F1 = skeleton (undirected); F1\textsubscript{dir} = directed arc overlap; F1\textsubscript{cpdag} = CPDAG-aware overlap.",
+        r"\begin{tabular}{lcccc}",
         r"\hline",
-        r"condition & AUPR & F1 & F1\textsubscript{dir} \\",
+        r"condition & AUPR & F1 & F1\textsubscript{dir} & F1\textsubscript{cpdag} \\",
         r"\hline",
     ]
     for condition in CONDITION_ORDER:
@@ -340,8 +410,14 @@ def write_aupr_extension_table(
             if row.get("condition") == condition
             and "directed_f1" in (row.get("metrics") or {})
         ]
-        if not vals_aupr or not vals_f1 or not vals_df1:
-            lines.append(f"{condition} & N/A & N/A & N/A \\\\")
+        vals_cpdag = [
+            float((row.get("metrics") or {})["cpdag_f1"])
+            for row in rows
+            if row.get("condition") == condition
+            and "cpdag_f1" in (row.get("metrics") or {})
+        ]
+        if not vals_aupr or not vals_f1 or not vals_df1 or not vals_cpdag:
+            lines.append(f"{condition} & N/A & N/A & N/A & N/A \\\\")
             continue
         aupr_mean = statistics.mean(vals_aupr)
         aupr_std = statistics.stdev(vals_aupr) if len(vals_aupr) >= 2 else 0.0
@@ -349,10 +425,13 @@ def write_aupr_extension_table(
         f1_std = statistics.stdev(vals_f1) if len(vals_f1) >= 2 else 0.0
         df1_mean = statistics.mean(vals_df1)
         df1_std = statistics.stdev(vals_df1) if len(vals_df1) >= 2 else 0.0
+        cf1_mean = statistics.mean(vals_cpdag)
+        cf1_std = statistics.stdev(vals_cpdag) if len(vals_cpdag) >= 2 else 0.0
         lines.append(
             f"{condition} & ${aupr_mean:.2f} \\pm {aupr_std:.2f}$ "
             f"& ${f1_mean:.2f} \\pm {f1_std:.2f}$ "
-            f"& ${df1_mean:.2f} \\pm {df1_std:.2f}$ \\\\"
+            f"& ${df1_mean:.2f} \\pm {df1_std:.2f}$ "
+            f"& ${cf1_mean:.2f} \\pm {cf1_std:.2f}$ \\\\"
         )
     lines.extend([r"\hline", r"\end{tabular}"])
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -402,9 +481,20 @@ def headline_summary(
         if metrics_llm.get("shd") is not None
         else None
     )
+    shd_cpdag_cllm = (
+        round2(float(metrics_llm["shd_cpdag"]))
+        if metrics_llm.get("shd_cpdag") is not None
+        else None
+    )
+    cpdag_f1_cllm = (
+        round2(float(metrics_llm[HEADLINE_CPDAG_METRIC]))
+        if metrics_llm.get(HEADLINE_CPDAG_METRIC) is not None
+        else None
+    )
 
     best_by_alg: dict[str, Any] = {}
     gap_for_best: list[float] = []
+    gap_cpdag_for_best: list[float] = []
 
     for alg in ALGORITHMS:
         best_cond: str | None = None
@@ -423,11 +513,30 @@ def headline_summary(
                 sk = _mean_metric(agg, cond, alg, "f1")
                 best_sk_f1 = round2(sk) if sk is not None else None
 
+        best_cond_cpdag: str | None = None
+        best_cf1: float | None = None
+        best_shd_cpdag: float | None = None
+        for cond in NON_ORACLE:
+            c1m = _mean_metric(agg, cond, alg, HEADLINE_CPDAG_METRIC)
+            if c1m is None:
+                continue
+            if best_cf1 is None or c1m > best_cf1:
+                best_cf1 = c1m
+                best_cond_cpdag = cond
+                shdc = _mean_metric(agg, cond, alg, "shd_cpdag")
+                best_shd_cpdag = round2(shdc) if shdc is not None else None
+
         f0 = _mean_metric(agg, "C0", alg, HEADLINE_F1_METRIC)
         f5 = _mean_metric(agg, "C5", alg, HEADLINE_F1_METRIC)
         g_pct = gap_closed_pct(best_df1, f0, f5)
         if g_pct is not None:
             gap_for_best.append(float(g_pct))
+
+        f0_cpdag = _mean_metric(agg, "C0", alg, HEADLINE_CPDAG_METRIC)
+        f5_cpdag = _mean_metric(agg, "C5", alg, HEADLINE_CPDAG_METRIC)
+        g_pct_cpdag = gap_closed_pct(best_cf1, f0_cpdag, f5_cpdag)
+        if g_pct_cpdag is not None:
+            gap_cpdag_for_best.append(float(g_pct_cpdag))
 
         n_ok = 0
         if best_cond is not None:
@@ -437,14 +546,21 @@ def headline_summary(
 
         best_by_alg[alg] = {
             "condition": best_cond,
+            "condition_cpdag": best_cond_cpdag,
             "directed_f1": round2(best_df1) if best_df1 is not None else None,
+            "cpdag_f1": round2(best_cf1) if best_cf1 is not None else None,
+            "cpdag_f1_c0": round2(f0_cpdag) if f0_cpdag is not None else None,
+            "directed_f1_c0": round2(f0) if f0 is not None else None,
             "f1": best_sk_f1,
             "shd": best_shd,
+            "shd_cpdag": best_shd_cpdag,
             "gap_closed_pct": g_pct,
+            "gap_closed_pct_cpdag": g_pct_cpdag,
             "n_ok_f1": n_ok,
         }
 
     gap_closed_best = max(gap_for_best) if gap_for_best else None
+    gap_closed_best_cpdag = max(gap_cpdag_for_best) if gap_cpdag_for_best else None
 
     cllm_gap_pcts: list[float] = []
     for alg in ALGORITHMS:
@@ -465,8 +581,10 @@ def headline_summary(
         df1 = _mean_metric(agg, "C5", alg, HEADLINE_F1_METRIC)
         n_ok = int(df1_block.get("n_ok", 0)) if isinstance(df1_block, dict) else 0
         sk = _mean_metric(agg, "C5", alg, "f1")
+        cpd5 = _mean_metric(agg, "C5", alg, HEADLINE_CPDAG_METRIC)
         oracle[alg] = {
             "directed_f1": round2(df1) if df1 is not None else None,
+            "cpdag_f1": round2(cpd5) if cpd5 is not None else None,
             "f1": round2(sk) if sk is not None else None,
             "n_ok": n_ok,
             "failed": df1 is None,
@@ -508,10 +626,13 @@ def headline_summary(
     return {
         "best_condition_per_algorithm": best_by_alg,
         "gap_closed_pct": gap_closed_best,
+        "gap_closed_pct_cpdag": gap_closed_best_cpdag,
         "c_llm_only": {
             "f1": sk_f1_cllm,
             "directed_f1": df1_cllm,
+            "cpdag_f1": cpdag_f1_cllm,
             "shd": shd_cllm,
+            "shd_cpdag": shd_cpdag_cllm,
             "gap_closed_pct_max_vs_algorithms": cllm_gap_max,
         },
         "oracle_c5": oracle,
@@ -781,9 +902,34 @@ def _signed(delta: float | None) -> str:
 def _fmt_headline_block(s: dict[str, Any]) -> str:
     lines = [
         "=== Step 6 Sachs Ablation Headline ===",
-        "Best non-oracle condition per algorithm (by directed F1):",
+        "Best non-oracle condition per algorithm (by CPDAG F1):",
     ]
     best = s["best_condition_per_algorithm"]
+    for alg in ALGORITHMS:
+        row = best[alg]
+        cond_c = row.get("condition_cpdag")
+        f1c0 = row.get("cpdag_f1_c0")
+        f1c = row.get("cpdag_f1")
+        shdc = row.get("shd_cpdag")
+        d0 = row.get("directed_f1_c0")
+        dbest = row.get("directed_f1")
+        cond_d = row.get("condition")
+        gc_c = row.get("gap_closed_pct_cpdag")
+        if cond_c is None or f1c is None:
+            lines.append(f"  {alg}: N/A (no successful runs)")
+            continue
+        shdc_s = f"{shdc:.2f}" if shdc is not None else "N/A"
+        f0s = f"{f1c0:.2f}" if f1c0 is not None else "N/A"
+        d0s = f"{d0:.2f}" if d0 is not None else "N/A"
+        dbests = f"{dbest:.2f}" if dbest is not None else "N/A"
+        gc_c_s = f"{gc_c:.2f}%" if gc_c is not None else "N/A"
+        lines.append(
+            f"  {alg}: C0 CPDAG F1={f0s} → best non-oracle {cond_c}"
+            f" CPDAG F1={f1c:.2f}, SHD-CPDAG={shdc_s} (gap closed: {gc_c_s}; "
+            f"directed: {d0s} @ C0 → {dbests} @ {cond_d})"
+        )
+
+    lines.append("Best non-oracle condition per algorithm (by directed F1):")
     for alg in ALGORITHMS:
         row = best[alg]
         cond = row["condition"]
@@ -806,13 +952,18 @@ def _fmt_headline_block(s: dict[str, Any]) -> str:
     cllm = s["c_llm_only"]
     gcl = cllm["gap_closed_pct_max_vs_algorithms"]
     df1_c = cllm.get("directed_f1")
+    cpd_c = cllm.get("cpdag_f1")
     sk1_c = cllm.get("f1")
     df1_s = f"{df1_c:.2f}" if df1_c is not None else "N/A"
+    cpd_s = f"{cpd_c:.2f}" if cpd_c is not None else "N/A"
     sk1_s = f"{sk1_c:.2f}" if sk1_c is not None else "N/A"
     shd_c = cllm.get("shd")
+    shd_cp = cllm.get("shd_cpdag")
     shd_line = f"{float(shd_c):.2f}" if shd_c is not None else "N/A"
+    shd_cp_s = f"{float(shd_cp):.2f}" if shd_cp is not None else "N/A"
     lines.append(
-        f"C-LLM-only: F1_dir={df1_s}, F1_skel={sk1_s}, SHD={shd_line}"
+        f"C-LLM-only: F1_cpdag={cpd_s}, F1_dir={df1_s}, F1_skel={sk1_s}, "
+        f"SHD-CPDAG={shd_cp_s}, SHD={shd_line}"
         + (f" (gap closed: {gcl:.2f}%)" if gcl is not None else " (gap closed: N/A)")
     )
 
@@ -821,10 +972,12 @@ def _fmt_headline_block(s: dict[str, Any]) -> str:
     for alg in ALGORITHMS:
         o = orch[alg]
         dfv = o["directed_f1"]
+        cpfv = o.get("cpdag_f1")
         if o["failed"] or dfv is None:
             o_parts.append(f"{alg} F1_dir=N/A (failed)")
         else:
-            o_parts.append(f"{alg} F1_dir={dfv:.2f}")
+            cp_s = f"{cpfv:.2f}" if cpfv is not None else "N/A"
+            o_parts.append(f"{alg} F1_cpdag={cp_s} F1_dir={dfv:.2f}")
     lines.append("Oracle (C5) ceiling: " + ", ".join(o_parts))
 
     d = s["cd_vs_llm_only_delta"]
@@ -873,6 +1026,7 @@ def main() -> None:
     write_ablation_table_directed(
         agg, llm_row, tables_dir / "ablation_table_directed.tex"
     )
+    write_ablation_table_cpdag(agg, llm_row, tables_dir / "ablation_table_cpdag.tex")
     write_constraint_quality_table(quality, tables_dir / "constraint_quality.tex")
     write_aupr_extension_table(results, tables_dir / "aupr_extension.tex")
 
@@ -885,6 +1039,7 @@ def main() -> None:
     print(_fmt_headline_block(summary))
     print(
         "Wrote tables/ablation_table.tex, tables/ablation_table_directed.tex, "
+        "tables/ablation_table_cpdag.tex, "
         "tables/constraint_quality.tex, tables/aupr_extension.tex\n"
         "Wrote figures/gap_closed.{pdf,png}, figures/cd_vs_llm_only.{pdf,png}, "
         "figures/threshold_sensitivity.{pdf,png}, "

@@ -48,6 +48,10 @@ def _minimal_result(
                 "directed_precision": 0.0,
                 "directed_recall": 0.0,
                 "directed_f1": 0.0,
+                "cpdag_precision": 0.0,
+                "cpdag_recall": 0.0,
+                "cpdag_f1": 0.0,
+                "shd_cpdag": shd,
             }
             if status == "ok"
             else None
