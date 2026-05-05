@@ -9,7 +9,7 @@ documentation task unless the user explicitly overrides part of it.
 `text2causal` is a Python 3.12 research pipeline that derives causal-discovery
 priors for protein-signalling datasets by combining a structured ontology
 (Reactome) with LLM reasoning, and then runs constrained causal discovery
-(`PC`, `GES`, `LiNGAM`) and reports paper-grade evaluation metrics.
+(`PC`, `GES`, `LiNGAM`, and — on interventional Sachs — `GIES`) and reports paper-grade evaluation metrics.
 
 The work is organised as the multi-step plan in `docs/dev_plan_v2.md`. Every
 step has a per-step spec under `docs/step_NN_*.md` (the authoritative scope
@@ -45,12 +45,13 @@ Active research pipeline (this is where new work goes):
 - `grounding/` — Step 3 variable grounding (LLM-driven dataset-column → UniProt / ChEBI / family mapping with Reactome validation). `ground.py` is the entry point; `evaluate.py` is the gold-standard scoring helper.
 - `evaluation/` — `harness.py` evaluates a predicted graph against ground truth (skeleton F1, directed F1, **CPDAG F1**, SHD, SHD-CPDAG, AUPR); `metrics.py` primitives; `cpdag_metrics.py` CPDAG-aware precision/recall/F1 and SHD-CPDAG (Chickering 1995; Tsamardinos & Brown 2008).
 - `constraints/constraint_builder.py` — translates priors into PC `BackgroundKnowledge`, LiNGAM prior matrices, and post-hoc GES edits. Will grow in Step 5.
-- `causal_discovery/` — algorithm wrappers (`run_pc.py`, `run_ges.py`, `run_lingam.py`).
+- `causal_discovery/` — algorithm wrappers (`run_pc.py`, `run_ges.py`, `run_lingam.py`, `run_gies.py` on interventional data).
 - `reasoning/` — Step 4 causal reasoning (`reason.py`), merge of free-text into no-context rows (`merge_freetext_fallback.py`), per-pair parametric fallback for uncovered pairs (`freetext_fallback.py`).
-- `experiments/` — runnable scripts and their JSON outputs (`baseline_sachs.py`/`.json`, `reactome_coverage.py`/`.json`, `run_grounding_sachs.py`, `grounding_sachs_gold.json`, `grounding_dream4.json`, `run_discovery_sachs.py`/`.json` Step 5 Sachs sweep, `runner.py` Step 6 ablation sweep → `ablation_results_sachs.json`, `constraint_quality.py` Step 6 Phase 3 → `constraint_quality_sachs.json`, `report.py` Step 6 Phase 4 → LaTeX under `tables/` and figures under `figures/`, `cost_report.py` Step 6 Phase 5 → `cost_report.json`). Most scripts write one committed JSON artefact; the Step 5 sweep persists incrementally to `experiments/discovery_results_sachs.json`; Step 6 persists incrementally to `experiments/ablation_results_sachs.json`.
+- `experiments/` — runnable scripts and their JSON outputs (`baseline_sachs.py`/`.json`, `reactome_coverage.py`/`.json`, `run_grounding_sachs.py`, `grounding_sachs_gold.json`, `grounding_dream4.json`, `run_discovery_sachs.py`/`.json` Step 5 Sachs sweep, `runner.py` Step 6 ablation sweep → `ablation_results_sachs.json`, `runner_interventional.py` PR6 interventional sweep → `ablation_results_sachs_interventional.json`, `constraint_quality.py` Step 6 Phase 3 → `constraint_quality_sachs.json`, `report.py` Step 6 Phase 4 → LaTeX under `tables/` and figures under `figures/`, `report_interventional.py` PR6 observational vs interventional tables, `cost_report.py` Step 6 Phase 5 → `cost_report.json`). Most scripts write one committed JSON artefact; the Step 5 sweep persists incrementally to `experiments/discovery_results_sachs.json`; Step 6 persists incrementally to `experiments/ablation_results_sachs.json`.
 - `tables/` — Step 6 Phase 4 paper `tabular` snippets (`ablation_table.tex`, `constraint_quality.tex`).
 - `figures/` — Step 6 Phase 4 matplotlib outputs (each plot as `.pdf` and `.png`).
-- `utils/load_data.py` — dataset loaders (`load_sachs_dataset`, `load_lucas_dataset`).
+- `utils/load_data.py` — dataset loaders (`load_sachs_dataset`, `load_sachs_interventional_dataset`, `load_lucas_dataset`).
+- `data/sachs/interventional/` — nine-condition Sachs cytometry CSVs + `manifest.json` (PR6; see `README.md` for citations).
 - `utils/graph_utils.py` — graph-manipulation helpers.
 - `tests/` — unittest-based regression coverage. Fixtures live in `tests/fixtures/`.
 - `cache/` — committed response caches (`cache/llm/`, `cache/reactome/`). The pipeline replays end-to-end from these without API access.
@@ -78,6 +79,8 @@ Prefer `Taskfile.yml` targets when they exist:
 - `task baseline-sachs` — Sachs unconstrained PC/GES/LiNGAM baseline → `experiments/baseline_sachs.json`.
 - `task discover-sachs` — Step 5 Sachs constrained-discovery sweep → `experiments/discovery_results_sachs.json`.
 - `task ablation-sachs` — Step 6 canonical ablation sweep on Sachs (480 algorithmic × 2 golds + C-LLM-only × 2 → `experiments/ablation_results_sachs.json`).
+- `task ablation-sachs-interventional` — PR6 interventional Sachs sweep (PC/GES/LiNGAM naive + GIES naive/gies × 2 golds + C-LLM-only × 2 → `experiments/ablation_results_sachs_interventional.json`).
+- `task report-sachs-interventional` — PR6 `tables/ablation_table_interventional.tex` + `tables/observational_vs_interventional.tex`.
 - `task constraint-quality-sachs` — Step 6 constraint quality (priors vs ground truth) → `experiments/constraint_quality_sachs.json`.
 - `task report-sachs` — Step 6 Phase 4 reporting → `tables/*.tex`, `figures/*.{pdf,png}` from committed JSON artefacts.
 - `task cost-report` — Step 6 Phase 5 LLM cache token/cost summary → `experiments/cost_report.json`.

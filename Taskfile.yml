@@ -106,6 +106,16 @@ tasks:
     cmds:
       - uv run python -m experiments.runner
 
+  ablation-sachs-interventional:
+    desc: PR6 — Sachs nine-context interventional sweep + GIES (writes ablation_results_sachs_interventional.json)
+    cmds:
+      - uv run python -m experiments.runner_interventional
+
+  report-sachs-interventional:
+    desc: PR6 — observational vs interventional CPDAG tables from committed JSON artefacts
+    cmds:
+      - uv run python -m experiments.report_interventional
+
   constraint-quality-sachs:
     desc: Step 6 constraint quality evaluation (precision/recall/hallucination/coverage per priors source)
     cmds:

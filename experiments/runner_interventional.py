@@ -1,0 +1,695 @@
+"""PR6 — Sachs interventional ablation (PC/GES/LiNGAM naive + GIES naive/interventional)."""
+
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+from dataclasses import dataclass, replace
+from pathlib import Path
+from typing import Any, Final
+
+import networkx as nx
+
+import experiments.run_condition_interventional as _ric
+from constraints.constraint_builder import load_priors
+from evaluation.harness import (
+    backfill_cpdag_metrics_in_results,
+    backfill_directed_metrics_in_results,
+    evaluate,
+    row_ok_metrics_missing_cpdag_f1,
+    row_ok_metrics_missing_directed_f1,
+)
+from utils.load_data import (
+    available_sachs_gold_versions,
+    load_sachs_interventional_dataset,
+    sachs_interventional_block_sizes,
+    sachs_interventional_gies_targets,
+)
+
+DATASET_NAME: Final[str] = "sachs_interventional"
+MATRIX_ID: Final[str] = "step8_interventional"
+
+ORACLE_PRIORS: Final[Path] = Path("experiments/oracle_priors_sachs.json")
+FREETEXT_PRIORS: Final[Path] = Path("experiments/freetext_priors_sachs.json")
+FLOOR_REACTOME_ONLY: Final[Path] = Path(
+    "experiments/floor_priors_sachs_reactome_only.json"
+)
+CAUSAL_PRIORS: Final[Path] = Path("experiments/causal_priors_sachs.json")
+CAUSAL_PRIORS_WITH_FALLBACK: Final[Path] = Path(
+    "experiments/causal_priors_sachs_with_fallback.json"
+)
+
+PREDICTED_DAG_GML: Final[Path] = Path("experiments/predicted_dag_llm_only_sachs.gml")
+PREDICTED_DAG_META: Final[Path] = Path(
+    "experiments/predicted_dag_llm_only_sachs.meta.json"
+)
+
+_NAIVE_ALGORITHMS: Final[tuple[str, ...]] = ("PC", "GES", "LiNGAM")
+_SEEDS: Final[tuple[int, ...]] = tuple(range(10))
+_GOLD_ORDER: Final[tuple[str, ...]] = tuple(available_sachs_gold_versions())
+
+
+def _freetext_fallback_row_stale(row: dict[str, Any], *, path: Path) -> bool:
+    if str(row.get("priors_source")) != "reactome_llm_with_freetext_fallback":
+        return False
+    if not path.is_file():
+        return False
+    current = hashlib.sha256(path.read_bytes()).hexdigest()
+    stored = (row.get("notes") or {}).get("source_priors_hash")
+    return stored != current
+
+
+def _gold_rank(gv: str) -> int:
+    if gv in _GOLD_ORDER:
+        return _GOLD_ORDER.index(gv)
+    return 99
+
+
+@dataclass(frozen=True)
+class _InterventionalCell:
+    condition: str
+    priors_source: str
+    priors_cache_key: str
+    threshold: float | None
+    algorithm: str
+    intervention_strategy: str
+    seed: int
+    gold_version: str = "original"
+    lingam_prior_mode: str | None = None
+
+
+@dataclass(frozen=True)
+class _CllmCell:
+    condition: str = "C-LLM-only"
+    priors_source: str = "reactome_llm"
+    gold_version: str = "original"
+
+
+def _threshold_key(threshold: float | None) -> str:
+    if threshold is None:
+        return "none"
+    return f"{float(threshold):.2f}"
+
+
+def _algorithm_sort_token(algorithm: str | None) -> str:
+    if algorithm is None:
+        return "_zzz"
+    return str(algorithm)
+
+
+def _intervention_sort_token(s: str | None) -> str:
+    if s == "gies":
+        return "1_gies"
+    return "0_naive"
+
+
+def result_sort_key(row: dict[str, Any]) -> tuple[str, int, str, str, str, float, int]:
+    th = row.get("threshold")
+    th_sort = -1.0 if th is None else float(th)
+    seed = row.get("seed")
+    seed_sort = -1 if seed is None else int(seed)
+    gv = str(row.get("gold_version") or "original")
+    return (
+        str(row["condition"]),
+        _gold_rank(gv),
+        str(row["priors_source"]),
+        _algorithm_sort_token(row.get("algorithm")),
+        _intervention_sort_token(str(row.get("intervention_strategy") or "naive")),
+        th_sort,
+        seed_sort,
+    )
+
+
+def result_row_key(
+    row: dict[str, Any],
+) -> tuple[str, str, str, str, str, int, str, str]:
+    alg = row.get("algorithm")
+    alg_part = "_llm_only" if alg is None else str(alg)
+    seed = row.get("seed")
+    seed_part = -1 if seed is None else int(seed)
+    lingam_mode = row.get("lingam_prior_mode")
+    lingam_part = "_none" if lingam_mode is None else str(lingam_mode)
+    gv = str(row.get("gold_version") or "original")
+    intv = str(row.get("intervention_strategy") or "naive")
+    return (
+        str(row["condition"]),
+        str(row["priors_source"]),
+        alg_part,
+        _threshold_key(row["threshold"] if "threshold" in row else None),
+        intv,
+        seed_part,
+        lingam_part,
+        gv,
+    )
+
+
+def _result_row_base_key(
+    row: dict[str, Any],
+) -> tuple[str, str, str, str, str, int, str]:
+    key = result_row_key(row)
+    return (key[0], key[1], key[2], key[3], key[4], key[5], key[7])
+
+
+def _atomic_write_json(path: Path, payload: dict[str, Any]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    with tmp.open("w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, sort_keys=True)
+        f.write("\n")
+    os.replace(tmp, path)
+
+
+def _summarise_payload(
+    results: list[dict[str, Any]], n_expected: int
+) -> dict[str, Any]:
+    n_failed = sum(1 for r in results if r.get("status") == "failed")
+    ges_dropped = 0
+    gies_dropped = 0
+    pc_dropped = 0
+    for r in results:
+        dropped = r.get("dropped_due_to_cycle") or []
+        if r.get("algorithm") == "GES":
+            ges_dropped += len(dropped)
+        if r.get("algorithm") == "GIES":
+            gies_dropped += len(dropped)
+        if r.get("algorithm") == "PC":
+            pc_dropped += len(dropped)
+    return {
+        "dataset": DATASET_NAME,
+        "matrix": MATRIX_ID,
+        "n_cells_expected": n_expected,
+        "n_cells_completed": len(results),
+        "n_cells_failed": n_failed,
+        "ges_total_dropped_due_to_cycle": ges_dropped,
+        "gies_total_dropped_due_to_cycle": gies_dropped,
+        "pc_total_dropped_due_to_cycle": pc_dropped,
+    }
+
+
+def _predicted_edges_list(graph: nx.DiGraph) -> list[list[str]]:
+    edges = [(str(u), str(v)) for u, v in graph.edges()]
+    edges.sort(key=lambda t: (t[0], t[1]))
+    return [list(pair) for pair in edges]
+
+
+def _append_condition_block(
+    cells: list[_InterventionalCell],
+    *,
+    condition: str,
+    priors_source: str,
+    priors_cache_key: str,
+    threshold: float | None,
+) -> None:
+    def _lingam_mode(alg: str) -> str | None:
+        if alg != "LiNGAM":
+            return None
+        if priors_source == "none":
+            return None
+        return "post_hoc"
+
+    for alg in _NAIVE_ALGORITHMS:
+        for seed in _SEEDS:
+            cells.append(
+                _InterventionalCell(
+                    condition=condition,
+                    priors_source=priors_source,
+                    priors_cache_key=priors_cache_key,
+                    threshold=threshold,
+                    algorithm=alg,
+                    intervention_strategy="naive",
+                    seed=seed,
+                    lingam_prior_mode=_lingam_mode(alg),
+                )
+            )
+    for seed in _SEEDS:
+        for strat in ("naive", "gies"):
+            cells.append(
+                _InterventionalCell(
+                    condition=condition,
+                    priors_source=priors_source,
+                    priors_cache_key=priors_cache_key,
+                    threshold=threshold,
+                    algorithm="GIES",
+                    intervention_strategy=strat,
+                    seed=seed,
+                    lingam_prior_mode=None,
+                )
+            )
+
+
+def _build_interventional_matrix() -> list[_InterventionalCell]:
+    cells: list[_InterventionalCell] = []
+    _append_condition_block(
+        cells,
+        condition="C0",
+        priors_source="none",
+        priors_cache_key="none",
+        threshold=None,
+    )
+    _append_condition_block(
+        cells,
+        condition="C0.5",
+        priors_source="omnipath_reactome_only",
+        priors_cache_key="omnipath_reactome_only",
+        threshold=0.7,
+    )
+    _append_condition_block(
+        cells,
+        condition="C1",
+        priors_source="freetext_llm",
+        priors_cache_key="freetext_llm",
+        threshold=0.7,
+    )
+    for thr, cond in ((0.9, "C2"), (0.7, "C3"), (0.6, "C4")):
+        _append_condition_block(
+            cells,
+            condition=cond,
+            priors_source="reactome_llm",
+            priors_cache_key="reactome_llm",
+            threshold=thr,
+        )
+    _append_condition_block(
+        cells,
+        condition="C3+ft",
+        priors_source="reactome_llm_with_freetext_fallback",
+        priors_cache_key="reactome_llm_with_freetext_fallback",
+        threshold=0.7,
+    )
+    _append_condition_block(
+        cells,
+        condition="C5",
+        priors_source="oracle",
+        priors_cache_key="oracle",
+        threshold=None,
+    )
+    cells.sort(
+        key=lambda c: (
+            c.condition,
+            c.priors_source,
+            c.algorithm,
+            _intervention_sort_token(c.intervention_strategy),
+            -1.0 if c.threshold is None else float(c.threshold),
+            c.seed,
+        )
+    )
+    return cells
+
+
+def _expand_with_gold(
+    cells: list[_InterventionalCell],
+) -> list[_InterventionalCell]:
+    out: list[_InterventionalCell] = []
+    for gv in available_sachs_gold_versions():
+        for c in cells:
+            out.append(replace(c, gold_version=gv))
+    return out
+
+
+def _build_cllm_cells() -> list[_CllmCell]:
+    return [_CllmCell(gold_version=gv) for gv in available_sachs_gold_versions()]
+
+
+def _apply_cell_filters(
+    algo_cells: list[_InterventionalCell],
+    cllm_cells: list[_CllmCell],
+    *,
+    only_conditions: list[str] | None,
+    only_algorithms: list[str] | None,
+    only_seeds: list[int] | None,
+) -> tuple[list[_InterventionalCell], list[_CllmCell]]:
+    out_algo = list(algo_cells)
+    out_cllm = list(cllm_cells)
+
+    if only_conditions is not None:
+        allow = frozenset(only_conditions)
+        out_algo = [c for c in out_algo if c.condition in allow]
+        out_cllm = [c for c in out_cllm if c.condition in allow]
+
+    if only_algorithms is not None:
+        allow_alg = frozenset(only_algorithms)
+        out_algo = [c for c in out_algo if c.algorithm in allow_alg]
+        out_cllm = []
+
+    if only_seeds is not None:
+        allow_s = frozenset(only_seeds)
+        out_algo = [c for c in out_algo if c.seed in allow_s]
+        out_cllm = []
+
+    return out_algo, out_cllm
+
+
+def _load_priors_cache() -> dict[str, list[Any] | None]:
+    return {
+        "none": None,
+        "omnipath_reactome_only": load_priors(FLOOR_REACTOME_ONLY),
+        "freetext_llm": load_priors(FREETEXT_PRIORS),
+        "reactome_llm": load_priors(CAUSAL_PRIORS),
+        "reactome_llm_with_freetext_fallback": load_priors(CAUSAL_PRIORS_WITH_FALLBACK),
+        "oracle": load_priors(ORACLE_PRIORS),
+    }
+
+
+def _run_cllm_cell(
+    *,
+    true_graph: nx.DiGraph,
+    gml_path: Path,
+    meta_path: Path,
+    gold_version: str,
+) -> dict[str, Any]:
+    predicted = nx.read_gml(gml_path, label="label")
+
+    def _aligned_names() -> bool:
+        pred_ns = {str(n) for n in predicted.nodes()}
+        true_ns = {str(n) for n in true_graph.nodes()}
+        return pred_ns == true_ns and all(n in predicted for n in true_graph.nodes())
+
+    if not _aligned_names():
+        mapping: dict[Any, str] = {}
+        for n in list(predicted.nodes()):
+            data = predicted.nodes[n]
+            lbl = data.get("label")
+            if lbl is not None:
+                mapping[n] = str(lbl)
+        if mapping:
+            predicted = nx.relabel_nodes(predicted, mapping)
+
+    metrics = evaluate(predicted, true_graph)
+    gml_str = gml_path.as_posix()
+    meta_str = meta_path.as_posix()
+    meta_obj = json.loads(meta_path.read_text(encoding="utf-8"))
+    if not isinstance(meta_obj, dict):
+        raise TypeError(f"Meta JSON must be an object: {meta_path}")
+    meta_thr = meta_obj.get("threshold")
+    priors_hash = meta_obj.get("source_priors_hash")
+    return {
+        "dataset": DATASET_NAME,
+        "condition": "C-LLM-only",
+        "algorithm": None,
+        "gold_version": gold_version,
+        "seed": None,
+        "threshold": None,
+        "priors_source": "reactome_llm",
+        "intervention_strategy": "naive",
+        "status": "ok",
+        "error": None,
+        "metrics": {k: float(v) for k, v in metrics.items()},
+        "predicted_edges": _predicted_edges_list(predicted),
+        "constraint_summary": None,
+        "dropped_due_to_cycle": [],
+        "notes": {
+            "meta_path": meta_str,
+            "predicted_dag_path": gml_str,
+            "n_nodes": int(predicted.number_of_nodes()),
+            "n_edges": int(predicted.number_of_edges()),
+            "threshold": meta_thr,
+            "source_priors_hash": priors_hash,
+        },
+    }
+
+
+def _expected_schedule_base_keys(
+    algo_scheduled: list[_InterventionalCell],
+    cllm_scheduled: list[_CllmCell],
+) -> set[tuple[str, str, str, str, str, int, str]]:
+    bases: set[tuple[str, str, str, str, str, int, str]] = set()
+    for c in algo_scheduled:
+        bases.add(
+            (
+                c.condition,
+                c.priors_source,
+                c.algorithm,
+                _threshold_key(c.threshold),
+                c.intervention_strategy,
+                c.seed,
+                c.gold_version,
+            )
+        )
+    for cc in cllm_scheduled:
+        bases.add(
+            (
+                "C-LLM-only",
+                "reactome_llm",
+                "_llm_only",
+                "none",
+                "naive",
+                -1,
+                cc.gold_version,
+            )
+        )
+    return bases
+
+
+def interventional_row_key_parts(
+    c: _InterventionalCell,
+) -> tuple[str, str, str, str, str, int, str, str]:
+    lingam_part = "_none" if c.lingam_prior_mode is None else str(c.lingam_prior_mode)
+    return (
+        c.condition,
+        c.priors_source,
+        c.algorithm,
+        _threshold_key(c.threshold),
+        c.intervention_strategy,
+        c.seed,
+        lingam_part,
+        c.gold_version,
+    )
+
+
+def run_interventional_ablation(
+    *,
+    output_path: Path = Path("experiments/ablation_results_sachs_interventional.json"),
+    only_conditions: list[str] | None = None,
+    only_algorithms: list[str] | None = None,
+    only_seeds: list[int] | None = None,
+) -> None:
+    full_algo = _expand_with_gold(_build_interventional_matrix())
+    cllm_cells = _build_cllm_cells()
+    algo_scheduled, cllm_scheduled = _apply_cell_filters(
+        full_algo,
+        cllm_cells,
+        only_conditions=only_conditions,
+        only_algorithms=only_algorithms,
+        only_seeds=only_seeds,
+    )
+    n_expected = len(algo_scheduled) + len(cllm_scheduled)
+
+    results: list[dict[str, Any]] = []
+    if output_path.is_file():
+        raw = json.loads(output_path.read_text(encoding="utf-8"))
+        results = list(raw.get("results") or [])
+
+    def algo_key(
+        c: _InterventionalCell,
+    ) -> tuple[str, str, str, str, str, int, str, str]:
+        return interventional_row_key_parts(c)
+
+    expected_algo_keys = {algo_key(c) for c in algo_scheduled}
+    expected_keys = set(expected_algo_keys)
+    for cc in cllm_scheduled:
+        expected_keys.add(
+            (
+                "C-LLM-only",
+                "reactome_llm",
+                "_llm_only",
+                "none",
+                "naive",
+                -1,
+                "_none",
+                cc.gold_version,
+            )
+        )
+    expected_bases = _expected_schedule_base_keys(algo_scheduled, cllm_scheduled)
+    results = [
+        row
+        for row in results
+        if _result_row_base_key(row) not in expected_bases
+        or result_row_key(row) in expected_keys
+    ]
+    results = [
+        row
+        for row in results
+        if not _freetext_fallback_row_stale(row, path=CAUSAL_PRIORS_WITH_FALLBACK)
+    ]
+    existing = {result_row_key(r) for r in results}
+
+    pending_algo = [c for c in algo_scheduled if algo_key(c) not in existing]
+    pending_cllm: list[_CllmCell] = []
+    for cc in cllm_scheduled:
+        cllm_k = (
+            "C-LLM-only",
+            "reactome_llm",
+            "_llm_only",
+            "none",
+            "naive",
+            -1,
+            "_none",
+            cc.gold_version,
+        )
+        if cllm_k not in existing:
+            pending_cllm.append(cc)
+
+    def _print_summary(results_: list[dict[str, Any]]) -> None:
+        n_ok = sum(1 for r in results_ if r.get("status") == "ok")
+        n_fail = sum(1 for r in results_ if r.get("status") == "failed")
+        gies_tot = sum(
+            len(r.get("dropped_due_to_cycle") or [])
+            for r in results_
+            if r.get("algorithm") == "GIES"
+        )
+        print(
+            f"Summary: cells_in_file={len(results_)} expected={n_expected} "
+            f"ok={n_ok} failed={n_fail} gies_dropped_edges={gies_tot}"
+        )
+
+    block_sizes = sachs_interventional_block_sizes()
+    gies_targets = sachs_interventional_gies_targets()
+    data_df, _ind, _g0 = load_sachs_interventional_dataset()
+    variable_names = list(data_df.columns)
+    graphs_by_gold = {
+        gv: load_sachs_interventional_dataset(gold_version=gv)[2]
+        for gv in available_sachs_gold_versions()
+    }
+
+    needs_directed_bf = any(row_ok_metrics_missing_directed_f1(r) for r in results)
+    needs_cpdag_bf = any(row_ok_metrics_missing_cpdag_f1(r) for r in results)
+    needs_metric_backfill = needs_directed_bf or needs_cpdag_bf
+
+    if not pending_algo and not pending_cllm:
+        if needs_metric_backfill:
+            n_dir = backfill_directed_metrics_in_results(
+                results,
+                variable_names,
+                graphs_by_gold["original"],
+                true_graph_by_gold_version=graphs_by_gold,
+            )
+            n_cp = backfill_cpdag_metrics_in_results(
+                results,
+                variable_names,
+                graphs_by_gold["original"],
+                true_graph_by_gold_version=graphs_by_gold,
+            )
+            payload = {
+                "results": results,
+                **_summarise_payload(results, n_expected),
+            }
+            _atomic_write_json(output_path, payload)
+            if n_dir:
+                print(f"Backfilled directed metrics for {n_dir} ok rows.")
+            if n_cp:
+                print(f"Backfilled CPDAG metrics for {n_cp} ok rows.")
+        _print_summary(results)
+        return
+
+    if needs_metric_backfill:
+        n_dir = backfill_directed_metrics_in_results(
+            results,
+            variable_names,
+            graphs_by_gold["original"],
+            true_graph_by_gold_version=graphs_by_gold,
+        )
+        n_cp = backfill_cpdag_metrics_in_results(
+            results,
+            variable_names,
+            graphs_by_gold["original"],
+            true_graph_by_gold_version=graphs_by_gold,
+        )
+        payload = {
+            "results": results,
+            **_summarise_payload(results, n_expected),
+        }
+        _atomic_write_json(output_path, payload)
+        if n_dir:
+            print(f"Backfilled directed metrics for {n_dir} ok rows.")
+        if n_cp:
+            print(f"Backfilled CPDAG metrics for {n_cp} ok rows.")
+
+    data_matrix = data_df.to_numpy()
+    priors_cache = _load_priors_cache()
+
+    n_todo = len(pending_algo) + len(pending_cllm)
+    done = 0
+
+    for cell in pending_algo:
+        done += 1
+        priors = priors_cache[cell.priors_cache_key]
+        true_graph = graphs_by_gold[cell.gold_version]
+        res = _ric.run_interventional_condition(
+            dataset_name=DATASET_NAME,
+            data=data_matrix,
+            variable_names=variable_names,
+            true_graph=true_graph,
+            priors=priors,
+            priors_source=cell.priors_source,
+            algorithm=cell.algorithm,
+            threshold=cell.threshold,
+            seed=cell.seed,
+            gold_version=cell.gold_version,
+            intervention_strategy=cell.intervention_strategy,  # type: ignore[arg-type]
+            block_sizes=block_sizes,
+            gies_intervention_targets=gies_targets,
+            lingam_prior_mode=cell.lingam_prior_mode,
+        )
+        if cell.priors_source == "reactome_llm_with_freetext_fallback":
+            fb_path = CAUSAL_PRIORS_WITH_FALLBACK
+            notes = dict(res.get("notes") or {})
+            notes["source_priors_hash"] = hashlib.sha256(
+                fb_path.read_bytes()
+            ).hexdigest()
+            notes["priors_json_path"] = fb_path.as_posix()
+            res["notes"] = notes
+        if cell.condition == "C0.5":
+            res["condition"] = "C0.5"
+        elif res["condition"] != cell.condition:
+            res["condition"] = cell.condition
+
+        results.append(res)
+        results.sort(key=result_sort_key)
+        payload = {
+            "results": results,
+            **_summarise_payload(results, n_expected),
+        }
+        _atomic_write_json(output_path, payload)
+
+        status = res.get("status", "?")
+        mt = res.get("metrics") or {}
+        shd_s = mt.get("shd")
+        shd_part = f"shd={shd_s}" if shd_s is not None else "shd=n/a"
+        print(
+            f"[{done}/{n_todo}] {res['condition']} {cell.algorithm} "
+            f"{cell.intervention_strategy} "
+            f"{_threshold_key(cell.threshold)} {cell.seed} "
+            f"gold={cell.gold_version} -> {status} ({shd_part})"
+        )
+
+    for cc in pending_cllm:
+        done += 1
+        tg = graphs_by_gold[cc.gold_version]
+        res = _run_cllm_cell(
+            true_graph=tg,
+            gml_path=PREDICTED_DAG_GML,
+            meta_path=PREDICTED_DAG_META,
+            gold_version=cc.gold_version,
+        )
+        results.append(res)
+        results.sort(key=result_sort_key)
+        payload = {
+            "results": results,
+            **_summarise_payload(results, n_expected),
+        }
+        _atomic_write_json(output_path, payload)
+        mt = res.get("metrics") or {}
+        print(
+            f"[{done}/{n_todo}] C-LLM-only gold={cc.gold_version} -> ok "
+            f"(shd={mt.get('shd')})"
+        )
+
+    _print_summary(results)
+
+
+def main() -> None:
+    run_interventional_ablation()
+
+
+if __name__ == "__main__":
+    main()

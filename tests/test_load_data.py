@@ -5,8 +5,13 @@ from __future__ import annotations
 import unittest
 
 from utils.load_data import (
+    SACHS_CANONICAL_COLUMNS,
     available_sachs_gold_versions,
+    load_sachs_interventional_conditions,
+    load_sachs_interventional_dataset,
     load_sachs_dataset,
+    sachs_interventional_block_sizes,
+    sachs_interventional_gies_targets,
 )
 
 
@@ -33,6 +38,25 @@ class LoadSachsGoldTests(unittest.TestCase):
         _, a = load_sachs_dataset("original")
         _, b = load_sachs_dataset("original")
         self.assertEqual(set(a.edges()), set(b.edges()))
+
+
+class LoadSachsInterventionalTests(unittest.TestCase):
+    def test_manifest_matches_observational_columns(self) -> None:
+        df_obs, _ = load_sachs_dataset("original")
+        df_int, ind, g = load_sachs_interventional_dataset("original")
+        self.assertEqual(list(df_obs.columns), list(df_int.columns))
+        self.assertEqual(list(df_int.columns), list(SACHS_CANONICAL_COLUMNS))
+        self.assertEqual(set(g.nodes()), {str(c) for c in df_int.columns})
+        self.assertEqual(len(df_int), sum(sachs_interventional_block_sizes()))
+        self.assertEqual(ind.shape[0], len(df_int))
+        for v in ind.tolist():
+            self.assertIn(v, range(-1, 11))
+
+    def test_conditions_and_gies_family_length(self) -> None:
+        conds = load_sachs_interventional_conditions()
+        self.assertEqual(len(conds), 9)
+        self.assertEqual(len(sachs_interventional_block_sizes()), 9)
+        self.assertEqual(len(sachs_interventional_gies_targets()), 9)
 
 
 if __name__ == "__main__":

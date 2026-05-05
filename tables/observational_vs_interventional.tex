@@ -1,0 +1,41 @@
+% Observational (CDT pooled rows; Step 6 JSON) vs interventional (nine contexts).
+% GIES observational column is N/A (algorithm absent on observational pipeline).
+\begin{tabular}{llccc}
+\hline
+condition & algorithm & F1\textsubscript{cpdag} (obs.) & F1\textsubscript{cpdag} (int.) & $\Delta$ \\
+\hline
+C0 & PC & $0.47$ & $0.47$ & $+0.00$ \\
+C0 & GES & $0.18$ & $0.18$ & $+0.00$ \\
+C0 & LiNGAM & $0.37$ & $0.37$ & $+0.00$ \\
+C0 & GIES & --- & $0.20$ & N/A \\
+C0.5 & PC & $0.47$ & $0.47$ & $+0.00$ \\
+C0.5 & GES & $0.18$ & $0.18$ & $+0.00$ \\
+C0.5 & LiNGAM & $0.37$ & $0.37$ & $+0.00$ \\
+C0.5 & GIES & --- & $0.20$ & N/A \\
+C1 & PC & $0.51$ & $0.51$ & $+0.00$ \\
+C1 & GES & $0.21$ & $0.21$ & $+0.00$ \\
+C1 & LiNGAM & $0.39$ & $0.39$ & $+0.00$ \\
+C1 & GIES & --- & $0.45$ & N/A \\
+C2 & PC & $0.51$ & $0.51$ & $+0.00$ \\
+C2 & GES & $0.19$ & $0.19$ & $+0.00$ \\
+C2 & LiNGAM & $0.36$ & $0.36$ & $+0.00$ \\
+C2 & GIES & --- & $0.30$ & N/A \\
+C3 & PC & $0.51$ & $0.51$ & $+0.00$ \\
+C3 & GES & $0.22$ & $0.22$ & $+0.00$ \\
+C3 & LiNGAM & $0.40$ & $0.40$ & $+0.00$ \\
+C3 & GIES & --- & $0.39$ & N/A \\
+C3+ft & PC & $0.51$ & $0.51$ & $+0.00$ \\
+C3+ft & GES & $0.24$ & $0.24$ & $+0.00$ \\
+C3+ft & LiNGAM & $0.45$ & $0.45$ & $+0.00$ \\
+C3+ft & GIES & --- & $0.53$ & N/A \\
+C4 & PC & $0.51$ & $0.51$ & $+0.00$ \\
+C4 & GES & $0.22$ & $0.22$ & $+0.00$ \\
+C4 & LiNGAM & $0.40$ & $0.40$ & $+0.00$ \\
+C4 & GIES & --- & $0.39$ & N/A \\
+C-LLM-only & --- & \multicolumn{3}{c}{same DAG evaluated on both datasets} \\
+C5 & PC & $0.51$ & $0.51$ & $+0.00$ \\
+C5 & GES & $0.24$ & $0.24$ & $+0.00$ \\
+C5 & LiNGAM & $0.48$ & $0.48$ & $+0.00$ \\
+C5 & GIES & --- & $0.71$ & N/A \\
+\hline
+\end{tabular}

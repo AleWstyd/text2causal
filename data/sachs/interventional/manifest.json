@@ -1,0 +1,83 @@
+[
+  {
+    "agent": "anti-CD3/CD28 (TCR stimulation)",
+    "condition_id": "cd3cd28",
+    "csv_relpath": "raw/cd3cd28.csv",
+    "gies_target_indices": [],
+    "intervention_target": null,
+    "intervention_type": "none",
+    "n_samples": 853
+  },
+  {
+    "agent": "anti-CD3/CD28 + ICAM-2 (LFA-1 costimulation)",
+    "condition_id": "cd3cd28_icam2",
+    "csv_relpath": "raw/cd3cd28_icam2.csv",
+    "gies_target_indices": [],
+    "intervention_target": null,
+    "intervention_type": "none",
+    "n_samples": 902
+  },
+  {
+    "agent": "Akt inhibitor VIII",
+    "condition_id": "cd3cd28_aktinhib",
+    "csv_relpath": "raw/cd3cd28_aktinhib.csv",
+    "gies_target_indices": [6],
+    "intervention_target": "pakts473",
+    "intervention_type": "inhibition",
+    "n_samples": 911
+  },
+  {
+    "agent": "Gö6976",
+    "condition_id": "cd3cd28_g0076",
+    "csv_relpath": "raw/cd3cd28_g0076.csv",
+    "gies_target_indices": [8],
+    "intervention_target": "PKC",
+    "intervention_type": "inhibition",
+    "n_samples": 723
+  },
+  {
+    "agent": "Psitectorigenin",
+    "condition_id": "cd3cd28_psitect",
+    "csv_relpath": "raw/cd3cd28_psitect.csv",
+    "gies_target_indices": [9],
+    "intervention_target": "P38",
+    "intervention_type": "inhibition",
+    "n_samples": 810
+  },
+  {
+    "agent": "U-0126",
+    "condition_id": "cd3cd28_u0126",
+    "csv_relpath": "raw/cd3cd28_u0126.csv",
+    "gies_target_indices": [1],
+    "intervention_target": "pmek",
+    "intervention_type": "inhibition",
+    "n_samples": 799
+  },
+  {
+    "agent": "LY294002",
+    "condition_id": "cd3cd28_ly",
+    "csv_relpath": "raw/cd3cd28_ly.csv",
+    "gies_target_indices": [4],
+    "intervention_target": "PIP3",
+    "intervention_type": "inhibition",
+    "n_samples": 848
+  },
+  {
+    "agent": "PMA",
+    "condition_id": "pma",
+    "csv_relpath": "raw/pma.csv",
+    "gies_target_indices": [8],
+    "intervention_target": "PKC",
+    "intervention_type": "activation",
+    "n_samples": 913
+  },
+  {
+    "agent": "\u03b2-2-cAMP",
+    "condition_id": "b2camp",
+    "csv_relpath": "raw/b2camp.csv",
+    "gies_target_indices": [7],
+    "intervention_target": "PKA",
+    "intervention_type": "activation",
+    "n_samples": 707
+  }
+]
