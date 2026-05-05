@@ -469,6 +469,11 @@ class RunConditionDeterminismTests(unittest.TestCase):
         a = run_condition(**common)
         b = run_condition(**common)
         self.assertEqual(a["predicted_edges"], b["predicted_edges"])
+        common_m = {**common, "gold_version": "mooij2020"}
+        am = run_condition(**common_m)
+        bm = run_condition(**common_m)
+        self.assertEqual(am["predicted_edges"], bm["predicted_edges"])
+        self.assertEqual(am["gold_version"], "mooij2020")
 
 
 class DeriveConditionLabelTests(unittest.TestCase):
@@ -589,3 +594,19 @@ class RunConditionJsonTests(unittest.TestCase):
         for row in samples:
             with self.subTest(status=row["status"], algorithm=row["algorithm"]):
                 json.dumps(row)
+                self.assertEqual(row.get("gold_version"), "original")
+
+        mooij_row = run_condition(
+            dataset_name="synth_chain",
+            data=data,
+            variable_names=names,
+            true_graph=true_graph,
+            priors=None,
+            priors_source="none",
+            algorithm="PC",
+            threshold=None,
+            seed=5,
+            gold_version="mooij2020",
+        )
+        json.dumps(mooij_row)
+        self.assertEqual(mooij_row["gold_version"], "mooij2020")

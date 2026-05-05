@@ -77,7 +77,7 @@ Prefer `Taskfile.yml` targets when they exist:
 - `task lint` — Ruff check.
 - `task baseline-sachs` — Sachs unconstrained PC/GES/LiNGAM baseline → `experiments/baseline_sachs.json`.
 - `task discover-sachs` — Step 5 Sachs constrained-discovery sweep → `experiments/discovery_results_sachs.json`.
-- `task ablation-sachs` — Step 6 canonical ablation sweep on Sachs → `experiments/ablation_results_sachs.json`.
+- `task ablation-sachs` — Step 6 canonical ablation sweep on Sachs (480 algorithmic × 2 golds + C-LLM-only × 2 → `experiments/ablation_results_sachs.json`).
 - `task constraint-quality-sachs` — Step 6 constraint quality (priors vs ground truth) → `experiments/constraint_quality_sachs.json`.
 - `task report-sachs` — Step 6 Phase 4 reporting → `tables/*.tex`, `figures/*.{pdf,png}` from committed JSON artefacts.
 - `task cost-report` — Step 6 Phase 5 LLM cache token/cost summary → `experiments/cost_report.json`.
@@ -137,7 +137,7 @@ Test discipline for new code:
 ## Repo-Specific Guidance
 
 - **C3+ft** loads `causal_priors_*_with_fallback.json`, built by `task fallback-priors`: paragraph `freetext_priors_*.json` first, then optional `per_pair_freetext_priors_*.json` (one LLM call per unordered `no_context` pair) so uncovered Sachs pairs such as PKA/PKC substrates receive a parametric fallback.
-- The primary research dataset is **Sachs** (`utils.load_data.load_sachs_dataset`); the secondary is **DREAM4 PSN** (Step 7). LUCAS is legacy.
+- The primary research dataset is **Sachs** (`utils.load_data.load_sachs_dataset`); evaluation uses **two committed gold DAGs** (`gold_version`: `original` default, `mooij2020`), so the Step 6 runner schedules roughly twice as many Sachs cells as before; the secondary dataset is **DREAM4 PSN** (Step 7). LUCAS is legacy.
 - `experiments/reactome_coverage.json` records the live coverage figures and the explicit `escalation_decision` (whether to fall back to OmniPath as the primary structured source). Risk #2 in the dev plan is keyed to **node** coverage, not pair coverage.
 - `extract_llm_constraints()` (legacy LUCAS path) filters relations by confidence threshold and validates them against dataset variable names. Do not change its semantics; the Step-3+ research pipeline does not use it.
 - All three CD algorithms apply prior constraints **post hoc** as direct edge edits (`utils.graph_utils.apply_post_hoc_edits`): `GES` never had a native prior hook; `PC` native `BackgroundKnowledge` does not retain required edges the Fisher-Z skeleton removes, so we re-inject them; `LiNGAM` native `prior_knowledge` leaves coefficients above the 0.001 threshold even with `apply_prior_knowledge_softly=True` (offending arcs survive), so constrained runs default to `lingam_prior_mode="post_hoc"`. Cycle-closing injection drops are logged in `dropped_due_to_cycle` (and `pc_post_hoc_*` for PC). This uniform post-hoc treatment is a known methodological caveat — to be reported, not silently fixed (see dev plan Risk #6). The native-LiNGAM modes (`all`, `sparse_required`, `forbidden_only`, `hybrid_top5`) remain available via `lingam_prior_mode` for sweeps but are not used by the canonical matrix.

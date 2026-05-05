@@ -96,6 +96,11 @@ tasks:
     cmds:
       - uv run python -m experiments.run_discovery_sachs
 
+  backfill-mooij-gold-sachs:
+    desc: Duplicate ablation JSON rows for mooij2020 gold (re-score only; no discovery rerun)
+    cmds:
+      - uv run python -m experiments.backfill_mooij_gold_ablation
+
   ablation-sachs:
     desc: Step 6 canonical ablation sweep on Sachs (210 algorithmic + 1 C-LLM-only)
     cmds:

@@ -393,6 +393,54 @@ class TestWritersAndFigures(unittest.TestCase):
                 fp.unlink()
             base.rmdir()
 
+    def test_write_mooij_cpdag_and_gold_comparison_smoke(self) -> None:
+        rows_o = [
+            _ok_row(
+                condition="C0", algorithm="PC", seed=i, f1=0.5, shd=3.0, cpdag_f1=0.55
+            )
+            for i in range(3)
+        ]
+        rows_m = [
+            _ok_row(
+                condition="C0", algorithm="PC", seed=i, f1=0.52, shd=2.0, cpdag_f1=0.58
+            )
+            for i in range(3)
+        ]
+        agg_o = report.aggregate(rows_o)
+        agg_m = report.aggregate(rows_m)
+        llm_o = {
+            "condition": "C-LLM-only",
+            "metrics": {
+                "shd": 10.0,
+                "f1": 0.4,
+                "directed_f1": 0.41,
+                "cpdag_f1": 0.42,
+                "shd_cpdag": 9.0,
+            },
+        }
+        llm_m = {
+            "condition": "C-LLM-only",
+            "metrics": {
+                "shd": 9.0,
+                "f1": 0.41,
+                "directed_f1": 0.42,
+                "cpdag_f1": 0.44,
+                "shd_cpdag": 8.0,
+            },
+        }
+        p_c = Path(__file__).resolve().parent / "_tmp_cpdag_mooij_smoke.tex"
+        p_cmp = Path(__file__).resolve().parent / "_tmp_gold_cmp_smoke.tex"
+        try:
+            report.write_ablation_table_cpdag(agg_m, llm_m, p_c)
+            report.write_gold_comparison_table(agg_o, agg_m, llm_o, llm_m, p_cmp)
+            t1 = p_c.read_text(encoding="utf-8")
+            t2 = p_cmp.read_text(encoding="utf-8")
+            self.assertIn("F1\\textsubscript{cpdag}", t1)
+            self.assertIn("mooij", t2.lower())
+        finally:
+            p_c.unlink(missing_ok=True)
+            p_cmp.unlink(missing_ok=True)
+
 
 if __name__ == "__main__":
     unittest.main()

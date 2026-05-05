@@ -14,6 +14,7 @@ import numpy as np
 import pandas as pd
 
 from experiments import runner as r
+from utils.load_data import available_sachs_gold_versions
 
 
 def _fake_sachs() -> tuple[pd.DataFrame, nx.DiGraph]:
@@ -33,11 +34,13 @@ def _minimal_algo_row(
     seed: int,
     threshold: float | None,
     status: str = "ok",
+    gold_version: str = "original",
 ) -> dict:
     return {
         "dataset": "sachs",
         "condition": condition,
         "algorithm": algorithm,
+        "gold_version": gold_version,
         "seed": seed,
         "threshold": threshold,
         "priors_source": priors_source,
@@ -84,21 +87,30 @@ class TestRunner(unittest.TestCase):
         )
 
     def test_idempotency_skips_run_condition(self) -> None:
-        existing = _minimal_algo_row(
+        existing_orig = _minimal_algo_row(
             condition="C0",
             priors_source="none",
             algorithm="PC",
             seed=0,
             threshold=None,
+            gold_version="original",
+        )
+        existing_mooij = _minimal_algo_row(
+            condition="C0",
+            priors_source="none",
+            algorithm="PC",
+            seed=0,
+            threshold=None,
+            gold_version="mooij2020",
         )
         payload = {
             "dataset": "sachs",
             "matrix": r.MATRIX_ID,
-            "n_cells_expected": 1,
-            "n_cells_completed": 1,
+            "n_cells_expected": 2,
+            "n_cells_completed": 2,
             "n_cells_failed": 0,
             "ges_total_dropped_due_to_cycle": 0,
-            "results": [existing],
+            "results": [existing_orig, existing_mooij],
         }
         with TemporaryDirectory() as td:
             outp = Path(td) / "out.json"
@@ -157,8 +169,14 @@ class TestRunner(unittest.TestCase):
             gp.write_text(gml, encoding="utf-8")
             mp.write_text(json.dumps(meta), encoding="utf-8")
 
-            row = r._run_cllm_cell(true_graph=true_g, gml_path=gp, meta_path=mp)
+            row = r._run_cllm_cell(
+                true_graph=true_g,
+                gml_path=gp,
+                meta_path=mp,
+                gold_version="original",
+            )
             self.assertEqual(row["condition"], "C-LLM-only")
+            self.assertEqual(row["gold_version"], "original")
             self.assertIsNone(row["algorithm"])
             self.assertIsNone(row["seed"])
             self.assertEqual(row["status"], "ok")
@@ -177,6 +195,7 @@ class TestRunner(unittest.TestCase):
             "dataset": "sachs",
             "condition": "C-LLM-only",
             "algorithm": None,
+            "gold_version": "original",
             "seed": None,
             "threshold": None,
             "priors_source": "reactome_llm",
@@ -197,14 +216,18 @@ class TestRunner(unittest.TestCase):
             "dropped_due_to_cycle": [],
             "notes": {},
         }
+        row_m = {
+            **row,
+            "gold_version": "mooij2020",
+        }
         payload = {
             "dataset": "sachs",
             "matrix": r.MATRIX_ID,
-            "n_cells_expected": 1,
-            "n_cells_completed": 1,
+            "n_cells_expected": 2,
+            "n_cells_completed": 2,
             "n_cells_failed": 0,
             "ges_total_dropped_due_to_cycle": 0,
-            "results": [row],
+            "results": [row, row_m],
         }
         with TemporaryDirectory() as td:
             outp = Path(td) / "ab.json"
@@ -232,7 +255,7 @@ class TestRunner(unittest.TestCase):
         payload = {
             "dataset": "sachs",
             "matrix": r.MATRIX_ID,
-            "n_cells_expected": 2,
+            "n_cells_expected": 4,
             "n_cells_completed": 1,
             "n_cells_failed": 0,
             "ges_total_dropped_due_to_cycle": 0,
@@ -264,11 +287,38 @@ class TestRunner(unittest.TestCase):
             self.assertEqual(len(reloaded["results"]), 1)
             self.assertEqual(reloaded["results"][0]["seed"], 0)
 
-    def test_sort_key_puts_none_algorithm_last_within_condition(self) -> None:
+
+class TestRunnerGoldSchedule(unittest.TestCase):
+    def test_schedule_doubles_cells_per_gold(self) -> None:
+        base = r._build_sachs_algorithmic_matrix()
+        expanded = r._expand_algo_with_gold(base)
+        self.assertEqual(
+            len(expanded), len(base) * len(available_sachs_gold_versions())
+        )
+
+    def test_expected_base_keys_include_gold(self) -> None:
+        cells = [
+            r._AlgorithmicCell(
+                condition="C0",
+                priors_source="none",
+                priors_cache_key="none",
+                threshold=None,
+                algorithm="PC",
+                seed=0,
+                gold_version="mooij2020",
+            )
+        ]
+        cllm = [r._CllmCell(gold_version="original")]
+        bases = r._expected_schedule_base_keys(cells, cllm)
+        self.assertIn(("C0", "none", "PC", "none", 0, "mooij2020"), bases)
+        self.assertIn(
+            ("C-LLM-only", "reactome_llm", "_llm_only", "none", -1, "original"), bases
+        )
         rows = [
             {
                 "condition": "Q",
                 "priors_source": "x",
+                "gold_version": "original",
                 "algorithm": None,
                 "threshold": None,
                 "seed": None,
@@ -276,6 +326,7 @@ class TestRunner(unittest.TestCase):
             {
                 "condition": "Q",
                 "priors_source": "x",
+                "gold_version": "original",
                 "algorithm": "PC",
                 "threshold": 0.7,
                 "seed": 0,
@@ -283,6 +334,7 @@ class TestRunner(unittest.TestCase):
             {
                 "condition": "Q",
                 "priors_source": "x",
+                "gold_version": "original",
                 "algorithm": "GES",
                 "threshold": 0.7,
                 "seed": 0,

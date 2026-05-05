@@ -114,12 +114,16 @@ than a small Step 6.7 diagnostic.
 
 The GES post-hoc constraint caveat therefore remains.
 
+## PR5 update (dual gold: Mooij et al. 2020)
+
+Reporting now scores the **same** predicted graphs against **`original`** (CDT consensus) and **`mooij2020`** (`data/sachs/gold_mooij2020.gml`). On the May 2026 committed sweep, **best non-oracle CPDAG F1** is **PC 0.51 vs 0.45**, **GES 0.24 vs 0.16**, **LiNGAM 0.45 vs 0.37** (robust headline minima: 0.45 / 0.16 / 0.37). Mooij gold removes/redirects several consensus arcs (Raf–Mek, PKC–P38) and adds Akt→Erk, so metrics move in both directions depending on the predictor; the paper should lead with the robust min line. Extra tables: `tables/ablation_table_cpdag_mooij.tex`, `tables/gold_comparison.tex`.
+
 ## Verification
 
 - `task ablation-sachs`
 - `task report-sachs`
 - `uv run python -m experiments.per_edge_attribution_sachs`
 
-The canonical Sachs ablation has 241/241 cells, all successful (the
+The canonical Sachs ablation has 482/482 cells (240 algorithmic conditions × 2 golds + 2 C-LLM-only), all successful (the
 previously N/A C5 oracle LiNGAM seeds now complete via post-hoc
 required-edge injection; see PR3b).

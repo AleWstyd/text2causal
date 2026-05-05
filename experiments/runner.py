@@ -1,11 +1,11 @@
-"""Step 6 Phase 2 — canonical Sachs ablation sweep (210 algorithmic cells + C-LLM-only)."""
+"""Step 6 Phase 2 — canonical Sachs ablation sweep (480 algorithmic cells × golds + C-LLM-only × 2)."""
 
 from __future__ import annotations
 
 import hashlib
 import json
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any, Final
 
@@ -20,7 +20,7 @@ from evaluation.harness import (
     row_ok_metrics_missing_cpdag_f1,
     row_ok_metrics_missing_directed_f1,
 )
-from utils.load_data import load_sachs_dataset
+from utils.load_data import available_sachs_gold_versions, load_sachs_dataset
 
 DATASET_NAME: Final[str] = "sachs"
 MATRIX_ID: Final[str] = "step6_canonical"
@@ -55,6 +55,13 @@ PREDICTED_DAG_META: Final[Path] = Path(
 
 _ALGORITHMS: Final[tuple[str, ...]] = ("PC", "GES", "LiNGAM")
 _SEEDS: Final[tuple[int, ...]] = tuple(range(10))
+_GOLD_ORDER: Final[tuple[str, ...]] = tuple(available_sachs_gold_versions())
+
+
+def _gold_rank(gv: str) -> int:
+    if gv in _GOLD_ORDER:
+        return _GOLD_ORDER.index(gv)
+    return 99
 
 
 @dataclass(frozen=True)
@@ -65,6 +72,7 @@ class _AlgorithmicCell:
     threshold: float | None
     algorithm: str
     seed: int
+    gold_version: str = "original"
     lingam_prior_mode: str | None = None
 
 
@@ -72,6 +80,7 @@ class _AlgorithmicCell:
 class _CllmCell:
     condition: str = "C-LLM-only"
     priors_source: str = "reactome_llm"
+    gold_version: str = "original"
 
 
 def _threshold_key(threshold: float | None) -> str:
@@ -86,13 +95,15 @@ def _algorithm_sort_token(algorithm: str | None) -> str:
     return str(algorithm)
 
 
-def result_sort_key(row: dict[str, Any]) -> tuple[str, str, str, float, int]:
+def result_sort_key(row: dict[str, Any]) -> tuple[str, int, str, str, float, int]:
     th = row.get("threshold")
     th_sort = -1.0 if th is None else float(th)
     seed = row.get("seed")
     seed_sort = -1 if seed is None else int(seed)
+    gv = str(row.get("gold_version") or "original")
     return (
         str(row["condition"]),
+        _gold_rank(gv),
         str(row["priors_source"]),
         _algorithm_sort_token(row.get("algorithm")),
         th_sort,
@@ -100,13 +111,14 @@ def result_sort_key(row: dict[str, Any]) -> tuple[str, str, str, float, int]:
     )
 
 
-def result_row_key(row: dict[str, Any]) -> tuple[str, str, str, str, int, str]:
+def result_row_key(row: dict[str, Any]) -> tuple[str, str, str, str, int, str, str]:
     alg = row.get("algorithm")
     alg_part = "_llm_only" if alg is None else str(alg)
     seed = row.get("seed")
     seed_part = -1 if seed is None else int(seed)
     lingam_mode = row.get("lingam_prior_mode")
     lingam_part = "_none" if lingam_mode is None else str(lingam_mode)
+    gv = str(row.get("gold_version") or "original")
     return (
         str(row["condition"]),
         str(row["priors_source"]),
@@ -114,13 +126,14 @@ def result_row_key(row: dict[str, Any]) -> tuple[str, str, str, str, int, str]:
         _threshold_key(row["threshold"] if "threshold" in row else None),
         seed_part,
         lingam_part,
+        gv,
     )
 
 
-def _result_row_base_key(row: dict[str, Any]) -> tuple[str, str, str, str, int]:
+def _result_row_base_key(row: dict[str, Any]) -> tuple[str, str, str, str, int, str]:
     """Key without LiNGAM mode, used to retire stale canonical rows."""
     key = result_row_key(row)
-    return key[:5]
+    return (key[0], key[1], key[2], key[3], key[4], key[6])
 
 
 def _atomic_write_json(path: Path, payload: dict[str, Any]) -> None:
@@ -257,32 +270,44 @@ def _build_sachs_algorithmic_matrix() -> list[_AlgorithmicCell]:
     return cells
 
 
+def _expand_algo_with_gold(cells: list[_AlgorithmicCell]) -> list[_AlgorithmicCell]:
+    """Schedule each algorithmic cell once per registered Sachs gold graph."""
+    out: list[_AlgorithmicCell] = []
+    for gv in available_sachs_gold_versions():
+        for c in cells:
+            out.append(replace(c, gold_version=gv))
+    return out
+
+
+def _build_cllm_cells() -> list[_CllmCell]:
+    return [_CllmCell(gold_version=gv) for gv in available_sachs_gold_versions()]
+
+
 def _apply_cell_filters(
     algo_cells: list[_AlgorithmicCell],
-    cllm: _CllmCell,
+    cllm_cells: list[_CllmCell],
     *,
     only_conditions: list[str] | None,
     only_algorithms: list[str] | None,
     only_seeds: list[int] | None,
-) -> tuple[list[_AlgorithmicCell], _CllmCell | None]:
+) -> tuple[list[_AlgorithmicCell], list[_CllmCell]]:
     out_algo = list(algo_cells)
-    out_cllm: _CllmCell | None = cllm
+    out_cllm = list(cllm_cells)
 
     if only_conditions is not None:
         allow = frozenset(only_conditions)
         out_algo = [c for c in out_algo if c.condition in allow]
-        if cllm.condition not in allow:
-            out_cllm = None
+        out_cllm = [c for c in out_cllm if c.condition in allow]
 
     if only_algorithms is not None:
         allow_alg = frozenset(only_algorithms)
         out_algo = [c for c in out_algo if c.algorithm in allow_alg]
-        out_cllm = None
+        out_cllm = []
 
     if only_seeds is not None:
         allow_s = frozenset(only_seeds)
         out_algo = [c for c in out_algo if c.seed in allow_s]
-        out_cllm = None
+        out_cllm = []
 
     return out_algo, out_cllm
 
@@ -303,6 +328,7 @@ def _run_cllm_cell(
     true_graph: nx.DiGraph,
     gml_path: Path,
     meta_path: Path,
+    gold_version: str,
 ) -> dict[str, Any]:
     predicted = nx.read_gml(gml_path, label="label")
 
@@ -333,6 +359,7 @@ def _run_cllm_cell(
         "dataset": DATASET_NAME,
         "condition": "C-LLM-only",
         "algorithm": None,
+        "gold_version": gold_version,
         "seed": None,
         "threshold": None,
         "priors_source": "reactome_llm",
@@ -353,6 +380,37 @@ def _run_cllm_cell(
     }
 
 
+def _expected_schedule_base_keys(
+    algo_scheduled: list[_AlgorithmicCell],
+    cllm_scheduled: list[_CllmCell],
+) -> set[tuple[str, str, str, str, int, str]]:
+    """(condition, priors_source, alg_key, threshold_key, seed, gold_version) without LiNGAM token."""
+    bases: set[tuple[str, str, str, str, int, str]] = set()
+    for c in algo_scheduled:
+        bases.add(
+            (
+                c.condition,
+                c.priors_source,
+                c.algorithm,
+                _threshold_key(c.threshold),
+                c.seed,
+                c.gold_version,
+            )
+        )
+    for cc in cllm_scheduled:
+        bases.add(
+            (
+                "C-LLM-only",
+                "reactome_llm",
+                "_llm_only",
+                "none",
+                -1,
+                cc.gold_version,
+            )
+        )
+    return bases
+
+
 def run_ablation(
     *,
     dataset_name: str = "sachs",
@@ -364,23 +422,23 @@ def run_ablation(
     if dataset_name != "sachs":
         raise NotImplementedError(f"runner does not yet support dataset {dataset_name}")
 
-    full_algo = _build_sachs_algorithmic_matrix()
-    cllm_cell = _CllmCell()
+    full_algo = _expand_algo_with_gold(_build_sachs_algorithmic_matrix())
+    cllm_cells = _build_cllm_cells()
     algo_scheduled, cllm_scheduled = _apply_cell_filters(
         full_algo,
-        cllm_cell,
+        cllm_cells,
         only_conditions=only_conditions,
         only_algorithms=only_algorithms,
         only_seeds=only_seeds,
     )
-    n_expected = len(algo_scheduled) + (1 if cllm_scheduled is not None else 0)
+    n_expected = len(algo_scheduled) + len(cllm_scheduled)
 
     results: list[dict[str, Any]] = []
     if output_path.is_file():
         raw = json.loads(output_path.read_text(encoding="utf-8"))
         results = list(raw.get("results") or [])
 
-    def algo_key(c: _AlgorithmicCell) -> tuple[str, str, str, str, int, str]:
+    def algo_key(c: _AlgorithmicCell) -> tuple[str, str, str, str, int, str, str]:
         return (
             c.condition,
             c.priors_source,
@@ -388,15 +446,24 @@ def run_ablation(
             _threshold_key(c.threshold),
             c.seed,
             "_none" if c.lingam_prior_mode is None else c.lingam_prior_mode,
+            c.gold_version,
         )
 
     expected_algo_keys = {algo_key(c) for c in algo_scheduled}
     expected_keys = set(expected_algo_keys)
-    if cllm_scheduled is not None:
+    for cc in cllm_scheduled:
         expected_keys.add(
-            ("C-LLM-only", "reactome_llm", "_llm_only", "none", -1, "_none")
+            (
+                "C-LLM-only",
+                "reactome_llm",
+                "_llm_only",
+                "none",
+                -1,
+                "_none",
+                cc.gold_version,
+            )
         )
-    expected_bases = {key[:5] for key in expected_keys}
+    expected_bases = _expected_schedule_base_keys(algo_scheduled, cllm_scheduled)
     # Step 6.7 changes the canonical Reactome+LLM LiNGAM rows from dense
     # matrices to forbidden-only sparse matrices. Remove stale rows with the
     # same condition/source/algorithm/threshold/seed but the old mode so the
@@ -415,11 +482,19 @@ def run_ablation(
     existing = {result_row_key(r) for r in results}
 
     pending_algo = [c for c in algo_scheduled if algo_key(c) not in existing]
-    pending_cllm = False
-    if cllm_scheduled is not None:
-        cllm_k = ("C-LLM-only", "reactome_llm", "_llm_only", "none", -1, "_none")
+    pending_cllm: list[_CllmCell] = []
+    for cc in cllm_scheduled:
+        cllm_k = (
+            "C-LLM-only",
+            "reactome_llm",
+            "_llm_only",
+            "none",
+            -1,
+            "_none",
+            cc.gold_version,
+        )
         if cllm_k not in existing:
-            pending_cllm = True
+            pending_cllm.append(cc)
 
     def _print_summary(results_: list[dict[str, Any]]) -> None:
         n_ok = sum(1 for r in results_ if r.get("status") == "ok")
@@ -446,13 +521,23 @@ def run_ablation(
 
     if not pending_algo and not pending_cllm:
         if needs_metric_backfill:
-            data_df, true_graph = load_sachs_dataset()
+            data_df, default_graph = load_sachs_dataset()
             variable_names = list(data_df.columns)
+            graphs_by_gold = {
+                gv: load_sachs_dataset(gold_version=gv)[1]  # type: ignore[arg-type]
+                for gv in available_sachs_gold_versions()
+            }
             n_dir = backfill_directed_metrics_in_results(
-                results, variable_names, true_graph
+                results,
+                variable_names,
+                default_graph,
+                true_graph_by_gold_version=graphs_by_gold,
             )
             n_cp = backfill_cpdag_metrics_in_results(
-                results, variable_names, true_graph
+                results,
+                variable_names,
+                default_graph,
+                true_graph_by_gold_version=graphs_by_gold,
             )
             payload = {
                 "results": results,
@@ -466,13 +551,25 @@ def run_ablation(
         _print_summary(results)
         return
 
-    data_df, true_graph = load_sachs_dataset()
+    data_df, _default_graph = load_sachs_dataset()
     variable_names = list(data_df.columns)
+    graphs_by_gold = {
+        gv: load_sachs_dataset(gold_version=gv)[1]  # type: ignore[arg-type]
+        for gv in available_sachs_gold_versions()
+    }
     if needs_metric_backfill:
         n_dir = backfill_directed_metrics_in_results(
-            results, variable_names, true_graph
+            results,
+            variable_names,
+            graphs_by_gold["original"],
+            true_graph_by_gold_version=graphs_by_gold,
         )
-        n_cp = backfill_cpdag_metrics_in_results(results, variable_names, true_graph)
+        n_cp = backfill_cpdag_metrics_in_results(
+            results,
+            variable_names,
+            graphs_by_gold["original"],
+            true_graph_by_gold_version=graphs_by_gold,
+        )
         payload = {
             "results": results,
             **_summarise_payload(results, n_expected),
@@ -486,12 +583,13 @@ def run_ablation(
     data_matrix = data_df.to_numpy()
     priors_cache = _load_priors_cache()
 
-    n_todo = len(pending_algo) + (1 if pending_cllm else 0)
+    n_todo = len(pending_algo) + len(pending_cllm)
     done = 0
 
     for cell in pending_algo:
         done += 1
         priors = priors_cache[cell.priors_cache_key]
+        true_graph = graphs_by_gold[cell.gold_version]
         res = _rc.run_condition(
             dataset_name=DATASET_NAME,
             data=data_matrix,
@@ -503,6 +601,7 @@ def run_ablation(
             threshold=cell.threshold,
             seed=cell.seed,
             lingam_prior_mode=cell.lingam_prior_mode,
+            gold_version=cell.gold_version,
         )
         if cell.priors_source == "reactome_llm_with_freetext_fallback":
             fb_path = CAUSAL_PRIORS_WITH_FALLBACK
@@ -531,15 +630,18 @@ def run_ablation(
         shd_part = f"shd={shd_s}" if shd_s is not None else "shd=n/a"
         print(
             f"[{done}/{n_todo}] {res['condition']} {cell.algorithm} "
-            f"{_threshold_key(cell.threshold)} {cell.seed} -> {status} ({shd_part})"
+            f"{_threshold_key(cell.threshold)} {cell.seed} "
+            f"gold={cell.gold_version} -> {status} ({shd_part})"
         )
 
-    if pending_cllm:
+    for cc in pending_cllm:
         done += 1
+        tg = graphs_by_gold[cc.gold_version]
         res = _run_cllm_cell(
-            true_graph=true_graph,
+            true_graph=tg,
             gml_path=PREDICTED_DAG_GML,
             meta_path=PREDICTED_DAG_META,
+            gold_version=cc.gold_version,
         )
         results.append(res)
         results.sort(key=result_sort_key)
@@ -550,7 +652,7 @@ def run_ablation(
         _atomic_write_json(output_path, payload)
         mt = res.get("metrics") or {}
         print(
-            f"[{done}/{n_todo}] C-LLM-only _llm_only none -1 -> ok "
+            f"[{done}/{n_todo}] C-LLM-only gold={cc.gold_version} -> ok "
             f"(shd={mt.get('shd')})"
         )
 

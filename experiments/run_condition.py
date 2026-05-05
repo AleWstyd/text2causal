@@ -204,6 +204,7 @@ def run_condition(
     threshold: float | None,
     seed: int,
     lingam_prior_mode: str | None = None,
+    gold_version: str = "original",
 ) -> dict[str, Any]:
     _validate_run_condition_inputs(
         priors=priors,
@@ -218,6 +219,7 @@ def run_condition(
         "dataset": dataset_name,
         "condition": condition,
         "algorithm": algorithm,
+        "gold_version": gold_version,
         "seed": seed,
         "threshold": threshold,
         "priors_source": priors_source,

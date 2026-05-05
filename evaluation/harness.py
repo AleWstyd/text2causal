@@ -92,6 +92,18 @@ def predicted_edges_row_has_mutual_arc_encoding(row: dict[str, Any]) -> bool:
     return any((b, a) in arcs for a, b in arcs if a != b)
 
 
+def _true_graph_for_ablation_row(
+    row: dict[str, Any],
+    *,
+    default_true_graph: nx.DiGraph,
+    true_graph_by_gold_version: dict[str, nx.DiGraph] | None,
+) -> nx.DiGraph:
+    if true_graph_by_gold_version is None:
+        return default_true_graph
+    gv = str(row.get("gold_version") or "original")
+    return true_graph_by_gold_version.get(gv, default_true_graph)
+
+
 def recompute_metrics_from_predicted_edges(
     row: dict[str, Any],
     variable_names: list[str],
@@ -119,12 +131,19 @@ def backfill_directed_metrics_in_results(
     results: list[dict[str, Any]],
     variable_names: list[str],
     true_graph: nx.DiGraph,
+    *,
+    true_graph_by_gold_version: dict[str, nx.DiGraph] | None = None,
 ) -> int:
     """Re-evaluate rows missing ``directed_f1``; returns count of updated rows."""
     n = 0
     for row in results:
         if row_ok_metrics_missing_directed_f1(row):
-            recompute_metrics_from_predicted_edges(row, variable_names, true_graph)
+            tg = _true_graph_for_ablation_row(
+                row,
+                default_true_graph=true_graph,
+                true_graph_by_gold_version=true_graph_by_gold_version,
+            )
+            recompute_metrics_from_predicted_edges(row, variable_names, tg)
             n += 1
     return n
 
@@ -133,6 +152,8 @@ def backfill_cpdag_metrics_in_results(
     results: list[dict[str, Any]],
     variable_names: list[str],
     true_graph: nx.DiGraph,
+    *,
+    true_graph_by_gold_version: dict[str, nx.DiGraph] | None = None,
 ) -> int:
     """Add ``cpdag_*`` / ``shd_cpdag`` to ok rows missing them (no algorithm rerun).
 
@@ -144,9 +165,14 @@ def backfill_cpdag_metrics_in_results(
     for row in results:
         if not row_ok_metrics_missing_cpdag_f1(row):
             continue
+        tg = _true_graph_for_ablation_row(
+            row,
+            default_true_graph=true_graph,
+            true_graph_by_gold_version=true_graph_by_gold_version,
+        )
         m = row.setdefault("metrics", {})
         if predicted_edges_row_has_mutual_arc_encoding(row):
-            recompute_metrics_from_predicted_edges(row, variable_names, true_graph)
+            recompute_metrics_from_predicted_edges(row, variable_names, tg)
             n += 1
             continue
 
@@ -156,13 +182,13 @@ def backfill_cpdag_metrics_in_results(
             if isinstance(e, (list, tuple)) and len(e) == 2
         ]
         if "directed_f1" not in m:
-            recompute_metrics_from_predicted_edges(row, variable_names, true_graph)
+            recompute_metrics_from_predicted_edges(row, variable_names, tg)
             n += 1
             continue
 
         m["cpdag_precision"] = float(m["directed_precision"])
         m["cpdag_recall"] = float(m["directed_recall"])
         m["cpdag_f1"] = float(m["directed_f1"])
-        m["shd_cpdag"] = float(shd_cpdag(pred_list, [], true_graph.edges()))
+        m["shd_cpdag"] = float(shd_cpdag(pred_list, [], tg.edges()))
         n += 1
     return n

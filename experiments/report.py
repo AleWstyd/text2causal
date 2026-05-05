@@ -93,6 +93,7 @@ def aggregate(results: list[dict[str, Any]]) -> dict[str, Any]:
     ``out[condition][algorithm][metric] = {"mean": float|None, "std": float|None, "n_ok": int}``.
 
     Rows with ``algorithm is None`` or ``condition == "C-LLM-only"`` are ignored.
+    Callers should pre-filter ``results`` (e.g. by ``gold_version``) when a JSON mixes golds.
     """
     algo_rows = [
         r
@@ -139,11 +140,107 @@ def aggregate(results: list[dict[str, Any]]) -> dict[str, Any]:
     return out
 
 
-def extract_llm_only_row(results: list[dict[str, Any]]) -> dict[str, Any]:
+def filter_results_by_gold(
+    results: list[dict[str, Any]], gold_version: str
+) -> list[dict[str, Any]]:
+    """Keep ablation rows tagged with a given ``gold_version`` (default tag: ``original``)."""
+    return [
+        r for r in results if str(r.get("gold_version") or "original") == gold_version
+    ]
+
+
+def extract_llm_only_row(
+    results: list[dict[str, Any]], *, gold_version: str = "original"
+) -> dict[str, Any]:
     for row in results:
-        if row.get("condition") == "C-LLM-only":
+        if row.get("condition") != "C-LLM-only":
+            continue
+        if str(row.get("gold_version") or "original") == gold_version:
             return row
-    raise ValueError("No C-LLM-only row in ablation results")
+    raise ValueError(
+        f"No C-LLM-only row in ablation results for gold_version={gold_version!r}"
+    )
+
+
+def condition_table_order_with_llm() -> list[str]:
+    """Paper table row order: conditions in :data:`CONDITION_ORDER` with C-LLM-only before C5."""
+    core = [c for c in CONDITION_ORDER if c != "C5"]
+    return core + ["C-LLM-only", "C5"]
+
+
+def _best_non_oracle_cpdag_mean(agg: dict[str, Any], algorithm: str) -> float | None:
+    best_cf1: float | None = None
+    for cond in NON_ORACLE:
+        c1m = _mean_metric(agg, cond, algorithm, HEADLINE_CPDAG_METRIC)
+        if c1m is None:
+            continue
+        if best_cf1 is None or c1m > best_cf1:
+            best_cf1 = c1m
+    return best_cf1
+
+
+def robust_non_oracle_cpdag_line(
+    agg_original: dict[str, Any], agg_mooij: dict[str, Any]
+) -> str:
+    """Conservative headline: per algorithm, min of best non-oracle CPDAG F1 across golds."""
+    parts: list[str] = []
+    for alg in ALGORITHMS:
+        o = _best_non_oracle_cpdag_mean(agg_original, alg)
+        m = _best_non_oracle_cpdag_mean(agg_mooij, alg)
+        if o is None or m is None:
+            parts.append(f"{alg}: N/A")
+            continue
+        r = min(o, m)
+        parts.append(
+            f"{alg}: robust min={r:.2f} (best non-oracle: orig={o:.2f}, mooij={m:.2f})"
+        )
+    return (
+        "Robust CPDAG F1 (min over gold versions; best non-oracle within each gold): "
+        + "; ".join(parts)
+    )
+
+
+def write_gold_comparison_table(
+    agg_original: dict[str, Any],
+    agg_mooij: dict[str, Any],
+    llm_only_original: dict[str, Any],
+    llm_only_mooij: dict[str, Any],
+    output_path: Path,
+) -> None:
+    """Per-(condition, algorithm) CPDAG F1 means: original vs mooij2020 gold."""
+    lines: list[str] = [
+        r"% Sachs: CPDAG F1 means vs two gold graphs (original CDT consensus; Mooij et al. 2020 DAG in data/sachs/gold_mooij2020.gml).",
+        r"% $\Delta$ = mooij $-$ original (same predicted graph; different gold). C-LLM-only has no algorithm column.",
+        r"\begin{tabular}{llccc}",
+        r"\hline",
+        r"condition & algorithm & F1\textsubscript{cpdag} (orig gold) & F1\textsubscript{cpdag} (mooij) & $\Delta$ \\",
+        r"\hline",
+    ]
+    for condition in condition_table_order_with_llm():
+        if condition == "C-LLM-only":
+            mo = (llm_only_original.get("metrics") or {}).get("cpdag_f1")
+            mm = (llm_only_mooij.get("metrics") or {}).get("cpdag_f1")
+            if mo is None or mm is None:
+                lines.append(r"C-LLM-only & --- & N/A & N/A & N/A \\")
+            else:
+                d = float(mm) - float(mo)
+                lines.append(
+                    f"C-LLM-only & --- & ${float(mo):.2f}$ & ${float(mm):.2f}$ & ${d:+.2f}$ \\\\"
+                )
+            continue
+        for alg in ALGORITHMS:
+            mo = _mean_metric(agg_original, condition, alg, HEADLINE_CPDAG_METRIC)
+            mm = _mean_metric(agg_mooij, condition, alg, HEADLINE_CPDAG_METRIC)
+            if mo is None or mm is None:
+                lines.append(f"{condition} & {alg} & N/A & N/A & N/A \\\\")
+            else:
+                d = float(mm) - float(mo)
+                lines.append(
+                    f"{condition} & {alg} & ${float(mo):.2f}$ & ${float(mm):.2f}$ & ${d:+.2f}$ \\\\"
+                )
+    lines.extend([r"\hline", r"\end{tabular}"])
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def _cell_tex(
@@ -899,9 +996,9 @@ def _signed(delta: float | None) -> str:
     return f"{delta:+.2f}"
 
 
-def _fmt_headline_block(s: dict[str, Any]) -> str:
+def _fmt_headline_block(s: dict[str, Any], *, gold_banner: str) -> str:
     lines = [
-        "=== Step 6 Sachs Ablation Headline ===",
+        f"=== Step 6 Sachs Ablation Headline ({gold_banner}) ===",
         "Best non-oracle condition per algorithm (by CPDAG F1):",
     ]
     best = s["best_condition_per_algorithm"]
@@ -1011,9 +1108,13 @@ def main() -> None:
     quality_path = REPO_ROOT / "experiments" / "constraint_quality_sachs.json"
 
     ablation = json.loads(ablation_path.read_text(encoding="utf-8"))
-    results = ablation["results"]
-    agg = aggregate(results)
-    llm_row = extract_llm_only_row(results)
+    results_full = ablation["results"]
+    results_orig = filter_results_by_gold(results_full, "original")
+    results_mooij = filter_results_by_gold(results_full, "mooij2020")
+    agg = aggregate(results_orig)
+    agg_mooij = aggregate(results_mooij)
+    llm_row = extract_llm_only_row(results_full, gold_version="original")
+    llm_row_mooij = extract_llm_only_row(results_full, gold_version="mooij2020")
 
     discovery = json.loads(discovery_path.read_text(encoding="utf-8"))
     disc_results = discovery["results"]
@@ -1027,8 +1128,21 @@ def main() -> None:
         agg, llm_row, tables_dir / "ablation_table_directed.tex"
     )
     write_ablation_table_cpdag(agg, llm_row, tables_dir / "ablation_table_cpdag.tex")
+    write_ablation_table_directed(
+        agg_mooij, llm_row_mooij, tables_dir / "ablation_table_directed_mooij.tex"
+    )
+    write_ablation_table_cpdag(
+        agg_mooij, llm_row_mooij, tables_dir / "ablation_table_cpdag_mooij.tex"
+    )
+    write_gold_comparison_table(
+        agg,
+        agg_mooij,
+        llm_row,
+        llm_row_mooij,
+        tables_dir / "gold_comparison.tex",
+    )
     write_constraint_quality_table(quality, tables_dir / "constraint_quality.tex")
-    write_aupr_extension_table(results, tables_dir / "aupr_extension.tex")
+    write_aupr_extension_table(results_orig, tables_dir / "aupr_extension.tex")
 
     figure_gap_closed(agg, llm_row, figures_dir)
     figure_cd_vs_llm_only(agg, llm_row, figures_dir)
@@ -1036,10 +1150,17 @@ def main() -> None:
     figure_coverage_conditional_quality(quality, figures_dir)
 
     summary = headline_summary(agg, llm_row, quality)
-    print(_fmt_headline_block(summary))
+    summary_mooij = headline_summary(agg_mooij, llm_row_mooij, quality)
+    print(_fmt_headline_block(summary, gold_banner="gold=original (CDT consensus)"))
+    print()
+    print(_fmt_headline_block(summary_mooij, gold_banner="gold=mooij2020"))
+    print()
+    print(robust_non_oracle_cpdag_line(agg, agg_mooij))
     print(
         "Wrote tables/ablation_table.tex, tables/ablation_table_directed.tex, "
         "tables/ablation_table_cpdag.tex, "
+        "tables/ablation_table_directed_mooij.tex, tables/ablation_table_cpdag_mooij.tex, "
+        "tables/gold_comparison.tex, "
         "tables/constraint_quality.tex, tables/aupr_extension.tex\n"
         "Wrote figures/gap_closed.{pdf,png}, figures/cd_vs_llm_only.{pdf,png}, "
         "figures/threshold_sensitivity.{pdf,png}, "
